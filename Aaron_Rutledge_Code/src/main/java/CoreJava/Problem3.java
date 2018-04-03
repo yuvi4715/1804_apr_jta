@@ -1,4 +1,4 @@
-package CoreJava;
+package coreJava;
 
 public class Problem3 {
 	
