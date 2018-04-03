@@ -5,8 +5,10 @@ public class WellsFargo {
 	public WellsFargo() {
 		// TODO Auto-generated constructor stub
 	}
-	public static void main(String() arg) {
-		Bank wellsfargo = newBank();
+	public static void main(String[] args) {
+		
+		Bank wellsfargo = new Bank(666666,(float)2333.025,"Tim", "Checking");
+		System.out.println(wellsfargo.toString());
 		
 	}
 
