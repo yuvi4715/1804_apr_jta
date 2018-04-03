@@ -4,9 +4,9 @@ public class MultipleArguments {
 
 	public static void main(String[] args) {
 		MultipleArguments m1 = new MultipleArguments();
-//		m1.display(10,11,12,13,14,15);
-//		m1.display(21,22,23,24);
-//		m1.display(31,32,33);
+		m1.display(10,11,12,13,14,15);
+		m1.display(21,22,23,24);
+		m1.display(31,32,33);
 		
 		print(20,21,22,23,24);
 		print(20,21,22,23,24,25);
