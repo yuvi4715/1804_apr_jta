@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class Problem23 {
@@ -41,7 +42,6 @@ public class Problem23 {
 		{
 			Map.Entry pair = (Map.Entry)it.next();
 			System.out.println(pair.getKey() + " = " + pair.getValue());
-			it.remove();
 		}
 		
 		System.out.println("\nTreeSet Entries:");
@@ -51,12 +51,15 @@ public class Problem23 {
 		System.out.println("\nHashSet Entries:");
 		for(int i:a)
 			System.out.println(i);
+		Collections.sort(a);
+		System.out.println("\nSorted Array List Entries:");
+		System.out.println(a.toString());
+		
 		Collections.sort(b);
 		System.out.println("\nSorted Linked List Entries:");
 		System.out.println(b.toString());
 		
-		ArrayList<Integer> keys = new ArrayList<Integer>();
-		Collections.sort(keys);
+		SortedSet<Integer> keys = new TreeSet<Integer>(c.keySet());
 		System.out.println("\nSorted Hash Map Entries:");
 		for(int i:keys)
 			System.out.println(i + " = " + c.get(i));
