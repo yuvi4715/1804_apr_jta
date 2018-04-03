@@ -8,7 +8,7 @@ public class DareDevil extends GiftedPeople {
 		System.out.println("Dare devil - Blind with enhanced senses and visibility");
 	}
 	
-	boolean demons(String stick) {
+	public boolean demons(String stick) {
 		boolean calm = false;
 		System.out.println("Dare devil - demons - Losing his father");
 		System.out.println(stick + " helps murdock to calm down a little bit ");
@@ -31,6 +31,9 @@ public class DareDevil extends GiftedPeople {
 		GiftedPeople g2 = new DareDevil();
 		//DareDevil d2 = new GiftedPeople(); //not an example for IS-A relation ship
 		GiftedPeople g3 = new JessicaJones();
+		System.out.println(g1.hashCode());
+		System.out.println(d1.hashCode());
+		System.out.println(g2.hashCode());
 	}
 	
 }

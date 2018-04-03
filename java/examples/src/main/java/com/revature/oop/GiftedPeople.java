@@ -2,7 +2,7 @@ package com.revature.oop;
 
 public class GiftedPeople {
 
-	String armor = "red";
+	public String armor = "red";
 	
 	public GiftedPeople() {
 		System.out.println("Gifted people - constructor");

@@ -18,11 +18,11 @@ public class JessicaJones extends GiftedPeople {
 		System.out.println("Jessica's darkest demons is KilGrave");
 	}
 	
-	void friends(String s1) {
+	public void friends(String s1) {
 		System.out.println("Jessica has a friend named: " + s1);
 	}
 	
-	void friends(String s1, String s2) {
+	public void friends(String s1, String s2) {
 		System.out.println("Jessica has two friends named " + s1 + " and " + s2);
 	}
 }
