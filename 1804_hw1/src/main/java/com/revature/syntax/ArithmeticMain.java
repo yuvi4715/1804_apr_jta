@@ -1,6 +1,6 @@
 package com.revature.syntax;
 
-//Part of the solution to hw1 problem #5
+// Part of the solution to hw1 problem #5
 
 public class ArithmeticMain {
 

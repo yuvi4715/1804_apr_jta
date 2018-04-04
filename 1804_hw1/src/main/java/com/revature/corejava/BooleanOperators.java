@@ -1,6 +1,6 @@
 package com.revature.corejava;
 
-//Answer for hw1 question #3
+// Answer for hw1 question #3
 
 public class BooleanOperators {
 

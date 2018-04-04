@@ -1,7 +1,7 @@
 package com.revature.syntax;
 
-//Answer for hw1 problem #4
-
+// Answer for hw1 problem #4
+ 
 public class ArithmeticOneClass {
 
 	double add(double a, double b) {

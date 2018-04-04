@@ -1,6 +1,6 @@
 package com.revature.corejava;
 
-//Answer for hw1 question #2
+// Answer for hw1 question #2
 
 public class GreatestOfThree {
 
