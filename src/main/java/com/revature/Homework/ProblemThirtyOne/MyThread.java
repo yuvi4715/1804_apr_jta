@@ -10,14 +10,16 @@ public class  MyThread implements Runnable{
 	public void run() {
 		if(id==0) {
 			try {
+				System.out.println(Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}else if(id==1) {
 			while(true)
-				System.out.println("Running Thread 1");
+				System.out.println(Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
 		}else if(id==2) {
+			System.out.println(Thread.currentThread().getName()+" : "+Thread.currentThread().getState());
 			Thread.yield();
 		}
 	}

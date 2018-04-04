@@ -1,18 +1,18 @@
-package com.revature.Homework.ProblemSeven;
+package com.revature.Homework.ProblemEighth;
 
 
-public class ProblemSevenBankCustomer {
+public class ProblemEightBankCustomer {
 
 		private static long customerCount=0L;
 		private String name;
 		private double balance;
-		private final long customerID;
-		ProblemSevenBankCustomer(String pName){
+		final private long customerID;
+		ProblemEightBankCustomer(String pName){
 			name=pName;
 			balance = 0;
 			customerID=customerCount++;
 		}
-		ProblemSevenBankCustomer(String pName,int pBalance){
+		ProblemEightBankCustomer(String pName,int pBalance){
 			this(pName);
 			balance = pBalance;
 		}
@@ -30,13 +30,13 @@ public class ProblemSevenBankCustomer {
 			balance = newBalance;
 			raiseBalanceByFlatAmount(amount);
 		}
-		public boolean equals(ProblemSevenBankCustomer pCust) {
+		public boolean equals(ProblemEightBankCustomer pCust) {
 				return pCust.customerID==customerID;
 		}
 		public static long getCustomerCount() {
 			return customerCount;
 		}
-		public static void printName(ProblemSevenBankCustomer pCust) {
+		public static void printName(ProblemEightBankCustomer pCust) {
 			System.out.println(pCust.name+" ID: "+pCust.customerID+" has a balance of "+pCust.balance);
 		}
 		public String getName() {

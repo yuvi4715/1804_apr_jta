@@ -33,7 +33,7 @@ public class Main {
 		}
 		double mean = sum/gradeCount;
 		for(double f:grades) {
-			stdDevSum+=Math.pow((f-mean), 2);
+			stdDevSum+=(f-mean)*(f-mean);
 		}
 		double stdDevMean = (stdDevSum/gradeCount);
 		double stdDev = Math.sqrt(stdDevMean);

@@ -2,8 +2,7 @@
 package com.revature.Homework.ProblemThirtyOne;
 
 public class Main {
-	public static void main(String[] args) {
-		Main main = new Main();
+	public static void main(String[] args) throws InterruptedException {
 		MyThread thread1=new MyThread();
 		MyThread thread2=new MyThread();
 		MyThread thread3=new MyThread();	
@@ -13,13 +12,13 @@ public class Main {
 		t1.start();
 		t2.start();
 		t3.start();
-		try {
-			t2.wait();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		t2.suspend();
+		for(int i=0;i<100;i++);
+		
+		t2.resume();		
 		t2.notify();
+		
 		t2.stop();
 	}
 	

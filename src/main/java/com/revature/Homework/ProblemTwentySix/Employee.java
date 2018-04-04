@@ -4,13 +4,6 @@ package com.revature.Homework.ProblemTwentySix;
 public class Employee{
 	private String FirstName,LastName,Role;
 	private long id;
-	{
-		System.out.println("Block");
-	}
-	//Static block is always executed
-	static {
-		System.out.println("static Block");
-	}
 	public Employee(String firstName, String lastName, String role, long id) {
 		super();
 		FirstName = firstName;

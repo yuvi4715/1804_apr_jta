@@ -9,7 +9,7 @@ public class  MyThread implements Runnable{
 	}
 	public void run() {
 		for(int i=0;i<1000;i++)
-		value=main.increment();
+			value=main.increment();
 	}
 	public int getValue() {
 		return value;

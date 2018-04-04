@@ -17,7 +17,6 @@ public class ProblemTwentySixMain {
 		List<Employee> empList = new ArrayList<Employee>();
 		try {
 			File file = new File("src/main/java/com/revature/Homework/ProblemTwentySix/Example.dat");
-			System.out.println(file.getAbsolutePath());
 			inputStream = new BufferedReader(new FileReader(file));
 			String l;
 			while((l=inputStream.readLine())!=null) {

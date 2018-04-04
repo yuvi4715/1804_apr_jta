@@ -1,10 +1,8 @@
 package com.revature.Homework.ProblemFourty;
 
 import java.math.BigInteger;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 	 public static void main(String[] args) {
@@ -26,9 +24,14 @@ public class Main {
 			return new BigInteger("1");
 		BigInteger tempOne=new BigInteger(number.subtract(one)+"");
 		BigInteger tempTwo=new BigInteger(number.subtract(two)+"");
-		BigInteger fib = fibonacciRercursive(tempOne).add(fibonacciRercursive(tempTwo));
+		BigInteger fib = null;
+		if(!cache.containsKey(number))
+			fib = fibonacciRercursive(tempOne).add(fibonacciRercursive(tempTwo));
+		else 
+			fib = cache.get(number);
 		return fib; 
 	 }
+	static final Map<BigInteger,BigInteger> cache = new HashMap<BigInteger,BigInteger>();
 	static final BigInteger one = new BigInteger("1");
 	static final BigInteger two = new BigInteger("2");
 		
