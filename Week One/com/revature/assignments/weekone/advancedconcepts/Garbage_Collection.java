@@ -13,8 +13,15 @@ public class Garbage_Collection {
 	/**
 	 * 
 	 */
+	/// 
 	public Garbage_Collection() {
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	////Q19
+	public static void garbageCollection() {
+		System.gc();
+		Runtime temp = Runtime.getRuntime();
+		temp.gc();
+	}
 }
