@@ -22,6 +22,7 @@ class ThreadTest extends Thread
 	private Thread t;
 	private String ThreadName;
 	private int counter = 0;
+	private static final Object Lock = new Object();
 	
 	public ThreadTest(String name)
 	{
@@ -32,13 +33,14 @@ class ThreadTest extends Thread
 	public void run()
 	{
 		System.out.println("Running " + ThreadName);
-		synchronized(this)
+		synchronized(Lock)
 		{
 			for(int i = 0; i<1000; i++)
 			{
 				counter = increment(counter);
 			}
 		}
+		
 		System.out.println("Thread " + ThreadName + "'s counter is " + counter);
 		System.out.println("Thread " + ThreadName + " exiting.");
 	}
