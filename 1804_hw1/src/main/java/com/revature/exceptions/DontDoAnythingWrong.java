@@ -2,6 +2,8 @@ package com.revature.exceptions;
 
 import java.util.Scanner;
 
+// Solution to hw1 problem #11 - #15
+
 public class DontDoAnythingWrong {
 		
 	public static void ducked() throws YouDidSomethingWrongException {
