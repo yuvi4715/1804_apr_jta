@@ -1,7 +1,7 @@
 package syntax;
 //Kevin Rivera - Revature
 //Assignment Week 1: Syntax - Problem 6.
-//This program contains examples for control statements (if, if-else, switch-case).
+//This program contains examples for control statements (if, if-else, switch-case, and loops).
 
 public class Prob_6 {
 	public static void main(String[] args) {
@@ -31,5 +31,25 @@ public class Prob_6 {
 			System.out.println("This runs when all previous cases fail.");
 		}
 		
+		//for loop with continue
+		for (int i = 0; i < 10; i++) {
+			if (i == 3) {
+				i++; 
+				continue;
+			}
+			if (i == 8)
+				System.out.println("value of i: " + i);
+		}
+		
+		//do-while
+		int x = 0;
+		do {
+			System.out.println(++x);
+		} while (x < 5);
+			
+		//while
+		while(x != 0) {
+			--x;
+		}
 	}
 }
