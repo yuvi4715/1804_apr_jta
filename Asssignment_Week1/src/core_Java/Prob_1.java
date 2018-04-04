@@ -1,8 +1,9 @@
 package core_Java;
 //Kevin Rivera - Revature
 //Assignment Week 1: Core Java - Problem 1.
+//This program does the 4 basic arithmetic operations on two hardcoded numbers.
 
-public class prob_1 {
+public class Prob_1 {
 	public static void main(String[] args) {
 		int a, b, result;
 		a = 10;
