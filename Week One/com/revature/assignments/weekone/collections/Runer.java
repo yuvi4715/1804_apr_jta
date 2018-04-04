@@ -33,6 +33,8 @@ public class Runer {
 		sorttest.sortArrayList();
 		sorttest.sortLinkedList();
 		sorttest.sortHashMap();
+		sorttest.sortTreeSet();
+		sorttest.sortHashSet();
 	}
 
 }

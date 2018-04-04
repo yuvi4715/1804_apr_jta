@@ -16,6 +16,7 @@ import java.util.ListIterator;
 import java.util.Map;
 import java.util.TreeSet;
 import java.util.Map.Entry;
+import java.util.Set;
 
 /**
  * @author Ed M
@@ -71,23 +72,37 @@ public class CollectionSort {
 	}
 
 	public TreeSet<String> sortTreeSet() {
-		TreeSet<String> tset = collectionOfCollections.getTset();
+		
+		TreeSet<String> treeset = collectionOfCollections.getTset();
+		TreeSet<String> ts=new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);
+		
 		Iterator<String> iterator;
-		iterator = tset.iterator();
-		while (iterator.hasNext())
+		iterator = treeset.iterator();
+		while (iterator.hasNext()) {
+			ts.add(iterator.next());
+			//System.out.println(iterator.next());
+		}
+		iterator = ts.iterator();
+		while (iterator.hasNext()) {
 			System.out.println(iterator.next());
-		return tset;
-
+		}
+		
+		
+		//System.out.println("Tree set :: "+ts);
+		return ts;
 	}
 
-	public HashSet<String> sortHashSet() {
+	public  HashSet<String> sortHashSet() {
 		HashSet<String> hset = collectionOfCollections.getHset();
-		Iterator<String> iterator = hset.iterator();
+		Set<String> set = hset;
+		List<String> sortedhset = new ArrayList<String>(set);
+		Collections.sort(sortedhset);
+		Iterator<String> iterator = set.iterator();
 
 		// check values
 		while (iterator.hasNext())
 			System.out.println(iterator.next());
-		return hset;
+		return (hset) ;
 
 	}
 
