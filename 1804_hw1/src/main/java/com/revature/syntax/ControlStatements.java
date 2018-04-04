@@ -2,6 +2,8 @@ package com.revature.syntax;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+// Solution to hw1 problem #6
+
 public class ControlStatements {
 
 	public static void main(String[] args) {
