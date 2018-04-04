@@ -39,7 +39,6 @@ class ThreadTest extends Thread
 				counter = increment(counter);
 			}
 		}
-		
 		System.out.println("Thread " + ThreadName + "'s counter is " + counter);
 		System.out.println("Thread " + ThreadName + " exiting.");
 	}
@@ -54,7 +53,7 @@ class ThreadTest extends Thread
 	    }
 	}
 
-	public static int increment(int i)
+	public int increment(int i)
 	{
 		return (i+1);
 	}
