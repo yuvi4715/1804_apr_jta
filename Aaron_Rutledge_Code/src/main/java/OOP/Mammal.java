@@ -1,4 +1,4 @@
-package OOP;
+package oop;
 
 public abstract class Mammal implements Animal{
 	
