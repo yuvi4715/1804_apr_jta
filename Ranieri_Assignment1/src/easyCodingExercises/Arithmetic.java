@@ -7,7 +7,7 @@ public class Arithmetic {
 		
 		double number1 = Double.parseDouble(args[0]);
 		double number2 = Double.parseDouble(args[1]);
-		String operator = args[2];
+		String operator =  args[2] ;
 		
 		System.out.println(calculator(number1,number2,operator));
 						
@@ -24,7 +24,6 @@ public class Arithmetic {
 			return f.subtract(number1,number2);
 		}
 		
-		// does not work
 		if(operator.contains("*")) {
 			return f.multiply(number1,number2);
 		}
