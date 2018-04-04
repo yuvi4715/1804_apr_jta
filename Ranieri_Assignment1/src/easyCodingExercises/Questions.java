@@ -10,7 +10,7 @@ public class Questions {
 		//question30();
 		//question31();
 		//question32();
-		question33();
+		//question33();
 		  		
 
 	}
