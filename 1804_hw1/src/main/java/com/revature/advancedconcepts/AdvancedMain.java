@@ -10,7 +10,15 @@ public class AdvancedMain {
 		int aInt = Integer.parseInt(a);
 		int bInt = Integer.parseInt(b);
 		
-		// Solution to hw1 problem #19
+		// Solution to hw1 problem #19 and #20
+		
+		//Runtime runtime = new Runtime();
+		//runtime.gc();
+		
+		//Constructor runtimeConstructor = Integer.class.getConstructor();
+		//Integer runtimeInteger = (Integer)runtimeConstructor.newInstance(3);
+		//System.out.println(runtimeInteger);
+		
 		System.gc();
 		
 		return aInt + bInt;

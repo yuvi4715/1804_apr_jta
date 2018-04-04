@@ -32,8 +32,9 @@ public class DontDoAnythingWrong {
 	
 	public static void main(String[] args) {
 		try {
+			// System.exit(0)
 			ducked();
-			System.exit(0); // Despite the system exit the finally block still runs
+			System.exit(0); // Despite the system exit the finally block still runs because this code is not reached
 		}
 		catch (YouDidSomethingWrongException ex) {
 			System.out.println(ex.getMessage());
