@@ -1,14 +1,35 @@
 package easyCodingExercises;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner; 
 
 public class GradesStatistics {
 
 	public static void main(String[] args) {
 
-		int[] thisIsAnIntrray = new int[10];
+
+		Scanner scan = new Scanner(System.in);
 		
+		//size of the array
+		int n = scan.nextInt();
+		int[] intArray = new int[n];
+		
+		
+		// fill array
+		for (int i = 0; i < intArray.length; i++)
+	    {
+	        System.out.println("Please enter number");
+	        intArray[i] = scan.nextInt();
+	    }
+
+				
+		
+		System.out.println(calculateSD(intArray));
+		System.out.println(sum(intArray));
+		System.out.println(maxMin(intArray)[0] +" min");
+		System.out.println(maxMin(intArray)[1]+ " max");
 	}
 	
 	// standard deviation
@@ -28,7 +49,6 @@ public class GradesStatistics {
 
         return Math.sqrt(standardDeviation/10);
     }
-	
 	
 	// sumation
 	public static int sum(int numArray[]) {
@@ -55,3 +75,6 @@ public class GradesStatistics {
 		return minMax;
 	}
 }
+
+
+
