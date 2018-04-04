@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class tester {
-
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -18,5 +17,5 @@ public class tester {
 	public void test() {
 		fail("Not yet implemented");
 	}
-
+	
 }
