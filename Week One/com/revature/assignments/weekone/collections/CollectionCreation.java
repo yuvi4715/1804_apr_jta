@@ -14,6 +14,8 @@ import static java.lang.System.out;;
  * @date Apr 4, 2018
  * @time time 11:03:43 AM
  */
+
+/// Q21
 public class CollectionCreation {
 
 	
@@ -25,10 +27,10 @@ public class CollectionCreation {
 	
 	public CollectionCreation() {
 		for(int i = 1; i<=3;i++) {
-			String sobj = ("String Object #" + i);
+			String sobj = ("String Object #" + ((int)(Math.random() * 1498) + 3));
 			alist.add("ArrayList: " + sobj);
 			llist.add("LinkList: " + sobj);
-			hmap.put(000,("Hashmap: " + sobj));
+			hmap.put(i,("Hashmap: " + sobj));
 			tset.add("TreeSet:" + sobj);
 			hset.add("HashSet:" + sobj);
 		}
