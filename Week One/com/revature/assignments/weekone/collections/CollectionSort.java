@@ -50,7 +50,7 @@ public class CollectionSort {
 	public HashMap<Integer, String> sortHashMap() {
 		HashMap<Integer, String> hmap = collectionOfCollections.getHmap();
 		
-		// Making Hash Map into a List for the use of Collection.sort and Compare at the valuse of the string.
+		// Making Hash Map into a List for the use of Collection.sort and Compare at the value of the string.
 		List<Map.Entry<Integer, String>> list = new LinkedList<Map.Entry<Integer, String>>(hmap.entrySet());
 		Collections.sort(list, new Comparator<Map.Entry<Integer, String>>() {
 			public int compare(Map.Entry<Integer, String> o1, Map.Entry<Integer, String> o2) {
@@ -62,7 +62,7 @@ public class CollectionSort {
         for (Map.Entry<Integer, String> entry : list) {
             sortedMap.put(entry.getKey(), entry.getValue());
         }
-
+        //Print it  
 		for (Entry<Integer, String> entry : sortedMap.entrySet()) {
 			Integer key = entry.getKey();
 			String value = entry.getValue();
