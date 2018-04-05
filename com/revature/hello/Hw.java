@@ -1,12 +1,16 @@
-// import java.util.*;
-
 package com.revature.hello;
 
-class Hw {
+import com.revature.*;
+
+
+public class Hw {
 	// class Inner{
 
 	// }
 	public static void main(String args[]) {
+		
+		new MultipleArguments();
+//		new oop.GiftedPeople();
 		// Core Java
 		{// 1
 			int x = 1 + 2;
@@ -46,19 +50,19 @@ class Hw {
 			A.subtract(1, 2);
 			A.multiply(1, 2);
 			A.divide(1, 2);
-			
+
 			// 6
-			if(true)
+			if (true)
 				;
 			else
 				;
-			for(int i = 0; i < 5; ++i)
+			for (int i = 0; i < 5; ++i)
 				continue;
 			do {
 				;
-			}while( false);
+			} while (false);
 			char c = 'a';
-			switch(c) {
+			switch (c) {
 			case 'a':
 				break;
 			case 'b':
@@ -66,23 +70,60 @@ class Hw {
 			default:
 				;
 			}
-			int[] i = {0,1};
-			for(int x : i)
+			int[] i = { 0, 1 };
+			for (int x : i)
 				++x;
-				
+
 		}
 		// Class members
-		{// 7
+		{
+			// 7
+			// 8
 			Consumer a = new Consumer();
 			Consumer b = new Consumer(4);
 			a.buy();
 			a.buy(2);
 			Consumer.tax();
 			Consumer.money();
-			
-			// 8
-			
+
 		}
+		//{
+			// 10
+			// Create a custom exception class that overrides the getMessage( ) method
+			class NewException extends Exception {
+				public String getMessage() {
+					return "newException";
+				}
+			}
+			// 11 Create a class that manually throws an exception of your custom type
+			 class Foo {
+				public void bar() throws NewException {
+					throw new NewException();
+				}
+				
+				public String baz() {
+					return "Success!";
+				}
+			}
+
+			// 12 Use System.out.println( ) to note where you are in the control flow. Example:
+			
+			// “Starting try block”, “Ending try block”, “Starting catch block”, etc.
+			// Duck the exception at least once
+			// Implement a finally block that prints a graceful goodbye message
+			// Use the System.exit(0) command in the try block and rerun the application.
+			// Note the console output to see if the finally block executes.
+		//}
+		
+	System.out.println("Called from the inner clas Foo" + new Foo().baz());
+		
+	}
+
+	// 9
+	interface Animal {
+		public void eat();
+
+		public void move();
 	}
 
 	public static int add(int x, int y) {
