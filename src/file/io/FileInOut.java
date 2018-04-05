@@ -23,7 +23,8 @@ public class FileInOut {
 		String firstName = (t.nextToken());
 		String lastName = (t.nextToken());
 		String role = (t.nextToken());
-			
+		
+		
 		System.out.println(role);
 
 	}
