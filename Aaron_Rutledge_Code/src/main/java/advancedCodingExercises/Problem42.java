@@ -1,6 +1,5 @@
 package advancedCodingExercises;
 
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Problem42 {
