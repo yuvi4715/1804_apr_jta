@@ -19,7 +19,7 @@ public class ExceptionMain {
 			
 		}
 		finally {
-			System.out.println("we are in the always executing final block except if system ends in the catch");
+			System.out.println("we are in the always executing final block except if system ends in the catch. au revoir (gracefully said)");
 		}
 		
 		

@@ -13,6 +13,7 @@ public class GradesStatistics {
 		Scanner scan = new Scanner(System.in);
 		
 		//size of the array
+		 System.out.println("How many grades are you adding?");
 		int n = scan.nextInt();
 		int[] intArray = new int[n];
 		
