@@ -8,7 +8,7 @@ public class Human extends Mammal{
 		
 	}
 	
-	public void walk() {
+	public static void walk() {
 		
 		System.out.println("Humans walk on two legs.");
 		

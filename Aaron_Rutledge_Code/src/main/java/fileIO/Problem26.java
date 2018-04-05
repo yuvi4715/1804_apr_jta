@@ -1,0 +1,63 @@
+package fileIO;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Problem26 {
+	
+	public static void main(String[] args) throws IOException {
+		
+		InputStream p25 = null;
+		BufferedReader buffer = null;
+		
+		try {
+			
+			p25 = new FileInputStream("C:\\Users\\haunt\\Documents\\workspace-sts-3.9.3.RELEASE\\com.revature.week1\\src\\main\\resources\\Problem25.txt");
+			buffer = new BufferedReader(new InputStreamReader(p25));
+			StringBuilder strBldr = new StringBuilder(buffer.readLine());
+			
+			String str = new String(strBldr.toString());
+			
+			System.out.println(str);
+			
+			StringTokenizer strTknr = new StringTokenizer(str, ":");
+			
+			while (strTknr.hasMoreTokens()) {
+				System.out.println(strTknr.nextToken());
+			}
+			
+			
+			
+			
+			
+			
+			
+		} catch (Exception e) {
+			
+			System.out.println("Something wrong with file read.");
+			
+		} finally {
+			
+			if (p25 != null) {
+				p25.close();
+				
+			}
+			if (buffer != null) {
+				buffer.close();
+				
+			}
+			
+			
+			
+		}
+		
+		
+		
+		
+	}
+
+}

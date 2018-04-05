@@ -14,7 +14,7 @@ public class Problem9 {
 		
 		two.eat();
 		two.move();
-		//two.walk();
+		two.walk();
 		
 		three.eat();
 		three.move();
