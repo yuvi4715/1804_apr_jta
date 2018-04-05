@@ -20,7 +20,7 @@ public class GradesStatistics {
 
         do{
             grade = input.nextInt();
-            if(grade != -1)
+            if(grade != -1 && grade <= 100 && grade >= 0)
                 grades.add(grade);
 
         }while(grade != -1);
