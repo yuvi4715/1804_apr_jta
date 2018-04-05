@@ -23,7 +23,7 @@ public class CollectionsMain {
 		arrayList.add("Chicago");
 		
 		Iterator<String> iter = arrayList.iterator();
-		
+				
 		System.out.println("Original print from ArrayList: ");
 		
 		while (iter.hasNext()) {
@@ -47,7 +47,7 @@ public class CollectionsMain {
 		linkedList.add("New York");
 		linkedList.add("Baltimore");
 		linkedList.add("Chicago");
-		
+			
 		iter = linkedList.iterator();
 		
 		System.out.println("\nOriginal print from LinkedList: ");

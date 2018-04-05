@@ -3,7 +3,8 @@ package com.revature.oop;
 // Main class that has results for hw1 problem #9
 
 public class AnimalMain {
-
+	
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		
 		Animal one = new Human();
@@ -12,7 +13,7 @@ public class AnimalMain {
 		
 		one.eat();
 		one.move();
-		// one.walk(); // This line doesnt work because walk() is not defined in Animal
+		// one.walk(); // This line doesn't work because walk() is not defined in Animal
 		
 		two.eat();
 		two.move();
