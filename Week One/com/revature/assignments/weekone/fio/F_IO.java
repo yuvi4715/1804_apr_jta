@@ -46,59 +46,86 @@ public class F_IO {
 			}
 			fileReader.close();
 			System.out.println("Contents of file:");
-			StringTokenizer token = new StringTokenizer(stringBuffer.toString(), ":");
+			StringTokenizer token = new StringTokenizer(stringBuffer.toString(), "\n:");
 			int fourCount = 1;
-			Integer idHolder = -1;
+			String idHolder = null;
 			String fristNameHolder = null;
 			String lastNameHolder = null;
 			String roleHolder = null;
-
+			int tobeConverted = -1;
 			while (token.hasMoreTokens()) {
+				
 				String temp0 = token.nextToken();
 				// System.out.println(temp0);
-				if (fourCount == 1) {
-					idHolder = (Integer.valueOf(temp0));
-					System.out.println(idHolder);
-				}
-				if (fourCount == 2) {
+				if (fourCount == 1 ) {
+					idHolder = temp0;
+					//System.out.println( idHolder);
+					fourCount++;
+				}else if (fourCount == 2) {
 					fristNameHolder = temp0;
 					// System.out.println(fristNameHolder);
-				}
-				if (fourCount == 3) {
+					fourCount++;
+				}else if (fourCount == 3) {
 					lastNameHolder = temp0;
 					// System.out.println(lastNameHolder);
-				}
-				if (fourCount == 4) {
-					fourCount = 1;
+					fourCount++;
+				}else if (fourCount == 4) {
 					roleHolder = temp0;
-					// System.out.println(roleHolder);
-
+					
 					Employee tempE = new Employee(idHolder, fristNameHolder, lastNameHolder, roleHolder);
+					
+					Integer key = Integer.valueOf(idHolder);
+					hmap.put(key,tempE);
+					
 					System.out.println(tempE.toString());
+					fourCount = 1;
 				}
-				
-				fourCount++;
 			}
 
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		HashMap<Integer, Employee> testhmap = hmap;
+		for (Entry<Integer, Employee> entry : hmap.entrySet()) {
+			Integer key = entry.getKey();
+			String value = entry.toString();
+			System.out.println("Key: " + key.toString() + " Value: " + value);
+		}
+		
 	}
 
 	public class Employee {
-		Integer id;
+		String id;
 		String firstName;
 		String lastName;
 		String role;
 
-		private Employee(Integer id, String firstName, String lastName, String role) {
+		public String getId() {
+			return id;
+		}
+
+		public String getFirstName() {
+			return firstName;
+		}
+
+		public String getLastName() {
+			return lastName;
+		}
+
+		public String getRole() {
+			return role;
+		}
+
+		private Employee(String id, String firstName, String lastName, String role) {
 			this.id = id;
 			this.firstName = firstName;
 			this.lastName = lastName;
 			this.role = role;
 
 		}
+
+		
 
 		public String toString() {
 			return ("Employee id: " + id + " ,Frist Name" + firstName + ", Last Name: " + lastName + ", Role: " + role);
