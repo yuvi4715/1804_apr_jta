@@ -1,3 +1,4 @@
+package syntax;
 
 public class Question5_2 {
 

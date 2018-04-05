@@ -6,7 +6,11 @@ public class _Exceptions {
 		Question10();
 		Question11();
 		Question12();
-		Question13();
+		try {
+			Question13();
+		} catch (Exception e) {
+			System.out.println("An exception has been ducked\n");
+		}
 		Question14();
 		Question15();
 	}
@@ -41,9 +45,9 @@ public class _Exceptions {
 		System.out.println();
 	}
 
-	public static void Question13() {
+	public static void Question13() throws Exception {
 		System.out.println("-- Question 13 --");
-		// duck the exception at least once
+		int i = 5/0;
 		System.out.println();
 	}
 
@@ -60,6 +64,13 @@ public class _Exceptions {
 	}
 
 	public static void Question15() {
+		System.out.println("-- Question 15 --");
+		try {
+			System.exit(0);
+		} finally {
+			System.out.println("Finally");
+			System.out.println();
+		}
 
 	}
 

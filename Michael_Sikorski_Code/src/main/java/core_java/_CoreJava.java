@@ -5,7 +5,7 @@
 
 package core_java;
 
-public class CoreJava {
+public class _CoreJava {
 
 	public static void main(String[] args) {
 		new Question1();

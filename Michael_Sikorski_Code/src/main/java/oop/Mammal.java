@@ -7,7 +7,7 @@ public abstract class Mammal implements Animal {
 		System.out.println("The mammal eats.");
 	}
 
-	public static void walk() {
+	public void walk() {
 		System.out.println("Mammals walk on 2 or 4 legs.");
 	}
 
