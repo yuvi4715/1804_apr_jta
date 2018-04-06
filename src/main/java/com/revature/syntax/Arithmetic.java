@@ -1,5 +1,6 @@
 package com.revature.syntax;
 
+// Question 4
 public class Arithmetic {
 
 	public int addTwo(int a, int b) {

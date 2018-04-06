@@ -1,19 +1,18 @@
 package com.revature.oop;
 
 public class Human extends Mammal {
+	
 	public void eat() {
-		System.out.println("I am eating!");
+		System.out.println("Human eating here");
 	}
 	
 	static void walk() {
-		Animal one = new Human();
-		Mammal two = new Human();
-		Human three = new Human();
+		System.out.println("Human walking here!!");
 	}
 
 	@Override
 	public void move() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Human moving here!!");
 	}
 }

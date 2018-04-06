@@ -6,11 +6,9 @@ public abstract class Mammal implements Animal {
 	public void eat() {
 		System.out.println("Eating");
 	}
-
-//	@Override
-//	public void move() {
-//		// TODO Auto-generated method stub
-//
-//	}
+	
+	static void walk() {
+		System.out.println("Mammal walking here");
+	}
 
 }
