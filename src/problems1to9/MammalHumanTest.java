@@ -9,15 +9,15 @@ public class MammalHumanTest {
 		
 		one.eat();
 		one.move();
-		one.walk();
+		//one.walk();
 		
 		two.eat();
 		two.move();
-		two.walk();
+		Mammal.walk();
 		
 		three.eat();
 		three.move();
-		three.walk();
+		Human.walk();
 
 	}
 

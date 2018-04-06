@@ -27,8 +27,8 @@ public class Arithmetic {
 			z = x /y;
 			return z;
 		}
-		catch(Exception e) {
-			System.out.println(e);
+		catch(ArithmeticException e) {
+			e.printStackTrace();
 			return 0;
 		}
 	}

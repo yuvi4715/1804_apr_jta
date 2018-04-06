@@ -38,7 +38,9 @@ public class Control {
 		case 4:
 			y = 8;
 		}
-		
+		System.out.println(x);
+		System.out.println(y);
+		System.out.println(z);
 		
 	}
 }
