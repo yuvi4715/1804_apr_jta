@@ -9,7 +9,7 @@ public class MultipleArguments {
 	}
 	
 	
-	static void print(int x, int...y) {
+	static void print(int x, int...y) {		// varargs
 		for(int i: y) {
 			System.out.println(i);
 		}	
