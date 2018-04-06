@@ -2,15 +2,14 @@ package com.revature.hello;
 
 import com.revature.*;
 
-
 public class Hw {
 	// class Inner{
 
 	// }
 	public static void main(String args[]) {
-		
+
 		new MultipleArguments();
-//		new oop.GiftedPeople();
+		// new oop.GiftedPeople();
 		// Core Java
 		{// 1
 			int x = 1 + 2;
@@ -87,43 +86,61 @@ public class Hw {
 			Consumer.money();
 
 		}
-		//{
-			// 10
-			// Create a custom exception class that overrides the getMessage( ) method
-			class NewException extends Exception {
-				public String getMessage() {
-					return "newException";
-				}
+		// 10
+		// Create a custom exception class that overrides the getMessage( ) method
+		class NewException extends Exception {
+			public String getMessage() {
+				return "newException";
 			}
-			// 11 Create a class that manually throws an exception of your custom type
-			 class Foo {
-				public void bar() throws NewException {
-					throw new NewException();
-				}
-				
-				public String baz() {
-					return "Success!";
-				}
+		}
+		// 11 Create a class that manually throws an exception of your custom type
+		class Foo {
+			public void bar() throws NewException {
+				throw new NewException();
 			}
 
-			// 12 Use System.out.println( ) to note where you are in the control flow. Example:
-			
-			// “Starting try block”, “Ending try block”, “Starting catch block”, etc.
-			// Duck the exception at least once
-			// Implement a finally block that prints a graceful goodbye message
-			// Use the System.exit(0) command in the try block and rerun the application.
-			// Note the console output to see if the finally block executes.
-		//}
-		
-	System.out.println("Called from the inner clas Foo" + new Foo().baz());
-		
-	}
+			public String baz() {
+				return "Success!";
+			}
+		}
 
-	// 9
-	interface Animal {
-		public void eat();
+		// 12 Use System.out.println( ) to note where you are in the control flow.
+		// Example:
 
-		public void move();
+		// “Starting try block”, “Ending try block”, “Starting catch block”, etc.
+		// Duck the exception at least once
+		// Implement a finally block that prints a graceful goodbye message
+		// Use the System.exit(0) command in the try block and rerun the application.
+		// Note the console output to see if the finally block executes.
+
+		// System.out.println("Called from the inner clas Foo" + new Foo().baz());
+
+		try {
+			System.out.println("Starting try block...");
+			// void qux() throws NewExcpetion{throw new NewException();}
+			// System.exit(0);
+			System.out.println("Endding try block.");
+
+		} catch (Exception e) {
+			System.out.println("Starting catch block...");
+
+			System.out.println("Ending catch block.");
+		} finally {
+			System.out.println("graceful message");
+		}
+
+		// Multithreading
+		// Write a method that stores an integer. Each time the method is called,
+		// increment the integer by 1. Create three threads that call this method 1000
+		// times each, storing the returned result in their own set. Print out each
+		// thread’s set.
+		
+		
+		// Synchronize the method that stores and increments the integer. Execute your
+		// threads again.
+		// Review thread-specific methods: sleep(), wait(), yield(), suspend(), stop(),
+		// resume(), interrupt(), notify(), notifyAll()
+
 	}
 
 	public static int add(int x, int y) {
