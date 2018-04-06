@@ -1,11 +1,16 @@
 package advanced.coding;
 
+import java.util.Calendar;
+import java.util.Comparator;
+
+import file.io.Employee;
 
 public class Questions {
 	
 	public static void main(String[] args) {
 		
 	//	question38("wooow woow jowk kol",'w','m');
+	//	question39();
 	//	System.out.println(question40(8));
 	//	question41();
 	//	question43(120);
@@ -17,6 +22,20 @@ public class Questions {
 	public static void question38(String s, char oldChar, char newChar ) {
 		
 		System.out.println(s.replace(oldChar, newChar));
+	}
+	
+	public static void question39() {
+		
+		Calendar bday = Calendar.getInstance();
+		bday.set(1994, 5, 20);
+		Calendar today = Calendar.getInstance();
+		
+		int time = bday.compareTo(today);
+		
+		double difference = today.getTimeInMillis()- bday.getTimeInMillis();
+		System.out.println( "This many years old"+ difference/1000/60/60/24/365);
+		
+		
 	}
 	
 	public static int question40(int x) {
@@ -67,6 +86,8 @@ public class Questions {
 	
 	public static void question42() {
 		
+		// is in the collection package java
+		
 	}
 	
 	public static void question43(int n) {
@@ -85,7 +106,7 @@ public class Questions {
 	    else      System.out.println(" Not Armstrong number");
 	    }
 	
-	public static void question44(String s) {
+	public static String question44(String s) {
 		
 		//String s = "hello world";		
 		String backwards = "";
@@ -96,7 +117,8 @@ public class Questions {
             backwards = backwards + s.charAt(i);          
         }
         
-		System.out.println(backwards);
+        return backwards;
+		//System.out.println(backwards);
 	}
 		
 	public static String question45(int n) {
@@ -116,3 +138,23 @@ public class Questions {
 	
 
 }
+
+
+class employeeSorter implements Comparator<Employee>{
+
+	@Override
+	public int compare(Employee o1, Employee o2) {
+		
+		int result = o1.getLastName().compareTo(o2.getLastName());
+		if (result != 0 ) {			
+			return result;
+		}
+		
+		return o1.getLastName().compareTo(o2.getLastName());
+	}
+}
+
+
+
+
+

@@ -25,6 +25,12 @@ public class Questions {
 		companyA.add(bob);
 		companyA.add(kat);
 		
+		// Prints all		
+//		for (Employee e : companyA) {
+//			System.out.println(e);
+//	}
+//		
+		
 		Collections.sort(companyA,new employeeSorter());
 		// Prints all
 //		for (Employee e : companyA) {
@@ -50,6 +56,7 @@ public class Questions {
 		companyHM.put("Bobby",bob);
 		companyHM.put("Katie",kat);
 		
+//		System.out.println(companyHM.keySet());
 		// cannot iterate HashMap
 //		for (Employee e : companyHM) {
 //			System.out.println(e);
@@ -64,10 +71,10 @@ public class Questions {
 		companyHM.put("Katie",kat);
 		
 		// prints out nothing
-		for (Employee e : companyTS) {
-			System.out.println(e);
-		}
-//		
+//		for (Employee e : companyTS) {
+//			System.out.println(e);
+//		}
+////		
 //		System.out.println(companyHM.get("Bobby"));
 		
 		//HashSet
