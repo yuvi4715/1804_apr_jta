@@ -1,4 +1,4 @@
-package question30;
+package question32;
 
 public class CheckPassFail {
 	static int checkNumber=50;

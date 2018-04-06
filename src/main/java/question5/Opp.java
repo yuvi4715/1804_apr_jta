@@ -1,7 +1,5 @@
 package question5;
 
-import java.util.StringTokenizer;
-
 public class Opp {
 
 	static int add(int num1, int num2){

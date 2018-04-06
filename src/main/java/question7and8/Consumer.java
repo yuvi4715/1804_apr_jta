@@ -1,4 +1,4 @@
-package question7;
+package question7and8;
 
 public class Consumer {
 	private static int allMoney=0;

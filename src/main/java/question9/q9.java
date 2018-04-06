@@ -9,9 +9,9 @@ public class q9 {
 		one.eat();
 		one.move();
 		two.eat();
-		two.walk();
+		Mammal.walk();
 		three.eat();
-		three.walk();
+		Mammal.walk();
 	}
 
 }

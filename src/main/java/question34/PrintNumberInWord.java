@@ -1,4 +1,4 @@
-package question32;
+package question34;
 
 public class PrintNumberInWord {
 	static String printNumNestedIf(int num) {

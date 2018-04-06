@@ -1,7 +1,5 @@
 package question4;
 
-import java.util.StringTokenizer;
-
 public class q4 {
 
 	public static void main(String[] args) {
@@ -10,7 +8,7 @@ public class q4 {
 		System.out.println(add(num1,num2));
 		System.out.println(multi(num1,num2));
 		System.out.println(sub(num1,num2));
-		int div=div(num1,num2);
+		float div=div(num1,num2);
 		if(div==0){
 			System.out.println(div);
 		}

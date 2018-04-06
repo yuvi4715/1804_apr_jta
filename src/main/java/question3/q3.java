@@ -1,7 +1,5 @@
 package question3;
 
-import java.util.StringTokenizer;
-
 public class q3 {
 
 	public static void main(String[] args) {
@@ -11,7 +9,7 @@ public class q3 {
 		boolean a1=!a;
 		boolean a2=a|b;
 		boolean a3=(!a&b)|(a&!b);
-		System.out.println(a+" : "+a2+" : "+a3);
+		System.out.println(a1+" : "+a2+" : "+a3);
 	}
 
 }

@@ -1,4 +1,4 @@
-package question33;
+package question35;
 
 import java.util.Scanner;
 

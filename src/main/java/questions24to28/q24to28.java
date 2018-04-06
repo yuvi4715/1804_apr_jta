@@ -26,7 +26,7 @@ public class q24to28 {
 					throw new Exception();
 				}
 				try {
-					temp.setID(Integer.parseInt(st.nextToken()));
+					temp.setNumber(Integer.parseInt(st.nextToken()));
 				}
 				catch(Exception notNum) {
 					System.out.println("Invalid Employee ID");

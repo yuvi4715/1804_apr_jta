@@ -1,12 +1,10 @@
 package question2;
 
-import java.util.StringTokenizer;
-
 public class q2 {
+	public static void main(String[] args) {
 		int x =4;
 		int y =20;
-		int z = 43;
-
+		int z =43;
 		if(x>y&&y>z){
 			System.out.println(x);
 		}
@@ -17,5 +15,4 @@ public class q2 {
 			System.out.println(z);
 		}
 	}
-
 }

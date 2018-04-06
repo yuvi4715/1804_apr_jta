@@ -1,4 +1,4 @@
-package src.main.java.questions10to15;
+package questions10to15;
 
 public class MyException extends Exception{
 

@@ -1,6 +1,6 @@
 package question29to31;
 
-public class SycronizedIncrementInteger{
+public class SycronizedIncrementedInteger{
 	private static int i=0;
 	
 	public static int getI() {

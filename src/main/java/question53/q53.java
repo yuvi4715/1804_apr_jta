@@ -4,7 +4,7 @@ public class q53 {
 	public static void main(String[] args) {
 		int[] nums = new int[] {1,2,3,4,5,6,7,8,9};
 		Dup result= findDup(nums);
-		if(result.getBol()==true) {
+		if(result.isBol()==true) {
 			System.out.println(result.getNum());
 		}
 		else {

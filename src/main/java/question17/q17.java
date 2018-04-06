@@ -9,6 +9,7 @@ public class q17 {
 		StringTokenizer st = new StringTokenizer(parseMe," ,:");
 		while(st.hasMoreElements()){
 			System.out.println(st.nextElement());
+		}
 	}
 
 }

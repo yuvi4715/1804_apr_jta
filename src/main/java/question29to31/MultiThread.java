@@ -22,7 +22,7 @@ public class MultiThread implements Runnable{
 		System.out.println("Running"+tName);
 		for(int i=0;i<1000;i++) {
 			set1.add(IncrementInteger.increment());
-			set2.add(SycronizedIncrementInteger.increment());
+			set2.add(SycronizedIncrementedInteger.increment());
 			//System.out.println(tName+": i equals: "+ IncrementInteger.getI());
 			//System.out.println(tName+": i equals: "+ SycronizedIncrementInteger.getI());
 		}

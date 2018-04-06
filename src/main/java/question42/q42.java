@@ -1,6 +1,8 @@
 package question42;
 
-import java.util.StringTokenizer;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class q42 {
 
@@ -11,26 +13,26 @@ public class q42 {
 		em.add(new Employees("Superman","News",78));
 		System.out.println("Unsorted");
         for (int i=0; i<em.size(); i++){
-            System.out.println(em.get(i));
+            System.out.println(em.get(i).name);
         }
  
         Collections.sort(em, new SortbyAge());
  
         System.out.println("Sorted by Age");
         for (int i=0; i<em.size(); i++){
-            System.out.println(em.get(i));
+            System.out.println(em.get(i).name);
         }
  
-        Collections.sort(em, new Sortbyname());
+        Collections.sort(em, new SortbyName());
  
         System.out.println("Sorted by Name");
         for (int i=0; i<em.size(); i++){
-            System.out.println(em.get(i));
+            System.out.println(em.get(i).name);
         }
 	}
 }
 
-public class SortbyAge implements Comparator<Student>
+class SortbyAge implements Comparator<Employees>
 {
     public int compare(Employees a, Employees b)
     {
@@ -38,7 +40,7 @@ public class SortbyAge implements Comparator<Student>
     }
 }
  
-public class Sortbyname implements Comparator<Student>
+class SortbyName implements Comparator<Employees>
 {
     public int compare(Employees a, Employees b)
     {

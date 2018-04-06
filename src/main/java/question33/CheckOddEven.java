@@ -1,4 +1,4 @@
-package question31;
+package question33;
 
 public class CheckOddEven {
 

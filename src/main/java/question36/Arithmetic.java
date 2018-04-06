@@ -1,4 +1,4 @@
-package question34;
+package question36;
 
 public class Arithmetic {
 	static void doMath(int num1, int num2, String operator){
