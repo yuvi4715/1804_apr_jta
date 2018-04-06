@@ -8,7 +8,7 @@ package com.revature.assignments.weekone.easycodingexercise;
  * @date Apr 5, 2018
  * @time time 1:33:10 PM
  */
-//Q34
+//Q33
 public class CheckOddEven {
 
 	/**
