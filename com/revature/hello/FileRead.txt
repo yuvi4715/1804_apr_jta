@@ -1,0 +1,4 @@
+Employee id:First Name:Last Name:Role
+01:Ian:B:Associate
+02:Yuvi:Damodaran:Trainer
+03:William:Gentry:Sidekick

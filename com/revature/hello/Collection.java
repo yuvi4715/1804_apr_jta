@@ -47,21 +47,17 @@ public class Collection {
 			System.out.println(i);
 		}
 
-		
-//		HashMap<Integer, String> m = new HashMap<>();
-//		m.put(9, "value1");
-//		m.put(-9, "value2");
-//		m.put(7, "value3");
-//		System.out.println("Unsorted HashMap:");
-//		for (int k : m.keySet()) {
-//			System.out.println(k + " " + m.get(k));
-//		}
-//		System.out.println("sorted HashMap:");
-//		m.sort((Integer x, Integer y) -> x - y);		 // Java 8+
-//		for (int k : m.keySet()) {
-//			System.out.println(k + " " + m.get(k));
-//		}
+		// unsortable collection
+		HashMap<Integer, String> m = new HashMap<>();
+		m.put(9, "value1");
+		m.put(-9, "value2");
+		m.put(7, "value3");
+		System.out.println("Never sorted HashMap:");
+		for (int k : m.keySet()) {
+			System.out.println(k + " " + m.get(k));
+		}
 
+		// always sorted
 		TreeSet<Integer> t = new TreeSet<>();
 		t.add(1);
 		t.add(7);
@@ -73,7 +69,6 @@ public class Collection {
 		for (int i : t) {
 			System.out.println(i);
 		}
-
 		
 		HashSet<Integer> s = new HashSet<>();
 		s.add(7);
@@ -86,9 +81,9 @@ public class Collection {
 		for (int i : s) {
 			System.out.println(i);
 		}
-		System.out.println("sorted HashSet:");
-//		s.sort((Integer x, Integer y) -> x - y);		 // Java 8+
-		for (int i : s) {
+		System.out.println("sorted HashSet elements:");
+		t = new TreeSet<Integer>(s);
+		for (int i : t) {
 			System.out.println(i);
 		}
 
