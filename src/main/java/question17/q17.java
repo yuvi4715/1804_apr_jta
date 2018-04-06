@@ -7,6 +7,8 @@ public class q17 {
 	public static void main(String[] args) {
 		String parseMe= "pickles ketchup, mustard: onion";
 		StringTokenizer st = new StringTokenizer(parseMe," ,:");
+		while(st.hasMoreElements()){
+			System.out.println(st.nextElement());
 	}
 
 }
