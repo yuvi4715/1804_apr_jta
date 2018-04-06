@@ -24,11 +24,17 @@ public class Questions {
 		companyA.add(tim);
 		companyA.add(bob);
 		companyA.add(kat);
+		kat.setAge(40);
+		tim.setAge(30);
+		bob.setAge(20);
+		
+//		Collections.sort(companyA, new employeeSorterAge());
+		
 		
 		// Prints all		
-//		for (Employee e : companyA) {
-//			System.out.println(e);
-//	}
+		for (Employee e : companyA) {
+			System.out.println(e);
+	}
 //		
 		
 		Collections.sort(companyA,new employeeSorter());
@@ -99,8 +105,9 @@ public class Questions {
 
 }
 
+// several comparators comment one out to sort it.
 
-class employeeSorter implements Comparator<Employee>{
+ class employeeSorter implements Comparator<Employee>{
 
 	@Override
 	public int compare(Employee o1, Employee o2) {
@@ -113,6 +120,42 @@ class employeeSorter implements Comparator<Employee>{
 		return o1.getLastName().compareTo(o2.getLastName());
 	}
 	
+	class employeeSorterRole implements Comparator<Employee>{
+
+		@Override
+		public int compare(Employee o1, Employee o2) {
+			
+			int result = o1.getRole().compareTo(o2.getRole());
+			if (result != 0 ) {			
+				return result;
+			}
+			
+			return o1.getRole().compareTo(o2.getRole());
+		}
+	
+	}
 	
 	
-}
+	
+	class employeeSorterAge implements Comparator<Employee>{
+
+		@Override
+		public int compare(Employee o1, Employee o2) {
+			
+			int result = o1.getAge() - o2.getAge();
+									
+				return result;
+				
+			
+		}
+	
+	}
+	
+	}
+	
+	
+	
+	
+	
+	
+	

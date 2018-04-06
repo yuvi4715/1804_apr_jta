@@ -36,6 +36,21 @@ public class Questions {
 		System.out.println( "This many years old"+ difference/1000/60/60/24/365);
 		
 		
+		
+
+		int monthB = bday.get(Calendar.MONTH);
+		int dayB = bday.get(Calendar.DAY_OF_MONTH);
+		
+
+		int monthT = bday.get(Calendar.MONTH);
+		int dayT = bday.get(Calendar.DAY_OF_MONTH);
+		
+		if(monthT == monthB && dayT == dayB) {
+			System.out.println("Happy birthday");
+			
+		}
+		
+		
 	}
 	
 	public static int question40(int x) {

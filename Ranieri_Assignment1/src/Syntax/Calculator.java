@@ -26,27 +26,28 @@ public class Calculator {
 		
 		int numberSwitch =5;
 		switch (numberSwitch) {
-		case 1:  System.out.println("1");
+		case 1:  System.out.println("one");
 					break;
-		case 2:  System.out.println("2");
+		case 2:  System.out.println("two");
 					break;
-		case 3:  System.out.println("3");
+		case 3:  System.out.println("three");
 					break;
-		case 4:  System.out.println("4");
+		case 4:  System.out.println("four");
 					break;			
-		case 5:  System.out.println("5");
+		case 5:  System.out.println("five");
 		
-		// case 5 will execute if no other casees are used
-		
-		
-		
-		
-		
+		// case 5 will execute if no other cases are used		
 		
 		
 		
 		}
+	
 		
 	}
+	
+	
+	
+		
+	
 
 }
