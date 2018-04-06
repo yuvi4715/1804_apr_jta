@@ -8,7 +8,23 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-public class Pokemon {
+public class Pokemon {//implements Comparable<Pokemon> {
+	
+	/*
+	 * 
+	 * Given that:
+	 * 		List<Pokemon> myPokemon = new ArrayList<>();
+	 * 
+	 * NOTE: Sorting a list WILL not work, unless
+	 * 		=> The Generic passed to the List does not have a defined means of sorting
+	 * 			e.g. List<Pokemon> WILL NOT BE SORTABLE until you make Pokemon implement Comparable<T>, and override the compareTo() method
+	 * 			Then, Collections.sort(myPokemon) will work
+	 * 	
+	 * 		=> You pass a Comparator<T>, or an instance of a class that implements Comparator<T> and overrides the compare() method,
+	 * 			 to the overloaded Collections.sort() method
+	 * 			e.g. At the bottom of this file, the PokemonHelper implements Comparator<Pokemon>
+	 * 			Then, Collections.sort(myPokemon, new PokemonHelper()) will work
+	 */
 	
 	private String type;
 	private int id;
@@ -56,9 +72,23 @@ public class Pokemon {
 
 //	@Override
 //	public int compareTo(Pokemon o) {
-//		//Instead of this.getId() - o.getId() for ascending,
-////		return o.getId() - this.getId();
+	
+	
+	
+//		/* For ascending order, use 'this' first */
+//		return this.getId() - o.getId();
+
+		/* For descending order, use the parameter name first */
+//		return o.getId() - this.getId();
+	
+	
+		/* REMEBER STRINGS HAVE THEIR OWN IMPLEMENTATION OF compareTo() */
+		/* For ascending, use 'this' first */
 //		return this.getName().compareTo(o.getName());
+	
+		/* For descending order, use the parameter name first */
+//		return o.getName().compareTo(this.getName());
+	
 //	}
 	
 	public static void main(String[] args) {
@@ -72,7 +102,8 @@ public class Pokemon {
 		myPokemon.add(new Pokemon("Psychic", 35, "Kadabra"));
 		myPokemon.add(new Pokemon("Fighting", 34, "Mankey"));
 		myPokemon.add(new Pokemon("Fighting", 36, "mankey"));
-		//This ArrayList was sorted by calling this method
+		
+		//This ArrayList was sorted by using the PokemonHelper, which implements Comparator<Pokemon>, therefore "IS-A" Comparator
 //		Collections.sort(myPokemon, new PokemonHelper());
 //		System.out.println("Sorting by ID");
 //		Collections.sort(myPokemon, (p1, p2) -> { return p1.getId() - p2.getId();});
@@ -86,11 +117,32 @@ public class Pokemon {
 //		}
 		
 //		System.out.println("Sorting by Type");
+		
+		/* This example was sorted by using a lambda expression using the Comparator interface */
 //		Collections.sort(myPokemon, (p1, p2) -> { return p1.getType().compareTo(p2.getType());});
 		
 //		for (Pokemon p : myPokemon) {
 //			System.out.println(p);
 //		}
+		
+		
+		
+		/*
+		 * Similar to calling Collections.sort() on a Generic type that does not have a defined means of sorting,
+		 * The Pokemon instances may not be inserted into either a TreeMap or a TreeSet unless you
+		 * 
+		 * 		=> Define a means of sorting, aka have Pokemon implement Comparable
+		 * 
+		 * 		=> Pass an instance of a Comparator into the constructor
+		 * 
+		 * 
+		 * Why is this? Because both TreeMap and TreeSet order the insertion of objects into the collection based on a sorting method,
+		 * whether it be implicit (Strings, primitives) or explicit (Having the class to be inserted to the TreeMap/TreeSet implement Comparable,
+		 * or passing an instance of a Comparator to the constructor)
+		 */
+		
+		
+		
 		
 		
 //		Set<String> myExampleTreeSet = new TreeSet<>();
@@ -126,11 +178,18 @@ public class Pokemon {
 		trainers.put("Misty", new Pokemon("Water", 14, "Staryu"));
 		trainers.put("Yuvi", new Pokemon("Psychic", 14, "Alakaza"));
 		
+		
+		/* Example of how to iterate through a Map, getting each Key/Value pair */
 		Iterator it = trainers.entrySet().iterator();
 		while (it.hasNext()) {
 			Map.Entry pair = (Map.Entry) it.next();
 			System.out.println(pair.getKey() + " => " + pair.getValue());
 		}
+		
+		
+		/* Or, this lambda expression is equivalent */
+		
+		trainers.forEach((k, v) -> System.out.println(k + " => " + v));
 		
 	}
 }
