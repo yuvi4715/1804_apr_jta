@@ -16,6 +16,7 @@ public class FileInOut {
 	public static void main(String[] args) throws IOException {
 
 		
+		//open file
 		HashMap<String, Employee> companyHM = new HashMap<>();
 		String myLine = null;		
 		File file = new File("C:\\Users\\Adam Ranieri\\Desktop\\employees.txt");
@@ -23,6 +24,7 @@ public class FileInOut {
 		
 		
 		
+		// adds lines to a list
 		List<String> list = new ArrayList<String>();
 		while (input.hasNextLine()) {
 		    list.add(input.nextLine());
@@ -30,7 +32,7 @@ public class FileInOut {
 		
 		
 	
-		
+		// adds elements in the list to a hashmap
 		for (int i = 0; i < list.size(); i++)	{
 		myLine = list.get(i);
 		StringTokenizer t = new StringTokenizer(myLine, ":");		

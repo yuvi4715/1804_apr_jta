@@ -30,13 +30,6 @@ public class Questions {
 		
 //		Collections.sort(companyA, new employeeSorterAge());
 		
-		
-		// Prints all		
-		for (Employee e : companyA) {
-			System.out.println(e);
-	}
-//		
-		
 		Collections.sort(companyA,new employeeSorter());
 		// Prints all
 //		for (Employee e : companyA) {

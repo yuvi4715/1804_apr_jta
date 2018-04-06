@@ -1,5 +1,9 @@
 package bonus;
 
+import java.util.Arrays;
+import java.util.Set;
+import java.util.TreeSet;
+
 import advanced.coding.Questions;
 import advanced.coding.Questions.*;
 
@@ -11,6 +15,7 @@ public class BonusQuestions {
 	//	question57("wow");
 	//	question49();
 	//	question56();
+	//    question61(); do not use
 		
 		
 	}
@@ -49,9 +54,17 @@ public class BonusQuestions {
 		
 	}
 	
-	public static void question63() {
+	public static void question61() {
+		// currently broken do not use
+		int array[] = {1,2,3,4,4,4,5,5,6,7,8,9};
 		
-		double radius = 1;
+		Set uniqueNums = new TreeSet();
+		
+		uniqueNums.addAll(Arrays.asList(array));
+		System.out.println( uniqueNums);
+		
+		
+		
 		
 		
 		
