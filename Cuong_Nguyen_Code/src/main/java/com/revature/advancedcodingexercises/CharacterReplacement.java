@@ -8,15 +8,14 @@ public class CharacterReplacement {
 	 */
 	public static void main(String[] args) {
 		String toReplace = "Happy";
-		System.out.println(toReplace);
+		System.out.println("The first string: " + toReplace);
 		CharacterReplacement ReplaceMe = new CharacterReplacement();
 		ReplaceMe.replacer(toReplace);
-		System.out.println(toReplace);
 
 	}
-	public String replacer(String hi) {
-		String hello = hi.substring(0) +'s'+ hi.substring(1);
-		return hello;
+	public void replacer(String hi) {
+		String hello = 'S'+ hi.substring(1);
+		System.out.println("The string after replacing: " + hello);
 	}
 
 }

@@ -1,6 +1,10 @@
 package com.revature.OOP;
 
 public interface Animal {
-	void eat();
-	void move();
+
+	abstract void eat();
+	default void move() {
+		System.out.println("Animal is moving to new location.");
+	}
+
 }

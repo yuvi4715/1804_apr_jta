@@ -15,9 +15,14 @@ public class FizzBuzz {
 			int MultipleThree, MultipleFive;
 			MultipleThree = numberPrinter % 3;
 			MultipleFive = numberPrinter % 5;
-			if (MultipleThree != 0 && MultipleFive != 0) {
+			if (MultipleThree != 0 && MultipleFive != 0)
 				System.out.println(numberPrinter);
-			}
+			if (MultipleThree == 0 & MultipleFive != 0)
+				System.out.println("Fizz");
+			if (MultipleFive == 0 & MultipleThree != 0)
+				System.out.println("Buzz");
+			if (MultipleFive == 0 & MultipleThree == 0)
+				System.out.println("FizzBuzz");
 		}
 	}
 

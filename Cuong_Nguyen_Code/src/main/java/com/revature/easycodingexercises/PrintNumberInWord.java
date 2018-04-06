@@ -1,8 +1,12 @@
 package com.revature.easycodingexercises;
 
+import java.util.Scanner;
+
 public class PrintNumberInWord {
 	public static void main(String[] args) {
-		int number = 19;
+		Scanner user = new Scanner(System.in);
+		System.out.println("Please enter in a number to print in word: ");
+		int number = user.nextInt();
 		String NumberInWord;
 		switch (number) {
 		case 1:
@@ -38,6 +42,7 @@ public class PrintNumberInWord {
 		}
 
 		System.out.println(NumberInWord);
+		user.close();
 
 	}
 }
