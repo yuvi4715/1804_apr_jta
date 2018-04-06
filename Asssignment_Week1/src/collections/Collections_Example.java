@@ -1,6 +1,5 @@
 package collections;
 //Kevin Rivera - Revature
-
 //Assignment Week 1: Collections - Problem 21, 22, 23.
 //This class contains an examples of classes that extend the Collection class,
 //and how to add items, iterate, sort, and print their items.
