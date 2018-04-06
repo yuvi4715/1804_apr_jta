@@ -1,15 +1,20 @@
 package com.revature.Homework.ProblemTwelve;
 
+import java.io.PrintStream;
 
 public class ProblemTwelve  {
-	public static void main(String... strings ) {
+	public static void main(String... strings ) 
+	{
+		test01(System.out);
+	}
+	public static void test01(PrintStream out) {
 		try {
-			System.out.println("Starting try block");
+			out.println("Starting try block");
 			throw new ProblemTwelveException();
 		}catch(Exception e) {
-			System.out.println("Starting catch block");
+			out.println("Starting catch block");
 		} finally {
-			System.out.println("Starting finally block");
+			out.println("Starting finally block");
 		}
 	}
 }

@@ -1,14 +1,15 @@
 package com.revature.Homework.ProblemNine;
 
+import java.io.PrintStream;
 
 public abstract class Mammal  implements Animal {
 
-	public void eat() {
-		System.out.println("Eating");
+	public void eat(PrintStream out) {
+		out.println("Eating");
 	}
 	
-	public static void walk() {
-		System.out.println("Walking");
+	public static void walk(PrintStream out) {
+		out.println("Walking");
 	}
 
 }

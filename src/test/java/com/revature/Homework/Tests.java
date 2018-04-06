@@ -2,22 +2,42 @@ package com.revature.Homework;
 
 import static org.junit.Assert.assertTrue;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.revature.Homework.ProblemEighteen.ProblemEighteenMain;
+import com.revature.Homework.ProblemEighth.ProblemEighth;
+import com.revature.Homework.ProblemEleven.ProblemEleven;
 import com.revature.Homework.ProblemFive.ProblemFiveMain;
 import com.revature.Homework.ProblemFour.ProblemFour;
+import com.revature.Homework.ProblemFourteen.ProblemFourteen;
+import com.revature.Homework.ProblemNine.ProblemNineMain;
 import com.revature.Homework.ProblemOne.Question01;
+import com.revature.Homework.ProblemSeven.ProblemSevenBankCustomer;
+import com.revature.Homework.ProblemSeventeen.ProblemSeventeenMain;
+import com.revature.Homework.ProblemSixteen.ProblemSixteenMain;
+import com.revature.Homework.ProblemTen.ProblemTen;
+import com.revature.Homework.ProblemThirteen.ProblemThirdteenMain;
+import com.revature.Homework.ProblemThirtyThree.CheckOddEven;
+import com.revature.Homework.ProblemThirtyTwo.CheckPassFail;
 import com.revature.Homework.ProblemThree.Question3;
+import com.revature.Homework.ProblemTwelve.ProblemTwelve;
+import com.revature.Homework.ProblemTwentyEight.ProblemTwentyEightMain;
+import com.revature.Homework.ProblemTwentySeven.ProblemTwentySevenMain;
+import com.revature.Homework.ProblemTwentySix.ProblemTwentySixMain;
 import com.revature.Homework.ProblemTwo.Question2;
+import com.revature.Homework.ProblemsSix.ProblemSix;
 
 public class Tests {
 
 	private ByteArrayOutputStream outContent;
+	
 	private PrintStream out;
 	@Before
 	public void setUpStreams() {
@@ -27,9 +47,13 @@ public class Tests {
 	}
 
 	@After
-	public void tearDown() {
+	public void tearDown() throws IOException {
 		System.out.println("******* END TEST *******");
+		outContent.close();
+		out.close();
+		System.setIn(System.in);
 	}
+	/*
 	@Test
 	public void testOneProblemFourtyseven() {
 		ProblemFiveMain.test01(out);
@@ -114,207 +138,225 @@ public class Tests {
 		String s = "";
 		assertTrue((s).equals(outContent.toString()));
 	}
-	@Test
+*/	@Test
 	public void testOneProblemThirtyfive() {
-		ProblemFiveMain.test01(out);
+		ByteArrayInputStream in = new ByteArrayInputStream((
+				"1\r\n" +
+				"2.0\r\n" +
+				"l\r\n" 
+				).getBytes());
+		System.setIn(in);
+		com.revature.Homework.ProblemThirtyFive.KeyboardScanner.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Enter Number\r\n" + 
+				"Enter Double Presicion\r\n" + 
+				"Enter String\r\n" + 
+				"Integer 1\r\n" + 
+				"Double 2.0\r\n" + 
+				"String l\r\n" + 
+				"";
 		assertTrue((s).equals(outContent.toString()));
 	}
+
 	@Test
 	public void testOneProblemThrityfour() {
-		ProblemFiveMain.test01(out);
+		ByteArrayInputStream in = new ByteArrayInputStream("1".getBytes());
+		System.setIn(in);
+		com.revature.Homework.ProblemThirtyFour.Main.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Enter Number\r\n" +
+				"One\r\n" + 
+				"One\r\n" ;
 		assertTrue((s).equals(outContent.toString()));
 	}
+
 	@Test
 	public void testOneProblemThirtythree() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
+		ByteArrayInputStream in = new ByteArrayInputStream("3".getBytes());
+		System.setIn(in);
+		CheckOddEven.test01(out);
+		String result = outContent.toString();
+		System.out.println(result);
+		String s = "Enter Number\r\n" +  
+				"Odd\r\n";
+		assertTrue((s).equals(result));
 	}
 	@Test
 	public void testOneProblemThritytwo() {
-		ProblemFiveMain.test01(out);
+		ByteArrayInputStream in = new ByteArrayInputStream("5".getBytes());
+		System.setIn(in);
+		CheckPassFail.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Enter Number\r\n" + 
+				"FAIL\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemThrityone() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
+		//TODO	
 	}
 	@Test
 	public void testOneProblemThirty() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
+		//TODO
 	}
 	@Test
 	public void testOneProblemTwentynine() {
-		ProblemFiveMain.test01(out);
+		//TODO
+	}
+	@Test
+	public void testOneProblemTwentyeight() throws NumberFormatException, IOException {
+		ProblemTwentyEightMain.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "1 : pedro\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
-	public void testOneProblemTwentyeight() {
-		ProblemFiveMain.test01(out);
+	public void testOneProblemtTwentyseven() throws NumberFormatException, IOException {
+		ProblemTwentySevenMain.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Employee [FirstName=pedro, LastName=rodriguez, Role=engineer, id=1]\r\n" + 
+				"Employee [FirstName=pedro, LastName=rodriguez, Role=engineer, id=1]\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
-	public void testOneProblemtTwentyseven() {
-		ProblemFiveMain.test01(out);
+	public void testOneProblemTwentysix() throws NumberFormatException, IOException {
+		ProblemTwentySixMain.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Employee [FirstName=pedro, LastName=rodriguez, Role=engineer, id=1]\r\n" + 
+				"Employee [FirstName=pedro, LastName=rodriguez, Role=engineer, id=1]\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
-	@Test
-	public void testOneProblemTwentysix() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
-	}
-	@Test
-	public void testOneProblemTwentyfive() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
-	}
-	@Test
-	public void testOneProblemTwentyfour() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
-	}
+	
 	@Test
 	public void testOneProblemTwentythree() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemTwentytwo() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
+		//TODO
+	}
+	@Test
+	public void testOneProblemTwentyonw() {
+		//TODO
 	}
 	@Test
 	public void testOneProblemTwenty() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
+		//TODO
 	}
 	@Test
 	public void testOneProblemNineteen() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
+		//TODO
 	}
 	@Test
 	public void testOneProblemEighteen() {
-		ProblemFiveMain.test01(out);
+		ProblemEighteenMain.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Totals : 65\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemSeventeen() {
-		ProblemFiveMain.test01(out);
+		ProblemSeventeenMain.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "pickles\r\n" + 
+				"ketchup\r\n" + 
+				"mustard\r\n" + 
+				"onion\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemSixteen() {
-		ProblemFiveMain.test01(out);
+		ProblemSixteenMain.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "String Hell \r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemFifteen() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
+		//TODO cant implement because of System.exit
 	}
 	@Test
 	public void testOneProblemFourteen() {
-		ProblemFiveMain.test01(out);
+		ProblemFourteen.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Top of the morning to you\r\n" + 
+				   "Good bye !\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemThridteen() {
-		ProblemFiveMain.test01(out);
+		ProblemThirdteenMain.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Problem ten Error\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemTwelve() {
-		ProblemFiveMain.test01(out);
+		ProblemTwelve.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Starting try block\r\n" + 
+				"Starting catch block\r\n" + 
+				"Starting finally block\r\n"	;
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemEleven() {
-		ProblemFiveMain.test01(out);
+		ProblemEleven.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Problem Eleven Error\r\n" ;
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemTen() {
-		ProblemFiveMain.test01(out);
+		ProblemTen.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Problem ten Error\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemNine() {
-		ProblemFiveMain.test01(out);
+		ProblemNineMain.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Human eating\r\n" + 
+				"Moving\r\n" + 
+				"Human eating\r\n" + 
+				"Moving\r\n" + 
+				"Walking\r\n" + 
+				"Human eating\r\n" + 
+				"Moving\r\n" + 
+				"Walking\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
+
 	@Test
 	public void testOneProblemEight() {
-		ProblemFiveMain.test01(out);
+		ProblemEighth.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Lerry ID: 0 has a balance of 180000.0\r\n" + 
+				"Terry ID: 1 has a balance of 180000.0\r\n" + 
+				"ProblemEightBankCustomer [name=Lerry, balance=40000.0, customerID=0]\r\n" + 
+				"ProblemEightBankCustomer [name=Terry, balance=40000.0, customerID=1]\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemSeven() {
-		ProblemFiveMain.test01(out);
+		ProblemSevenBankCustomer.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "ProblemSevenBankCustomer [name=Antonio, balance=0.0, customerID=0]\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemSix() {
-		ProblemFiveMain.test01(out);
+		ProblemSix.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Executed if\r\n" + 
+				"Executed switch\r\n" + 
+				"For loop executed 1 times\r\n" + 
+				"For loop executed 2 times\r\n" + 
+				"For loop executed 3 times\r\n" + 
+				"Executed while loop\r\n" + 
+				"do while loop executed\r\n" + 
+				"Executed break statement\r\n" + 
+				"Executed continue statement\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test

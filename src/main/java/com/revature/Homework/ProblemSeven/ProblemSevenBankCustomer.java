@@ -1,8 +1,9 @@
 package com.revature.Homework.ProblemSeven;
 
+import java.io.PrintStream;
 
 public class ProblemSevenBankCustomer {
-
+		
 		private static long customerCount=0L;
 		private String name;
 		private double balance;
@@ -56,5 +57,16 @@ public class ProblemSevenBankCustomer {
 		public void setBalance(double balance) {
 			this.balance = balance;
 		}
-		
+		@Override
+		public String toString() {
+			return "ProblemSevenBankCustomer [name=" + name + ", balance=" + balance + ", customerID=" + customerID
+					+ "]";
+		}
+		public static void test01(PrintStream out) {
+			ProblemSevenBankCustomer cus = new ProblemSevenBankCustomer("Antonio");
+			out.println(cus);
+		}
+		public static void main(String[] args) {
+			test01(System.out);
+		}
 }

@@ -6,15 +6,16 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import com.revature.Homework.ProblemTwentySix.Employee;
-
 public class ProblemTwentySevenMain {
-	
 	public static void main(String[] args) throws IOException {
+		test01(System.out);
+	}
+	public static void test01(PrintStream out) throws NumberFormatException, IOException {
 		BufferedReader inputStream=null;
 		List<Employee> empList = new ArrayList<Employee>();
 		try {
@@ -35,7 +36,7 @@ public class ProblemTwentySevenMain {
 				inputStream.close();
 		}
 		for(Employee e:empList)
-			System.out.println(e);
+			out.println(e);
 	}
 	
 }

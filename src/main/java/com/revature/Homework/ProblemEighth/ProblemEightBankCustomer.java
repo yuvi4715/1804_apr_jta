@@ -1,5 +1,6 @@
 package com.revature.Homework.ProblemEighth;
 
+import java.io.PrintStream;
 
 public class ProblemEightBankCustomer {
 
@@ -15,6 +16,11 @@ public class ProblemEightBankCustomer {
 		ProblemEightBankCustomer(String pName,int pBalance){
 			this(pName);
 			balance = pBalance;
+		}
+		@Override
+		public String toString() {
+			return "ProblemEightBankCustomer [name=" + name + ", balance=" + balance + ", customerID=" + customerID
+					+ "]";
 		}
 		public void raiseBalanceByPercentage(double percent) {
 			balance += balance*(percent);
@@ -36,8 +42,8 @@ public class ProblemEightBankCustomer {
 		public static long getCustomerCount() {
 			return customerCount;
 		}
-		public static void printName(ProblemEightBankCustomer pCust) {
-			System.out.println(pCust.name+" ID: "+pCust.customerID+" has a balance of "+pCust.balance);
+		public static void printName(ProblemEightBankCustomer pCust, PrintStream out) {
+			out.println(pCust.name+" ID: "+pCust.customerID+" has a balance of "+pCust.balance);
 		}
 		public String getName() {
 			return name;

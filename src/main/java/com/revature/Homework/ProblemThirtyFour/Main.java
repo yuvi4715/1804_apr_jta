@@ -1,66 +1,69 @@
 package com.revature.Homework.ProblemThirtyFour;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Main {
 	 public static void main(String[] args) {
-		
+		test01(System.out);
+	 }
+	 public static void test01(PrintStream out) {
 		 Scanner in = new Scanner(System.in);	
 		int number = 0;
-		System.out.println("Enter Number");
+		out.println("Enter Number");
 		if(in.hasNextInt())
 			number = in.nextInt();
 		if(number==1) {
-			System.out.println("One");
+			out.println("One");
 		} else if(number==2) {
-			System.out.println("Two");
+			out.println("Two");
 		} else if(number==3) {
-			System.out.println("Three");
+			out.println("Three");
 		} else if(number==4) {
-			System.out.println("Four");
+			out.println("Four");
 		} else if(number==5) {
-			System.out.println("Five");
+			out.println("Five");
 		} else if(number==6) {
-			System.out.println("Six");
+			out.println("Six");
 		} else if(number==7) {
-			System.out.println("Seven");
+			out.println("Seven");
 		} else if(number==8) {
-			System.out.println("Eight");
+			out.println("Eight");
 		} else if(number==9) {
-			System.out.println("Nine");
+			out.println("Nine");
 		} else{
-			System.out.println("Other");
+			out.println("Other");
 		}
 		switch(number) {
 		case 1:
-			System.out.println("One");
+			out.println("One");
 			break;
 		case 2:
-			System.out.println("Two");
+			out.println("Two");
 			break;
 		case 3:
-			System.out.println("Three");
+			out.println("Three");
 			break;
 		case 4:
-			System.out.println("Four");
+			out.println("Four");
 			break;
 		case 5:
-			System.out.println("Five");
+			out.println("Five");
 			break;
 		case 6:
-			System.out.println("Six");
+			out.println("Six");
 			break;
 		case 7:
-			System.out.println("Seven");
+			out.println("Seven");
 			break;
 		case 8:
-			System.out.println("Eight");
+			out.println("Eight");
 			break;
 		case 9:
-			System.out.println("Nine");
+			out.println("Nine");
 			break;
 		default:
-			System.out.println("Other");
+			out.println("Other");
 			break;
 		}
 	}

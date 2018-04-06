@@ -1,19 +1,22 @@
 package com.revature.Homework.ProblemThirtyTwo;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class CheckPassFail {
 	 public static void main(String[] args) {
-		System.out.println("Enter Number");
+		test01(System.out);
+	}
+	 public static void test01(PrintStream out ) {
+		 out.println("Enter Number");
 		 Scanner in = new Scanner(System.in);	
 		int mark = 0;
 		if(in.hasNextInt())
 			mark = in.nextInt();
 		if(mark>50) {
-			System.out.println("PASS");
+			out.println("PASS");
 		} else {
-			System.out.println("FAIL");
+			out.println("FAIL");
 		}
-		
-	}
+	 }
 }

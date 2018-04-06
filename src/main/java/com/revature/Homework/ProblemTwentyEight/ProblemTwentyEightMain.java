@@ -3,14 +3,20 @@ package com.revature.Homework.ProblemTwentyEight;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class ProblemTwentyEightMain {
 	
 	public static void main(String[] args) throws IOException {
+		test01(System.out);
+	}
+	
+	public static void test01(PrintStream out ) throws NumberFormatException, IOException {
 		BufferedReader inputStream=null;
 		HashMap<Long,String> empMap = new HashMap<Long,String>();
 		try {
@@ -29,7 +35,7 @@ public class ProblemTwentyEightMain {
 				inputStream.close();
 		}
 		for(Long e:empMap.keySet()) {			
-			System.out.println(e+" : "+empMap.get(e));
+			out.println(e+" : "+empMap.get(e));
 		}
 	}
 	

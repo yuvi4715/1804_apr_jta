@@ -1,6 +1,7 @@
 package com.revature.Homework.ProblemTwentyTwo;
 
 
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -9,6 +10,10 @@ import java.util.TreeSet;
 
 public class ProblemTwentyTwoMain {
 	public static void main(String[] args) {
+		test01(System.out);
+	}
+	public static void test01(PrintStream out)
+	{
 		ArrayList<Integer> aList = new ArrayList<Integer>();
 		LinkedList<Integer> lList = new LinkedList<Integer>();
 		HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
@@ -23,23 +28,23 @@ public class ProblemTwentyTwoMain {
 		}
 		System.out.println("ArrayList: ");
 		for(Integer i:aList) {
-			System.out.println(i);
+			out.println(i);
 		}
-		System.out.println("LinkedList: ");
+		out.println("LinkedList: ");
 		for(Integer i:lList) {
-			System.out.println(i);
+			out.println(i);
 		}
-		System.out.println("HashMap: ");
+		out.println("HashMap: ");
 		for(Integer i:map.keySet()) {
-			System.out.println(i+" : "+map.get(i));
+			out.println(i+" : "+map.get(i));
 		}
-		System.out.println("TreeSet: ");
+		out.println("TreeSet: ");
 		for(Integer i:treeset) {
-			System.out.println(i);
+			out.println(i);
 		}
-		System.out.println("HashSet: ");
+		out.println("HashSet: ");
 		for(Integer i:hSet) {
-			System.out.println(i);
+			out.println(i);
 		}
 	}
 }
