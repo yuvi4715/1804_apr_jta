@@ -18,7 +18,6 @@ public class Questions16Through20 {
 		 * a given point in the program, which could be useful, especially when used in conjunction with
 		 * the maxMemory method to determine the cap
 		 * I could use the halt method in a dead end error block to force the error to end the program
-		 * I could use 
 		 */
 	}
 	

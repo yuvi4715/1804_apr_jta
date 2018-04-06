@@ -21,7 +21,7 @@ public class ExcercisesIO {
 	}
 	
 	void readEmployees() throws IOException{
-		fr = new FileReader("C:\\Users\\pinky\\Documents\\workspace-sts-3.9.3.RELEASE\\Assignment_Week_1\\src\\main\\resources\\Employees");
+		fr = new FileReader("src\\main\\resources\\Employees");
 		BufferedReader in = new BufferedReader(fr);
 		
 		while((s =in.readLine()) != null) {

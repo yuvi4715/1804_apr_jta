@@ -57,12 +57,6 @@ public class MethodsACE {
 		}
 	}
 	
-	//Question 42
-//	public void compareEmployees() {
-//		Employee e1 = new Employee(1,"Nick","McComb","Associate");
-//		Employee e2 = new Employee
-//	}
-	
 	//Question 43
 	public boolean isArmstrong(int n) {
 		int starter = n;
