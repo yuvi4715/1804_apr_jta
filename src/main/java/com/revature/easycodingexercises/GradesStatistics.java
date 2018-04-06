@@ -2,6 +2,7 @@ package com.revature.easycodingexercises;
 
 import javax.swing.plaf.synth.SynthSpinnerUI;
 
+// Question 37
 public class GradesStatistics {
 
 	public static void main(String[] args) {

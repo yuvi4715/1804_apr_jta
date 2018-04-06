@@ -1,5 +1,6 @@
 package com.revature.classmembers;
 
+// Question 7
 public class Customer {
 		
 	private String firstName;

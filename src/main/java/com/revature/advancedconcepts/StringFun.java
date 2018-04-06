@@ -9,7 +9,7 @@ public class StringFun {
 	public static void main(String[] args) {
 		
 		// StringBuilders
-		
+		// Question 16
 		StringBuilder theStringBuilder = new StringBuilder("Daredevil is cool.");
 		theStringBuilder.append(" Iron Fist is cool too.");
 		theStringBuilder.insert(18, " Jessica Jones is super cool.");
@@ -20,7 +20,7 @@ public class StringFun {
 		System.out.println(theStringBuilder);
 		
 		// StringTokenizers
-		
+		// Question 17
 		String tags = "pop,rock,punk,top-40,classic-rock";
 		StringTokenizer theStringTokenizer = new StringTokenizer(tags, ",");
 		while (theStringTokenizer.hasMoreTokens()) {
@@ -31,15 +31,18 @@ public class StringFun {
 		System.out.println(addTwoNumberStrings("10", "5"));
 		
 		// request Garbage Collection
+		// Question 19
 		System.gc();
 		
 		// create a Runtime object and note at least three methods
+		// Question 20
 		Runtime rt = Runtime.getRuntime();
 		System.out.println("Available Processors: " + rt.availableProcessors());
 		System.out.println("Free Memory: " + rt.freeMemory());
 		System.out.println("Total Memory: " + rt.totalMemory());
 	}
 	
+	// Question 18
 	public static int addTwoNumberStrings(String num1, String num2) {
 		return Integer.parseInt(num1) + Integer.parseInt(num2);
 	}

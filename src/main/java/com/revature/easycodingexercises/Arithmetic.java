@@ -1,5 +1,6 @@
 package com.revature.easycodingexercises;
 
+// Question 36
 public class Arithmetic {
 	public static void main(String[] args) {
 		if (args.length == 0) {
@@ -21,8 +22,6 @@ public class Arithmetic {
 				System.out.println("Not a valid operator");
 			}
 		}
-		
-		
-		
+			
 	}
 }

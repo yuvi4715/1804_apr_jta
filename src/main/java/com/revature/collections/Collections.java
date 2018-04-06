@@ -17,7 +17,7 @@ public class Collections {
 		
 		// Create an ArrayList, LinkedList, HashMap, TreeSet, and a HashSet. 
 		// Insert 3 objects into each.
-
+		// Question 21
 		ArrayList<String> theArrayList = new ArrayList<>();
 		LinkedList<String> theLinkedList = new LinkedList<>();
 		HashMap<String, String> theHashMap = new HashMap<>();
@@ -45,7 +45,7 @@ public class Collections {
 		theHashSet.add("Scarlet Witch");
 
 		// Iterate over the collections and print each object
-		
+		// Question 22
 		for (String hero : theArrayList) {
 			System.out.println(hero);
 		}
@@ -71,7 +71,7 @@ public class Collections {
 		}
 		
 		// Sort the collecions and compare the original to the sorted collection
-		
+		// Question 23
 		System.out.println("theArrayList: " + theArrayList);
 		theArrayList.sort((a, b) -> a.compareTo(b));
 		System.out.println("theArrayList after sort: " + theArrayList);

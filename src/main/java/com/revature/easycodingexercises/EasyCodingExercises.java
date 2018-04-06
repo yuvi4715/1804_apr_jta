@@ -5,24 +5,27 @@ import java.util.Scanner;
 public class EasyCodingExercises {
 
 	public static void main(String[] args) {
-//		checkPassFail(50);
-//		checkOddEven(78);
-//		printNumberInWord(9, true, true);
+		checkPassFail(50);
+		checkOddEven(78);
+		printNumberInWord(9, true, true);
 		
 //		keyboardScanner();
 		
 	}
 	
+	// Question 32
 	static void checkPassFail(int mark) {
 		String result = mark >= 50 ? "PASS" : "FAIL";
 		System.out.println(result);
 	}
 	
+	// Question 33
 	static void checkOddEven(int n) {
 		String result = n % 2 != 0 ? "Odd Number" : "Even Number";
 		System.out.println(result);
 	}
 	
+	// Question 34
 	static void printNumberInWord(int n, boolean isDaytime, boolean isWeekday) {
 		if (isDaytime) {
 			System.out.println("It is daytime");
@@ -64,6 +67,7 @@ public class EasyCodingExercises {
 		}
 	}
 	
+	// Question 35
 	static void keyboardScanner() {
 		Scanner scanner = new Scanner(System.in);
 		
@@ -79,31 +83,5 @@ public class EasyCodingExercises {
 		stringInput = scanner.nextLine();
 		System.out.println("You entered: " + stringInput);
 	}
-//	
-//	static void arithmetic() {
-//		Scanner scanner = new Scanner(System.in);
-//		System.out.print("Enter an integer: ");
-//		int a = Integer.parseInt(scanner.nextLine());
-//		
-//		System.out.print("Enter another integer: ");
-//		int b = Integer.parseInt(scanner.nextLine());
-//		
-//		System.out.print("Enter an arithmetic operator: ");
-//		String operator = scanner.nextLine();
-//		
-//		if (operator.equals("+")) {
-//			System.out.println(a + b);
-//		} else if (operator.equals("-")) {
-//			System.out.println(a - b);
-//		} else if (operator.equals("*")) {
-//			System.out.println(a * b);
-//		} else if (operator.equals("/")) {
-//			System.out.println(a / b);
-//		} else {
-//			System.out.println("Not a valid operator");
-//		}
-//	}
-	
-	
 
 }

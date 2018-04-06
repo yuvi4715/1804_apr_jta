@@ -10,7 +10,6 @@ import java.util.StringTokenizer;
 
 public class FileRead {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		try {
 			readWriteBytes();
 		} catch (IOException e) {
@@ -19,6 +18,7 @@ public class FileRead {
 			
 	}
 
+	// Question 24, 25
 	static void readWriteBytes() throws IOException {
 		FileInputStream fis = new FileInputStream("/Users/andrewmcgovern/Documents/workspace-sts-3.9.3.RELEASE/1804_apr_java/src/main/java/com/revature/fileio/employee.txt");
 		InputStreamReader isr = new InputStreamReader(fis);
@@ -26,6 +26,7 @@ public class FileRead {
 				
 		ArrayList list = new ArrayList();
 		
+		// Question 26
 		StringTokenizer tokenizer = new StringTokenizer(br.readLine(), ":");
 		while (tokenizer.hasMoreTokens()) {
 			list.add(tokenizer.nextToken());
@@ -36,8 +37,10 @@ public class FileRead {
 		String lastName = (String) list.get(2);
 		String role = (String) list.get(3);
 
+		// Question 27
 		Employee theEmployee = new Employee(id, firstName, lastName, role);
 		
+		// Question 28
 		HashMap<String, Employee> ht = new HashMap<>();
 		ht.put(theEmployee.getId(), theEmployee);
 		System.out.println(ht);
