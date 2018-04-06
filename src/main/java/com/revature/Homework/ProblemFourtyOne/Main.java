@@ -1,13 +1,12 @@
 package com.revature.Homework.ProblemFourtyOne;
 
-import java.math.BigInteger;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Scanner;
+import java.io.PrintStream;
 
 public class Main {
 	public static void main(String[] args) {
+		test01(System.out);
+	}	
+	public static void test01(PrintStream out) {
 		for(int i=1;i<=50;i++)
 		{
 			String s ="";
@@ -19,7 +18,7 @@ public class Main {
 			}
 			if(s.length()==0)
 				s+=i;
-			System.out.println(s);
+			out.println(s);
 		}
-	}	
+	}
 }

@@ -1,13 +1,16 @@
 package com.revature.Homework.ProblemThirtyEight;
 
 
-import java.util.Scanner;
+import java.io.PrintStream;
 
 public class Main {
 	 public static void main(String[] args) {		
+		test01(System.out);
+	 }
+	 public static void test01(PrintStream out) {
 		String hello = "Jerry";
-		System.out.println(replaceChar(hello, 'T', 0));
-		System.out.println(replaceChar(hello, 'T', 3));
+		out.println(replaceChar(hello, 'T', 0));
+		out.println(replaceChar(hello, 'T', 3));
 	 }
 	 public static String replaceChar(String s,char c,int location) {
 		 if(location>(s.length()-1))

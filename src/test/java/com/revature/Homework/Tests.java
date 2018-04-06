@@ -9,6 +9,7 @@ import java.io.PrintStream;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.revature.Homework.ProblemEighteen.ProblemEighteenMain;
@@ -53,92 +54,377 @@ public class Tests {
 		out.close();
 		System.setIn(System.in);
 	}
-	/*
 	@Test
 	public void testOneProblemFourtyseven() {
 		ProblemFiveMain.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "4\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemFourtysix() {
-		ProblemFiveMain.test01(out);
+		com.revature.Homework.ProblemFourtySix.Main.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "9 10\r\n" + 
+				"10 9\r\n" ;
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemFourtyfive() {
-		ProblemFiveMain.test01(out);
+		ByteArrayInputStream in = new ByteArrayInputStream((
+				"13\r\n"  
+			).getBytes());
+		System.setIn(in);
+		com.revature.Homework.ProblemFourtyFive.Main.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Enter Number:\r\n"+ 
+				"Is Prime\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemFourtyfour() {
-		ProblemFiveMain.test01(out);
+		ByteArrayInputStream in = new ByteArrayInputStream((
+			"anna\r\n" 
+			).getBytes());
+		System.setIn(in);
+		com.revature.Homework.ProblemFourtyFour.Main.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Enter String:\r\n" + 
+				"anna\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemFourtythree() {
-		ProblemFiveMain.test01(out);
+		ByteArrayInputStream in = new ByteArrayInputStream((
+			"371\r\n" 
+			).getBytes());
+		System.setIn(in);
+		com.revature.Homework.ProblemFourtyThree.Main.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Enter number: \r\n" +
+				"Is an Armstrong Number\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemFourtytwo() {
-		ProblemFiveMain.test01(out);
-		System.out.println(outContent.toString());
-		String s = "";
-		assertTrue((s).equals(outContent.toString()));
+		//TODO
 	}
 	@Test
 	public void testOneProblemFourtyone() {
-		ProblemFiveMain.test01(out);
+		com.revature.Homework.ProblemFourtyOne.Main.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "1\r\n" + 
+				"2\r\n" + 
+				"Fizz\r\n" + 
+				"4\r\n" + 
+				"Buzz\r\n" + 
+				"Fizz\r\n" + 
+				"7\r\n" + 
+				"8\r\n" + 
+				"Fizz\r\n" + 
+				"Buzz\r\n" + 
+				"11\r\n" + 
+				"Fizz\r\n" + 
+				"13\r\n" + 
+				"14\r\n" + 
+				"FizzBuzz\r\n" + 
+				"16\r\n" + 
+				"17\r\n" + 
+				"Fizz\r\n" + 
+				"19\r\n" + 
+				"Buzz\r\n" + 
+				"Fizz\r\n" + 
+				"22\r\n" + 
+				"23\r\n" + 
+				"Fizz\r\n" + 
+				"Buzz\r\n" + 
+				"26\r\n" + 
+				"Fizz\r\n" + 
+				"28\r\n" + 
+				"29\r\n" + 
+				"FizzBuzz\r\n" + 
+				"31\r\n" + 
+				"32\r\n" + 
+				"Fizz\r\n" + 
+				"34\r\n" + 
+				"Buzz\r\n" + 
+				"Fizz\r\n" + 
+				"37\r\n" + 
+				"38\r\n" + 
+				"Fizz\r\n" + 
+				"Buzz\r\n" + 
+				"41\r\n" + 
+				"Fizz\r\n" + 
+				"43\r\n" + 
+				"44\r\n" + 
+				"FizzBuzz\r\n" + 
+				"46\r\n" + 
+				"47\r\n" + 
+				"Fizz\r\n" + 
+				"49\r\n" + 
+				"Buzz\r\n" ;
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
+	@Ignore
 	public void testOneProblemFourty() {
-		ProblemFiveMain.test01(out);
+		com.revature.Homework.ProblemFourty.Main.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Iterative\r\n" + 
+				"2\r\n" + 
+				"3\r\n" + 
+				"5\r\n" + 
+				"8\r\n" + 
+				"13\r\n" + 
+				"21\r\n" + 
+				"34\r\n" + 
+				"55\r\n" + 
+				"89\r\n" + 
+				"144\r\n" + 
+				"233\r\n" + 
+				"377\r\n" + 
+				"610\r\n" + 
+				"987\r\n" + 
+				"1597\r\n" + 
+				"2584\r\n" + 
+				"4181\r\n" + 
+				"6765\r\n" + 
+				"10946\r\n" + 
+				"17711\r\n" + 
+				"28657\r\n" + 
+				"46368\r\n" + 
+				"75025\r\n" + 
+				"121393\r\n" + 
+				"196418\r\n" + 
+				"317811\r\n" + 
+				"514229\r\n" + 
+				"832040\r\n" + 
+				"1346269\r\n" + 
+				"2178309\r\n" + 
+				"3524578\r\n" + 
+				"5702887\r\n" + 
+				"9227465\r\n" + 
+				"14930352\r\n" + 
+				"24157817\r\n" + 
+				"39088169\r\n" + 
+				"63245986\r\n" + 
+				"102334155\r\n" + 
+				"165580141\r\n" + 
+				"267914296\r\n" + 
+				"433494437\r\n" + 
+				"701408733\r\n" + 
+				"1134903170\r\n" + 
+				"1836311903\r\n" + 
+				"2971215073\r\n" + 
+				"4807526976\r\n" + 
+				"7778742049\r\n" + 
+				"12586269025\r\n" + 
+				"20365011074\r\n" + 
+				"32951280099\r\n" + 
+				"53316291173\r\n" + 
+				"86267571272\r\n" + 
+				"139583862445\r\n" + 
+				"225851433717\r\n" + 
+				"365435296162\r\n" + 
+				"591286729879\r\n" + 
+				"956722026041\r\n" + 
+				"1548008755920\r\n" + 
+				"2504730781961\r\n" + 
+				"4052739537881\r\n" + 
+				"6557470319842\r\n" + 
+				"10610209857723\r\n" + 
+				"17167680177565\r\n" + 
+				"27777890035288\r\n" + 
+				"44945570212853\r\n" + 
+				"72723460248141\r\n" + 
+				"117669030460994\r\n" + 
+				"190392490709135\r\n" + 
+				"308061521170129\r\n" + 
+				"498454011879264\r\n" + 
+				"806515533049393\r\n" + 
+				"1304969544928657\r\n" + 
+				"2111485077978050\r\n" + 
+				"3416454622906707\r\n" + 
+				"5527939700884757\r\n" + 
+				"8944394323791464\r\n" + 
+				"14472334024676221\r\n" + 
+				"23416728348467685\r\n" + 
+				"37889062373143906\r\n" + 
+				"61305790721611591\r\n" + 
+				"99194853094755497\r\n" + 
+				"160500643816367088\r\n" + 
+				"259695496911122585\r\n" + 
+				"420196140727489673\r\n" + 
+				"679891637638612258\r\n" + 
+				"1100087778366101931\r\n" + 
+				"1779979416004714189\r\n" + 
+				"2880067194370816120\r\n" + 
+				"4660046610375530309\r\n" + 
+				"7540113804746346429\r\n" + 
+				"12200160415121876738\r\n" + 
+				"19740274219868223167\r\n" + 
+				"31940434634990099905\r\n" + 
+				"51680708854858323072\r\n" + 
+				"83621143489848422977\r\n" + 
+				"135301852344706746049\r\n" + 
+				"218922995834555169026\r\n" + 
+				"354224848179261915075\r\n" + 
+				"Recursive\r\n"+
+				"2\r\n" + 
+				"3\r\n" + 
+				"5\r\n" + 
+				"8\r\n" + 
+				"13\r\n" + 
+				"21\r\n" + 
+				"34\r\n" + 
+				"55\r\n" + 
+				"89\r\n" + 
+				"144\r\n" + 
+				"233\r\n" + 
+				"377\r\n" + 
+				"610\r\n" + 
+				"987\r\n" + 
+				"1597\r\n" + 
+				"2584\r\n" + 
+				"4181\r\n" + 
+				"6765\r\n" + 
+				"10946\r\n" + 
+				"17711\r\n" + 
+				"28657\r\n" + 
+				"46368\r\n" + 
+				"75025\r\n" + 
+				"121393\r\n" + 
+				"196418\r\n" + 
+				"317811\r\n" + 
+				"514229\r\n" + 
+				"832040\r\n" + 
+				"1346269\r\n" + 
+				"2178309\r\n" + 
+				"3524578\r\n" + 
+				"5702887\r\n" + 
+				"9227465\r\n" + 
+				"14930352\r\n" + 
+				"24157817\r\n" + 
+				"39088169\r\n" + 
+				"63245986\r\n" + 
+				"102334155\r\n" + 
+				"165580141\r\n" + 
+				"267914296\r\n" + 
+				"433494437\r\n" + 
+				"701408733\r\n" + 
+				"1134903170\r\n" + 
+				"1836311903\r\n" + 
+				"2971215073\r\n" + 
+				"4807526976\r\n" + 
+				"7778742049\r\n" + 
+				"12586269025\r\n" + 
+				"20365011074\r\n" + 
+				"32951280099\r\n" + 
+				"53316291173\r\n" + 
+				"86267571272\r\n" + 
+				"139583862445\r\n" + 
+				"225851433717\r\n" + 
+				"365435296162\r\n" + 
+				"591286729879\r\n" + 
+				"956722026041\r\n" + 
+				"1548008755920\r\n" + 
+				"2504730781961\r\n" + 
+				"4052739537881\r\n" + 
+				"6557470319842\r\n" + 
+				"10610209857723\r\n" + 
+				"17167680177565\r\n" + 
+				"27777890035288\r\n" + 
+				"44945570212853\r\n" + 
+				"72723460248141\r\n" + 
+				"117669030460994\r\n" + 
+				"190392490709135\r\n" + 
+				"308061521170129\r\n" + 
+				"498454011879264\r\n" + 
+				"806515533049393\r\n" + 
+				"1304969544928657\r\n" + 
+				"2111485077978050\r\n" + 
+				"3416454622906707\r\n" + 
+				"5527939700884757\r\n" + 
+				"8944394323791464\r\n" + 
+				"14472334024676221\r\n" + 
+				"23416728348467685\r\n" + 
+				"37889062373143906\r\n" + 
+				"61305790721611591\r\n" + 
+				"99194853094755497\r\n" + 
+				"160500643816367088\r\n" + 
+				"259695496911122585\r\n" + 
+				"420196140727489673\r\n" + 
+				"679891637638612258\r\n" + 
+				"1100087778366101931\r\n" + 
+				"1779979416004714189\r\n" + 
+				"2880067194370816120\r\n" + 
+				"4660046610375530309\r\n" + 
+				"7540113804746346429\r\n" + 
+				"12200160415121876738\r\n" + 
+				"19740274219868223167\r\n" + 
+				"31940434634990099905\r\n" + 
+				"51680708854858323072\r\n" + 
+				"83621143489848422977\r\n" + 
+				"135301852344706746049\r\n" + 
+				"218922995834555169026\r\n" + 
+				"354224848179261915075\r\n" ;
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemThirtynine() {
-		ProblemFiveMain.test01(out);
+		ByteArrayInputStream in = new ByteArrayInputStream((
+				"1991\r\n" +
+				"08\r\n" +
+				"24\r\n" 
+				).getBytes());
+		System.setIn(in);
+		com.revature.Homework.ProblemThirtyNine.Main.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Please Enter Year: \r\n"+
+				"Please Enter Month: \r\n" +
+				"Please Enter Day: \r\n" +
+				"27\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemThirtyeight() {
-		ProblemFiveMain.test01(out);
+		com.revature.Homework.ProblemThirtyEight.Main.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Terry\r\n" + 
+				   "JerTy\r\n" ;
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemThirtyseven() {
-		ProblemFiveMain.test01(out);
+		ByteArrayInputStream in = new ByteArrayInputStream((
+				"45\r\n" +
+				"45\r\n" +
+				"45\r\n" +
+				"s\r\n" 
+				).getBytes());
+		System.setIn(in);
+		com.revature.Homework.ProblemThirtySeven.Main.test01(out);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "Enter Number\r\n" +
+				"Enter Number\r\n" +
+				"Enter Number\r\n" +
+				"Enter Number\r\n" +
+				"Minimum = 45.0 Maximum = 45.0, Mean = 45.0, Standard Deviation = 68.7386354243376\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
 	@Test
 	public void testOneProblemThirtysix() {
-		ProblemFiveMain.test01(out);
+		String[] a = {
+				"1.0",
+				"34.56",
+				"+"
+		};
+		com.revature.Homework.ProblemThirtySix.Main.test01(out,a);
 		System.out.println(outContent.toString());
-		String s = "";
+		String s = "35.56\r\n";
 		assertTrue((s).equals(outContent.toString()));
 	}
-*/	@Test
+	@Test
 	public void testOneProblemThirtyfive() {
 		ByteArrayInputStream in = new ByteArrayInputStream((
 				"1\r\n" +
@@ -229,6 +515,7 @@ public class Tests {
 	
 	@Test
 	public void testOneProblemTwentythree() {
+		//TODO
 	}
 	@Test
 	public void testOneProblemTwentytwo() {

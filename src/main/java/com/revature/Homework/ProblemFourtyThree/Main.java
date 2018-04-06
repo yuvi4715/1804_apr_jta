@@ -1,15 +1,15 @@
 package com.revature.Homework.ProblemFourtyThree;
 
-import java.math.BigInteger;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
+		test01(System.out);
+	}	
+	public static void test01(PrintStream out) {
 		Scanner in = new Scanner(System.in);
-		System.out.println("Enter number: ");
+		out.println("Enter number: ");
 		String s;
 		s=in.nextLine();
 		int number = Integer.parseInt(s);
@@ -20,8 +20,8 @@ public class Main {
 			sum+=Math.pow(Integer.parseInt(c+""), length);
 		}
 		if(sum==number)
-			System.out.println("Is an Armstrong Number");
+			out.println("Is an Armstrong Number");
 		else 
-			System.out.println("Is NOT an Armstrong Number");
-	}	
+			out.println("Is NOT an Armstrong Number");
+	}
 }

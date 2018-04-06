@@ -1,22 +1,26 @@
 package com.revature.Homework.ProblemFourty;
 
+import java.io.PrintStream;
 import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
 	 public static void main(String[] args) {
-		 System.out.println("Iterative");
+		 test01(System.out);
+	 }
+	 public static void test01(PrintStream out) {
+		 out.println("Iterative");
 		 BigInteger prev=new BigInteger("1"),prevPrev=new BigInteger("1");
 		 for(int i=0;i<98;i++) {
 			 BigInteger currentFib=prev.add(prevPrev);
 			 prevPrev=prev;
 			 prev=currentFib;
-			 System.out.println(currentFib);
+			 out.println(currentFib);
 		 }
-		 System.out.println("Recursivve");
+		 out.println("Recursive");
 		 for(int i=0;i<=100;i++)
-			 System.out.println(fibonacciRercursive(new BigInteger(i+"")));
+			 out.println(fibonacciRercursive(new BigInteger(i+"")));
 	 }
 	 public static BigInteger fibonacciRercursive(BigInteger number) {
 		BigInteger result = null;

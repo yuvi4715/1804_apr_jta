@@ -1,15 +1,15 @@
 package com.revature.Homework.ProblemFourtyFive;
 
-import java.math.BigInteger;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
+		test01(System.out);
+	}
+	public static void test01(PrintStream out) {
 		Scanner in = new Scanner(System.in);
-		System.out.println("Enter Number:");
+		out.println("Enter Number:");
 		int number=in.nextInt();
 		boolean isPrime=true;
 		for(int i=2;i<Math.sqrt(number);i++) {
@@ -19,8 +19,8 @@ public class Main {
 			}
 		}
 		if(isPrime) {
-			System.out.println("Is Prime");
+			out.println("Is Prime");
 		} else 
-			System.out.println("IS not Prime");
+			out.println("IS not Prime");
 	}
 }

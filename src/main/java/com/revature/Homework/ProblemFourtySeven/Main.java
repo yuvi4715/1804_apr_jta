@@ -1,11 +1,15 @@
 package com.revature.Homework.ProblemFourtySeven;
 
+import java.io.PrintStream;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
 public class Main {
 	public static void main(String[] args) {
+		test01(System.out);
+	}
+	public static void test01(PrintStream out) {
 		List list = new LinkedList();
 		list.add(1);
 		list.add(2);
@@ -25,7 +29,6 @@ public class Main {
 			if(fastPointer.hasNext())
 				fastPointer.next();
 		}
-		System.out.println(middle);
+		out.println(middle);
 	}
-	
 }
