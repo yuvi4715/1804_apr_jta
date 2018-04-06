@@ -38,8 +38,8 @@ import com.revature.Homework.ProblemsSix.ProblemSix;
 public class Tests {
 
 	private ByteArrayOutputStream outContent;
-	
 	private PrintStream out;
+	
 	@Before
 	public void setUpStreams() {
 		outContent = new ByteArrayOutputStream();
@@ -55,8 +55,45 @@ public class Tests {
 		System.setIn(System.in);
 	}
 	@Test
+	public void testOneProblemFiftythree() {
+		int[] a= {
+				1,
+				2,
+				3,
+				3
+		};
+		com.revature.Homework.ProblemFiftyThree.Main.test01(out,a);
+		System.out.println(outContent.toString());
+		String s = "Has Duplicate\r\n";
+		assertTrue((s).equals(outContent.toString()));
+	}
+	@Test
+	public void testOneProblemFiftyTwo() {
+		ByteArrayInputStream in = new ByteArrayInputStream((
+				"127\r\n"
+			).getBytes());
+		System.setIn(in);
+		com.revature.Homework.ProblemFiftyTwo.Main.test01(out);
+		System.out.println(outContent.toString());
+		String s = "Enter Number:\r\n" +
+				"721\r\n";
+		assertTrue((s).equals(outContent.toString()));
+	}
+	@Test
+	public void testOneProblemFourtyeighth() {
+		ByteArrayInputStream in = new ByteArrayInputStream((
+				"4\r\n"
+			).getBytes());
+		System.setIn(in);
+		com.revature.Homework.ProblemFourtyEight.Main.test01(out);
+		System.out.println(outContent.toString());
+		String s = "Enter a number:\r\n"+ 
+				"24\r\n";
+		assertTrue((s).equals(outContent.toString()));
+	}
+	@Test
 	public void testOneProblemFourtyseven() {
-		ProblemFiveMain.test01(out);
+		com.revature.Homework.ProblemFourtySeven.Main.test01(out);
 		System.out.println(outContent.toString());
 		String s = "4\r\n";
 		assertTrue((s).equals(outContent.toString()));
