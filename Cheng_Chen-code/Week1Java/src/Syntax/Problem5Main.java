@@ -1,4 +1,4 @@
-package Problem5;
+package Syntax;
 
 public class Problem5Main {
 

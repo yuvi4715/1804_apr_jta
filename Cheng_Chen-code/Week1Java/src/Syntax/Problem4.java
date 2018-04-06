@@ -1,3 +1,4 @@
+package Syntax;
 
 public class Problem4 {
 

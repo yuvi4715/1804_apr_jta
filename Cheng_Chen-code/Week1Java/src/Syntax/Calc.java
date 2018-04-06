@@ -1,4 +1,4 @@
-package Problem5;
+package Syntax;
 
 public class Calc {
 	public int add(int a, int b)

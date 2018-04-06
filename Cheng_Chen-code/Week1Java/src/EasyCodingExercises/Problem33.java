@@ -1,3 +1,4 @@
+package EasyCodingExercises;
 import java.util.Scanner;
 
 public class Problem33 

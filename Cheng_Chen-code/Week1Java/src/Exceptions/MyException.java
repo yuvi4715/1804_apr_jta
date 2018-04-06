@@ -1,4 +1,4 @@
-package Problems11To20;
+package Exceptions;
 
 public class MyException extends Exception
 {
