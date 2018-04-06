@@ -1,6 +1,6 @@
 //Ed Marable
 //Revature Week One Assignment
-public class WeekoneAssignment {
+public class TestingCodePackage {
 
 	static class CoreJava {
 		int hardCodedNumber1 = 2;
@@ -105,9 +105,9 @@ public class WeekoneAssignment {
 	}
 
 	public static void main(String[] args) {
-		WeekoneAssignment.CoreJava CoreJavaSegment = new WeekoneAssignment.CoreJava();
+		TestingCodePackage.CoreJava CoreJavaSegment = new TestingCodePackage.CoreJava();
 		CoreJavaSegment.display();
-		WeekoneAssignment.Syntax SyntaxSegment = new WeekoneAssignment.Syntax();
+		TestingCodePackage.Syntax SyntaxSegment = new TestingCodePackage.Syntax();
 		SyntaxSegment.display();
 		/// Q5 Start
 		int testTemp00 = 14;
