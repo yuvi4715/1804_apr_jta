@@ -1,9 +1,9 @@
 package com.revature.oop;
 
-public abstract class Mammal implements Animal {
+public class Mammal implements Animal {
 
 
-	public void eat() {
+	public static void eat() {
 		System.out.println("Mammal eat");
 		
 	}
