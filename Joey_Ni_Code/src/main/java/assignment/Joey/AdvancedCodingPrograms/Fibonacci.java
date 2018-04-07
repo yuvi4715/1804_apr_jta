@@ -1,4 +1,4 @@
-package AdvancedCodingPrograms;
+package assignment.Joey.AdvancedCodingPrograms;
 /**3. Write a Java program to print the first 100 Fibonacci numbers using iteration.
  *  Rewrite using recursion.
  *  Fibonacci numbers are the numbers in the following integer sequence, 

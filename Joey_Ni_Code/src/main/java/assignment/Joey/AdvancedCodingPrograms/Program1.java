@@ -1,4 +1,4 @@
-package AdvancedCodingPrograms;
+package assignment.Joey.AdvancedCodingPrograms;
 /**1. Write a method to replace a given character in a String with another character.
 */
 public class Program1 {

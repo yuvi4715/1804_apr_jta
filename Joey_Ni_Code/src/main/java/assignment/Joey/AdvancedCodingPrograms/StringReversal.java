@@ -1,4 +1,4 @@
-package AdvancedCodingPrograms;
+package assignment.Joey.AdvancedCodingPrograms;
 /**7. Write a method to reverse a String without using API functions.
 */
 public class StringReversal {

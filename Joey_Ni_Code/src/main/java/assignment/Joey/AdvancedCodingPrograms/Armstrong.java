@@ -1,4 +1,4 @@
-package AdvancedCodingPrograms;
+package assignment.Joey.AdvancedCodingPrograms;
 /**
 6. Write a Java program to check if a number is Armstrong or not.
 Armstrong number: sum of a number's digits raised to (the number of its digits) 
