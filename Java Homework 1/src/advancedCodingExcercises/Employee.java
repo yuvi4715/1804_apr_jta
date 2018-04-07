@@ -13,7 +13,14 @@ public class Employee {
 	List<Employee> employee;
 	
 	public Employee() {
+
+		
 		createEmployees();
+		System.out.println("Before sorting...");
+		print();
+		System.out.println();
+		
+		
 		System.out.println("Sorting by Name");
 		Collections.sort(employee, Employee.eNameComparator);
 		print();
@@ -48,7 +55,7 @@ public class Employee {
 	}
 
 
-	void createEmployees() {
+	void createEmployees() { // creating employee objects.
 		employee = new ArrayList<Employee>(); 
 		employee.add(new Employee("Ash", "Pokemon", 13));
 		employee.add(new Employee("BigBoss", "Diamond Dogs", 35));
@@ -108,7 +115,7 @@ public class Employee {
 			String eName2 = o2.getFirstName().toUpperCase();
 			
 			
-			// Ascending order
+			// Ascending order, flip the compareTo method to get descending order
 			return eName1.compareTo(eName2);
 		}
 	};
