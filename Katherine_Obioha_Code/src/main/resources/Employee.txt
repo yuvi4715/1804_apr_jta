@@ -1,0 +1,6 @@
+1: Katherine: Obi: Trainee
+5: Tom: Arugula: Trainer
+3: Angela: Sea: Trainer
+4: Ahmed: Johnson: Trainer
+2: Timothy: Brown: Trainee
+6: Thomas: Brown: Trainee
