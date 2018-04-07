@@ -68,8 +68,7 @@ public class _Exceptions {
 		try {
 			System.exit(0);
 		} finally {
-			System.out.println("Finally");
-			System.out.println();
+			System.out.println("Will not print");
 		}
 
 	}

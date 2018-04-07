@@ -11,12 +11,16 @@ import javax.swing.event.ListSelectionEvent;
 public class _FileIO {
 	
 	static HashMap<Integer,Employee> hm;
+	static File f;
+	
+	public _FileIO() {
+		f = new File("src\\\\main\\\\java\\\\employees.txt");
+	}
 	
 	public static void main(String[] args) {
 		hm = new HashMap<>();
-		try {			
-			Scanner in = new Scanner(new File("src\\main\\java\\employees.txt"));
-			
+		try {
+			Scanner in = new Scanner(f);
 			while
 				(in.hasNextLine()) {
 				String line = in.nextLine();
@@ -29,6 +33,7 @@ public class _FileIO {
 				e.setRole(st.nextToken());
 				hm.put(id, e);
 			}
+			in.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -37,5 +42,9 @@ public class _FileIO {
 			System.out.print(key + " : " + hm.get(key).toString());
 			System.out.println();
 		} 
+	}
+	
+	public File getFile() {
+		return f;
 	}
 }

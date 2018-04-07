@@ -10,7 +10,7 @@ public class Question9 {
 
 		one.eat();
 		one.move();
-		// one.walk();
+		one.walk();
 
 		two.eat();
 		two.move();

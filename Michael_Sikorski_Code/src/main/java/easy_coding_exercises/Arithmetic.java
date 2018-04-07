@@ -4,7 +4,8 @@ public class Arithmetic {
 	
 	public static void main(String[] args) {
 		try {
-			Arithmetic(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2]);
+			System.out.println(args[0]+" "+args[1]+" "+args[2]);
+			//Arithmetic(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2]);
 		} catch (Exception e) {
 			System.out.println("Invalid parameters!");
 		}

@@ -7,7 +7,7 @@ public class CheckOddEven {
 		System.out.println(OddOrEven(3));
 	}
 
-	private static String OddOrEven(int i) {
+	public static String OddOrEven(int i) {
 		if (i % 2 == 0) {
 			return "Even Number";
 		} else {

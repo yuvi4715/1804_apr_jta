@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.TreeSet;
+import java.util.List;
 
 public class _Collections {
 	
@@ -93,7 +95,7 @@ public class _Collections {
 			System.out.print(i + " ");
 		} System.out.println();
 		
-		System.out.println(hm.getClass().getName() + " cannot be sorted");
+		System.out.println(hm.getClass().getName() + " cannot be sorted"); 
 		System.out.println(ts.getClass().getName() + " cannot be sorted");
 		System.out.println(hs.getClass().getName() + " cannot be sorted");
 		
