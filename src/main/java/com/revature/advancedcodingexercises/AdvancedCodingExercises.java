@@ -1,5 +1,7 @@
 package com.revature.advancedcodingexercises;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -10,9 +12,8 @@ public class AdvancedCodingExercises {
 		String replacingChar = replaceChar("I ran I ran so far away", 'a', 'e');
 		System.out.println(replacingChar);
 
-		Date myBirthday = new Date(88, 4, 5);
 		Date bd = Calendar.getInstance().getTime();
-		System.out.println(birthday(myBirthday));
+		System.out.println(birthday("1988", "4", "7"));
 		printFibonacci();
 		fizzBuzz();
 		
@@ -48,23 +49,55 @@ public class AdvancedCodingExercises {
 	}
 
 	// Question 39
-	static int birthday(Date birthdayDate) {
-		Calendar theCalendar = Calendar.getInstance();
-		Date now = theCalendar.getTime();
-		int age = now.getYear() - birthdayDate.getYear();
-		if (now.getMonth() < birthdayDate.getMonth()) {
-			age--;
+//	static int birthday(Date birthdayDate) {
+//		Calendar theCalendar = Calendar.getInstance();
+//		Date now = theCalendar.getTime();
+//		int age = now.getYear() - birthdayDate.getYear();
+//		if ((now.getMonth() + 1) < birthdayDate.getMonth()) {
+//			age--;
+//		} 
+//		if ((now.getMonth() + 1) == birthdayDate.getMonth()) {
+//			System.out.println("We're in outer conditional");
+//			if (now.getDay() == birthdayDate.getDay()) {
+//				System.out.println("Happy Birthday!!");
+//			} 
+//			System.out.println("now.getDay: " + now.getDay());
+//			System.out.println("birthdayDate.getDay: " + birthdayDate.getDay());
+//
+//			if ((now.getDay() - 1) < (birthdayDate.getDay() - 1)) {
+//				age--;
+//			}
+//		} 
+//		return age;
+//	}
+	
+	// Question 39
+	static int birthday(String year, String month, String day) {
+		DateFormat formatYear = new SimpleDateFormat("yyyy");
+		DateFormat formatMonth = new SimpleDateFormat("MM");
+		DateFormat formatDay = new SimpleDateFormat("dd");
+		
+		Calendar calendar = Calendar.getInstance();
+		
+		int currentYear = Integer.parseInt(formatYear.format(calendar.getTime()));
+		int currentMonth = Integer.parseInt(formatMonth.format(calendar.getTime()));
+		int currentDay = Integer.parseInt(formatDay.format(calendar.getTime()));
+		
+		int birthDay = Integer.parseInt(day);
+		int birthMonth = Integer.parseInt(month);
+		int birthYear = Integer.parseInt(year);
+		
+		int age;
+		
+		if (birthYear <= currentYear && birthMonth <= currentMonth && birthDay < currentDay) {
+			age = currentYear - 1 - birthYear;
+		} else {
+			age = currentYear - birthYear;
 		}
-		if (now.getMonth() == birthdayDate.getMonth()) {
-			if (now.getDay() < birthdayDate.getDay()) {
-				age--;
-			}
+
+		if (currentMonth == birthMonth && currentDay == birthDay) {
+			System.out.println("Happy birthday to You, Happy Birthday to you!!");
 		}
-		if (now.getMonth() == birthdayDate.getMonth()) {
-			if (now.getDay() == birthdayDate.getDay()) {
-				System.out.println("Happy Birthday!!");
-			}
-		} 
 		return age;
 	}
 	
