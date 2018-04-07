@@ -87,6 +87,8 @@ public class Grade_System {
 		System.out.println("Min: " + Grade_System.getMinimum(array));
 		System.out.print("Std. Dev.: "); System.out.printf("%.2f", Grade_System.getStdDev(array));
 		
+		input.close();
+		
 	}
 	
 }
