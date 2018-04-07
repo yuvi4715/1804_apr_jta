@@ -1,4 +1,4 @@
-package com.revature.Homework.ProblemFiftyFour;
+package com.revature.Homework.ProblemSixtyOne;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,10 +14,9 @@ public class Main {
 	}
 	public static void test01(PrintStream out) {
 		HashMap<String,Integer> wordDictionary = new HashMap<>();
-		HashMap<Character,Integer> charDictionary = new HashMap<>();
 		BufferedReader inputStream=null;
 		try {
-			File file = new File("src/main/java/com/revature/Homework/ProblemFiftyFour/Example.dat");
+			File file = new File("src/main/java/com/revature/Homework/ProblemSixtyOne/Example.dat");
 			inputStream = new BufferedReader(new FileReader(file));
 			String l;
 			while((l=inputStream.readLine())!=null) {
@@ -51,14 +50,6 @@ public class Main {
 						wordCount = wordDictionary.get(word);
 					}
 					wordDictionary.put(word, ++wordCount);
-					for(int i=0;i<word.length();i++) {
-						char c = Character.toLowerCase(word.charAt(i));
-						int charCount=0;
-						if(charDictionary.containsKey(c)) {
-							charCount=charDictionary.get(c);
-						}
-						charDictionary.put(c, ++charCount);
-					}
 				}
 			}
 		}catch(IOException e) {
@@ -74,11 +65,8 @@ public class Main {
 		}
 		out.println("Words:");
 		for(String key:wordDictionary.keySet()) {
-			out.println(key+" "+wordDictionary.get(key));
-		}
-		out.println("Characters:");
-		for(Character key:charDictionary.keySet()) {
-			out.println(key+" "+charDictionary.get(key));
+			if(wordDictionary.get(key)==1)
+				out.println(key+" "+wordDictionary.get(key));
 		}
 	}
 }
