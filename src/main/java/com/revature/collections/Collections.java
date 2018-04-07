@@ -80,25 +80,25 @@ public class Collections {
 		theLinkedList.sort((a, b) -> a.compareTo(b));
 		System.out.println("theLinkedList after sort: " + theLinkedList);
 		
-		// TODO sort the HashMap
+		// HashMaps can't truly be sorted because they don't preserve insertion order 
+		// But i've created a Linked HashMap that sorts the original HashMap by the key
 		System.out.println("The HashMap " + theHashMap);
 		ArrayList<String> al = new ArrayList();
 		LinkedHashMap<String, String> lhm = new LinkedHashMap<>();
+		
 		Iterator it = theHashMap.entrySet().iterator();
 		while(it.hasNext()) {
 			Map.Entry pair = (Map.Entry) it.next();
 			al.add((String) pair.getKey());
-			it.remove();
 		}
 		al.sort(null);
 		System.out.println("List after while loop: " + al);
 		for (String hero : al) {
 			lhm.put(hero, theHashMap.get(hero));
 		}
+		
 		System.out.println("Linked Hash Map: " + lhm);
-		
-		// End of HashMap Sorting experiment
-		
+				
 		System.out.println("theTreeSet is already sorted " + theTreeSet);
 		
 		System.out.println("theHashSet: " + theHashSet);
