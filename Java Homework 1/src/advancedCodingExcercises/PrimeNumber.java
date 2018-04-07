@@ -8,7 +8,7 @@ public class PrimeNumber {
 	
 	
 	public PrimeNumber() {
-		System.out.println("Enter a number greater than 2");
+		System.out.println("Enter a number greater than 3");
 		getInput();
 		if (isPrime(input)) {
 			System.out.println("The number entered is prime");
@@ -27,8 +27,8 @@ public class PrimeNumber {
 	
 	boolean isPrime(int input) {
 		boolean isPrime = false;
-		for(int i = 2; 2*i < input;i++) { // tried to be efficient here.
-			if(input % i ==0) {  // use of mod is pretty import, so I went with it
+		for(int i = 2; 2*i < input;i++) { // tried to be a bit efficient here.
+			if(input % i ==0) {  // use of mod is pretty important, so I went with it
 				isPrime = false;
 		    }
 		    isPrime =  true;

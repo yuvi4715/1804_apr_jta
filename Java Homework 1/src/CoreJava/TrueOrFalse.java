@@ -1,5 +1,6 @@
 package CoreJava;
-// Problem 3
+// Problem 3 - two vars are declared true or false, and then 
+// 				are processed based on given statements. Results are returned
 public class TrueOrFalse {
 	boolean a = true;
 	boolean b = false;
@@ -7,7 +8,7 @@ public class TrueOrFalse {
 	boolean r2; 
 	boolean r3;
 	
-	public TrueOrFalse() {
+	public TrueOrFalse() { // Constructor
 		calculate();
 		results();
 	}

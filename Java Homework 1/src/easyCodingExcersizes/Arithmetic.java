@@ -32,7 +32,7 @@ public class Arithmetic {
 	}
 	
 	void getResult(int var1, int var2, String var3) {
-		switch (var3) {
+		switch (var3) { //using a switch for operators
 		case "+":
 			System.out.println(var1 + " + " + var2 + " = " + (var1+var2) );
 			break;

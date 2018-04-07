@@ -1,5 +1,5 @@
 package fileIO;
-//Problem 24 -  A file called "person.txt" is created created with the string
+//Problem 24 -  A file called "person.txt" is created with information
 //problem 25 -  read 24
 //problem 26 - file is read and parsed.  Even printed out for confirmation
 

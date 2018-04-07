@@ -1,6 +1,7 @@
 package CoreJava;
 
-// Problem 1
+// Problem 1 - A simple program that takes hardcoded integers and
+//				and does simple math with them
 public class SimpleMath {
 	static int a = 3;
 	static int b = 4;

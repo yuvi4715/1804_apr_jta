@@ -1,6 +1,8 @@
 package classMembers;
 
-// problem 7, designed to be inherited by class in problem 8
+// problem 7 - designed to be inherited by class in problem 8.
+//  		Customer classed created with required methods and
+//			and variables.
 public class Customer {
 	
 	String firstName;
@@ -8,15 +10,15 @@ public class Customer {
 	String item;
 	int purchase;
 	int credit;
-	final int storeNumber = 214;
-	static int departmentNumber = 12;
+	final int storeNumber = 214;  // final var
+	static int departmentNumber = 12; // static var
 	
-	public Customer() {
+	public Customer() { // default constructor
 		
 		
 	}
 	
-	public Customer(String firstName, String lastName) {
+	public Customer(String firstName, String lastName) { // parameterized constructor
 		this.firstName = firstName;
 		this.lastName = lastName;
 		System.out.println("Transaction history logged at Store# " + getStoreNumber()); // used to get store number since it is Final

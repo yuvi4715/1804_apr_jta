@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 public class Fibonacci {
 
-	 BigInteger n1 = BigInteger.ZERO;
+	 BigInteger n1 = BigInteger.ZERO; // Big integer is used as the numbers will get very large
 	 BigInteger n2 = BigInteger.ONE;
 	 BigInteger n3;
 	 int count = 100;

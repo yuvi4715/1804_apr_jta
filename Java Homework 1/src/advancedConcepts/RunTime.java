@@ -1,5 +1,5 @@
 package advancedConcepts;
-//problem 20 **not done yet**
+//problem 20 -  creates a runtime object, then notes and tests 3 runtime methods
 
 public class RunTime{
 	

@@ -17,7 +17,7 @@ public class GreatestOfThree {
 	
 	public int determineMax(int a, int b, int c) {
 		int max = 0;
-		if (a > b && a > c) {
+		if (a > b && a > c) { // short circuit operators here
 			max = a;	
 		}
 		if (b > a &&  b > c) {

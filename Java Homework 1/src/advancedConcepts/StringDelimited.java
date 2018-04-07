@@ -8,7 +8,7 @@ public class StringDelimited {
 	
 	
 	public static void main(String[] args) {
-		while (st.hasMoreTokens()) {
+		while (st.hasMoreTokens()) { // while it has more tokens, the next token is returned
 	         System.out.println(st.nextToken());
 	     }
 	}

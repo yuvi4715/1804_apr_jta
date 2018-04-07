@@ -16,7 +16,7 @@ public class Employee extends FileIO { // 26
 	public Employee() {
 		tokenize();
 		System.out.println("Employees are registered in hashmap...");
-		System.out.println(hMap.toString());
+		System.out.println(hMap.toString()); // lists their ID and where they are stored in memory
 
 	}
 	

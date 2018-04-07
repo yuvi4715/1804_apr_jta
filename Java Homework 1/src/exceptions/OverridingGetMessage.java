@@ -1,8 +1,8 @@
 package exceptions;
-// Problem 10  - overiding the getMessage method.
+// Problem 10  -  a simple class overiding the getMessage method.
 public class OverridingGetMessage extends Exception {
 		
-
+	// serialization
 	private static final long serialVersionUID = -5990853197261620861L;
 	
 		public OverridingGetMessage() {

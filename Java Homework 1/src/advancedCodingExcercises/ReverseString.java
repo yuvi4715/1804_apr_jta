@@ -1,5 +1,5 @@
 package advancedCodingExcercises;
-// problem 44 - take the given string and reverse it without using the API
+// problem 44 - take the given string and reverse it without using the String API
 public class ReverseString {
 	char[] a; //opted to use char array
 	String str = "Hello I am a String";

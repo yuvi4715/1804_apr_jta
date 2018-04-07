@@ -1,5 +1,5 @@
 package advancedConcepts;
-// problem 15
+// problem 15 - Stringbulder obect is created, with 3 methods to manipulate it
 public class AStringBuilderObject {
 	StringBuilder l = new StringBuilder();
 	

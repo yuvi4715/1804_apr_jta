@@ -1,7 +1,7 @@
 package oop;
 // inherits from mammal which uses interface. Outputs are notable.
 public class Human extends Mammal{
-	static Animal one = new Human();
+	static Animal one = new Human(); // static instances 
 	static Mammal two = new Human();
 	static Human three = new Human();
 	

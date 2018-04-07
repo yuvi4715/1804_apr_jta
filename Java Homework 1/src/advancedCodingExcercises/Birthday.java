@@ -19,7 +19,7 @@ public class Birthday {
 		
 	}
 	
-	void getBirthday() {
+	void getBirthday() { // if true the birthday song is printed
 		if (isBirthDay() == true) {
 			System.out.println("Happy birthday to you!");
 			System.out.println("Happy birthday to you!");
