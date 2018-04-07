@@ -18,8 +18,13 @@ public class ControlFlow {
 		// For Loop
 		
 		System.out.println("For Loop");
-		for (int i = 0 ; i < 3 ; i++) {
-			System.out.println(i);
+		for (int i = 0 ; i < 8 ; i++) {
+			if (i == 8) {
+				break;
+			} else {
+				System.out.println(i);
+				continue;
+			}
 		}
 		
 		// Enhanced For Loop
