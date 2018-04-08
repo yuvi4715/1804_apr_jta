@@ -13,7 +13,7 @@ public class ReverseString
 	{
 	      String input, reverse = "";
 	      Scanner scan = new Scanner(System.in);
-	      System.out.println("Plesae enter the message to be reversed.");
+	      System.out.println("Please enter the message to be reversed.");
 	      input = scan.nextLine();
 	      for ( int i = input.length() - 1 ; i >= 0 ; i-- )
 	      {
