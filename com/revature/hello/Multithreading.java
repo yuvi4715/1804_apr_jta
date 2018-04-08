@@ -1,6 +1,5 @@
 package com.revature.hello;
 
-import java.util.concurrent.TimeUnit;
 
 public class Multithreading extends Thread {
 	// Multithreading
@@ -39,7 +38,7 @@ public class Multithreading extends Thread {
 		// resume(), interrupt(), notify(), notifyAll()
 		Thread test = new Multithreading();
 		test.start();
-		test.sleep(10);
+		Thread.sleep(10);
 //		test.wait();
 //		test.notify();
 //		test.yield();

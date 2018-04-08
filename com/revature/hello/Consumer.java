@@ -12,6 +12,7 @@ public class Consumer {
 		Consumer b = new Consumer(4);
 		a.buy();
 		a.buy(2);
+		b.buy();
 		Consumer.tax();
 		Consumer.money();
 	}

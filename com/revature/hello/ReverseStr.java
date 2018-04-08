@@ -1,6 +1,6 @@
 package com.revature.hello;
 
-public class reverseStr {
+public class ReverseStr {
 
 	// Write a method to reverse a String without using API functions.
 	public static void main(String[] args) {

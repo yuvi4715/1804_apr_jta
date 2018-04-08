@@ -4,6 +4,11 @@ package com.revature.hello;
 // Create a custom exception class that overrides the getMessage( ) method
 class NewException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public static void main(String[] args) {
 
 		// 12 Use System.out.println( ) to note where you are in the control flow.

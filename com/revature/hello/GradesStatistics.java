@@ -21,6 +21,7 @@ public class GradesStatistics {
 			int grade = sc.nextInt();
 			if (grade > 100 || grade < 0) {
 				System.out.println("Invalid grade: " + grade);
+				sc.close();
 				return;
 			}
 			grades[i] = grade;
@@ -34,6 +35,8 @@ public class GradesStatistics {
 		System.out.println("max = " + max());
 		System.out.println("min = " + min());
 		System.out.println("standard deviation = " + stdDev());
+		
+		sc.close();
 	}
 
 	public static float mean() {

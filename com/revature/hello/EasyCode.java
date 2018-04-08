@@ -80,6 +80,7 @@ public class EasyCode {
 			System.out.println("Enter a String: ");
 			String s = sc.nextLine();
 			System.out.println("echoing input: " + s);
+			sc.close();
 		}
 	}
 }

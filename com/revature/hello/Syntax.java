@@ -17,18 +17,19 @@ public class Syntax {
 		A.divide(1, 2);
 
 		// 6
-		if (true)
+		if (1 == Math.random())
 			;
-		else
+		else {
 			;
-		
+		}
+
 		for (int i = 0; i < 5; ++i)
 			continue;
-		
+
 		do {
 			;
 		} while (false);
-		
+
 		char c = 'a';
 		switch (c) {
 		case 'a':
@@ -37,12 +38,13 @@ public class Syntax {
 			;
 		default:
 			;
-		
+
 		}
-		
+
 		int[] i = { 0, 1 };
-		for (int x : i)
-			++x;
+		for (int x : i) {
+			x = x - 1;
+		}
 
 	}
 

@@ -51,6 +51,8 @@ public class FileIO {
 		for (int k : map.keySet()) {
 			System.out.println(map.get(k));
 		}
+
+		scanner.close();
 	}
 
 }

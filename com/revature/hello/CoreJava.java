@@ -5,7 +5,7 @@ public class CoreJava {
 		int x = 1 + 2;
 		int y = 2 - 3;
 		int z = 3 / 5;
-		int w = 5 * 7;
+		x = 5 * 7;
 		System.out.println("1: finished.");
 
 		// 2

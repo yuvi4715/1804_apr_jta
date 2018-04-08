@@ -25,22 +25,21 @@ public abstract class Mammal implements Animal{
 		Animal one = new Human(); 
 		Mammal two = new Human();
 		Human three = new Human();
-		
+
+		System.out.println("Animal: ");
 		one.eat();
 		one.move();
-		((Human)one).walk();
 		Human.walk();
 
-		System.out.println("two: ");
+		System.out.println("Mammal: ");
 		two.eat();
 		two.move();
-		two.walk();
 		Mammal.walk();
 
-		System.out.println("three: ");
-		two.eat();
-		two.move();
-		two.walk();		// calls mammal's walk(), just call static method's with the class name
+		System.out.println("Human: ");
+		three.eat();
+		three.move();
+		Human.walk();		// static methods should be called in static ways
 	}
 }
 
