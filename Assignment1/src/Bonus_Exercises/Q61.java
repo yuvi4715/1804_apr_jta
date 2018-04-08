@@ -6,13 +6,12 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Q54
+public class Q61
 {
 	public static void main(String args[])
 	{
 		BufferedReader istream = null;
 		ArrayList<String> list = new ArrayList<String>();
-		int duplicates=0;
 		String thisStr;
 		
 		try
@@ -26,18 +25,20 @@ public class Q54
 				while(splitter.hasMoreTokens())
 				{
 					thisStr=splitter.nextToken().toLowerCase();
-					if(list.contains(thisStr))
-					{
-						duplicates++;
-					}
-					else
+					
+					if(!list.contains(thisStr))
 					{
 						list.add(thisStr);
 					}
 				}
 			}
 			
-			System.out.println("The provided file contains " + duplicates + " duplicate words.");
+			System.out.print("The distinct words from the provided file are: ");
+			for(int i=0; i<list.size(); i++)
+			{
+				System.out.print(list.get(i) + " ");
+			}
+			
 		}
 		catch(Exception e)
 		{
