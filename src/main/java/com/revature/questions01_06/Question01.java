@@ -1,8 +1,8 @@
 package com.revature.questions01_06;
 
 public class Question01 {
-	
-	//**** My packages turned into folders while tuning for readability and my updated version might be late. Sorry for the trouble
+
+	//***There is likely nothing wrong with my packages but please message me if there is.
 	
 	/*For my assignment questions I should've used jUnit but it took longer than expected to go back and
 	 *fix my answers and could not. However, I've attempted to format the main methods in a way that would
