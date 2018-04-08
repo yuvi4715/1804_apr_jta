@@ -25,8 +25,9 @@ public class Collection {
 		for (int i : a) {
 			System.out.println(i);
 		}
-//		Comparator<Integer> nums = (Integer x, Integer y) -> x - y;		
-		a.sort((Integer x, Integer y) -> x - y);		 // LAMBDA
+		Comparator<Integer> nums = (Integer x, Integer y) -> x - y;
+//		System.out.println(nums);
+//		a.sort((Integer x, Integer y) -> x - y);		 // LAMBDA
 		System.out.println("sorted ArrayList:");
 		for (int i : a) {
 			System.out.println(i);

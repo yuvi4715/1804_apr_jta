@@ -54,22 +54,3 @@ public class FileIO {
 	}
 
 }
-
-class Employee {
-	private int employeeID;
-	private String firstName;
-	private String lastName;
-	private String role;
-
-	public Employee(int employeeID, String firstName, String lastName, String role) {
-		this.employeeID = employeeID;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.role = role;
-	}
-
-	public String toString() {
-		return "employeeID: " + employeeID + "\nFirst name: " + firstName + "\nLast name: " + lastName + "\nrole: "
-				+ role;
-	}
-}
