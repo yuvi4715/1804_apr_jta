@@ -2,7 +2,7 @@ package com.revature.questions07_08;
 
 public class Customer {
 
-	
+
 	public static String customerOf = "I ate at Adam's pizzaria!";
 	public String name = "Joe";
 	public String foodEaten = "Pizza";

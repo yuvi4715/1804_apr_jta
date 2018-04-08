@@ -9,7 +9,6 @@ public class Question17 {
 	}
 	
 	
-	//Question 17
 	public static void tokenStrings() {
 		
 		StringTokenizer pizza = new StringTokenizer("cheese tomato crust salami");

@@ -3,31 +3,17 @@ package com.revature.questions16_20;
 public class Question20 {
 
 	public static void main(String[] args) {
-		Runtime rt = Runtime.getRuntime();
+		Runtime runthread= Runtime.getRuntime();
 		
-		System.out.println(rt.freeMemory());
+		System.out.println("Test on thread's free memory: " + runthread.freeMemory());
 		
-		System.out.println(rt.totalMemory());
+		System.out.println("Test on thread's total memory: " + runthread.totalMemory());
 		
-		System.out.println(rt.availableProcessors());
+		System.out.println("Test on thread's available processors: " + runthread.availableProcessors());
 		
-		//One example of how I would use these types of calls to run a code 
-		//in different ways based on the available resources, such as 
-		//designing a program to run on more threads if more cores are available.
-		
-		float mem = rt.totalMemory();
-		
-		mem = mem / 1024;
-		
-		System.out.println(mem + "KB");
-		
-		mem = mem / 1024;
-		
-		System.out.println(mem + "MB");
-		
-		mem = mem / 1024;
-		
-		System.out.println(mem + "GB");
+		//I think I would use this to test the upper limits and general usage of the memory 
+		//used by the JVM. Especially if I have some evilthreads(?) or something else running haywire,
+		//I think I would be able to check using commands with runtime.
 	}
 	
 }

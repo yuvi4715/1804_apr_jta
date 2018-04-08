@@ -7,15 +7,15 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.TreeSet;
 
-public class Question21 {
+public class Question21_23 {
 
 	public static void main(String[] args) {
 		weirdArrays();
 		
 	}
 	
-	//Question 21 and Question 22
-	//As for Question 23, the collections are as expected except hashsets which I can't figure out. 
+	//Question 21 and Question 22 and Question 23 combined.
+	
 	public static void weirdArrays() {
 		
 		ArrayList<Integer> al = new ArrayList<Integer>();

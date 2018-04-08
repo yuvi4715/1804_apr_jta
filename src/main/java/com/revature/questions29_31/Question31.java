@@ -3,15 +3,15 @@ package com.revature.questions29_31;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Question29 {
+public class Question31 {
 
 	public static void main(String[] args) {
-		
-		imGreatAtThreading t1 = new imGreatAtThreading("Good Guy");
-		imGreatAtThreading t2 = new imGreatAtThreading("Bad Guy");
-		imGreatAtThreading t3 = new imGreatAtThreading("Okay Guy");
 	
-		t1.start();	
+		imGreatAtThreading3 t1 = new imGreatAtThreading3("Good Guy");
+		imGreatAtThreading3 t2 = new imGreatAtThreading3("Bad Guy");
+		imGreatAtThreading3 t3 = new imGreatAtThreading3("Okay Guy");
+		
+		t1.start();
 		t2.start();
 		t3.start();
 		
@@ -21,19 +21,19 @@ public class Question29 {
 	
 }
 
-class imGreatAtThreading implements Runnable {
+class imGreatAtThreading3 implements Runnable {
 
 	private Thread t;
 	private String name;
 	int sumNum;
 	List<Integer> numList = new ArrayList<>();
 
-	public imGreatAtThreading(String name) {
+	public imGreatAtThreading3(String name) {
 		this.name = name;
 		this.sumNum = 0;
 	}
 	
-	public void start() {
+	public synchronized void start() {
 		t = new Thread(this, name);
 		t.start();
 	}
