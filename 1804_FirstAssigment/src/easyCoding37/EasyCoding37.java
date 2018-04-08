@@ -91,16 +91,13 @@ public class EasyCoding37
 		double sd = 0;
 		double avg = getAverage(array);
 		int[] tempArray = new int[array.length];
-		//For each number, subtract the mean and square the result
 		for (int i = 0; i < array.length; i++) {
 			tempArray[i] = (int) Math.pow((array[i] - avg), 2);
 		}
-		//Get the mean of THOSE squared results, use previous avg variable
 		for (int i = 0; i < array.length; i++) {
 			avg += tempArray[i];
 		}
 		avg = avg / array.length;
-		//THEN the square root of that and we're done
 		sd = Math.sqrt(avg);
 		
 		return sd;
