@@ -19,6 +19,11 @@ public class AdvancedMain {
 		//Integer runtimeInteger = (Integer)runtimeConstructor.newInstance(3);
 		//System.out.println(runtimeInteger);
 		
+		Runtime r = Runtime.getRuntime();
+		//r.exec(command);
+		//r.getClass();
+		//r.load(Filename);
+		
 		System.gc();
 		
 		return aInt + bInt;

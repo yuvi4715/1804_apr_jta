@@ -5,6 +5,8 @@ import java.util.Calendar;
 import java.util.Comparator;
 import java.util.Iterator;
 
+// Solution to hw1 problem #38 - #39, #42 - #45
+
 public class AdvancedCodingMain {
 	
 	/**

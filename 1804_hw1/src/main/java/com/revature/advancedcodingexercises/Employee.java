@@ -2,6 +2,8 @@ package com.revature.advancedcodingexercises;
 
 import java.util.Comparator;
 
+// Part of solution to hw1 problem #42
+
 public class Employee {
 
 	private String name;
