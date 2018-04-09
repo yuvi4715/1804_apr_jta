@@ -9,7 +9,7 @@ public class BankMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//log usage for later
-		//log.info("INFO SHOULD BE PRINTED.");
+		//log.info("TEST.");
 	}
 
 }
