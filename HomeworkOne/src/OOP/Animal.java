@@ -2,32 +2,19 @@
 //Animal one = new Human(); 	Mammal two = new Human(); 	Human three = new Human();
 //Call each of the methods for each of the objects: eat(), move(), walk(). Note the results.
 
-//Inteface: Animal
+//Interface: Animal
 //Methods: eat(); move()
 //class Mammal: implements animal and eat(); static method: walk()
-//class Human: extends Mammal; overries eat(); static method: walk()
+//class Human: extends Mammal; overrides eat(); static method: walk()
 //Animal one = new Human(); 	
 //Mammal two = new Human(); 	
 //Human three = new Human();
-//
 
 package OOP;
 
-
-public class question9 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Animal one = new Human(); 	
-		Mammal two = new Human(); 	
-		Human three = new Human();
-		one.eat();
-		two.eat();
-		three.eat();
-		one.move();
-		two.move();
-		three.move();
-		
-	}
-
+public interface Animal {
+	public void eat();
+	public void move();
+	public void walk();
 }
+

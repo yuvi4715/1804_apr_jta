@@ -1,18 +1,30 @@
+//Create a main method in a new class that:
+//	Creates 2 customers
+//	Uses each of the Customer class members
+
 package ClassMembers;
 
 import java.util.Scanner;
 
-public class question8 {
+class question8 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner input = new Scanner(System.in);
-		question7 question7Object = new question7(null);
-		
-		System.out.println("Enter your name here: ");
-		String name = input.nextLine();
-		
-		question7Object.simpleMessage(name); 
+	public class Customer1	{
+		public void print() {
+			System.out.println("This is the first customer");
+		}	
 	}
+	
+	public class Customer2	{
+		public void print() {
+			System.out.println("This is the second customer");
+		}	
+	}
+	
+	public static void main(String[] args) {
+		question8 demo = new question8();
+		question8.Customer1 demo2 = demo.new Customer1();
+		System.out.println(demo2);
+	}
+
 
 }
