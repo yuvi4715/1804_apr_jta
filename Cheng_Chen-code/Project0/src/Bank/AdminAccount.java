@@ -8,18 +8,14 @@ private static final long serialVersionUID = 1L;
 	
 	public AdminAccount(String n, int accNum, String pass, String newUser)
 	{
-		this.setAuth(false);
+		this.setAuth(true);
 		Name = n;
 		this.setUser(newUser);
 		this.setPassword(pass);
 	}
 	
-	public AdminAccount(String n, int accNum, double newBalance, String pass, String newUser)
+	public void Authorize(UserAccount a)
 	{
-		this.setAuth(false);
-		Name = n;
-		this.setBalance(newBalance);
-		this.setUser(newUser);
-		this.setPassword(pass);
+		a.setAuth(true);
 	}
 }

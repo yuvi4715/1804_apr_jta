@@ -17,7 +17,7 @@ public class BankMain {
 	
 	
 	//TODOs
-	//user logs in
+	//user logs in(checks against DB)
 	//gives options
 	//admin options check if account is admin, if not, return invalid
 	//event loop

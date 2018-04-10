@@ -14,15 +14,6 @@ public class UserAccount extends Account
 		this.setPassword(pass);
 	}
 	
-	public UserAccount(String n, int accNum, double newBalance, String pass, String newUser)
-	{
-		this.setAuth(false);
-		Name = n;
-		this.setBalance(newBalance);
-		this.setUser(newUser);
-		this.setPassword(pass);
-	}
-	
 	public boolean checkAuth() throws UnauthorizedException
 	{
 		if(this.getAuth())
