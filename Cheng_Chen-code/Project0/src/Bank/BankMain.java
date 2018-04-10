@@ -14,5 +14,12 @@ public class BankMain {
 		//log usage for later
 		//log.info("TEST.");
 	}
-
+	
+	
+	//TODOs
+	//user logs in
+	//gives options
+	//admin options check if account is admin, if not, return invalid
+	//event loop
+	//log out.
 }
