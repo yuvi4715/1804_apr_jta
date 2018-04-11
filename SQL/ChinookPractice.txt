@@ -1,0 +1,21 @@
+Chinook Practice
+
+	1. Select all records from the Employee table where first name is Andrew and REPORTSTO is NULL. 
+
+	2. Select all albums in Album table and sort result set in descending order by title. 
+
+	3. Update Aaron Mitchell in Customer table to Robert Walter 
+	
+	4. Select all employees hired between 1st of June 2003 and 1st of March 2004
+	
+	5. Delete a record in Customer table where the name is Robert Walter (There may be constraints that rely on this, find out how to resolve them). 
+	
+	6. Create an inner join that joins customers and orders and specifies the name of the customer and the invoiceId. 
+	
+	7. Create an outer join that joins the customer and invoice table, specifying the CustomerId, firstname, lastname, invoiceId, and total. 
+	
+	8. Create a right join that joins album and artist specifying artist name and title.
+	
+	9. Create a cross join that joins album and artist and sorts by artist name in ascending order.
+	
+	10. Perform a self-join on the employee table, joining on the reportsto column. 
