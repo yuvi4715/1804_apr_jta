@@ -45,4 +45,11 @@ public class CreditAccount extends Account{
 		this.accountID = accountID;
 	}
 	
+	public void getInfo() {
+		System.out.println("accountID: "+ getAccountID());
+		System.out.println("Status: " + super.getStatus());
+		System.out.println("Credit Limit: "+getCredit());
+		System.out.println("Available Credit: "+ getAvailableCredit());
+		System.out.println("Account type: credit");
+	}
 }

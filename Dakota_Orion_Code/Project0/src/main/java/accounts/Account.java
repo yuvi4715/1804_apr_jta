@@ -4,6 +4,7 @@ public abstract class Account{
 	private static int curAccountNum=1;
 	String status ="Active";
 	double accountBalance;
+	private int accountID;
 	
 	public Account(double money){
 		accountBalance=money;
@@ -42,5 +43,13 @@ public abstract class Account{
 		status = "StandBy";
 	}
 
+	public int getAccountID() {
+		return accountID;
+	}
+
+	public void setAccountID(int accountID) {
+		this.accountID = accountID;
+	}
 	
+	public abstract void getInfo();
 }
