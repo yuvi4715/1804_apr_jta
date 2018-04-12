@@ -76,14 +76,18 @@ public class Customer {
 
 	public void deposit(double deposit) {
 		this.balance = this.balance + deposit;
+		this.updateHistory("Deposited $"+ deposit);
 	}
 	
 	public void withdraw(double withdrawl) {
 		
 		if(this.balance>withdrawl) {
 		this.balance = this.balance - withdrawl;
+		this.updateHistory("withdrew $"+ withdrawl);
+		
 		}else {		
 			System.out.println("You do not have enough money ");
+			this.updateHistory("attempted to withdraw $"+ withdrawl+ " but insufficent funds");
 		}
 		
 		
