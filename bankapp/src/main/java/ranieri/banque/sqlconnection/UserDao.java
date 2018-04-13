@@ -9,7 +9,8 @@ public interface UserDao {
 	
 	public boolean insertUser();
 	public boolean updateUser();
-	public boolean getUser();
-	public List<Customer> getAllCustomers();
+	public boolean getUser(User user);
+	public List<User> getAllCustomers();
+	
 
 }

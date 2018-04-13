@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UI {
 	
-public static Customer customerLoggedIn(Customer customer) {
+public static User customerLoggedIn(User user) {
 	
 	Scanner scan = new Scanner(System.in);
 	boolean loggedIn = true;
@@ -15,7 +15,7 @@ public static Customer customerLoggedIn(Customer customer) {
 //		return customer;
 //	}
 	
-	System.out.println("Logged in as "+ customer.getUsername() + "       Your current balance: $"+customer.getBalance() + "\n" );
+	System.out.println("Logged in as "+ user.getUsername() + "       Your current balance: $"+user.getBalance() + "\n" );
 	System.out.println("to deposit type  deposit and the ammount   i.e.  deposit 1000");
 	System.out.println("to withdrawl type  withdrawl and the ammount   i.e.  withdrawl 1000");
 	System.out.println("to logout and finalize changes     logout username");
@@ -25,10 +25,15 @@ public static Customer customerLoggedIn(Customer customer) {
 	
 	
 	while(loggedIn) {
-		System.out.println("Logged in as "+ customer.getUsername() + "       Your current balance: $"+customer.getBalance() + "\n" );	
+		System.out.println("Logged in as "+ user.getUsername() + "       Your current balance: $"+user.getBalance() + "\n" );	
 		String input = scan.nextLine();
 		String[] inputs = input.split(" ");
 		
+		if (inputs.length<2) {
+			System.out.println("invalid inputs");
+			continue;
+		}
+				
 		if(inputs[0].equals("logout")) {
 			
 			// update account sql goes here
@@ -37,30 +42,29 @@ public static Customer customerLoggedIn(Customer customer) {
 			loggedIn = false;
 			break;
 		}
-		
+						
 		if(legitInputs(inputs[0],inputs[1])== false) {		
 			System.out.println("invalid inputs! ");
 			continue;
 		}
 		
-		control(customer,inputs[0],Double.parseDouble(inputs[1]));
-			
+		control(user,inputs[0],Double.parseDouble(inputs[1]));			
 		
 		System.out.println(inputs[0]+ " "+ inputs[1]+ "  Transaction completed ");
 		
 		
 	}
 	
-	return customer;
+	return user;
 		
 	}
 
 public static void main(String[] args) {
 	
 	
-	Customer adam = new Customer ("adamd0ggg", "fsdfdsfsdf");
+	//User adam = new User ("adamd0ggg", "fsdfdsfsdf");
 	
-	customerLoggedIn(adam);
+	//customerLoggedIn(adam);
 	
 	//System.out.println(legitNumber("1000"));
 	//System.out.println(legitCommand("LOgout"));
@@ -113,14 +117,14 @@ public static boolean legitInputs(String arg1, String arg2) {
 
 
 
-public static void control(Customer customer, String s, double num) {
+public static void control(User user, String s, double num) {
 	s = s.toLowerCase();
 	
 	if(s.equals("deposit")) {
-		customer.deposit(num);
+		user.deposit(num);
 	}
 	if(s.equals("withdrawl")) {
-		customer.withdraw(num);
+		user.withdraw(num);
 	}
 	
 		

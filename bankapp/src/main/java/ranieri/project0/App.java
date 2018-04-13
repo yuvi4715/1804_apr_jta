@@ -43,8 +43,8 @@ public class App
         
     }
     
-    public static Customer makeUser(String name, String password) {   	
-    	return new Customer(name, password);
+    public static User makeUser(String name, String password) {   	
+    	return new User(name, password);
     	   	
     }
     

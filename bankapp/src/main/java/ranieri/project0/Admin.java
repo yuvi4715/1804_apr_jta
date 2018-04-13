@@ -1,15 +1,16 @@
 package ranieri.project0;
 
-public class Admin {
+public class Admin extends User {
 	
 	
 	
 	private String username;
 	private String password;
+	private boolean authorized = true;
 	
 		
 	public Admin(String username, String password) {
-		super();
+		super(username, password);
 		this.username = username;
 		this.password = password;
 	}
@@ -19,10 +20,10 @@ public class Admin {
 		
 	}
 
-	public void authorizeUser(Customer customer) {
+	public void authorizeUser(User user) {
 		//
 		
-		customer.setAuthorized(true);		
+		user.setAuthorized(true);		
 	}
 	
 	public void createAdmin(String username, String password) {
@@ -41,6 +42,18 @@ public class Admin {
 	
 	
 	
-	
+	@Override
+	public String toString() {
+		return "Admin [username=" + username + ", password=" + password + ", authorized=" + authorized + "]";
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+				Admin steve = new Admin("rhino", "p4$$word");
+				System.out.println("sdfsdfdsf");
+				System.out.println(steve);
+
+	}
 
 }
