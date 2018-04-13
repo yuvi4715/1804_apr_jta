@@ -37,5 +37,8 @@ What are the transaction properties (ACID)
 What are the Isolation Levels
 What are the Concurrency Issues 
 
-
-
+What is JDBC
+What are the important interfaces
+How do you connect to the database
+What are the different ways you can execute a statement
+What is the DAO
