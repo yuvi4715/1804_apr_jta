@@ -1,31 +1,37 @@
 package accounts;
 
 import java.util.ArrayList;
-import java.util.Hashtable;
+import java.util.List;
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
+import model.AccountBean;
+import model.Service;
+import model.UsersBean;
+
 public class MyBank {
-	static Hashtable<Integer, ArrayList<Account>> accounts = new Hashtable<Integer, ArrayList<Account>>();
-	static Hashtable<Integer,Users> allUsers = new Hashtable<Integer, Users>();
-	static ArrayList<Users> unApproved = new ArrayList<Users>();
-	static ArrayList<Account> accountList = new ArrayList<Account>();
-	static ArrayList<Users> usersList = new ArrayList<Users>();
-	private ArrayList<Account> curAccounts= new ArrayList<Account>();
+	final static Logger log = Logger.getLogger(MyBank.class);
+
+	private ArrayList<AccountBean> curAccounts= new ArrayList<AccountBean>();
 	Scanner scan = new Scanner(System.in);
 	private int curUserID;
-	private Users curUser;
+	private UsersBean curUser;
 	
 	public void createUser() {
 		System.out.println("Creating Standard User");
-		Users nUsers = new Users();
+		UsersBean nUsers = new UsersBean();
+		nUsers.setapprove("False");
+		nUsers.settype("User");
+		nUsers.setUsersBeanId(Service.getMaxUsersBeanId()+1);
 		boolean x=true;
 		do {
 			System.out.println("Please enter your password");
 			String str= scan.nextLine();
-			nUsers.setPassword(str);
+			nUsers.setpassword(str);
 			System.out.println("Please reenter your password");
 			str= scan.nextLine();
-			if(nUsers.getPassword().equals(str)) {
+			if(nUsers.getpassword().equals(str)) {
 				System.out.println("Successfully created an account");
 				x=false;
 			}
@@ -33,15 +39,15 @@ public class MyBank {
 				System.out.println("Passwords don't match try again");
 			}
 		}while(x);
-		setCurUserID(nUsers.getID());
+		setCurUserID(nUsers.getUsersBeanId());
 		setCurUser(nUsers);
-		setCurAccounts(accounts.get(curUserID));
-		usersList.add(curUser);
-		allUsers.put(curUserID, nUsers);
-		addUnapproved(nUsers);
+		//usersList.add(curUser);
+		Service.insertUsersBean(nUsers);
+		//allUsers.put(curUserID, nUsers);
+		//addUnapproved(nUsers);
 		System.out.println("Please wait for an Admin to approve your account");
 	}
-	
+	/*
 	public void addUnapproved(Users user) {
 		unApproved.add(user);
 		for(int i=0;i<unApproved.size();i++) {
@@ -49,19 +55,22 @@ public class MyBank {
 				unApproved.remove(i);
 			}
 		}
-	}
+	}*/
 	
 	public void createAdminUser() {
 		System.out.println("Creating Admin User");
-		Users nUsers = new Users("Admin");
+		UsersBean nUsers = new UsersBean();
+		nUsers.setUsersBeanId(Service.getMaxUsersBeanId()+1);
+		nUsers.setapprove("True");
+		nUsers.settype("Admin");
 		boolean x=true;
 		do {
 			System.out.println("Please enter your password");
 			String str= scan.nextLine();
-			nUsers.setPassword(str);
+			nUsers.setpassword(str);
 			System.out.println("Please reenter your password");
 			str= scan.nextLine();
-			if(nUsers.getPassword().equals(str)) {
+			if(nUsers.getpassword().equals(str)) {
 				System.out.println("Successfully created an account");
 				x=false;
 			}
@@ -69,53 +78,48 @@ public class MyBank {
 				System.out.println("Passwords don't match try again");
 			}
 		}while(x);
-		setCurUserID(nUsers.getID());
+		setCurUserID(nUsers.getUsersBeanId());
 		setCurUser(nUsers);
-		setCurAccounts(accounts.get(getCurUserID()));
-		usersList.add(getCurUser());
-		allUsers.put(getCurUserID(), nUsers);
+		Service.insertUsersBean(nUsers);
+		//usersList.add(getCurUser());
+		//allUsers.put(getCurUserID(), nUsers);
 	}
 	
 	public void createAccount(String str, int userID) {
-		if(accounts.get(userID)==null) {
-			accounts.put(userID,new ArrayList<Account>());
+		int id = Service.getMaxAccountsBeanId()+1;
+		AccountBean acc = new AccountBean("Active",0, 0,str);
+		if(str.equals("Credit")) {
+			acc.setLimit(1000);
 		}
-		if(str.equals("checking")||str.equals("Checking")) {
-			CheckingAccount acc = new CheckingAccount(0);
-			accountList.add(acc);
-			accounts.get(userID).add(acc);
-		}
-		else if(str.equals("Savings")||str.equals("savings")) {
-			SavingsAccount acc = new SavingsAccount(0);
-			accountList.add(acc);
-			accounts.get(userID).add(acc);
-		}
-		else if(str.equals("credit")||str.equals("credit")) {
-			CreditAccount acc = new CreditAccount(1000);
-			accountList.add(acc);
-			accounts.get(userID).add(acc);
-		}
-		else {
-			System.out.println("Invalid account type, please try again");
-			System.out.println("Valid types are 'Checking', 'Savings' and 'Credit'");
-		}
-		setCurAccounts(accounts.get(getCurUserID()));
+		acc.setAccountBeanId(id);
+		Service.insertAccountsBean(acc);;
+		Service.createUserAccountRelationship(getCurUserID(), acc.getAccountBeanId());
+		curAccounts.add(acc);
 	}
 	
-	public Users getCurUser() {
+	public UsersBean getCurUser() {
 		return curUser;
 	}
 
-	public void setCurUser(Users curUser) {
-		this.curUser = curUser;
+	public void setCurUser(UsersBean nUsers) {
+		this.curUser = nUsers;
 	}
 	
 	public void login() {
 		boolean x=true;
 		do {
 			System.out.println("Enter your userID or '0' to create new user");
-			int userID = scan.nextInt();
+			int userID;
+			try{userID = scan.nextInt();}
+			catch(Exception e) {
+				System.out.println("What you entered is not an integer");
+				System.out.println(e.getMessage());
+				log.error("Invalid input, expecting an integer");
+				scan.next();
+				continue;
+			}
 			setCurUserID(userID);
+			UsersBean temp = Service.getUsersBean(userID);
 			if(userID==0) {
 				scan.nextLine();
 				createUser();
@@ -126,19 +130,25 @@ public class MyBank {
 				createAdminUser();
 				break;
 			}
-			else if(allUsers.containsKey(userID)==false) {
+			else if(temp==null) {
 				System.out.println("Invalid ID");
 				continue;
 			}
 			System.out.println("Enter your password");
 			String str = scan.nextLine();
 			str = scan.nextLine();
-			if(str.equals(allUsers.get(curUserID).getPassword())==false) {
+			if(str.equals(temp.getpassword())==false) {
 				System.out.println("Incorrect Password");
 				continue;
 			}
-			setCurUser(allUsers.get(curUserID));
-			setCurAccounts(accounts.get(curUserID));
+			temp.setUsersBeanId(curUserID);
+			setCurUser(temp);
+			curAccounts.clear();
+			for(int i:Service.getUserAccounts(getCurUserID())) {
+				AccountBean atemp = Service.getAccountBean(i);
+				atemp.setAccountBeanId(i);
+				curAccounts.add(atemp);
+			}
 			x=false;
 		}while(x);
 	}
@@ -151,11 +161,11 @@ public class MyBank {
 		this.curUserID = curUserID;
 	}
 	
-	public ArrayList<Account> getCurAccounts() {
+	public ArrayList<AccountBean> getCurAccounts() {
 		return curAccounts;
 	}
 
-	public void setCurAccounts(ArrayList<Account> curAccounts) {
+	public void setCurAccounts(ArrayList<AccountBean> curAccounts) {
 		this.curAccounts = curAccounts;
 	}
 	
@@ -188,99 +198,143 @@ public class MyBank {
 			boolean y=true;
 			System.out.println("Welcome to your account, Please type an action from the list below");
 			do {
-				curUser.getStatus();
-				if(!getCurUser().isApproved()) {
+				System.out.println("My "+getCurUser().toString());
+				if(getCurUser().getapprove().equals("False")) {
 					System.out.println("You are not yet approved, please wait for admin approval");
 					curUserID =-1;
 					curUser=null;
 					break;
 				}
 				System.out.println("Actions - 'logout', 'create savings account', 'create credit account', 'create checking account', 'view my accounts', 'deposit', 'withdraw', 'exit'");
-				if(curUser.getType().equals("Admin")) {
+				if(curUser.gettype().equals("Admin")) {
 					System.out.println("Admin Actions - 'view all accounts', 'view all users', 'view unapproved users', 'approve user', 'approve all users', 'change credit limit'");
 				}
 				String str= scan.nextLine();
 				int scanI;
-				if(curUser.getType().equals("Admin")) {
+				if(curUser.gettype().equals("Admin")) {
 					if(str.equals("view all accounts")) {
 						System.out.print("Accounts: ");
-						for(Account a:accountList) {
-							System.out.print(a.getAccountID()+", ");
+						List<AccountBean> accounts = Service.getAllAccountsBeans();
+						for(AccountBean a:accounts) {
+							System.out.println(a);
 						}
-						System.out.println();
 					}
 					else if(str.equals("view all users")) {
 						System.out.print("Users: ");
-						for(Users u: usersList) {
-							System.out.print(u.getID()+", ");
+						List<UsersBean> users = Service.getAllUsersBean();
+						for(UsersBean u: users) {
+							System.out.println(u+", ");
 						}
-						System.out.println();
 					}
 					else if(str.equals("view unapproved users")) {
 						System.out.print("Unapproved users: ");
-						for(Users u:unApproved) {
-							System.out.print(u.getID()+", ");
+						List<UsersBean> users = Service.getAllUsersBean();
+						for(UsersBean u:users) {
+							if(u.getapprove().equals("False")) {
+								System.out.println(u);
+							}
 						}
-						System.out.println();
 					}
 					else if(str.equals("approve user")) {
 						System.out.println("Enter ID of user to approve");
-						scanI = scan.nextInt();
-						for(Users u:unApproved) {
-							if(u.getID()==scanI) {
-								u.setApproved(true);
-								unApproved.remove(u);
-								break;
-							}
+						try{scanI = scan.nextInt();}
+						catch(Exception e) {
+							System.out.println("What you entered is not an integer");
+							System.out.println(e.getMessage());
+							log.error("Invalid input, expecting an integer");
+							scan.next();
+							continue;
+						}
+						UsersBean user = Service.getUsersBean(scanI);
+						if(user!=null) {
+							user.setapprove("True");
+							Service.updateUsersBean(user);
+						}
+						else {
+							System.out.println("No user with that ID");
 						}
 					}
 					else if(str.equals("approve all users")) {
-						for(Users u:unApproved) {
-							u.setApproved(true);
+						List<UsersBean> users = Service.getAllUsersBean();
+						for(UsersBean u:users) {
+							if(u.getapprove().equals("False")) {
+								u.setapprove("True");
+								Service.updateUsersBean(u);
+							}
 						}
-						unApproved.clear();
 					}
 					else if(str.equals("change credit limit")) {
 						System.out.println("Enter accountID of the credit account");
-						scanI = scan.nextInt();
-						for(Account a: accountList) {
-							if(a.getAccountID()==scanI) {
-								if(a instanceof CreditAccount) {
-									System.out.println("Enter limit you want to set for this account");
-									scanI = scan.nextInt();
-									if(scanI<=500) {
-										System.out.println("invalid limit");
-									}
-									else {
-										((CreditAccount) a).setCredit(scanI);
-									}
-								}
-								else {
-									System.out.println("This is not a credit account, try again");
-								}
+						try{scanI = scan.nextInt();}
+						catch(Exception e) {
+							System.out.println("What you entered is not an integer");
+							System.out.println(e.getMessage());
+							log.error("Invalid input, expecting an integer");
+							scan.next();
+							continue;
+						}
+						AccountBean acc =Service.getAccountBean(scanI);
+						if(acc.getType().equals("Credit")) {
+							System.out.println("Enter limit you want to set for this account");
+							try{scanI = scan.nextInt();}
+							catch(Exception e) {
+								System.out.println("What you entered is not an integer");
+								System.out.println(e.getMessage());
+								log.error("Invalid input, expecting an integer");
+								scan.next();
+								continue;
 							}
+							if(scanI<=500) {
+								System.out.println("invalid limit, limit must be over $500");
+							}
+							else {
+								acc.setLimit(scanI);
+								Service.updateAccountsBean(acc);
+							}
+						}
+						else {
+							System.out.println("This account is not a credit account");
 						}
 					}
 				}
 				if(str.equals("view my accounts")) {
-					if(getCurAccounts()!=null) {
-						for(Account z:getCurAccounts()) {
-							z.getInfo();
-						}
-					}
-					else {
-						System.out.println("Currently have no accounts");
+					curAccounts.clear();
+					for(int i:Service.getUserAccounts(getCurUserID())) {
+						AccountBean atemp = Service.getAccountBean(i);
+						atemp.setAccountBeanId(i);
+						curAccounts.add(atemp);
+						System.out.println(atemp);
 					}
 				}
 				else if(str.equals("deposit")) {
 					if(getCurAccounts()!=null) {
 					System.out.println("Enter accountID to deposit to: ");
-					scanI=scan.nextInt();
-						for(Account z:getCurAccounts()) {
-							if(z.getAccountID()==scanI) {
+					System.out.println("Money will fail to deposit if accountID does not correlate to your account");
+					try{scanI = scan.nextInt();}
+					catch(Exception e) {
+						System.out.println("What you entered is not an integer");
+						log.error("Invalid input, expecting an integer");
+						scan.next();
+						continue;
+					}
+						for(AccountBean z:getCurAccounts()) {
+							if(z.getAccountBeanId()==scanI) {
 								System.out.println("enter amount of money to deposit");
-								scanI=scan.nextInt();
-								z.deposit(scanI);
+								try{scanI = scan.nextInt();}
+								catch(Exception e) {
+									System.out.println("What you entered is not an integer");
+									System.out.println(e.getMessage());
+									log.error("Invalid input, expecting an integer");
+									scan.next();
+								}
+								if(z.getType().equals("Credit")) {
+									z.setBalance(z.getBalance()-scanI);
+									Service.updateAccountsBean(z);
+								}
+								else {
+									z.setBalance(z.getBalance()+scanI);
+									Service.updateAccountsBean(z);
+								}
 							}
 						}
 					}
@@ -291,12 +345,43 @@ public class MyBank {
 				else if(str.equals("withdraw")) {
 					if(getCurAccounts()!=null) {
 						System.out.println("Enter accountID to withdraw: ");
-						scanI=scan.nextInt();
-							for(Account z:getCurAccounts()) {
-								if(z.getAccountID()==scanI) {
+						System.out.println("Money will fail to withdraw if accountID does not correlate to your account");
+						try{scanI = scan.nextInt();}
+						catch(Exception e) {
+							System.out.println("What you entered is not an integer");
+							System.out.println(e.getMessage());
+							log.error("Invalid input, expecting an integer");
+							scan.next();
+							continue;
+						}
+							for(AccountBean z:getCurAccounts()) {
+								if(z.getAccountBeanId()==scanI) {
 									System.out.println("enter amount of money to withdraw");
-									scanI=scan.nextInt();
-									z.deposit(scanI);
+									try{scanI = scan.nextInt();}
+									catch(Exception e) {
+										System.out.println("What you entered is not an integer");
+										System.out.println(e.getMessage());
+										log.error("Invalid input, expecting an integer");
+										scan.next();
+									}
+									if(z.getType().equals("Credit")) {
+										if(z.getBalance()+scanI>z.getLimit()) {
+											System.out.println("You don't have enought credit to do this");
+										}
+										else {
+											z.setBalance(z.getBalance()+scanI);
+											Service.updateAccountsBean(z);
+										}
+									}
+									else {
+										if(z.getBalance()>=scanI) {
+											z.setBalance(z.getBalance()-scanI);;
+											Service.updateAccountsBean(z);
+										}
+										else {
+											System.out.println("You don't have enought money to do this");
+										}
+									}
 								}
 							}
 						}
@@ -305,13 +390,13 @@ public class MyBank {
 						}
 				}
 				else if(str.equals("create savings account")) {
-					createAccount("savings",getCurUserID());
+					createAccount("Savings",getCurUserID());
 				}
 				else if(str.equals("create checking account")) {
-					createAccount("checking",getCurUserID());
+					createAccount("Checking",getCurUserID());
 				}
 				else if(str.equals("create credit account")) {
-					createAccount("credit",getCurUserID());
+					createAccount("Credit",getCurUserID());
 				}
 				else if(str.equals("exit")) {
 					scan.close();
@@ -322,7 +407,7 @@ public class MyBank {
 					curUser=null;
 					y=false;
 				}
-				else if(getCurUser().getType()!="Admin") {
+				else if(!(getCurUser().gettype().equals("Admin"))) {
 					System.out.println("Invalid Entry, please type in one of the available actions");
 					continue;
 				}
