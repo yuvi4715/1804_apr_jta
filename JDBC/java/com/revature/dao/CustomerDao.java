@@ -12,6 +12,6 @@ public interface CustomerDao {
 	boolean insertCustomer(Customer customer);
 	public Customer getCustomer(String email);
 	public abstract List<Customer> getAllCustomers();
-	public boolean updateCustomer(Customer customer);
-	public boolean deleteCustomer(Customer customer);
+	public boolean updateCustomer(String email, Customer customer);
+	public boolean deleteCustomer(String email);
 }

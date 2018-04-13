@@ -26,13 +26,14 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	@Override
 	public boolean insertCustomer(Customer customer) {
+		int index = 0;
 		try (Connection conn = ConnectionsWithPropertiesUtil.getConnection()) {
 			PreparedStatement stmt = conn.prepareStatement("INSERT INTO customer "
 					+ "(customerid, firstname, lastname, email) VALUES (?, ?, ?, ?)");
-			stmt.setInt(1, 63);
-			stmt.setString(2, customer.getFirstName());
-			stmt.setString(3, customer.getLastName());
-			stmt.setString(4, customer.getEmail());
+			stmt.setInt(++index, 63);
+			stmt.setString(++index, customer.getFirstName());
+			stmt.setString(++index, customer.getLastName());
+			stmt.setString(++index, customer.getEmail());
 			if (!stmt.execute())
 				// executeUpdate returns the number of rows modified from the DML statement
 				return stmt.getUpdateCount() > 0;
@@ -47,10 +48,11 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	@Override
 	public Customer getCustomer(String email) {
+		int index = 0;
 		try (Connection conn = ConnectionsWithPropertiesUtil.getConnection()) {
 			PreparedStatement stmt = conn.prepareStatement("SELECT firstname, "
 					+ "lastname, email FROM customer WHERE email = ?");
-			stmt.setString(1, email);
+			stmt.setString(++index, email);
 			ResultSet rs = stmt.executeQuery();
 			// Can use if-statement instead of while-loop if you only expect one record
 			if (rs.next()) {
@@ -91,14 +93,39 @@ public class CustomerDaoImpl implements CustomerDao {
 	}
 
 	@Override
-	public boolean updateCustomer(Customer customer) {
-		// TODO Auto-generated method stub
+	public boolean updateCustomer(String originalEmail, Customer customer) {
+		int index = 0;
+		try (Connection conn = ConnectionsWithPropertiesUtil.getConnection()) {
+			PreparedStatement stmt = conn.prepareStatement("UPDATE customer SET firstname = ?, lastname = ?, email = ? WHERE email = ?");
+			stmt.setString(++index, customer.getFirstName());
+			stmt.setString(++index, customer.getLastName());
+			stmt.setString(++index, customer.getEmail());
+			stmt.setString(++index, originalEmail);
+			if (!stmt.execute()) {
+				return stmt.getUpdateCount() > 0;
+			}
+		} catch (SQLException sqle) {
+			System.err.println(sqle.getMessage());
+			System.err.println("SQL State: " + sqle.getSQLState());
+			System.err.println("Error Code: " + sqle.getErrorCode());
+		}
 		return false;
 	}
 
 	@Override
-	public boolean deleteCustomer(Customer customer) {
-		// TODO Auto-generated method stub
+	public boolean deleteCustomer(String email) {
+		int index = 0;
+		try (Connection conn = ConnectionsWithPropertiesUtil.getConnection()) {
+			PreparedStatement stmt = conn.prepareStatement("DELETE FROM customer WHERE email = ?");
+			stmt.setString(++index, email);
+			if (!stmt.execute()) {
+				return stmt.getUpdateCount() > 0;
+			}
+		} catch (SQLException sqle) {
+			System.err.println(sqle.getMessage());
+			System.err.println("SQL State: " + sqle.getSQLState());
+			System.err.println("Error Code: " + sqle.getErrorCode());
+		}
 		return false;
 	}
 }
