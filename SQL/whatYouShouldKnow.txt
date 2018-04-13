@@ -1,0 +1,41 @@
+5 Sublanguages of SQL
+What are the different constraints
+What is cascade delete
+What are some common commands/clauses and their syntax (I gave you a cheat sheet)
+What are the different relationships? (Multiplicity)
+How do you enforce the different relationships
+What is an ERD
+What is Normalization
+How do you enforce Normalization
+What is Denormalization
+What is OLAP/OLTP
+What is a nested query
+What is referential integrity
+What is an orphaned record
+What is an aggregate function/scalar function
+What is a join
+What are the different joins available
+What are the difference between the joins 
+What is a Set Operation
+What are the different Set Operations available
+What are the difference between the set operations
+What is the purpose of LIKE
+What is the purpose of DISTINCT
+What is the purpose of SELECT INTO
+What is the difference between Set Operations and Joins
+What is the difference between WHERE and HAVING
+What is the difference between DELETE, DROP, and TRUNCATE
+What is the difference between ORDER BY and GROUP BY
+What is PL/SQL
+What is a Stored Procedure
+What is a UDF
+What are the differences between a SP and a UDF
+What is a trigger
+What is a cursor
+What is a transaction
+What are the transaction properties (ACID)
+What are the Isolation Levels
+What are the Concurrency Issues 
+
+
+

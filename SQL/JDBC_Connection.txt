@@ -1,0 +1,53 @@
+GENERAL NOTE: If you are unable to successfully connect to anything, double and triple check the spelling of the hard coded items you provide
+
+
+Using JDBC to connect to an external database
+
+*** This assumes no previous configuration***
+
+1. Obtain the ojdbc7.jar file 
+
+2. In the root directory of your STS project, run the command
+
+	mvn install:install-file -Dfile=C:\jars\ojdbc7.jar -DgroupId=com.oracle -Dartifactid=ojdbc7 -Dversion=12.1.0 -Dpackaging=jar 
+	
+	=> This command adds the JDBC driver to your .m2 folder 
+	
+3. In your pom.xml file, add 
+
+	<dependency>
+		<groupId>com.oracle</groupId>
+		<artifactId>ojdbc7</artifactId>
+		<version>12.1.0</version>
+	</dependency>
+	
+	
+Now, you've successfully enabled your project to be able to connect to the database. 
+
+To connect to your individual database, you need 
+
+	URL => jdbc:oracle:thin:@<PUT YOUR INDIVIDUAL URL HERE>:1521:ORCL
+	Username => username associated with the database 
+	Password => password associated with the database 
+	
+	
+1. Create a Connection Object
+
+	Connection conn = DriverManager.getConnection(url, username, password)
+	
+	
+2. Create a Statement object 
+
+	Statement stmt = conn.createStatement();
+	PreparedStatement pstmt = conn.prepareStatement(sql);
+	CallableStatement cstmt = conn.prepareCall(sql);
+	
+	
+3. Execute the Statement depending on the type of SQL operations you are performing
+
+	boolean execute(sql)
+	ResultSet executeQuery(sql)
+	int executeUpdate(sql)
+	
+	
+4. Don't forget to close your resources in the reverse order they were declared!!! Using the try-with-resources does this for you automatically

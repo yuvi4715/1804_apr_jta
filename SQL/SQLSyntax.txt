@@ -1,0 +1,102 @@
+DDL
+CREATE
+	CREATE TABLE table_name (
+		column_name COLUMN_TYPE,
+		column_name COLUMN_TYPE,
+		...
+		CONSTRAINT constraint_name CONSTRAINT TYPE
+	);
+	
+ALTER
+	ALTER TABLE table_name
+		ADD column_name COLUMN_TYPE;	--Adds a single column to Table
+		
+	ALTER TABLE table_name 				--Adds multiple columns to Table
+		ADD (
+			column_name COLUMN_TYPE,
+			column_name COLUMN_TYPE,
+			...
+			);
+			
+	ALTER TABLE table_name				--Modify an existing column in table 
+		MODIFY column_name COLUMN TYPE;
+		
+	ALTER TABLE table_name 				--Modify multiple existing columns in table 
+		MODIFY (
+			column_name COLUMN_TYPE,
+			column_name COLUMN_TYPE,
+			...
+			)
+			
+	ALTER TABLE table_name				--Drops a single column in table 
+		DROP COLUMN column_name;
+		
+	ALTER TABLE table_name 				--Rename the table 
+		RENAME TO new_table_name;
+		
+	ALTER TABLE table_name 				--Renames the column in the table
+		RENAME COLUMN column_name TO new_column_name;
+		
+RENAME
+	RENAME TABLE table_name				--Renames the table
+		TO new_table_name;
+		
+DROP
+	DROP TABLE table_name;				--Drops the table 
+	
+	DROP TABLE table_name CASCADE;		--Drops the table as well as all referential integrity constraints that refer to primary and unique keys
+	
+TRUNCATE
+	TRUNCATE TABLE table_name;			--Truncates the table 
+	
+	
+DML
+INSERT
+	INSERT INTO table_name VALUES(val1, val2, ... , valN);											--Inserts values in order of table definition
+	INSERT INTO table_name (col3, col1, col2, ... , colN) VALUES (val3, val1, val2, ... , valN); 	--Inserts values in order of column definition
+	
+UPDATE
+	UPDATE table_name SET column_name1 = new_value1, column_name2 = new_value2, ... , column_name3 = new_value3 WHERE condition;
+	
+DELETE
+		DELETE FROM table_name;							--Deletes each entry in the table 
+		DELETE FROM table_name WHERE condition;			--Deletes each entry in the table that meets the condition 
+		
+		
+DQL
+SELECT
+	SELECT column_names FROM table_name 
+		WHERE condition 
+		GROUP BY column_name
+		HAVING aggregate_function
+		ORDER BY column_name;
+		
+		
+DCL
+GRANT
+	GRANT privilege_type ON table_name TO grantees;
+	
+		ALL-PRIVILEGES
+		DELETE 
+		INSERT 
+		REFERENCES [column-list]
+		SELECT [column-list]
+		TRIGGER
+		UPDATE [column-list]
+		
+		
+REVOKE
+	REVOKE privilege_type ON table_name FROM user;
+	
+	
+	
+TCL
+COMMIT
+	commit;
+	
+ROLLBACK
+	rollback;
+	
+SAVEPOINT
+	savepoint;
+	savepoint savepoint-name; --Using ROLLBACK savepoint-name will rollback to this point
