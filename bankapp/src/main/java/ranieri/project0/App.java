@@ -1,6 +1,7 @@
 package ranieri.project0;
 
 import java.util.Scanner;
+import ranieri.banque.sqlconnection.*;
 
 /**
  * Hello world!
@@ -16,8 +17,11 @@ public class App
     	boolean appOn = true;
     	while(appOn) {
         greeting();// home page
-        int choice = scan.nextInt();
         
+        int choice = validInput();
+        if (choice == 0)
+        	continue;
+    
         switch(choice) {
         
         case 1: login(); 
@@ -64,6 +68,19 @@ public class App
     }
     
     public static void createAccount() {
+    	
+    }
+    
+    public static int validInput() {
+    	 
+    	Scanner scan = new Scanner(System.in);
+        try {
+        int choice = scan.nextInt();
+        return choice;
+        }catch(Exception e){
+        	System.out.println("Not a valid input!!!!");
+        }
+        return 0;
     	
     }
     
