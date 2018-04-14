@@ -58,10 +58,14 @@ public class User {
 		this.password = password;
 	}
 	
-			
-		
+	public String getRole() {
+		return role;
+	}
 	
-
+	public int getAuth() {
+		return this.authorized;
+	}
+			
 
 	public double getBalance() {
 		return balance;

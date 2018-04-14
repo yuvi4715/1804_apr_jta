@@ -27,13 +27,21 @@ private static UserDaoImpl instance;
 	
 
 	@Override
-	public boolean insertUser() {
+	public boolean insertUser(User user) {
 		// TODO Auto-generated method stub
 		try(Connection conn = ConnectionBanque.getConnection()){
-			CallableStatement stmt = conn.prepareCall("CALL {insert_user(?,?,?,?,?)}");
 			
-			
-
+			CallableStatement stmt = conn.prepareCall("INSERT INTO BANQUE_USER(username,password,balance,authorization, role) VALUES(?,?,?,?,?)");
+			stmt.setString(1, user.getUsername());
+			stmt.setString(2,user.getPassword() );
+			stmt.setDouble(3, user.getBalance());
+			stmt.setInt(4, user.getAuth());
+			stmt.setString(5, user.getRole());
+			System.out.println(stmt);
+						
+				return stmt.executeUpdate()> 0 ;
+				
+		
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -49,8 +57,12 @@ private static UserDaoImpl instance;
 	}
 
 	@Override
-	public boolean updateUser() {
+	public boolean updateUser(User user) {
 		// TODO Auto-generated method stub
+		
+		
+		
+		
 		return false;
 	}
 

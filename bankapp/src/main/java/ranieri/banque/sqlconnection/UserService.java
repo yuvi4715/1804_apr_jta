@@ -14,13 +14,20 @@ public class UserService{
 		
 	}
 	
+	public static boolean insertUser(User user) {
+		return dao.insertUser(user);
+	}
+	
 	
 	
 	public static void main(String[] args) {
+		User test = new User("tester","testpass",1,80900);
+		UserService.insertUser(test);
 		
-		User tony = UserService.getUser("not Tony Soprano");
+//		User tony = UserService.getUser("CODEMASTER");	
+//		System.out.println(tony.getPassword());
 		
-		System.out.println(tony.getBalance());
+		
 
 	}
 
