@@ -50,7 +50,7 @@ public class App
     
     public static void greeting() {
     	System.out.println( "Welcome to Banque du légitimité \n the home of honest banking" );
-        System.out.println("Press 1 to login as user");
+        System.out.println("Press 1 to login");
         System.out.println("Press 2 to make a new account");
         System.out.println("Press 3 to exit");
         
@@ -59,11 +59,30 @@ public class App
     
     public static void login() {
     	
-    	System.out.println("Welcome to login please put in username and password");
-    	// needs to point to ui if customer and adminUI for admin user
+    	try {
+    	System.out.println("Welcome to login please put in username");
+    	Scanner scan = new Scanner(System.in);
+    	String username = scan.nextLine();
+    	User currentUser = UserService.getUser(username);
+    	System.out.println("Please verify password");
+    	String password = scan.nextLine();
     	
     	
-    	System.out.println("not a valid username and/or passowrd");
+    	if(password.equals(currentUser.getPassword()) && currentUser.getAuth()<2) {    		  		   		
+    		UI.customerLoggedIn(currentUser);
+    	}
+    	if(password.equals(currentUser.getPassword()) && currentUser.getAuth()>1) {    		  		   		
+    		AdminUI.adminLoggedIn(currentUser);
+    	}
+    		
+    	else {
+    		System.out.println("Incorrect username or password");
+    	}
+    	}catch(Exception e) {
+    		System.out.println("Invalid inputs");  		
+    	
+    	}
+    
     	
     }
     

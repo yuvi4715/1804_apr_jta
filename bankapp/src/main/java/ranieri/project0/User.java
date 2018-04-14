@@ -65,6 +65,10 @@ public class User {
 	public int getAuth() {
 		return this.authorized;
 	}
+	
+	public void setAuth(int level) {
+		this.authorized = level;
+	}
 			
 
 	public double getBalance() {

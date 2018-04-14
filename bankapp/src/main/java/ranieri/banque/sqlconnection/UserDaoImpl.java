@@ -5,8 +5,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
-
 
 import ranieri.project0.*;
 
@@ -109,8 +109,35 @@ private static UserDaoImpl instance;
 	}
 
 	@Override
-	public List<User> getAllCustomers() {
+	public List<String> getAllCustomers() {
 		// TODO Auto-generated method stub
+		try(Connection conn = ConnectionBanque.getConnection()){
+			
+			List<String> customers = new ArrayList<>();
+			
+			PreparedStatement stmt = conn.prepareCall("SELECT USERNAME FROM banque_user WHERE AUTHORIZATION = 0 ");
+	
+			
+				ResultSet rs= stmt.executeQuery();
+				
+				while(rs.next()) {
+					customers.add(rs.getString("USERNAME"));
+				}
+				
+				return customers;
+		
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
 		return null;
 	}
 

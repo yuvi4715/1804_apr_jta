@@ -6,8 +6,7 @@ public class Admin extends User {
 	
 	private String username;
 	private String password;
-	private boolean authorized = true;
-	
+
 		
 	public Admin(String username, String password) {
 		super(username, password);
@@ -40,7 +39,7 @@ public class Admin extends User {
 	
 	@Override
 	public String toString() {
-		return "Admin [username=" + username + ", password=" + password + ", authorized=" + authorized + "]";
+		return "Admin is so much better than customer ";
 	}
 
 	public static void main(String[] args) {
