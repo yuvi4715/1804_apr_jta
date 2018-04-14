@@ -37,7 +37,6 @@ private static UserDaoImpl instance;
 			stmt.setDouble(3, user.getBalance());
 			stmt.setInt(4, user.getAuth());
 			stmt.setString(5, user.getRole());
-			System.out.println(stmt);
 						
 				return stmt.executeUpdate()> 0 ;
 				
@@ -59,11 +58,32 @@ private static UserDaoImpl instance;
 	@Override
 	public boolean updateUser(User user) {
 		// TODO Auto-generated method stub
+		try(Connection conn = ConnectionBanque.getConnection()){
+			
+			CallableStatement stmt = conn.prepareCall("UPDATE BANQUE_USER SET username = ?, password = ?, balance = ?, authorization = ?, role = ? WHERE username= ?");
+			stmt.setString(1, user.getUsername());
+			stmt.setString(2,user.getPassword() );
+			stmt.setDouble(3, user.getBalance());
+			stmt.setInt(4, user.getAuth());
+			stmt.setString(5, user.getRole());
+			stmt.setString(6, user.getUsername());
+						
+				return stmt.executeUpdate()> 0 ;
+				
+		
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		
 		
 		
 		
 		return false;
+		
 	}
 
 	@Override
