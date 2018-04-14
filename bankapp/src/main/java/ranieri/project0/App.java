@@ -88,6 +88,25 @@ public class App
     
     public static void createAccount() {
     	
+    	Scanner scan = new Scanner(System.in);
+    	
+    	try {
+    	System.out.println("please enter a username with no spaces");
+    	String username = scan.nextLine();
+    	username = username.trim();
+    	
+    	System.out.println("please enter a password with no spaces");
+    	String password = scan.nextLine();
+    	password = password.trim();
+    	
+    	User new_user = new User(username,password);
+    	  	
+    	UserService.insertUser(new_user);
+    	System.out.println("Succesfully created a new user");
+    	}catch (Exception e) {
+    		System.out.println("Invalid inputs");
+    	}
+    	
     }
     
     public static int validInput() {

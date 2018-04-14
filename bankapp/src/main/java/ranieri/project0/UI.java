@@ -2,6 +2,8 @@ package ranieri.project0;
 
 import java.util.Scanner;
 
+import ranieri.banque.sqlconnection.UserService;
+
 public class UI {
 	
 public static User customerLoggedIn(User user) {
@@ -11,9 +13,10 @@ public static User customerLoggedIn(User user) {
 	
 	// checks for authorization
 	
-//	if (customer.checkAuthorization()== false) {
-//		return customer;
-//	}
+	if (user.getAuth()== 0) {
+		System.out.println("You are not authorized at this time");
+		return null;
+	}
 	
 	System.out.println("Logged in as "+ user.getUsername() + "       Your current balance: $"+user.getBalance() + "\n" );
 	System.out.println("to deposit type  deposit and the ammount   i.e.  deposit 1000");
@@ -36,9 +39,8 @@ public static User customerLoggedIn(User user) {
 				
 		if(inputs[0].equals("logout")) {
 			
-			// update account sql goes here
-			
-			
+			UserService.updateUser(user);
+			System.out.println("logging out and updating your new balance");
 			loggedIn = false;
 			break;
 		}
