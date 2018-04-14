@@ -7,8 +7,9 @@ public class User {
 	
 	private String username;
 	private String password;
+	private String role = "customer";
 	private ArrayList<String> history;
-	boolean authorized = false;
+	int authorized = 0;
 	private double balance = 0;
 	
 	public User(String username, String password) {
@@ -18,7 +19,7 @@ public class User {
 		
 	}
 	
-	public User(String username, String password, boolean authorized, double balance) {
+	public User(String username, String password, int authorized, double balance) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -57,17 +58,9 @@ public class User {
 		this.password = password;
 	}
 	
+			
+		
 	
-	
-	public boolean isAuthorized() {
-		return authorized;
-	}
-
-
-
-	public void setAuthorized(boolean authorized) {
-		this.authorized = authorized;
-	}
 
 
 	public double getBalance() {
@@ -94,19 +87,6 @@ public class User {
 	}
 
 
-	public boolean checkAuthorization() {
-		
-		if(authorized == true) {
-			return true;
-		}else {
-			System.out.println("You are not authorized at this moment.");
-			return false;
-		}
-			
-		
-	}
-
-		
 	
 	
 	

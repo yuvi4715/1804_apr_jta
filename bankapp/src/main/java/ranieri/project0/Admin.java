@@ -20,11 +20,7 @@ public class Admin extends User {
 		
 	}
 
-	public void authorizeUser(User user) {
-		//
-		
-		user.setAuthorized(true);		
-	}
+
 	
 	public void createAdmin(String username, String password) {
 		

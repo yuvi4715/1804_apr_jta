@@ -3,6 +3,7 @@ package ranieri.banque.sqlconnection;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -54,23 +55,25 @@ private static UserDaoImpl instance;
 	}
 
 	@Override
-	public boolean getUser(User user) {
+	public User getUser(String username) {
+		
 		try(Connection conn = ConnectionBanque.getConnection()){
-			PreparedStatement stmt = conn.prepareCall("SELECT * from banque_user WHERE username = ? ;");
-			stmt.setString(1, user.getUsername() );
+			PreparedStatement stmt = conn.prepareCall("SELECT username, password, balance, authorization FROM banque_user WHERE username = ? ");
+			stmt.setString(1, username );
+			
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()) {
+				return new User(rs.getString("username"), rs.getString("password"),rs.getInt("authorization"), rs.getDouble("balance"));
+			}
 
-			return stmt.executeUpdate()> 0 ;
 						
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		return false;
+				
+		return null;
 	}
 
 	@Override
