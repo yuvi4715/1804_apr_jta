@@ -28,6 +28,11 @@
   </build>
   
   <dependencies>
+  	<dependency>
+    	<groupId>com.oracle</groupId>
+    	<artifactId>ojdbc7</artifactId>
+    	<version>12.1.0</version>
+	</dependency>
 	<!-- https://mvnrepository.com/artifact/junit/junit -->
 	<dependency>
     	<groupId>junit</groupId>

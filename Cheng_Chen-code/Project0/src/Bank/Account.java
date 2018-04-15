@@ -7,24 +7,13 @@ public abstract class Account implements Serializable
 	//account number initialized at creation, is the 
 	private static final long serialVersionUID = 1L;
 	private double balance = 0;
-	private int accNo;
 	private boolean Auth;
 	private String password;
 	private String username;
 	
-	public int getAccountNumber()
-	{
-		return accNo;
-	}
-	
 	protected void setPassword(String newPass)
 	{
 		password = newPass;
-	}
-	
-	protected void accNo(int n)
-	{
-		accNo = n;
 	}
 	
 	protected void setUser(String newUser)
@@ -40,6 +29,16 @@ public abstract class Account implements Serializable
 	protected void setAuth(boolean a)
 	{
 		Auth = a;
+	}
+	
+	public String getUser()
+	{
+		return username;
+	}
+	
+	public String getPass()
+	{
+		return password;
 	}
 	
 	public double getBalance()
