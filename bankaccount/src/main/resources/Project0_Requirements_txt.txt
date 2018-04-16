@@ -1,0 +1,25 @@
+Below are the core ones (everyone MUST accomplish them)
+--user login 
+-account creation (admin and user role)
+--admins must approve users before they can be used (isAdmin boolean, EZ)
+-transactions, must support withdrawals and deposits (EZ methods)
+-must use logging (use Log4j, pending)
+-everything must NOT be in the main method. (call login() in the main, EZ)
+-data must be persisted (saved in the DB, EZ)
+-collect data inputs from console (scanner, EZ)
+
+Flow:
+1) Login
+2) Display Menu
+	a)Deposit
+	b)Withdrawal
+	If (admin)
+		1. List newly created accounts waiting approval.
+3) Log Out, display login screen
+
+When account is created, generate number with sequence and display all info to the user, and that it will be waiting for approval.
+
+In java app, create object with the properties of the user in the DB
+
+Login should check isAdmin AND isApproved
+
