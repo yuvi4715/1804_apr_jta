@@ -17,17 +17,14 @@ public class BankAccount{
     *   Main method.
     */
     public static void main(String[] args) {
-        //Test insertUser and updateBalance methods in BankDAOImpl class
-        //testUser = new User(0, 1, "Admin", "Test", 100017, 0, "pass1");
-        //System.out.println("Made admin: " + BankService.approveUser(testUser));
-        // testUser = BankService.getUser(100017, "pass1");
-        // System.out.println(testUser.toString());
-        while(!mainMenu) {
-        	displayLogin();
-        }
-        while(mainMenu){
-            displayMainMenu();
-        }
+        createAccount();
+        
+        // while(!mainMenu) {
+        // 	displayLogin();
+        // }
+        // while(mainMenu){
+        //     displayMainMenu();
+        // }
     }
 
     /*
@@ -94,7 +91,7 @@ public class BankAccount{
         }while(accNum < 100000 || accNum > 999999);
         //Print if the user account was approved or not
         if (accNum != 0)
-        	System.out.println("User with account # " + accNum + " approved: " + BankService.approveUser(accNum));
+        	log.info("User with account # " + accNum + " approved: " + BankService.approveUser(accNum));
 
         //Prompt the user if he wants to continue approving accounts.
         String yesno = "";
@@ -153,7 +150,7 @@ public class BankAccount{
         //If credentials are correct, testUser won't be NULL
         testUser = BankService.getUser(accNum, passwd);
         if(testUser == null){
-            System.out.println("Credentials are incorrect, try again.");
+            log.error("Credentials are incorrect, try again.");
         }
 
         //If user is Admin and/or Approved, proceed to main menu, else return to login menu.
@@ -166,7 +163,7 @@ public class BankAccount{
             return;
         }
         else
-            System.out.println("This account is not approved. Please try again later.");
+            log.warn("This account is not approved. Please try again later.");
     }
 
     /*
@@ -178,6 +175,34 @@ public class BankAccount{
         String passwd = "";
         String firstN = "";
         String lastN = "";
+    }
+
+    /*
+    *   This method is used for withdrawals and deposits. It receives a boolean variable which
+    *   determines if the transaction will be a deposit or withdrawal.
+    */
+    public static void modifyBalance(boolean depositOrNah){
+        //This variable will be set to -1 if the transaction is a withdrawal.
+        //So that when it performs the addition, it actually subtracts.
+        int mult = 1;
+        double amount = 0;
+        String action = "deposit";
+        if(!depositOrNah){
+            mult = -1;
+            action = "withdraw";
+        }
+
+        //Prompt the user to enter an amount, and verify that the amount is correct.
+        do{
+            System.out.print("Enter the amount to " + action + ": ");
+            amount = input.nextDouble();
+            amount = Math.abs(amount) * mult;
+            if (testUser.getBalance() + amount < 0)
+                log.warn("Invalid amount entered. Not enough funds.");
+        }while(testUser.getBalance() + amount < 0);
+        testUser.setBalance(testUser.getBalance() + amount);
+        BankService.updateBalance(testUser);
+        log.info("This amount is valid, new balance is: " + testUser.getBalance());
     }
 
     /*
