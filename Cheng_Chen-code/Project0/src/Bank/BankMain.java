@@ -19,13 +19,7 @@ public class BankMain {
 	final static Logger log = Logger.getLogger(BankMain.class);
 	
 	public static void main(String[] args) 
-	{
-		// TODO Auto-generated method stub
-		//log usage for later
-		//log.info("TEST.");
-		//UserAccount test = new UserAccount("John Smith", "test", "JST", 10, false);
-		//System.out.println("Test Account was updated: " + BankService.updateUser(test));
-		
+	{	
 		boolean running = true;
 		
 		System.out.println("Welcome to the Revature Banking Application.");
@@ -123,10 +117,11 @@ public class BankMain {
 			System.out.println("Please enter your username:");
 			Scanner in = new Scanner(System.in);
 			String username = in.nextLine();
-			UserAccount current = BankService.getUser(username);
 			
 			System.out.println("Please enter your password:");
 			String password = in.nextLine();
+			
+			UserAccount current = BankService.getUser(username);
 			
 			if(password.equals(current.getPass()) && current.getAuth())
 			{
@@ -249,10 +244,11 @@ public class BankMain {
 			System.out.println("Please enter your username:");
 			Scanner in = new Scanner(System.in);
 			String username = in.nextLine();
-			AdminAccount current = BankService.getAdmin(username);
 			
 			System.out.println("Please enter your password:");
 			String password = in.nextLine();
+			
+			AdminAccount current = BankService.getAdmin(username);
 			
 			if(password.equals(current.getPass()))
 			{
