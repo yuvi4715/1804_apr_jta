@@ -147,10 +147,14 @@ public class BankMain {
 	}
 	public static void UserMenu(UserAccount user)
 	{
+		System.out.println("Welcome, " + user.getName() + "!");
+		System.out.println("Your current balance is: ");
+		System.out.printf("$%.2f", user.getBalance());
+		System.out.println();
 		boolean loggedOn = true;
+		
 		while(loggedOn)
 		{
-			System.out.println("Welcome, " + user.getName() + "!");
 			System.out.println("Please select an option below:");
 			System.out.println("1. Make a deposit.");
 			System.out.println("2. Make a withdrawl.");
