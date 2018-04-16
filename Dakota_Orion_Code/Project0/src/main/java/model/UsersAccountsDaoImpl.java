@@ -7,6 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
+import accounts.MyBank;
 import util.ConnectionWithProperties;
 
 public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
@@ -18,6 +21,7 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 		}
 		return instance;
 	}
+	final static Logger log = Logger.getLogger(MyBank.class);
 	public boolean insertUsersBean(UsersBean user) {
 		try(Connection conn = ConnectionWithProperties.getConnection()){
 			PreparedStatement stmt = conn.prepareStatement("INSERT INTO users(userid,password,type,approve) VALUES(?,?,?,?)");
@@ -25,9 +29,11 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			stmt.setString(2,user.getpassword());
 			stmt.setString(3,user.gettype());
 			stmt.setString(4, user.getapprove());
+			log.info("Creating user into database");
 			return stmt.executeUpdate()>0;
 			
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -47,6 +53,7 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 				return temp;
 			}
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -68,6 +75,7 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			}
 			return users;
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -87,6 +95,7 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			}
 			return users;
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -101,9 +110,11 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			stmt.setString(2,user.gettype());
 			stmt.setString(3, user.getapprove());
 			stmt.setInt(4, user.getUsersBeanId());
+			log.info("Updating a user in the database");
 			return stmt.executeUpdate()>0;
 			
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -119,8 +130,10 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			}
 			PreparedStatement stmt = conn.prepareStatement("DELETE FROM users where userid = ?");
 			stmt.setInt(1, u);
+			log.info("Deleting user from database");
 			return stmt.executeUpdate()>0;
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -140,6 +153,7 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			return accounts;
 			
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -155,6 +169,7 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			return stmt.executeUpdate()>0;
 			
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -170,9 +185,11 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			stmt.setInt(3, AccountsBean.getBalance());
 			stmt.setInt(4, AccountsBean.getLimit());
 			stmt.setString(5, AccountsBean.getType());
+			log.info("Creating a new account in database");
 			return stmt.executeUpdate()>0;
 			
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -192,6 +209,7 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 				return temp;
 			}
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -213,6 +231,7 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			}
 			return accounts;
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -228,9 +247,11 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			stmt.setInt(3, AccountsBean.getLimit());
 			stmt.setString(4, AccountsBean.getType());
 			stmt.setInt(5,AccountsBean.getAccountBeanId());
+			log.info("Updating an account in the database");
 			return stmt.executeUpdate()>0;
 			
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -245,8 +266,10 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 			stmt1.setInt(1, a);
 			stmt2.setInt(1, a);
 			stmt1.executeUpdate();
+			log.info("Deleting an account in database");
 			return stmt2.executeUpdate()>0;
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -262,6 +285,7 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 				return rs.getInt(1);
 			}
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -277,6 +301,7 @@ public class UsersAccountsDaoImpl implements AccountsDao, UsersDao{
 				return rs.getInt(1);
 			}
 		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());

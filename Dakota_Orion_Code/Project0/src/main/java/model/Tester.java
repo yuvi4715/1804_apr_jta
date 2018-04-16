@@ -4,6 +4,8 @@ package model;
 public class Tester {
 
 	public static void main(String[] args) {
+		
+		// USED FOR TESTING PURPOSES AND DELETING INFORMATION FROM THE DATABASE
 /*		int maxUserId = Service.getMaxUsersBeanId();
 		System.out.println(maxUserId);
 		List<UsersBean> u = Service.getAllUsersBean();
@@ -12,7 +14,6 @@ public class Tester {
 		}
 		
 		System.out.println(Service.getUsersBean(1));*/
-		Service.deleteUsersBean(3);
 	}
 
 }

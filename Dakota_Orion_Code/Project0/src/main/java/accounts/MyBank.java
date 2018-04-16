@@ -337,6 +337,7 @@ public class MyBank {
 								}
 							}
 						}
+						scan.nextLine();
 					}
 					else {
 						System.out.println("Currently have no accounts");
@@ -384,6 +385,7 @@ public class MyBank {
 									}
 								}
 							}
+							scan.nextLine();
 						}
 						else {
 							System.out.println("Currently have no accounts");
