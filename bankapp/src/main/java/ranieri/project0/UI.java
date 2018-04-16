@@ -18,7 +18,8 @@ public static User customerLoggedIn(User user) {
 		return null;
 	}
 	
-	System.out.println("Logged in as "+ user.getUsername() + "       Your current balance: $"+user.getBalance() + "\n" );
+	System.out.println("Logged in as "+ user.getUsername() + "       Your current balance: $"+user.getBalance() + "\n" );	
+	
 	System.out.println("to deposit type  deposit and the ammount   i.e.  deposit 1000");
 	System.out.println("to withdrawl type  withdrawl and the ammount   i.e.  withdrawl 1000");
 	System.out.println("to logout and finalize changes     logout username");
@@ -97,7 +98,7 @@ public static boolean legitCommand(String command) {
 	
 	command = command.toLowerCase();
 	
-	if( command.equals("withdrawl") ||command.equals("deposit") || command.equals("logout") || command.equals("finalize")) {
+	if( command.equals("withdrawl") ||command.equals("deposit") || command.equals("logout") || command.equals("account")) {
 		return true;
 	}else {
 		return false;

@@ -3,9 +3,13 @@ package ranieri.project0;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+
 import ranieri.banque.sqlconnection.*;
 
 import ranieri.banque.sqlconnection.UserService;
+import ranieri.logger.Logger4j;
 
 public class AdminUI {
 	
@@ -68,6 +72,8 @@ public class AdminUI {
 		User candidate = UserService.getUser(username);
 		candidate.setAuth(1);
 		UserService.updateUser(candidate);
+		final Logger log = Logger.getLogger(Logger4j.class);
+    	log.info("user" +candidate.getUsername()+"was quthorized");
 		System.out.println("Update successful");
 		}catch(Exception e){
 			
@@ -86,9 +92,11 @@ public class AdminUI {
 		try {
 		String username = scan.nextLine();		
 		User candidate = UserService.getUser(username);
-		candidate.setAuth(2);
+		candidate.setAuth(2);		
 		UserService.updateUser(candidate);
 		System.out.println("New admin created");
+		final Logger log = Logger.getLogger(Logger4j.class);
+    	log.info("user" +candidate.getUsername()+"was made an admin");
 		}catch(Exception e){
 			
 			System.out.println("exiting with creating an admin");

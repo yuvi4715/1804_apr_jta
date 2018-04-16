@@ -1,7 +1,11 @@
 package ranieri.project0;
 
 import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+
 import ranieri.banque.sqlconnection.*;
+import ranieri.logger.Logger4j;
 
 /**
  * Hello world!
@@ -11,7 +15,7 @@ public class App
 {
     public static void main( String[] args )
     {
-    	
+    	final Logger log = Logger.getLogger(Logger4j.class);
     	Scanner scan = new Scanner(System.in);
     	
     	boolean appOn = true;
@@ -27,7 +31,7 @@ public class App
         case 1: login(); 
         		break;
         		
-        case 2: createAccount();
+        case 2: createUser();
         		break;
         
         case 3: appOn= false;
@@ -51,7 +55,7 @@ public class App
     public static void greeting() {
     	System.out.println( "Welcome to Banque du légitimité \n the home of honest banking" );
         System.out.println("Press 1 to login");
-        System.out.println("Press 2 to make a new account");
+        System.out.println("Press 2 to make a new user account");
         System.out.println("Press 3 to exit");
         
     }
@@ -68,11 +72,18 @@ public class App
     	String password = scan.nextLine();
     	
     	
-    	if(password.equals(currentUser.getPassword()) && currentUser.getAuth()<2) {    		  		   		
+    	if(password.equals(currentUser.getPassword()) && currentUser.getAuth()<2) { 
+    		final Logger log = Logger.getLogger(Logger4j.class);
+        	log.info("user "+ currentUser.getUsername()+" logged in");
     		UI.customerLoggedIn(currentUser);
+    		log.info("user "+ currentUser.getUsername()+" logged out");
     	}
-    	if(password.equals(currentUser.getPassword()) && currentUser.getAuth()>1) {    		  		   		
+    	if(password.equals(currentUser.getPassword()) && currentUser.getAuth()>1) { 
+    		final Logger log = Logger.getLogger(Logger4j.class);
+    		log.info("user "+ currentUser.getUsername()+" logged in");
     		AdminUI.adminLoggedIn(currentUser);
+    		log.info("user "+ currentUser.getUsername()+" logged out");
+    		
     	}
     		
     	else {
@@ -86,7 +97,7 @@ public class App
     	
     }
     
-    public static void createAccount() {
+    public static void createUser() {
     	
     	Scanner scan = new Scanner(System.in);
     	
@@ -103,6 +114,9 @@ public class App
     	  	
     	UserService.insertUser(new_user);
     	System.out.println("Succesfully created a new user");
+    	final Logger log = Logger.getLogger(Logger4j.class);
+    	log.info("A new user " +new_user.getUsername()+" was created");
+    	
     	}catch (Exception e) {
     		System.out.println("Invalid inputs");
     	}
