@@ -66,7 +66,7 @@ public abstract class Account implements Serializable
 		else if(amount > balance)
 			throw new WithdrawOverException();
 		else 
-			balance += amount;
+			balance -= amount;
 	}
 }
 

@@ -31,8 +31,13 @@ public class BankService {
 		return dao.updateUser(user);
 	}
 	
-	public static List<UserAccount> getAllUsers()
+	public static void getAllUsers()
 	{
-		return dao.getAllUsers();
+		dao.getAllUsers();
+	}
+	
+	public static boolean deleteUser(String delete)
+	{
+		return dao.deleteUser(delete);
 	}
 }

@@ -10,4 +10,5 @@ public interface AccountDao
 	public AdminAccount getAdmin(String admin);
 	public boolean updateUser(UserAccount user);
 	public List<UserAccount> getAllUsers();
+	public boolean deleteUser(String user);
 }

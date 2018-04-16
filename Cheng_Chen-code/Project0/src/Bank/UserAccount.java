@@ -14,7 +14,7 @@ public class UserAccount extends Account
 		this.setPassword(pass);
 	}
 	
-	public UserAccount(String n, String pass, String newUser, double balance, boolean auth)
+	public UserAccount(String n, String newUser, String pass, double balance, boolean auth)
 	{
 		this.setAuth(auth);
 		this.setBalance(balance);

@@ -128,13 +128,13 @@ public class BankMain {
 			System.out.println("Please enter your password:");
 			String password = in.nextLine();
 			
-			if(password.equals(current.getPass()) && current.checkAuth())
+			if(password.equals(current.getPass()) && current.getAuth())
 			{
 				log.info("User entered correct password.");
 				UserMenu(current);
 				
 			}
-			else if(!current.checkAuth())
+			else if(!current.getAuth())
 			{
 				log.error("Unauthorized Account.");
 				System.out.println("This account is currently unauthorized.");
@@ -212,7 +212,8 @@ public class BankMain {
 			user.deposit(amount);
 			log.info(user.getUser() + " deposited " + amount + "into account.");
 			System.out.print("Deposit completed, current balance: $");
-			System.out.printf("%.1f", user.getBalance());
+			System.out.printf("%.2f", user.getBalance());
+			System.out.println();
 			BankService.updateUser(user);
 		}
 		catch(NegativeDepositException e)
@@ -227,7 +228,8 @@ public class BankMain {
 			user.withdraw(amount);
 			log.info(user.getUser() + " withdrew " + amount + "into account.");
 			System.out.print("Withdrawl completed, current balance: $");
-			System.out.printf("%.1f", user.getBalance());
+			System.out.printf("%.2f", user.getBalance());
+			System.out.println();
 			BankService.updateUser(user);
 		}
 		catch(NegativeDepositException e)
@@ -278,7 +280,8 @@ public class BankMain {
 			System.out.println("Please select an option below:");
 			System.out.println("1. See all users.");
 			System.out.println("2. Authorize a user.");
-			System.out.println("3. Log out.");
+			System.out.println("3. Delete a user.");
+			System.out.println("4. Log out.");
 			
 			try
 			{
@@ -287,13 +290,9 @@ public class BankMain {
 				
 				switch(choice)
 				{
-					case 0: 
+					case 1: 
 					{
-						List<UserAccount> users = BankService.getAllUsers();
-						for(UserAccount a:users)
-						{
-							System.out.println("Name: " + a.getName() + " username: " + a.getUser() + " Authorized: " + Boolean.toString(a.getAuth()));
-						}
+						BankService.getAllUsers();
 						break;
 					}
 					case 2: 
@@ -301,7 +300,12 @@ public class BankMain {
 						AuthorizeAccount(admin);
 						break;
 					}
-					case 3: 
+					case 3:
+					{
+						DeleteAccount();
+						break;
+					}
+					case 4: 
 					{
 						log.info("Admin logging out.");
 						loggedOn = false;
@@ -332,8 +336,28 @@ public class BankMain {
 			UserAccount toAuthorize = BankService.getUser(username);
 			
 			admin.Authorize(toAuthorize);
+			BankService.updateUser(toAuthorize);
 			System.out.println("Authorization successful.");
 			log.info("The account " + toAuthorize.getUser() + " has been authorized.");
+		}
+		catch(Exception e)
+		{
+			System.err.println("Invalid Input.");
+			log.error("User entered Invalid Input.");
+		}
+	}
+	
+	public static void DeleteAccount()
+	{
+		try
+		{
+			System.out.println("Please enter the username of the accout you wish to delete:");
+			Scanner in = new Scanner(System.in);
+			String username = in.nextLine();
+			BankService.deleteUser(username);
+			
+			System.out.println("Delete successful.");
+			log.info("An account is deleted.");
 		}
 		catch(Exception e)
 		{

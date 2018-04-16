@@ -74,7 +74,7 @@ public class AccountDaoImpl implements AccountDao
 			
 			if(rs.next())
 			{
-				return new UserAccount(rs.getString("name_of_owner"), rs.getString("passwords"), rs.getString("username"), rs.getDouble("balance"), rs.getBoolean("authorize") );
+				return new UserAccount(rs.getString("name_of_owner"), rs.getString("username"), rs.getString("passwords"), rs.getDouble("balance"), rs.getBoolean("authorize") );
 			}
 		}
 		catch (SQLException sqle) 
@@ -141,7 +141,7 @@ public class AccountDaoImpl implements AccountDao
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next())
 			{
-				users.add(new UserAccount(rs.getString("name_of_owner"), rs.getString("passwords"), rs.getString("username"), rs.getDouble("balance"), rs.getBoolean("authorize")));
+				System.out.println("Name: " + rs.getString("name_of_owner") + " username: " +  rs.getString("username") + " Authorized: " + Boolean.toString(rs.getBoolean("authorize")));
 			}
 		}
 		catch (SQLException sqle) 
@@ -152,5 +152,24 @@ public class AccountDaoImpl implements AccountDao
 		}
 		
 		return null;
+	}
+	
+	public boolean deleteUser(String user)
+	{
+		try(Connection conn = ConnectionWithPropertiesUtil.getConnection())
+		{
+			PreparedStatement stmt = conn.prepareStatement("DELETE FROM useracc WHERE username = ?");
+			stmt.setString(1, user);
+
+			return stmt.executeUpdate() > 0;
+		}
+		catch (SQLException sqle) 
+		{
+			System.err.println(sqle.getMessage());
+			System.err.println("SQL State: " + sqle.getSQLState());
+			System.err.println("Error Code: " + sqle.getErrorCode());
+		}
+		
+		return false;
 	}
 }
