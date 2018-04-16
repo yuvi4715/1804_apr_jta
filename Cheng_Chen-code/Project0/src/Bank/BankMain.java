@@ -60,7 +60,6 @@ public class BankMain {
 					case 4: 
 					{
 						log.error("User selected 4.\nExiting program.");
-						System.out.println("Exiting program.");
 						System.exit(0);
 						break;
 					}
