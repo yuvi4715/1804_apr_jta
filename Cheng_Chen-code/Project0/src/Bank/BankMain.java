@@ -22,7 +22,7 @@ public class BankMain {
 	{	
 		boolean running = true;
 		
-		System.out.println("Welcome to the Revature Banking Application.");
+		System.out.println("Welcome to the Banking Application.");
 		Scanner scan = new Scanner(System.in);
 		
 		while(running)
