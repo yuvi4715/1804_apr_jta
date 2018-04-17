@@ -11,9 +11,13 @@ CONSTRAINT PK_BANK PRIMARY KEY (id),
 CONSTRAINT UK_USERNAME UNIQUE(username)
 );
 
-DROP TABLE bank_user;
-INSERT INTO bank_user VALUES(null, 'Nicholas', 'McComb', 'Bank_Owner', 'password', 1, 1000000000, 1);
+INSERT INTO bank_user VALUES(null, 'Sarah', 'Jean', 'dummy2', 'password', 1, 50000, 0);
 SELECT * FROM bank_user;
+
+BEGIN
+    change_first_name(2,'Nicholas');
+END;
+/
 
 CREATE SEQUENCE bank_sequence
     START WITH 1
@@ -31,6 +35,17 @@ BEGIN
     END IF;
 END;
 /    
+
+CREATE OR REPLACE PROCEDURE new_user(firstname IN VARCHAR2, lastname IN VARCHAR2, username IN VARCHAR2, 
+                                    password IN VARCHAR2, verified IN NUMBER, balance IN NUMBER, admin IN NUMBER)
+AS
+BEGIN
+    INSERT INTO bank_user VALUES(null, firstname, lastname, username, password, 0, balance, admin);
+    COMMIT;
+END;
+/
+ 
+ SELECT * FROM bank_user;
     
 CREATE OR REPLACE PROCEDURE deposit(target IN NUMBER, amount IN NUMBER)
 AS
@@ -65,7 +80,7 @@ CREATE OR REPLACE PROCEDURE change_first_name(target IN NUMBER, new_name IN VARC
 AS
 BEGIN
     UPDATE bank_user SET firstname = new_name
-    WHERE id = TARGET;
+    WHERE id = target;
     COMMIT;
 END;
 /
@@ -92,10 +107,34 @@ CREATE OR REPLACE PROCEDURE change_password(target IN NUMBER, new_pw IN VARCHAR2
 AS
 BEGIN
     UPDATE bank_user SET password = new_pw
-    WHERE id = TARGET;
+    WHERE id = target;
     COMMIT;
 END;
 /
 
+CREATE OR REPLACE PROCEDURE get_user(target IN VARCHAR2, user_cursor OUT SYS_REFCURSOR)
+AS
+BEGIN
+    OPEN user_cursor FOR
+    SELECT * FROM bank_user
+    WHERE username=target;
+END;
+/
 
+CREATE OR REPLACE PROCEDURE verify(target IN NUMBER)
+AS
+BEGIN
+    UPDATE bank_user SET verified = 1
+    WHERE id=target;
+    COMMIT;
+END;
+/
 
+CREATE OR REPLACE PROCEDURE close_account(target IN NUMBER)
+AS
+BEGIN
+    DELETE FROM bank_user
+    WHERE id=target;
+    COMMIT;
+END;
+/

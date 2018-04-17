@@ -10,13 +10,12 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class MyConnection {
-private MyConnection() {
-		
-	}
+
+	private MyConnection() {}
 	
 	public static Connection getConnection() {
 		InputStream in = null;
-		try {
+		try{
 			Properties props = new Properties();
 			in = new FileInputStream("src/main/resources/db.properties");
 			props.load(in);
