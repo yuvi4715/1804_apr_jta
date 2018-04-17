@@ -16,16 +16,16 @@ public class BankUser implements Serializable
 	
 	public BankUser() {}
 
-	public BankUser(int userID, String fisrtName, String lastName, String username, String password) 
+	public BankUser(String fisrtName, String lastName, String username, String password, int isApproved, int isAdmin) 
 	{
 		super();
-		this.userID = userID;
+		//this.userID = userID;
 		this.fisrtName = fisrtName;
 		this.lastName = lastName;
 		this.username = username;
 		this.password = password;
-		this.isApproved = 0;
-		this.isAdmin = 0;
+		this.isApproved = isApproved;
+		this.isAdmin = isAdmin;
 	}
 	
 	

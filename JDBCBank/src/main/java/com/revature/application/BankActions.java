@@ -2,6 +2,7 @@ package com.revature.application;
 
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import com.revature.model.Account;
@@ -12,16 +13,25 @@ import com.revature.service.BankUserService;
 public class BankActions
 {
 	final static Logger log = Logger.getLogger(BankActions.class);
+	private static Scanner scan;
 	public static void menu()
 	{
 		int input = 0;
 		System.out.println("");
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Please choose an option");
-		System.out.println("1: Login \n2: Create Account \n3: exit");
-		input = scan.nextInt();
-		    do 
-		    {	    	
+		scan = new Scanner(System.in);
+	  do 
+	  {
+			System.out.println("Please choose an option");
+			System.out.println("1: Login \n2: Create Account \n3: exit");
+			try 
+			{
+				input = scan.nextInt();
+			} 
+			catch (Exception e) 
+			{
+				
+			}
+			  
 		    	switch (input)
 				{
 					case 1: 
@@ -32,8 +42,9 @@ public class BankActions
 					case 2: 
 					{
 						CreateUser();
+						break;
 					}
-							break;
+			
 					default: input = 3;
 							break;
 				}
@@ -46,20 +57,19 @@ public class BankActions
 	
 	public static void Login()
 	{
+		Scanner sc = new Scanner(System.in);
 		String answer = "";
-		String response = "";
-		System.out.println("");
-		Scanner scan = new Scanner(System.in);
+		String response = "";	
+		do 
+		{
 		System.out.println("Please enter your username");
-		answer = scan.nextLine();
+		answer = sc.nextLine();
 		System.out.println("Please enter your password");
-		response = scan.nextLine();
+		response = sc.next();
 		BankUser user = new BankUser();
 		Iterator<BankUser> it = BankUserService.getAllUsers().iterator();
 		while(it.hasNext())
 		{
-			System.out.println(user.getUsername());
-			System.out.println(user.getPassword());
 			user = it.next();
 			if ((user.getUsername().equals(answer)) && (user.getPassword().equals(response)))
 			{
@@ -80,7 +90,8 @@ public class BankActions
 		{
 			System.out.println("Your Status has not yet been approved");
 		}
-		scan.close();
+		}while(!answer.equals("exit"));
+		sc.close();
 	}
 	
 	public static void UserActions(BankUser user)
@@ -89,39 +100,44 @@ public class BankActions
 		int answer = 0;
 		String response = "";
 		System.out.println("");
-		Scanner scan = new Scanner(System.in);
-	
+		Scanner sc = new Scanner(System.in);
 		    do 
 		    {	    
 		    	System.out.println("Please choose an option");
 				System.out.println("1: View Account Balance \n2: Withdraw \n3: Deposit \n4: Transfer \n5: Exit");
-				input = scan.nextInt();
+				input = sc.nextInt();
 		    	switch (input)
 				{
 					case 1: // View Account Balance
 					{
 						
 						System.out.println("Which account would you like to view?");
-						response = scan.nextLine();
+						response = sc.next();
 						AccountService.getAccount(user.getUserID(),response);
 					}
 							break;
 					case 2: // Withdraw
 					{
 						System.out.println("How much would you like to withdraw?");
-						answer = scan.nextInt();
+						answer = sc.nextInt();
 						System.out.println("From which account?");
-						response = scan.nextLine();
+						response = sc.next();
 						Account acc = AccountService.getAccount(user.getUserID(),response);
+						try {
+							TimeUnit.SECONDS.sleep(10);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 						Withdraw(answer, acc);
 					}
 							break;
 					case 3: // Deposit
 					{
 						System.out.println("How much would you like to deposit?");
-						answer = scan.nextInt();
+						answer = sc.nextInt();
 						System.out.println("From which account?");
-						response = scan.nextLine();
+						response = sc.next();
 						Account acc = AccountService.getAccount(user.getUserID(),response);
 						Deposit(answer, acc);
 					}
@@ -129,12 +145,12 @@ public class BankActions
 					case 4:// Transfer
 					{
 						System.out.println("How much would you like to transfer?");
-						answer = scan.nextInt();
+						answer = sc.nextInt();
 						System.out.println("From which account?");
-						response = scan.nextLine();
+						response = scan.next();
 						Account acc1 = AccountService.getAccount(user.getUserID(),response);
 						System.out.println("To which account?");
-						response = scan.nextLine();
+						response = sc.next();
 						Account acc2 = AccountService.getAccount(user.getUserID(),response);
 						Transfer(answer,acc1,acc2);
 					}
@@ -142,10 +158,8 @@ public class BankActions
 					default: input = 5;
 							break;
 				}
-		    } 
-		    while(input != 5);
-			scan.close();
-		
+		    } while(input != 5);
+		    sc.close();
 	}
 	
 	
@@ -154,15 +168,14 @@ public class BankActions
 	{
 		int input = 0;
 		int answer = 0;
+		Scanner sc = new Scanner(System.in);
 		String response = "";
 		System.out.println("");
-		Scanner scan = new Scanner(System.in);
-	
 		    do 
 		    {	    
 		    	System.out.println("Please choose an option");
 				System.out.println("1: Approve Users \n2: Approve Admins \n3: Delete Users \n4: Delete Accounts \n5: Exit");
-				input = scan.nextInt();
+				input = sc.nextInt();
 		    	switch (input)
 				{
 					case 1: // Approve Users
@@ -178,7 +191,7 @@ public class BankActions
 							}
 						}
 						System.out.println("What account would you like to approve?");
-						answer = scan.nextInt();
+						answer = sc.nextInt();
 						user1 = BankUserService.getUser(answer);
 						ApproveUser(user1);
 						
@@ -197,7 +210,7 @@ public class BankActions
 							}
 						}
 						System.out.println("What account would you like to approve?");
-						answer = scan.nextInt();
+						answer = sc.nextInt();
 						user1 = BankUserService.getUser(answer);
 						MakeAdmin(user1);
 					}
@@ -212,7 +225,7 @@ public class BankActions
 							System.out.println(user1);
 						}
 						System.out.println("What user would you like to delete?");
-						answer = scan.nextInt();
+						answer = sc.nextInt();
 						DeleteUser(answer);
 					}
 		                 	break;
@@ -226,9 +239,9 @@ public class BankActions
 							System.out.println(acc);
 						}
 						System.out.println("What account would you like to delete?");
-						response = scan.nextLine();
+						response = sc.nextLine();
 						System.out.println("From what user??");
-						answer = scan.nextInt();
+						answer = sc.nextInt();
 						acc = AccountService.getAccount(answer, response);
 						DeleteAccount(acc.getAccountID());
 					}
@@ -236,10 +249,8 @@ public class BankActions
 					default: input = 5;
 							break;
 				}
-		    } 
-		    while(input != 5);
-			scan.close();
-		
+		    }  while(input != 5);
+		    sc.close();
 	}
 	
 	
@@ -249,7 +260,6 @@ public class BankActions
 		String lastName;
 		String username;
 		String password;
-		Scanner scan = new Scanner(System.in);
 		System.out.println("Please enter a Username");
 		username = scan.next();
 		System.out.println("Please enter a Password");
@@ -258,10 +268,9 @@ public class BankActions
 		firstName = scan.next();
 		System.out.println("Please enter your Last Name");
 		lastName = scan.next();
-		BankUser user = new BankUser(0,firstName,lastName,username,password);
+		BankUser user = new BankUser(firstName,lastName,username,password,0,0);
 		log.info(BankUserService.insertUser(user));
 		System.out.println("Your User Id is:" + user.getUserID());
-		scan.close();
 	}
 	
 	
@@ -271,7 +280,6 @@ public class BankActions
 		String lastName;
 		String username;
 		String password;
-		Scanner scan = new Scanner(System.in);
 		System.out.println("Please enter a Username");
 		username = scan.next();
 		System.out.println("Please enter a Password");
@@ -280,11 +288,8 @@ public class BankActions
 		firstName = scan.next();
 		System.out.println("Please enter your Last Name");
 		lastName = scan.next();
-		BankUser user = new BankUser(0,firstName,lastName,username,password);
+		BankUser user = new BankUser(firstName,lastName,username,password,1,1);
 		log.info(BankUserService.insertUser(user));
-		BankUserService.updateUserStatus(user);
-		BankUserService.updateUserAdmin(user);
-		scan.close();
 	}
 	
 	public static void Deposit(int amount, Account acc)

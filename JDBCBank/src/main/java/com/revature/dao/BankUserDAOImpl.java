@@ -47,8 +47,8 @@ public class BankUserDAOImpl implements BankUserDAO
 			ResultSet rs = stmt.executeQuery();
 			if (rs.next()) 
 			{
-				return new BankUser(rs.getInt("user_id"), rs.getString("first_name"), rs.getString("last_name"),
-						rs.getString("username"), rs.getString("password"));
+				return new BankUser(rs.getString("first_name"), rs.getString("last_name"),
+						rs.getString("username"), rs.getString("password"),rs.getInt("is_approved"),rs.getInt("is_admin"));
 			}
 		} 
 		catch (SQLException sqle)
@@ -70,8 +70,8 @@ public class BankUserDAOImpl implements BankUserDAO
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next())
 			{
-				users.add(new BankUser(rs.getInt("user_id"), rs.getString("first_name"), rs.getString("last_name"),
-						rs.getString("username"), rs.getString("password")));
+				users.add(new BankUser(rs.getString("first_name"), rs.getString("last_name"),
+						rs.getString("username"), rs.getString("password"),rs.getInt("is_approved"),rs.getInt("is_admin")));
 			}
 			return users;
 		} 
@@ -92,7 +92,7 @@ public class BankUserDAOImpl implements BankUserDAO
 		try (Connection conn = ConnectionUtil.getConnection()) 
 		{
 			CallableStatement stmt = conn.prepareCall("{CALL update_user_approved(?, ?)}");
-			stmt.setInt(++index, approved );	
+			stmt.setInt(++index, 1 );	
 			stmt.setInt(++index, user.getUserID());
 			return stmt.executeUpdate() > 0;
 		} 
