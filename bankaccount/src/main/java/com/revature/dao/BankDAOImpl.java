@@ -23,7 +23,7 @@ public class BankDAOImpl implements BankDAO{
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO bankuser (firstName, lastName, isAdmin, isApproved) VALUES (?,?,?,?)");
             stmt.setString(++index, newUser.getFirstName());
             stmt.setString(++index, newUser.getLastName());
-            stmt.setInt(++index, 0);
+            stmt.setInt(++index, newUser.getIsAdmin());
             stmt.setInt(++index, 0);
 
             //If this variable is less than 3, then one of the inserts failed.

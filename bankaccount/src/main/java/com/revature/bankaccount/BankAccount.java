@@ -1,5 +1,6 @@
 package com.revature.bankaccount;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import org.apache.log4j.Logger;
@@ -17,12 +18,18 @@ public class BankAccount{
     *   Main method.
     */
     public static void main(String[] args) {
-        while(!mainMenu) {
-        	displayLogin();
+        try {
+            while(!mainMenu) {
+                displayLogin();
+            }
+            while(mainMenu){
+                displayMainMenu();
+            }
+        } catch (InputMismatchException e) {
+            log.error("You tried to write a string instead of a number! D:");
+            System.out.println("Exiting program...");
         }
-        while(mainMenu){
-            displayMainMenu();
-        }
+        
     }
 
     /*
@@ -31,7 +38,7 @@ public class BankAccount{
     *    2. Withdraw from their account
     *    3. Deposit to their account
     */
-    public static void displayMainMenu(){
+    public static void displayMainMenu() throws InputMismatchException{
         int menuSelection = 1;
         System.out.println();
         //If the user is admin, display 4th option in the menu.
@@ -46,9 +53,9 @@ public class BankAccount{
                 menuSelection = input.nextInt();
             }while (menuSelection < 0 || menuSelection > 5);
             if(menuSelection == 1)
-                login();
+                modifyBalance(false);
             else if (menuSelection == 2)
-                createAccount();
+                modifyBalance(true);
             else if (menuSelection == 3)
                 viewBalance();
             else if (menuSelection == 4)
@@ -67,9 +74,9 @@ public class BankAccount{
                 menuSelection = input.nextInt();
             }while (menuSelection < 0 || menuSelection > 4);
             if(menuSelection == 1)
-                login();
+                modifyBalance(false);
             else if (menuSelection == 2)
-                createAccount();
+                modifyBalance(true);
             else if (menuSelection == 3)
                 viewBalance();
             else
@@ -80,7 +87,7 @@ public class BankAccount{
     /*
     *   Displays a list of users waiting for approval
     */
-    public static void showWaitingUsers(){
+    public static void showWaitingUsers() throws InputMismatchException{
         //Get list and print each element
         int accNum = 0;
         List<User> list = BankService.getWaitingUsers();
@@ -119,7 +126,7 @@ public class BankAccount{
     *   Displays a login menu where the user has the option to: login, create account
     *   or exit the program. This is the first menu shown when the program is run.
     */
-    public static void displayLogin(){
+    public static void displayLogin() throws InputMismatchException{
         int menuSelection = 1;
         do{
             System.out.print(  "1. Log In\n" + 
@@ -141,12 +148,13 @@ public class BankAccount{
     *   Gets the login information as input from the user, then it's verified if the
     *   user exists in the DB. If so, then proceed to main menu.
     */
-    public static void login(){
+    public static void login() throws InputMismatchException{
     	int accNum = 0;
     	String passwd = "";
         do{
             System.out.print("Enter account number: ");
-            accNum = Integer.parseInt(input.nextLine());
+            accNum = input.nextInt();
+            input.nextLine();
             System.out.print("Enter password: ");
             passwd = input.nextLine().trim();
         }while (passwd == "" || accNum < 100000 || accNum > 999999);
@@ -242,6 +250,7 @@ public class BankAccount{
 
         //Prompt the user to enter an amount, and verify that the amount is correct.
         do{
+        	System.out.println("Current balance is: " + testUser.getBalance());
             System.out.print("Enter the amount to " + action + ": ");
             amount = input.nextDouble();
             amount = Math.abs(amount) * mult;
