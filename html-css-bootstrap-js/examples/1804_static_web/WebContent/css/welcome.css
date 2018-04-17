@@ -1,0 +1,35 @@
+@charset "ISO-8859-1";
+
+/* example for external styling */
+ol {
+	color: green;
+}
+
+p {
+	background-color: lightgray;
+	color: black;
+	font-family: Tahoma;
+	font-size: 50%;
+	text-align: center;
+}
+
+td {
+    border-top-width: 20px;
+    border-bottom-width: 20px;
+    border-right-width: 10px;
+    border-left-width: 10px;
+}
+
+h1, h2 {
+	color : red;
+}
+
+h3 {
+	color : blue;
+}
+
+table {
+	border-color: green;
+	/* border: solid; */
+	border-style: dotted;
+}
