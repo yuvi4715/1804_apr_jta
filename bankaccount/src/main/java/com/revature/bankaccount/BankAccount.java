@@ -17,14 +17,12 @@ public class BankAccount{
     *   Main method.
     */
     public static void main(String[] args) {
-        createAccount();
-        
-        // while(!mainMenu) {
-        // 	displayLogin();
-        // }
-        // while(mainMenu){
-        //     displayMainMenu();
-        // }
+        while(!mainMenu) {
+        	displayLogin();
+        }
+        while(mainMenu){
+            displayMainMenu();
+        }
     }
 
     /*
@@ -35,12 +33,35 @@ public class BankAccount{
     */
     public static void displayMainMenu(){
         int menuSelection = 1;
-        //If the user is admin, display 3rd option in the menu.
+        System.out.println();
+        //If the user is admin, display 4th option in the menu.
         if(testUser.getIsAdmin() == 1){
             do{
                 System.out.print("1. Withdraw\n" + 
                                  "2. Deposit\n" +
-                                 "3. View waiting list\n" +
+                                 "3. View balance\n" +
+                                 "4. View waiting list\n" +
+                                 "5. Exit\n" +
+                                 "Enter option: ");
+                menuSelection = input.nextInt();
+            }while (menuSelection < 0 || menuSelection > 5);
+            if(menuSelection == 1)
+                login();
+            else if (menuSelection == 2)
+                createAccount();
+            else if (menuSelection == 3)
+                viewBalance();
+            else if (menuSelection == 4)
+                showWaitingUsers();
+            else
+                exitProgram();
+        }
+        //If the user is NOT admin, don't display 4th option.
+        else{
+            do{
+                System.out.print("1. Withdraw\n" + 
+                                 "2. Deposit\n" +
+                                 "3. View balance\n" +
                                  "4. Exit\n" +
                                  "Enter option: ");
                 menuSelection = input.nextInt();
@@ -50,23 +71,7 @@ public class BankAccount{
             else if (menuSelection == 2)
                 createAccount();
             else if (menuSelection == 3)
-                showWaitingUsers();
-            else
-                exitProgram();
-        }
-        //If the user is NOT admin, don't display 3rd option.
-        else{
-            do{
-                System.out.print("1. Log In\n" + 
-                                 "2. Create Account\n" +
-                                 "3. Exit\n" +
-                                 "Enter option: ");
-                menuSelection = input.nextInt();
-            }while (menuSelection < 0 || menuSelection > 3);
-            if(menuSelection == 1)
-                login();
-            else if (menuSelection == 2)
-                createAccount();
+                viewBalance();
             else
                 exitProgram();
         }      
@@ -84,8 +89,9 @@ public class BankAccount{
         }
         //Prompt user which accounts to approve
         do{
-            System.out.println("Enter account number to approve or type 0 to exit: ");
+            System.out.print("Enter account number to approve or type 0 to exit: ");
             accNum = input.nextInt();
+            input.nextLine();
             if(accNum == 0)
                 break;
         }while(accNum < 100000 || accNum > 999999);
@@ -95,13 +101,12 @@ public class BankAccount{
 
         //Prompt the user if he wants to continue approving accounts.
         String yesno = "";
-        do{
+        while(!yesno.equals("y") && !yesno.equals("n")){
             System.out.print("Continue approving users? (y/n): ");
-            yesno = input.next();
-            yesno = yesno.toLowerCase().trim();
-        }while(!yesno.equals("y") && !yesno.equals("n"));
+            yesno = input.nextLine().toLowerCase().trim();
+        }
 
-        if(yesno == "y")
+        if(yesno.equals("y"))
             showWaitingUsers();
         else{
             System.out.println("Returning to main menu...");
@@ -143,8 +148,7 @@ public class BankAccount{
             System.out.print("Enter account number: ");
             accNum = Integer.parseInt(input.nextLine());
             System.out.print("Enter password: ");
-            passwd = input.nextLine();
-            passwd.trim();
+            passwd = input.nextLine().trim();
         }while (passwd == "" || accNum < 100000 || accNum > 999999);
         
         //If credentials are correct, testUser won't be NULL
@@ -172,9 +176,53 @@ public class BankAccount{
     *   the object to an interface that manages the transactions on the DB.
     */
     public static void createAccount(){
+        //Gather user input and store in the following variables. These will be used as
+        //arguments later to make a new User object, and pass it onto BankService.insertUser()
         String passwd = "";
         String firstN = "";
         String lastN = "";
+        String isAdmin = "n";
+        int theRealIsAdmin = 0;
+        do{
+            System.out.print("Enter your first name: ");
+            firstN = input.nextLine();
+            if(firstN.equals("")){
+                System.out.println("First name cannot be empty. Try again.");
+                continue;
+            }
+            System.out.print("Enter your last name: ");
+            lastN = input.nextLine();
+            if(lastN.equals("")){
+                System.out.println("Last name cannot be empty. Try again.");
+                continue;
+            }
+            System.out.print("Enter your password: ");
+            passwd = input.nextLine();
+            if(passwd.equals("")){
+                System.out.println("Password cannot be empty. Try again.");
+                continue;
+            }
+            System.out.print("Would you like admin rights? (y/n): ");
+            isAdmin = input.nextLine().toLowerCase();
+            if(!isAdmin.equals("n") && !isAdmin.equals("y")){
+                System.out.println("Incorrect input. Try again.");
+                //for safe measure
+                passwd = "";
+                continue;
+            }
+
+        }while(passwd.equals("") || firstN.equals("") || lastN.equals(""));
+        log.info("Successfully gathered info. Now processing...");
+        //Change isAdmin to int value
+        if(isAdmin.equals("n"))
+            theRealIsAdmin = 0;
+        else   
+            theRealIsAdmin = 1;
+        
+        testUser = new User(theRealIsAdmin, 0, firstN, lastN, 0, 0, passwd);
+        log.info("User account was created: " + BankService.insertUser(testUser));
+        testUser = new User(theRealIsAdmin, 0, firstN, lastN, BankService.getLastAccountNumber(), 0, passwd);
+        log.info("Your login information is --> Account #:" + testUser.getAccountNumber() + " and Password: " + passwd);
     }
 
     /*

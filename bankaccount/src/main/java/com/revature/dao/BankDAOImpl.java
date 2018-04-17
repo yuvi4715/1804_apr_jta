@@ -14,7 +14,7 @@ import com.revature.util.ConnectionUtil;
 
 public class BankDAOImpl implements BankDAO{
     final static Logger log = Logger.getLogger(BankDAOImpl.class); 
-    
+
 	@Override
 	public boolean insertUser(User newUser) {
         int index = 0;
@@ -46,10 +46,6 @@ public class BankDAOImpl implements BankDAO{
                 accNum = rs.getInt("accountNumber");
             else
                 log.error("Error occured with the ResultSet return when fetching the last row for the accountNumber.");
-            
-            //If accNum is 0, then something went wrong with the value in the ResultSet. It shouldn't happen though.
-            if (accNum == 0)
-                log.error("accNum is 0. The value returned by the resultSet was incorrect");
             
             //Second insertion requires the accountNumber, and inserts into account table.
             index = 0;
@@ -230,6 +226,28 @@ public class BankDAOImpl implements BankDAO{
 			log.error("Error Code: " + e.getErrorCode());
         }
 		return null;
+	}
+
+	@Override
+	public int getLastAccountNumber() {
+        try(Connection conn = ConnectionUtil.getConnection()){
+            //Get newly generated accountNumber
+            int accNum = 0;
+            String getLastRowFromBankUserQuery = "SELECT * FROM " + 
+            "(select * from bankuser ORDER BY accountNumber DESC) WHERE rownum <= 1 ORDER BY rownum DESC";
+            PreparedStatement stmt = conn.prepareStatement(getLastRowFromBankUserQuery);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next())
+                accNum = rs.getInt("accountNumber");
+            else
+                log.error("Error occured with the ResultSet return when fetching the last row for the accountNumber.");
+            return accNum;
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+			log.error("SQL State: " + e.getSQLState());
+			log.error("Error Code: " + e.getErrorCode());
+        }
+        return 0;
 	}
 
 }

@@ -78,8 +78,8 @@ END;
 SELECT * FROM bankuser INNER JOIN account 
     ON bankuser.accountNumber = account.accountNumber
     INNER JOIN p4ssw0rd 
-    ON bankuser.accountNumber = p4ssw0rd.accountNumber
-    WHERE bankuser.accountNumber = 100017;
+    ON bankuser.accountNumber = p4ssw0rd.accountNumber;
+    --WHERE bankuser.accountNumber = 100017;
 
 --Select last row inserted
 SELECT *

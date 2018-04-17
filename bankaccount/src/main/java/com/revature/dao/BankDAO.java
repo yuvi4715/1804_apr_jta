@@ -11,4 +11,5 @@ public interface BankDAO{
     public boolean makeAdmin(int accountNum);
     public User getUser(int accountNum, String passwd);
     public List<User> getWaitingUsers();
+    public int getLastAccountNumber();
 }

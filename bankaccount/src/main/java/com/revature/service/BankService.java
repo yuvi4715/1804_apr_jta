@@ -32,4 +32,8 @@ public class BankService{
     public static List<User> getWaitingUsers(){
         return dao.getWaitingUsers();
     }
+    
+    public static int getLastAccountNumber(){
+        return dao.getLastAccountNumber();
+    }
 }
