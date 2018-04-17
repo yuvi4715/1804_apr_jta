@@ -9,10 +9,10 @@ import java.util.List;
  */
 public interface BankAccountInterface {
 	void createAccount(BankUser user);
-	boolean updateBalance(BankUser user);
 	int getAccountNumber(BankUser user);
 	float deposit(int acct, float balance);
-	float getBalance(int id);
+	float getBalance(int account);
 	float withdraw(int account, float amount);
+	int getAccountNumber(int id);
 	
 }

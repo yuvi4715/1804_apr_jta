@@ -33,16 +33,19 @@ public class ConnectDB
 		
 	//	try(FileInputStream in = new FileInputStream("src/main/resources/db.properties"))
 	//	try(FileInputStream in = new FileInputStream("src/main/resources/admindb.properties"))
-		try(FileInputStream in = new FileInputStream("src/main/resources/userdb.properties"))
+		try(FileInputStream in = new FileInputStream("src/main/resources/host.properties");
+				FileInputStream in2= new FileInputStream("src/main/resources/userdb.properties"))
 		{
-			Properties props = new Properties();
-			props.load(in);
-			con = DriverManager.getConnection(props.getProperty("url"), 
+			Properties host = new Properties();
+			Properties props=new Properties();
+			host.load(in); //load host
+			props.load(in2); //load user login details
+			con = DriverManager.getConnection(host.getProperty("url"), 
 				    									 props.getProperty("username"), 
 				    									 props.getProperty("password"));
 			
 			//Logs if connection is valid
-			Log.logInfo("Connection successfull: "+Boolean.toString(con.isValid(100)));
+			//Log.logInfo("Connection successfull: "+Boolean.toString(con.isValid(100)));
 		} catch (FileNotFoundException e) {
 			Log.logError(e.getMessage());
 		} catch (IOException e) {
@@ -69,10 +72,12 @@ public class ConnectDB
 	public static void close()
 	{
 		try {
-			con.close();
+			if(con!=null)
+			{ con.close();
 			con=null;
 			System.gc(); //garbage collection
 			Log.logInfo("Bank closed successfully");
+			}
 		} catch (SQLException e) {
 			Log.logError(e.getMessage());
 		}

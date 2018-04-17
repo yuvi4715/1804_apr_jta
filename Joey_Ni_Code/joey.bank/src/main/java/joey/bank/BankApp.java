@@ -1,9 +1,13 @@
 package joey.bank;
 
-import java.sql.Connection;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.List;
+import java.util.Properties;
+import java.util.Scanner;
 
-import joey.bank.model.BankAdmin;
 import joey.bank.model.BankService;
 import joey.bank.model.BankUser;
 
@@ -28,70 +32,126 @@ public class BankApp {
 		 *7. user request deposit/withdrawal
 		 *8. admin approves deposit/withdrawal and got notified of row updates
 		 */
-		BankService.openBank(); //opens bank/connection to database
-	//	BankService.createAdmin("tom7", "hellowworld","Poorest", "Richest");//create bank admin: usrname, pass, ln, fn
-	//	BankService.createAdmin("tomIII", "hellowworld","Richest", "BankAdmin1"); //Bank admin cannot create other admin
-	//	BankService.createAdmin("joeyni", "helloworld", "ni", "joey"); //Demo
-		//user create account, background process: added by admin, user does not care about who the admin is
-	//	BankService.getAllUsers();
-	//	System.out.println(BankService.getUser("lastname","richest"));
-	//	BankService.createAccount(BankService.getUser("lastname","richest")); //as many accounts as you want
-	//	System.out.println(BankService.deleteUser("jackson6", "helloworld"));
-	//	BankService.insertUser("jackson8","helloworld","richest","lastname", 169); //add user
-	//	BankService.createAccount(BankService.getUser("richest", "lastname")); //create new bank account
-	//	BankService.deposit(BankService.getUser("richest", "lastname"), 300); //deposit
-	//	BankService.getBalance(BankService.getUser("richest", "lastname")); //CHECK BALANCE
-	//	BankService.withdraw(BankService.getUser("richest", "lastname"), 300);
-	//	BankService.insertUser("joeyusertest","joeypass","joeylast","joeyfirst", 169); //most recent test user
-	//	BankService.getUser("lastname", "richest"); //jackson8 lastname, firsname
-	//	BankService.getBalance("jackson8", "helloworld"); //jackson8 username, password
-		BankService.deposit(100, 300);
-		BankService.withdraw(116, 100);
-	//	BankService.withdraw("joeyusertest", "joeypass", 100);
-		/*BankUser getUser(String lastname, String firstname);
-	boolean deposit(float amount);
-	boolean withdraw(float amount);
-	float getBalance(String username, String password);*/
+		Scanner console = new Scanner(System.in);
+		System.out.println("Welcome to The Richest Bank");
+		System.out.println("Please enter your username");
+		String username = console.next();
+		System.out.println("Please enter your password");
+		String password = console.next();
 		
-	//	System.out.println(BankService.getAllUsers());
-		/*List<BankUser> users = BankService.getAllUsers();
-		for(BankUser b: users) {
-		System.out.println(b);
+		Properties props =new Properties();
+		try(OutputStream out=new FileOutputStream("src/main/resources/userdb.properties")) 
+		{
+			props.setProperty("username", username);
+			props.setProperty("password", password);
+			props.store(out, null);
+		}catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+		BankService.openBank(); //opens bank/connection to database
+		int menu=BankService.selectMenu(username, password);
 		
-		//BankService.closeBank(); //close for admin session
-		//BankService.userConnect(); //user login
-		//BankService.getUser(lastname, firstname)
+		switch(menu)
+		{
+		case 0: System.out.println("Welcome Boss: " +username + "Got a new employee?"); 
+				System.out.println("0: Create admin");
+				
+				break;
+		case 1: System.out.println("Welcome BankAdmin: " +username);
+				System.out.println(" Here's your Menu");
+				System.out.println("1. Add a new bank user/create account for user");
+				System.out.println("2. Make a deposit on behalf of an user");
+				System.out.println("3. Get all users");
+				System.out.println("4. Get complete user info");
+				break;
+		case 2: System.out.println("Welcome Bank User: " + username + " Menu"); 
+				System.out.println("5.Get balance 6.Make a deposit 7. Make a withdrawal");
+				System.out.println("8. Retrieve your secret account number");
+				break;
+		case 3: System.out.println("Sorry you have not signed up yet.");
+				System.out.println("Please see one of our admins to sign up or visit our branch in Reston to sign up");
+				break;
+		default: System.out.println("Some error happened. Please visit later");
+		}
+		String name;
+		String pass;
+		String last;
+		String first;
+		int action = console.nextInt();
+		switch(action)
+		{
+			case 0: System.out.println("Create admin: please enter username, password, lastname, firstname separated by space");
+					name=console.next();
+					pass=console.next();
+					last=console.next();
+					first=console.next();
+					BankService.createAdmin(name, pass, last, first); //create bank admin, insert into table, grant role
+					//Bank admin cannot create other admin
+					System.out.println("Admin created and granted access and privileges.");
+					break;
+			case 1: System.out.println("Create user: please enter username, password, lastname, firstname separated by space ");
+					System.out.println("Also include your admin id");
+					name=console.next();
+					pass=console.next();
+					last=console.next();
+					first=console.next();
+					int admin=console.nextInt();
+					BankService.insertUser(name, pass, last, first, admin);
+					BankUser temp=new BankUser(name, pass, last, first);
+					BankService.createAccount(temp);
+					System.out.println("New user: "+BankService.getUser(last, first));
+					System.out.println("New Bank Account: "+BankService.getAccountNumber(temp));
+					System.out.println("Initial deposit: ");
+					int depo=console.nextInt();
+					BankService.deposit(temp, depo);
+					System.out.println("New balance: " +BankService.getBalance(BankService.getId(name, pass)));
+					break;
+			case 2: System.out.println("Please enter bank account number");
+			        int acnum=console.nextInt();
+			        System.out.println("Please enter amount");
+					depo=console.nextInt();
+					BankService.deposit(acnum, depo);
+					System.out.println(BankService.getBalance(acnum));
+					break;
+			case 3: List<BankUser> users = BankService.getAllUsers();
+					for(BankUser b: users) { System.out.println(b);}
+					break;
+			case 4: System.out.println("Enter user lastname and firstname");
+			        String lastname=console.next();
+			        String firstname=console.next();
+					System.out.println(BankService.getUser(lastname, firstname));
+					System.out.println("From the username gotten from previous result, can get to all other ops getId, getAccount, getBalance etc.");
+					break;
+			case 5: System.out.println("Your balance is:"+ BankService.getBalance(username, password));
+					break;
+			case 6: //user deposit
+					int uid=BankService.getId(username, password);
+					int acct=BankService.getAccountNumber(uid);
+					System.out.println("Enter amount to deposit");
+					depo=console.nextInt();
+					System.out.println(username+ password);
+					BankService.deposit(acct, depo);
+					break;
+			case 7: System.out.println("Enter amount to withdraw");
+					depo=console.nextInt();
+					uid=BankService.getId(username, password);
+					acct=BankService.getAccountNumber(uid);
+					BankService.withdraw(acct, depo);
+					break;
+			case 8: uid=BankService.getId(username, password);
+				    acct=BankService.getAccountNumber(uid);
+					System.out.println("Your user id" +uid);
+			        System.out.println("Your bank account #: "+acct);
+			    
 		
-	//	BankService.updateAccount(user,amount);
-		/* user_id NUMBER(8,0) CHECK (user_id BETWEEN 0 AND 99999999) PRIMARY KEY, 
-		   account_number NUMBER CHECK (account_number BETWEEN 0 AND 99999999), 
-		   admin_id NUMBER(8,0) CHECK (admin_id BETWEEN 0 AND 99999999),
-		   firstname VARCHAR2(16) NOT NULL, --20 bytes max
-		   lastname VARCHAR2(16) NOT NULL,  --20 char max
-		   username VARCHAR(16) NOT NULL, --16char max
-		   password VARCHAR2(16) NOT NULL --16char max*/
-	    
-		//Need Admin approval, which approves only if user does not have an user account yet
-		//BankService.insertUser(new BankUser(1, 18, "George", "Washington", "gw1st","helloworld"));
-		//BankService.insertUser(new BankUser(2, 18, "Thomas", "Jefferson", "gw1st","helloworld"));
-	//	BankService.closeBank();
-	//	BankService.openBank();
-	/*	BankService.insertUser(new BankUser(3, 18, "John", "Adams", "gw1st","helloworld"));
+		}
+	
 		BankService.closeBank();
-		BankService.openBank();
-		BankService.insertUser(new BankUser(4, 19, "Andrew", "Jackson", "gw1st","helloworld"));
-		//BankUser mm =BankService.getUser("George", "Washington");
-		//System.out.println(mm.toString());
-		BankService.closeBank();
-		BankService.openBank();
-		
-		
-		
-		
-		
-		*/
-		BankService.closeBank(); //close bank/connectino to database
+	
+	//To cheat into this system: get admin last name, get admin id, create user using that admin id...
+	
 	}
 
 }

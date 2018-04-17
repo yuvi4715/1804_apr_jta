@@ -1,16 +1,24 @@
 package joey.bank.model;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import javax.sql.RowSetEvent;
 import javax.sql.RowSetListener;
+import javax.sql.rowset.FilteredRowSet;
+
+import com.sun.rowset.FilteredRowSetImpl;
 
 import joey.bank.ConnectDB;
+import joey.bank.IdFilter;
 import joey.bank.Log;
 
 public class BankAdminConnect implements BankAdminInterface, RowSetListener {
@@ -43,8 +51,8 @@ public class BankAdminConnect implements BankAdminInterface, RowSetListener {
 		return 0;
 	}
 	
-
-	public static BankAdmin insertAdmin(String username, String password, String lastname, String firstname)
+	@Override
+	public BankAdmin insertAdmin(String username, String password, String lastname, String firstname)
 	{
 		BankAdmin admin=new BankAdmin(username, password, lastname, firstname);
 	
@@ -67,7 +75,8 @@ public class BankAdminConnect implements BankAdminInterface, RowSetListener {
 		
 	}
 	
-	static void grantAdmin(BankAdmin admin)
+	@Override
+	public void grantAdmin(BankAdmin admin)
 	{
 		try(Connection con = ConnectDB.getCon())
 		{
@@ -84,8 +93,8 @@ public class BankAdminConnect implements BankAdminInterface, RowSetListener {
 			Log.logError("At BankAdminConnect 52:"+e.getMessage());
 		}
 	}
-
-	static void createUser(String username, String password)
+	@Override
+	public void createUser(String username, String password)
 		{
 			try(Connection con = ConnectDB.getCon())
 			{
@@ -94,7 +103,7 @@ public class BankAdminConnect implements BankAdminInterface, RowSetListener {
 				//stmt.setString(1, username);
 				//stmt.setString(2, password);
 				stmt.execute();
-				Log.logError("At BankAdminConnect: User created: "+ username);
+				Log.logInfo("At BankAdminConnect: User created: "+ username);
 				
 			} catch (SQLException e) {
 				Log.logError("At BankAdminConnect 94:"+e.getMessage());
@@ -102,7 +111,8 @@ public class BankAdminConnect implements BankAdminInterface, RowSetListener {
 				
 		}
 		
-	public static BankUser insertUser(String username, String password, String lastname, String firstname, int admin) 
+	@Override
+	public BankUser insertUser(String username, String password, String lastname, String firstname, int admin) 
 	{
 			BankUser user=new BankUser(username, password, lastname, firstname);
 			try(Connection con = ConnectDB.getCon())
@@ -128,7 +138,8 @@ public class BankAdminConnect implements BankAdminInterface, RowSetListener {
 
 		//Do not grant bank_user, instead used stored procedure to grant bank_user accesses. 
 		//Bank_admin does not have GRANT ANY ROLE privilege
-	public static void grantUserRole(BankUser user)
+	@Override
+	public void grantUserRole(BankUser user)
 	{
 			try(Connection con = ConnectDB.getCon())
 			{
@@ -152,7 +163,7 @@ public class BankAdminConnect implements BankAdminInterface, RowSetListener {
 	{
 			try(Connection con = ConnectDB.getCon())
 			{
-				PreparedStatement stmt = con.prepareStatement("DELETE * FROM JOEY_INMARS.BANKUSER WHERE username=? AND password=?");
+				PreparedStatement stmt = con.prepareStatement("DELETE FROM JOEY_INMARS.BANKUSER WHERE username=? AND password=?");
 				stmt.setString(1, username);
 				stmt.setString(2, password);
 				stmt.executeUpdate();
@@ -189,35 +200,16 @@ public class BankAdminConnect implements BankAdminInterface, RowSetListener {
 		
 
 	@Override
-	public BankAdmin createAdmin(BankAdmin admin) {
-		
-		return null;
-	}
-	//Approve method to have an admin check user to make sure user and amount are legal
-	/*1. admin login to database
-	 * 2. admin checks amount make sure username and password match, withdrawal < balance
-	 * 3. admin updates and log out
-	 * @see joey.bank.model.BankAdminInterface#approve(java.lang.String, java.lang.String, float)
-	 */
-	@Override
-	public boolean approve(String username, String password, float amount) 
-	{
-		
-		
-		
-		
-		return false;
-	}
-
-	@Override
 	public void rowSetChanged(RowSetEvent event) {
-		Log.logInfo("Approving");
-		System.out.println("Deposit/Withdrawal accepted");
+		Log.logInfo("Admin is has done the thing, is notified and will not do stuff to break this process");
+		//Could have more logic to review row change/approve, but since this is simple deposit stuff...
+		
+		System.out.println("Row changed: Deposit/Withdrawal accepted");
 	}
 
 	@Override
 	public void rowChanged(RowSetEvent event) {
-		Log.logInfo("Approving");
+		Log.logInfo("Admin is notified and will not do stuff to break this");
 		System.out.println("Balance updated");
 	}
 

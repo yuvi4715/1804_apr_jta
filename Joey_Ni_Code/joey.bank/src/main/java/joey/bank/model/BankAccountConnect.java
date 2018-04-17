@@ -31,10 +31,6 @@ public class BankAccountConnect implements BankAccountInterface{
 		}
 		
 	}
-	@Override
-	public boolean updateBalance(BankUser user) {
-		return false;
-	}
 
 	@Override
 	public int getAccountNumber(BankUser user) {
@@ -57,6 +53,22 @@ public class BankAccountConnect implements BankAccountInterface{
 		return 0;
 	}
 
+	@Override
+	public int getAccountNumber(int id) {
+		try(Connection con = ConnectDB.getCon())
+		{
+			
+			PreparedStatement stmt1 = con.prepareStatement("SELECT ACCOUNT_NUMBER FROM JOEY_INMARS.BANK_ACCOUNT WHERE USER_ID=?");
+			stmt1.setInt(1, id);
+			ResultSet rs2=stmt1.executeQuery();
+			if(rs2.next()) Log.logInfo("ACCOUNT NUMBER FOUND: "+rs2.getInt(1));
+			return rs2.getInt(1);
+		} catch (SQLException e) {
+			Log.logError(e.getMessage());
+		}
+		
+		return 0;
+	}
 	@Override
 	public float deposit(int account, float amount) 
 	{

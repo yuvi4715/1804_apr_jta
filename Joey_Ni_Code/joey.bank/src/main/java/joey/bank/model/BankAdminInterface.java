@@ -11,12 +11,17 @@ import joey.bank.Log;
 
 public interface BankAdminInterface {
 	int getUserBalance(int userid);
-	BankAdmin createAdmin(BankAdmin admin); //create admin
+
+	BankAdmin insertAdmin(String username, String password, String lastname, String firstname);
+	void grantAdmin(BankAdmin admin);
+	
+	void createUser(String username, String password);
+	
+	BankUser insertUser(String username, String password, String lastname, String firstname, int admin);
+	void grantUserRole(BankUser user);
+	
 	List<BankUser> getAllUsers();
 	boolean deleteUser(String username, String password);
-	boolean approve(String username, String password, float amount);
-	 //add new user to db
-	//BankUser insertUser(String username, String password, String lastname, String firstname);
 
 	static BankAdmin getAdmin(String lastname) {
 		try(Connection con = ConnectDB.getCon())

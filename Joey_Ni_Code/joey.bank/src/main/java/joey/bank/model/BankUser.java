@@ -34,7 +34,7 @@ public class BankUser
 	@Override
 	public String toString() {
 		return "BankUser [account_number=" + account_number + ", lastname=" + lastname + ", firstname=" + firstname
-				+ ", username=" + username + ", admin_id=" + admin_id + ", user_id=" + user_id + "]";
+				+ ", username=" + username + "]";
 	}
 
 

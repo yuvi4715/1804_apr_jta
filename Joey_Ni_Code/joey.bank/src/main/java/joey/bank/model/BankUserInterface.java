@@ -11,5 +11,5 @@ public interface BankUserInterface
 	boolean deposit(int id, float amount);
 	boolean withdraw(int id, float amount);
 	float getBalance(String username, String password);
-	
+	int getId(String username, String password);
 }

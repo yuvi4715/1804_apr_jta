@@ -884,3 +884,157 @@ PL/SQL: Statement ignored
 2018-04-15 20:45:13 INFO  Log:31 - Approving
 2018-04-15 20:45:13 INFO  Log:31 - Approving
 2018-04-15 20:45:13 INFO  Log:31 - Bank closed successfully
+2018-04-16 19:16:34 INFO  Log:19 - Start of BankLog
+2018-04-16 19:16:34 ERROR Log:25 - The url cannot be null
+2018-04-16 19:19:32 INFO  Log:19 - Start of BankLog
+2018-04-16 19:19:32 INFO  Log:31 - Connection successfull: true
+2018-04-16 19:19:33 INFO  Log:31 - Bank closed successfully
+2018-04-16 20:21:14 INFO  Log:19 - Start of BankLog
+2018-04-16 20:21:15 INFO  Log:31 - Connection successfull: true
+2018-04-16 20:22:51 INFO  Log:19 - Start of BankLog
+2018-04-16 20:22:52 INFO  Log:31 - Connection successfull: true
+2018-04-16 20:22:53 INFO  Log:31 - Bank closed successfully
+2018-04-16 20:25:10 INFO  Log:19 - Start of BankLog
+2018-04-16 20:25:11 INFO  Log:31 - Connection successfull: true
+2018-04-16 20:25:11 INFO  Log:31 - Bank closed successfully
+2018-04-16 20:38:16 INFO  Log:19 - Start of BankLog
+2018-04-16 20:38:19 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-16 20:43:49 INFO  Log:19 - Start of BankLog
+2018-04-16 20:43:51 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-16 20:45:12 INFO  Log:19 - Start of BankLog
+2018-04-16 20:45:15 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-16 20:45:42 INFO  Log:19 - Start of BankLog
+2018-04-16 20:45:43 INFO  Log:31 - Connection successfull: true
+2018-04-16 20:45:43 INFO  Log:31 - Bank closed successfully
+2018-04-16 21:56:46 INFO  Log:19 - Start of BankLog
+2018-04-16 21:56:48 INFO  Log:31 - Connection successfull: true
+2018-04-16 21:58:50 ERROR Log:25 - At BankAdminConnect: User created: john
+2018-04-16 21:58:51 INFO  Log:31 - Connection successfull: true
+2018-04-16 21:58:52 INFO  Log:31 - At BankAdminConnect: Admin Role granted to john
+2018-04-16 21:58:52 INFO  Log:31 - Bank closed successfully
+2018-04-16 22:00:57 INFO  Log:19 - Start of BankLog
+2018-04-16 22:02:01 INFO  Log:19 - Start of BankLog
+2018-04-16 22:02:38 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:03:35 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:03:35 ERROR Log:25 - At BankAdminConnect: User created: sally
+2018-04-16 22:03:35 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:03:36 INFO  Log:31 - At BankAdminConnect: BankUser Role granted to sally
+2018-04-16 22:03:36 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:03:36 INFO  Log:31 - Account created with default balance:0, default account type: checking, and User ID: 289
+2018-04-16 22:03:37 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:03:37 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:03:37 INFO  Log:31 - ACCOUNT NUMBER FOUND: 124
+2018-04-16 22:04:21 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:04:23 ERROR Log:25 - DEPOSIT:ORA-01017: invalid username/password; logon denied
+
+2018-04-16 22:04:23 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:04:23 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:04:24 ERROR Log:25 - Result set after last row
+2018-04-16 22:04:24 INFO  Log:31 - Bank closed successfully
+2018-04-16 22:10:02 INFO  Log:19 - Start of BankLog
+2018-04-16 22:10:03 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:10:13 INFO  Log:31 - Bank closed successfully
+2018-04-16 22:32:23 INFO  Log:19 - Start of BankLog
+2018-04-16 22:32:25 INFO  Log:31 - Connection successfull: true
+2018-04-16 22:33:32 ERROR Log:25 - DEPOSIT:ORA-01017: invalid username/password; logon denied
+
+2018-04-16 22:33:32 INFO  Log:31 - ACCOUNT BALANCE: 0
+2018-04-16 22:33:32 INFO  Log:31 - Bank closed successfully
+2018-04-16 23:03:56 INFO  Log:19 - Start of BankLog
+2018-04-16 23:03:58 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:16:43 INFO  Log:19 - Start of BankLog
+2018-04-16 23:16:44 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:16:53 INFO  Log:31 - Got balance
+2018-04-16 23:17:00 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:17:01 ERROR Log:25 - DEPOSIT:ORA-01017: invalid username/password; logon denied
+
+2018-04-16 23:17:11 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:17:12 ERROR Log:25 - Withdraw:ORA-01017: invalid username/password; logon denied
+
+2018-04-16 23:17:12 INFO  Log:31 - Bank closed successfully
+2018-04-16 23:18:14 INFO  Log:19 - Start of BankLog
+2018-04-16 23:18:15 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:18:19 INFO  Log:31 - Got balance
+2018-04-16 23:18:19 INFO  Log:31 - Bank closed successfully
+2018-04-16 23:18:33 INFO  Log:19 - Start of BankLog
+2018-04-16 23:18:34 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:18:50 ERROR Log:25 - DEPOSIT:ORA-01017: invalid username/password; logon denied
+
+2018-04-16 23:18:50 INFO  Log:31 - Bank closed successfully
+2018-04-16 23:20:11 INFO  Log:19 - Start of BankLog
+2018-04-16 23:20:12 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:20:18 INFO  Log:31 - Got balance
+2018-04-16 23:20:18 INFO  Log:31 - Bank closed successfully
+2018-04-16 23:20:27 INFO  Log:19 - Start of BankLog
+2018-04-16 23:20:28 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:20:35 ERROR Log:25 - DEPOSIT:ORA-01017: invalid username/password; logon denied
+
+2018-04-16 23:20:35 INFO  Log:31 - Bank closed successfully
+2018-04-16 23:25:21 INFO  Log:19 - Start of BankLog
+2018-04-16 23:25:21 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:25:28 INFO  Log:31 - Bank closed successfully
+2018-04-16 23:41:31 INFO  Log:19 - Start of BankLog
+2018-04-16 23:41:32 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:41:40 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:41:40 INFO  Log:31 - ACCOUNT NUMBER FOUND: 124
+2018-04-16 23:41:41 INFO  Log:31 - Bank closed successfully
+2018-04-16 23:41:56 INFO  Log:19 - Start of BankLog
+2018-04-16 23:42:00 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:42:05 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:42:05 INFO  Log:31 - ACCOUNT NUMBER FOUND: 124
+2018-04-16 23:42:08 INFO  Log:31 - Admin is notified
+2018-04-16 23:42:08 INFO  Log:31 - Bank closed successfully
+2018-04-16 23:42:46 INFO  Log:19 - Start of BankLog
+2018-04-16 23:42:48 INFO  Log:31 - Connection successfull: true
+2018-04-16 23:42:57 INFO  Log:31 - Bank closed successfully
+2018-04-17 00:03:24 INFO  Log:19 - Start of BankLog
+2018-04-17 00:03:25 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:03:34 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:03:34 INFO  Log:31 - ACCOUNT NUMBER FOUND: 124
+2018-04-17 00:03:35 INFO  Log:31 - Admin is notified
+2018-04-17 00:04:26 INFO  Log:19 - Start of BankLog
+2018-04-17 00:04:27 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:04:31 INFO  Log:31 - Got balance
+2018-04-17 00:04:31 INFO  Log:31 - Bank closed successfully
+2018-04-17 00:04:46 INFO  Log:19 - Start of BankLog
+2018-04-17 00:04:47 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:04:58 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:04:58 INFO  Log:31 - ACCOUNT NUMBER FOUND: 124
+2018-04-17 00:04:58 INFO  Log:31 - Admin is notified
+2018-04-17 00:11:54 INFO  Log:19 - Start of BankLog
+2018-04-17 00:11:55 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:12:04 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:12:04 INFO  Log:31 - ACCOUNT NUMBER FOUND: 124
+2018-04-17 00:12:04 INFO  Log:31 - Admin is has done the thing, is notified and will not do stuff to break this process
+2018-04-17 00:12:04 INFO  Log:31 - Bank closed successfully
+2018-04-17 00:13:41 INFO  Log:19 - Start of BankLog
+2018-04-17 00:13:42 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:14:04 ERROR Log:25 - At BankAdminConnect: User created: susan
+2018-04-17 00:14:05 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:14:05 INFO  Log:31 - At BankAdminConnect: Admin Role granted to susan
+2018-04-17 00:14:05 INFO  Log:31 - Bank closed successfully
+2018-04-17 00:15:07 INFO  Log:19 - Start of BankLog
+2018-04-17 00:15:08 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:15:59 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:15:59 INFO  Log:31 - At BankAdminConnect: User created: hansen
+2018-04-17 00:16:00 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:16:00 INFO  Log:31 - At BankAdminConnect: BankUser Role granted to hansen
+2018-04-17 00:16:00 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:16:00 INFO  Log:31 - Account created with default balance:0, default account type: checking, and User ID: 305
+2018-04-17 00:16:01 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:16:01 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:16:01 INFO  Log:31 - ACCOUNT NUMBER FOUND: 132
+2018-04-17 00:16:13 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:16:13 INFO  Log:31 - ACCOUNT NUMBER FOUND: 132
+2018-04-17 00:16:13 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:16:13 INFO  Log:31 - Balance updated
+2018-04-17 00:16:13 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:16:14 INFO  Log:31 - Connection successfull: true
+2018-04-17 00:16:14 ERROR Log:25 - Result set after last row
+2018-04-17 00:16:14 INFO  Log:31 - Bank closed successfully
+2018-04-17 00:20:23 INFO  Log:31 - Admin is notified and will not do stuff to break this process
+2018-04-17 00:20:23 INFO  Log:31 - Admin is notified and will not do stuff to break this process
+2018-04-17 00:20:23 INFO  Log:31 - Bank closed successfully

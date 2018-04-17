@@ -1,0 +1,886 @@
+2018-04-12 14:06:03 INFO  Log:19 - Start of BankLog
+2018-04-12 14:06:04 INFO  Log:31 - Connection successfull: true
+2018-04-12 20:24:28 INFO  Log:31 - Connection successfull: true
+2018-04-12 20:28:27 INFO  Log:31 - Connection successfull: true
+2018-04-12 20:31:44 INFO  Log:19 - Start of BankLog
+2018-04-12 20:31:45 INFO  Log:31 - Connection successfull: true
+2018-04-12 20:31:45 ERROR Log:25 - Missing IN or OUT parameter at index:: 7
+2018-04-12 20:31:45 ERROR Log:25 - Closed Connection
+2018-04-12 20:34:39 INFO  Log:19 - Start of BankLog
+2018-04-12 20:34:40 INFO  Log:31 - Connection successfull: true
+2018-04-12 20:34:40 ERROR Log:25 - At BankUserConnect:ORA-00933: SQL command not properly ended
+
+2018-04-12 20:34:40 ERROR Log:25 - Closed Connection
+2018-04-12 20:35:28 INFO  Log:19 - Start of BankLog
+2018-04-12 20:35:29 INFO  Log:31 - Connection successfull: true
+2018-04-12 20:35:29 ERROR Log:25 - At BankUserConnect:ORA-00933: SQL command not properly ended
+
+2018-04-12 20:35:29 ERROR Log:25 - Closed Connection
+2018-04-12 20:36:13 INFO  Log:19 - Start of BankLog
+2018-04-12 20:36:13 INFO  Log:31 - Connection successfull: true
+2018-04-12 20:36:14 ERROR Log:25 - At BankUserConnect:ORA-00933: SQL command not properly ended
+
+2018-04-12 20:36:14 ERROR Log:25 - Closed Connection
+2018-04-12 20:39:40 INFO  Log:19 - Start of BankLog
+2018-04-12 20:39:41 INFO  Log:31 - Connection successfull: true
+2018-04-12 20:39:42 ERROR Log:25 - At BankUserConnect:ORA-01722: invalid number
+
+2018-04-12 20:39:42 ERROR Log:25 - Closed Connection
+2018-04-12 21:43:52 INFO  Log:19 - Start of BankLog
+2018-04-12 21:43:53 INFO  Log:31 - Connection successfull: true
+2018-04-12 21:43:54 ERROR Log:25 - At BankUserConnect:ORA-00001: unique constraint (JOEY_INMARS.SYS_C005285) violated
+
+2018-04-12 21:43:54 ERROR Log:25 - Closed Connection
+2018-04-12 22:43:09 INFO  Log:19 - Start of BankLog
+2018-04-12 22:43:10 INFO  Log:31 - Connection successfull: true
+2018-04-12 22:43:10 ERROR Log:25 - At BankUserConnect:ORA-02290: check constraint (JOEY_INMARS.SYS_C005282) violated
+
+2018-04-12 22:43:10 ERROR Log:25 - Closed Connection
+2018-04-12 22:44:39 INFO  Log:19 - Start of BankLog
+2018-04-12 22:44:41 INFO  Log:31 - Connection successfull: true
+2018-04-12 22:44:41 ERROR Log:25 - At BankUserConnect:ORA-00001: unique constraint (JOEY_INMARS.SYS_C005285) violated
+
+2018-04-12 22:44:41 ERROR Log:25 - Closed Connection
+2018-04-12 22:45:05 INFO  Log:19 - Start of BankLog
+2018-04-12 22:45:07 INFO  Log:31 - Connection successfull: true
+2018-04-12 22:45:08 ERROR Log:25 - At BankUserConnect:ORA-00001: unique constraint (JOEY_INMARS.SYS_C005285) violated
+
+2018-04-12 22:45:08 ERROR Log:25 - Closed Connection
+2018-04-12 22:53:03 INFO  Log:19 - Start of BankLog
+2018-04-12 22:53:05 INFO  Log:31 - Connection successfull: true
+2018-04-12 22:53:05 ERROR Log:25 - At BankUserConnect:ORA-00001: unique constraint (JOEY_INMARS.PK_BANK_USER_ACCOUNT_NUMBER) violated
+
+2018-04-12 22:53:05 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-12 22:53:05 ERROR Log:25 - Closed Connection
+2018-04-12 22:53:05 INFO  Log:31 - Bank closed successfully
+2018-04-12 22:55:23 INFO  Log:19 - Start of BankLog
+2018-04-12 22:55:25 INFO  Log:31 - Connection successfull: true
+2018-04-12 22:55:26 INFO  Log:31 - Bank closed successfully
+2018-04-12 23:03:32 INFO  Log:19 - Start of BankLog
+2018-04-12 23:03:33 INFO  Log:31 - Connection successfull: true
+2018-04-12 23:03:33 ERROR Log:25 - At BankUserConnect:Missing IN or OUT parameter at index:: 7
+2018-04-12 23:03:33 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-12 23:03:33 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-12 23:03:33 ERROR Log:25 - Closed Connection
+2018-04-12 23:05:31 INFO  Log:19 - Start of BankLog
+2018-04-12 23:05:32 INFO  Log:31 - Connection successfull: true
+2018-04-12 23:05:34 ERROR Log:25 - At BankUserConnect:ORA-00001: unique constraint (JOEY_INMARS.PK_BANK_USER_USER_ID) violated
+
+2018-04-12 23:05:34 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-12 23:05:34 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-12 23:05:34 ERROR Log:25 - Closed Connection
+2018-04-12 23:08:11 INFO  Log:19 - Start of BankLog
+2018-04-12 23:08:12 INFO  Log:31 - Connection successfull: true
+2018-04-12 23:09:04 INFO  Log:19 - Start of BankLog
+2018-04-12 23:09:05 INFO  Log:31 - Connection successfull: true
+2018-04-12 23:14:59 INFO  Log:19 - Start of BankLog
+2018-04-12 23:15:04 INFO  Log:31 - Connection successfull: true
+2018-04-12 23:15:07 ERROR Log:25 - At BankUserConnect:ORA-00001: unique constraint (JOEY_INMARS.PK_BANK_USER_USER_ID) violated
+
+2018-04-12 23:15:07 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-12 23:15:07 ERROR Log:25 - Closed Connection
+2018-04-12 23:22:56 INFO  Log:19 - Start of BankLog
+2018-04-12 23:22:57 INFO  Log:31 - Connection successfull: true
+2018-04-12 23:22:58 ERROR Log:25 - At BankUserConnect:ORA-00001: unique constraint (JOEY_INMARS.PK_BANK_USER_USER_ID) violated
+
+2018-04-12 23:22:58 INFO  Log:31 - Bank closed successfully
+2018-04-12 23:22:58 INFO  Log:31 - Connection successfull: true
+2018-04-12 23:22:58 ERROR Log:25 - At BankUserConnect:ORA-00001: unique constraint (JOEY_INMARS.PK_BANK_USER_USER_ID) violated
+
+2018-04-12 23:22:58 INFO  Log:31 - Bank closed successfully
+2018-04-12 23:22:58 INFO  Log:31 - Connection successfull: true
+2018-04-12 23:22:58 INFO  Log:31 - Bank closed successfully
+2018-04-13 16:07:43 INFO  Log:19 - Start of BankLog
+2018-04-13 16:07:46 INFO  Log:31 - Connection successfull: true
+2018-04-13 16:07:47 INFO  Log:31 - Bank closed successfully
+2018-04-13 16:08:36 INFO  Log:19 - Start of BankLog
+2018-04-13 16:08:38 INFO  Log:31 - Connection successfull: true
+2018-04-13 16:08:38 INFO  Log:31 - Bank closed successfully
+2018-04-13 16:09:10 INFO  Log:19 - Start of BankLog
+2018-04-13 16:09:13 INFO  Log:31 - Connection successfull: true
+2018-04-13 16:09:13 INFO  Log:31 - Bank closed successfully
+2018-04-13 16:10:41 INFO  Log:19 - Start of BankLog
+2018-04-13 16:10:44 INFO  Log:31 - Connection successfull: true
+2018-04-13 16:10:44 INFO  Log:31 - Bank closed successfully
+2018-04-13 16:46:21 INFO  Log:19 - Start of BankLog
+2018-04-13 16:46:23 INFO  Log:31 - Connection successfull: true
+2018-04-13 16:46:23 INFO  Log:31 - Bank closed successfully
+2018-04-13 17:55:42 INFO  Log:19 - Start of BankLog
+2018-04-13 17:55:43 INFO  Log:31 - Connection successfull: true
+2018-04-13 17:55:44 ERROR Log:25 - At BankUserConnect:ORA-01935: missing user or role name
+
+2018-04-13 17:55:44 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-13 17:55:44 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:00:50 INFO  Log:19 - Start of BankLog
+2018-04-13 18:00:52 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:00:52 ERROR Log:25 - At BankUserConnect:ORA-01935: missing user or role name
+
+2018-04-13 18:00:52 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-13 18:00:52 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:02:39 INFO  Log:19 - Start of BankLog
+2018-04-13 18:02:40 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:02:40 ERROR Log:25 - At BankUserConnect:ORA-01935: missing user or role name
+
+2018-04-13 18:02:40 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-13 18:02:40 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:15:18 INFO  Log:19 - Start of BankLog
+2018-04-13 18:15:19 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:15:20 ERROR Log:25 - At BankUserConnect:ORA-01935: missing user or role name
+
+2018-04-13 18:15:20 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-13 18:15:20 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:15:55 INFO  Log:19 - Start of BankLog
+2018-04-13 18:15:55 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:15:58 ERROR Log:25 - At BankUserConnect:ORA-01935: missing user or role name
+
+2018-04-13 18:15:58 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-13 18:15:58 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:18:05 INFO  Log:19 - Start of BankLog
+2018-04-13 18:18:05 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:18:06 ERROR Log:25 - At BankUserConnect:ORA-01935: missing user or role name
+
+2018-04-13 18:18:06 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-13 18:18:06 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:20:57 INFO  Log:19 - Start of BankLog
+2018-04-13 18:20:58 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:20:58 ERROR Log:25 - At BankUserConnect:ORA-01935: missing user or role name
+
+2018-04-13 18:20:58 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-13 18:20:58 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:25:27 INFO  Log:19 - Start of BankLog
+2018-04-13 18:25:28 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:25:29 ERROR Log:25 - At BankUserConnect:Closed Connection
+2018-04-13 18:25:29 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:28:06 INFO  Log:19 - Start of BankLog
+2018-04-13 18:28:07 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:28:07 ERROR Log:25 - At BankUserConnect:ORA-01920: user name 'TOM' conflicts with another user or role name
+
+2018-04-13 18:28:07 ERROR Log:25 - At BankUserConnect:08003
+2018-04-13 18:28:07 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:28:32 INFO  Log:19 - Start of BankLog
+2018-04-13 18:28:33 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:28:33 ERROR Log:25 - At BankUserConnect: User created: tom2
+2018-04-13 18:28:33 ERROR Log:25 - At BankUserConnect:08003
+2018-04-13 18:28:33 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:30:04 INFO  Log:19 - Start of BankLog
+2018-04-13 18:30:05 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:30:05 ERROR Log:25 - At BankUserConnect 68:ORA-01920: user name 'TOM2' conflicts with another user or role name
+
+2018-04-13 18:31:38 INFO  Log:19 - Start of BankLog
+2018-04-13 18:31:39 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:31:39 ERROR Log:25 - At BankUserConnect 68:ORA-01920: user name 'TOM2' conflicts with another user or role name
+
+2018-04-13 18:31:39 ERROR Log:25 - At BankUserConnect 52:Closed Connection
+2018-04-13 18:31:39 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:36:10 INFO  Log:19 - Start of BankLog
+2018-04-13 18:36:11 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:36:11 ERROR Log:25 - At BankUserConnect: User created: tom3
+2018-04-13 18:36:12 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:36:12 ERROR Log:25 - At BankUserConnect 52:ORA-00987: missing or invalid username(s)
+
+2018-04-13 18:36:12 INFO  Log:31 - Bank closed successfully
+2018-04-13 18:59:56 INFO  Log:19 - Start of BankLog
+2018-04-13 18:59:57 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:59:57 ERROR Log:25 - At BankUserConnect: User created: tom4
+2018-04-13 18:59:58 INFO  Log:31 - Connection successfull: true
+2018-04-13 18:59:58 ERROR Log:25 - At BankAdminConnect 52:ORA-00987: missing or invalid username(s)
+
+2018-04-13 18:59:58 INFO  Log:31 - Bank closed successfully
+2018-04-13 19:00:40 INFO  Log:19 - Start of BankLog
+2018-04-13 19:00:41 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:00:42 ERROR Log:25 - At BankUserConnect: User created: tom5
+2018-04-13 19:00:43 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:00:43 ERROR Log:25 - At BankAdminConnect 52:ORA-00990: missing or invalid privilege
+
+2018-04-13 19:00:43 INFO  Log:31 - Bank closed successfully
+2018-04-13 19:02:30 INFO  Log:19 - Start of BankLog
+2018-04-13 19:02:31 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:02:32 ERROR Log:25 - At BankUserConnect 68:ORA-01920: user name 'TOM5' conflicts with another user or role name
+
+2018-04-13 19:02:32 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:02:33 INFO  Log:31 - At BankAdminConnect: Admin Role granted totom5
+2018-04-13 19:02:33 INFO  Log:31 - Bank closed successfully
+2018-04-13 19:02:58 INFO  Log:19 - Start of BankLog
+2018-04-13 19:02:59 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:02:59 ERROR Log:25 - At BankUserConnect: User created: tom6
+2018-04-13 19:02:59 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:02:59 INFO  Log:31 - At BankAdminConnect: Admin Role granted to tom6
+2018-04-13 19:02:59 INFO  Log:31 - Bank closed successfully
+2018-04-13 19:05:09 INFO  Log:19 - Start of BankLog
+2018-04-13 19:05:11 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-13 19:06:26 INFO  Log:19 - Start of BankLog
+2018-04-13 19:06:28 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-13 19:07:23 INFO  Log:19 - Start of BankLog
+2018-04-13 19:07:25 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-13 19:08:49 INFO  Log:19 - Start of BankLog
+2018-04-13 19:08:50 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:08:50 INFO  Log:31 - Bank closed successfully
+2018-04-13 19:09:45 INFO  Log:19 - Start of BankLog
+2018-04-13 19:09:46 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:09:46 ERROR Log:25 - At BankUserConnect:ORA-00942: table or view does not exist
+
+2018-04-13 19:09:46 ERROR Log:25 - At BankUserConnect 68:ORA-00922: missing or invalid option
+
+2018-04-13 19:09:47 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:09:47 ERROR Log:25 - At BankAdminConnect 52:ORA-00933: SQL command not properly ended
+
+2018-04-13 19:09:47 INFO  Log:31 - Bank closed successfully
+2018-04-13 19:11:54 INFO  Log:19 - Start of BankLog
+2018-04-13 19:11:55 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:11:55 ERROR Log:25 - Missing IN or OUT parameter at index:: 1
+2018-04-13 19:11:55 INFO  Log:31 - Bank closed successfully
+2018-04-13 19:16:17 INFO  Log:19 - Start of BankLog
+2018-04-13 19:16:20 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:16:20 INFO  Log:31 - Bank closed successfully
+2018-04-13 19:55:18 INFO  Log:19 - Start of BankLog
+2018-04-13 19:55:19 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:55:19 ERROR Log:25 - At BankUserConnect:ORA-00942: table or view does not exist
+
+2018-04-13 19:55:20 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:55:20 ERROR Log:25 - At BankUserConnect 68:ORA-01031: insufficient privileges
+
+2018-04-13 19:55:20 INFO  Log:31 - Connection successfull: true
+2018-04-13 19:55:21 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANKUSER' not granted or does not exist
+
+2018-04-13 19:55:21 INFO  Log:31 - Bank closed successfully
+2018-04-13 20:11:48 INFO  Log:19 - Start of BankLog
+2018-04-13 20:11:49 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:11:49 ERROR Log:25 - At BankAdminConnect:ORA-00942: table or view does not exist
+
+2018-04-13 20:11:50 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:11:50 ERROR Log:25 - At BankAdminConnect: User created: jackson
+2018-04-13 20:11:50 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:11:51 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANKUSER' not granted or does not exist
+
+2018-04-13 20:11:51 INFO  Log:31 - Bank closed successfully
+2018-04-13 20:15:57 INFO  Log:19 - Start of BankLog
+2018-04-13 20:15:58 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:15:58 ERROR Log:25 - At BankAdminConnect 93:ORA-00942: table or view does not exist
+
+2018-04-13 20:15:58 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:15:59 ERROR Log:25 - At BankAdminConnect 68:ORA-01920: user name 'JACKSON' conflicts with another user or role name
+
+2018-04-13 20:15:59 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:15:59 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANK_USER' not granted or does not exist
+
+2018-04-13 20:15:59 INFO  Log:31 - Bank closed successfully
+2018-04-13 20:16:12 INFO  Log:19 - Start of BankLog
+2018-04-13 20:16:13 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:16:13 ERROR Log:25 - At BankAdminConnect 93:ORA-00942: table or view does not exist
+
+2018-04-13 20:16:13 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:16:13 ERROR Log:25 - At BankAdminConnect: User created: jackson1
+2018-04-13 20:16:14 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:16:14 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANK_USER' not granted or does not exist
+
+2018-04-13 20:16:14 INFO  Log:31 - Bank closed successfully
+2018-04-13 20:52:49 INFO  Log:19 - Start of BankLog
+2018-04-13 20:52:50 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:52:50 ERROR Log:25 - At BankAdminConnect 93:ORA-00942: table or view does not exist
+
+2018-04-13 20:52:50 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:52:50 ERROR Log:25 - At BankAdminConnect 68:ORA-01920: user name 'JACKSON1' conflicts with another user or role name
+
+2018-04-13 20:52:51 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:52:51 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANK_USER' not granted or does not exist
+
+2018-04-13 20:52:51 INFO  Log:31 - Bank closed successfully
+2018-04-13 20:54:17 INFO  Log:19 - Start of BankLog
+2018-04-13 20:54:18 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:54:18 ERROR Log:25 - At BankAdminConnect 93:ORA-00942: table or view does not exist
+
+2018-04-13 20:54:18 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:54:18 ERROR Log:25 - At BankAdminConnect 68:ORA-01920: user name 'JACKSON1' conflicts with another user or role name
+
+2018-04-13 20:54:18 INFO  Log:31 - Connection successfull: true
+2018-04-13 20:54:18 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANK_USER' not granted or does not exist
+
+2018-04-13 20:54:18 INFO  Log:31 - Bank closed successfully
+2018-04-13 21:02:51 INFO  Log:19 - Start of BankLog
+2018-04-13 21:02:52 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:02:52 ERROR Log:25 - At BankAdminConnect 93:Missing IN or OUT parameter at index:: 6
+2018-04-13 21:02:53 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:02:53 ERROR Log:25 - At BankAdminConnect 68:ORA-01920: user name 'JACKSON1' conflicts with another user or role name
+
+2018-04-13 21:02:53 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:02:53 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANK_USER' not granted or does not exist
+
+2018-04-13 21:02:53 INFO  Log:31 - Bank closed successfully
+2018-04-13 21:04:52 INFO  Log:19 - Start of BankLog
+2018-04-13 21:04:52 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:04:53 ERROR Log:25 - At BankAdminConnect 93:Missing IN or OUT parameter at index:: 6
+2018-04-13 21:04:53 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:04:53 ERROR Log:25 - At BankAdminConnect: User created: jackson3
+2018-04-13 21:04:54 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:04:54 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANK_USER' not granted or does not exist
+
+2018-04-13 21:04:54 INFO  Log:31 - Bank closed successfully
+2018-04-13 21:06:03 INFO  Log:19 - Start of BankLog
+2018-04-13 21:06:04 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:06:04 ERROR Log:25 - At BankAdminConnect 93:ORA-00942: table or view does not exist
+
+2018-04-13 21:06:04 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:06:05 ERROR Log:25 - At BankAdminConnect: User created: jackson4
+2018-04-13 21:06:05 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:06:05 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANK_USER' not granted or does not exist
+
+2018-04-13 21:06:05 INFO  Log:31 - Bank closed successfully
+2018-04-13 21:09:54 INFO  Log:19 - Start of BankLog
+2018-04-13 21:09:55 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:10:32 INFO  Log:19 - Start of BankLog
+2018-04-13 21:10:33 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:10:33 INFO  Log:31 - Bank closed successfully
+2018-04-13 21:20:00 INFO  Log:19 - Start of BankLog
+2018-04-13 21:20:01 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:20:01 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-13 21:20:01 INFO  Log:31 - Bank closed successfully
+2018-04-13 21:37:54 INFO  Log:19 - Start of BankLog
+2018-04-13 21:37:56 INFO  Log:31 - Connection successfull: true
+2018-04-13 21:37:56 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-13 21:37:56 INFO  Log:31 - Bank closed successfully
+2018-04-14 07:37:11 INFO  Log:19 - Start of BankLog
+2018-04-14 07:37:12 INFO  Log:31 - Connection successfull: true
+2018-04-14 07:37:12 INFO  Log:31 - Bank closed successfully
+2018-04-14 07:38:15 INFO  Log:19 - Start of BankLog
+2018-04-14 07:38:16 INFO  Log:31 - Connection successfull: true
+2018-04-14 07:38:17 INFO  Log:31 - Connection successfull: true
+2018-04-14 07:38:17 ERROR Log:25 - At BankAdminConnect 68:ORA-01920: user name 'JACKSON4' conflicts with another user or role name
+
+2018-04-14 07:38:18 INFO  Log:31 - Connection successfull: true
+2018-04-14 07:38:18 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANK_USER' not granted or does not exist
+
+2018-04-14 07:38:18 INFO  Log:31 - Connection successfull: true
+2018-04-14 07:38:18 INFO  Log:31 - Bank closed successfully
+2018-04-14 07:38:46 INFO  Log:19 - Start of BankLog
+2018-04-14 07:38:47 INFO  Log:31 - Connection successfull: true
+2018-04-14 07:38:47 INFO  Log:31 - Connection successfull: true
+2018-04-14 07:38:48 ERROR Log:25 - At BankAdminConnect: User created: jackson5
+2018-04-14 07:38:48 INFO  Log:31 - Connection successfull: true
+2018-04-14 07:38:48 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANK_USER' not granted or does not exist
+
+2018-04-14 07:38:48 INFO  Log:31 - Connection successfull: true
+2018-04-14 07:38:48 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:35:19 INFO  Log:19 - Start of BankLog
+2018-04-14 09:35:19 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:35:20 ERROR Log:25 - At BankUserConnect 36:ORA-00942: table or view does not exist
+
+2018-04-14 09:35:20 ERROR Log:25 - At BankAdminConnect 68:ORA-00922: missing or invalid option
+
+2018-04-14 09:35:20 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:35:20 ERROR Log:25 - At BankAdminConnect 52:ORA-00933: SQL command not properly ended
+
+2018-04-14 09:35:20 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:37:16 INFO  Log:19 - Start of BankLog
+2018-04-14 09:37:17 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:37:18 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:37:19 ERROR Log:25 - At BankAdminConnect: User created: jackson6
+2018-04-14 09:37:19 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:37:19 ERROR Log:25 - At BankAdminConnect 108:ORA-00942: table or view does not exist
+
+2018-04-14 09:37:19 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:43:40 INFO  Log:19 - Start of BankLog
+2018-04-14 09:43:41 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:43:41 ERROR Log:25 - At BankAdminConnect 125:Missing IN or OUT parameter at index:: 2
+2018-04-14 09:43:41 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:45:47 INFO  Log:19 - Start of BankLog
+2018-04-14 09:45:47 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:45:48 ERROR Log:25 - At BankAdminConnect 125:ORA-00903: invalid table name
+
+2018-04-14 09:45:48 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:49:05 INFO  Log:19 - Start of BankLog
+2018-04-14 09:49:05 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:49:06 ERROR Log:25 - At BankAdminConnect 125:ORA-00903: invalid table name
+
+2018-04-14 09:49:06 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:51:27 INFO  Log:19 - Start of BankLog
+2018-04-14 09:51:28 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:51:29 ERROR Log:25 - At BankAdminConnect 68:ORA-00922: missing or invalid option
+
+2018-04-14 09:51:29 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:51:29 ERROR Log:25 - At BankAdminConnect 52:ORA-00933: SQL command not properly ended
+
+2018-04-14 09:51:29 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:52:43 INFO  Log:19 - Start of BankLog
+2018-04-14 09:52:44 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:52:45 ERROR Log:25 - At BankAdminConnect: User created: tomII
+2018-04-14 09:52:45 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:52:46 INFO  Log:31 - At BankAdminConnect: Admin Role granted to tomII
+2018-04-14 09:52:46 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:54:39 INFO  Log:19 - Start of BankLog
+2018-04-14 09:54:41 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-14 09:56:30 INFO  Log:19 - Start of BankLog
+2018-04-14 09:56:31 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:56:32 ERROR Log:25 - At BankAdminConnect: User created: tomIII
+2018-04-14 09:56:32 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:56:33 INFO  Log:31 - At BankAdminConnect: Admin Role granted to tomIII
+2018-04-14 09:56:33 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:57:03 INFO  Log:19 - Start of BankLog
+2018-04-14 09:57:03 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:57:03 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:57:43 INFO  Log:19 - Start of BankLog
+2018-04-14 09:57:44 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:57:44 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:57:44 ERROR Log:25 - At BankAdminConnect: User created: jackson7
+2018-04-14 09:57:45 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:57:45 ERROR Log:25 - At BankAdminConnect 108:ORA-01917: user or role 'RICHEST' does not exist
+
+2018-04-14 09:57:45 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:59:08 INFO  Log:19 - Start of BankLog
+2018-04-14 09:59:09 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:59:09 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:59:09 ERROR Log:25 - At BankAdminConnect: User created: jackson8
+2018-04-14 09:59:10 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:59:11 ERROR Log:25 - At BankAdminConnect 108:ORA-01917: user or role 'RICHEST' does not exist
+
+2018-04-14 09:59:11 INFO  Log:31 - Bank closed successfully
+2018-04-14 09:59:43 INFO  Log:19 - Start of BankLog
+2018-04-14 09:59:44 INFO  Log:31 - Connection successfull: true
+2018-04-14 09:59:44 ERROR Log:25 - At BankAdminConnect 125:ORA-00903: invalid table name
+
+2018-04-14 09:59:44 INFO  Log:31 - Bank closed successfully
+2018-04-14 10:03:43 INFO  Log:19 - Start of BankLog
+2018-04-14 10:04:10 INFO  Log:19 - Start of BankLog
+2018-04-14 10:05:23 INFO  Log:31 - Connection successfull: true
+2018-04-14 10:05:26 INFO  Log:31 - Connection successfull: true
+2018-04-14 10:05:29 ERROR Log:25 - At BankAdminConnect 68:ORA-01920: user name 'JACKSON8' conflicts with another user or role name
+
+2018-04-14 10:05:31 INFO  Log:31 - Connection successfull: true
+2018-04-14 10:05:35 INFO  Log:31 - At BankAdminConnect: BankUser Role granted to jackson8
+2018-04-14 10:05:37 INFO  Log:31 - Bank closed successfully
+2018-04-14 10:06:08 INFO  Log:19 - Start of BankLog
+2018-04-14 10:06:09 INFO  Log:31 - Connection successfull: true
+2018-04-14 10:06:09 INFO  Log:31 - Connection successfull: true
+2018-04-14 10:06:10 ERROR Log:25 - At BankAdminConnect: User created: jackson9
+2018-04-14 10:06:10 INFO  Log:31 - Connection successfull: true
+2018-04-14 10:06:10 INFO  Log:31 - At BankAdminConnect: BankUser Role granted to jackson9
+2018-04-14 10:06:10 INFO  Log:31 - Bank closed successfully
+2018-04-14 10:58:55 INFO  Log:19 - Start of BankLog
+2018-04-14 10:58:56 INFO  Log:31 - Connection successfull: true
+2018-04-14 10:58:56 INFO  Log:31 - Connection successfull: true
+2018-04-14 10:58:57 INFO  Log:31 - Connection successfull: true
+2018-04-14 10:58:57 ERROR Log:25 - ResultSet.next was not called
+2018-04-14 10:58:57 INFO  Log:31 - Bank closed successfully
+2018-04-14 11:03:33 INFO  Log:19 - Start of BankLog
+2018-04-14 11:03:36 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:03:36 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:03:36 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:03:36 ERROR Log:25 - ORA-00926: missing VALUES keyword
+
+2018-04-14 11:03:36 INFO  Log:31 - Bank closed successfully
+2018-04-14 11:05:28 INFO  Log:19 - Start of BankLog
+2018-04-14 11:05:29 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:05:30 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:05:30 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:05:30 ERROR Log:25 - ORA-00933: SQL command not properly ended
+
+2018-04-14 11:05:30 INFO  Log:31 - Bank closed successfully
+2018-04-14 11:08:33 INFO  Log:19 - Start of BankLog
+2018-04-14 11:08:34 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:08:34 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:08:35 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:08:35 INFO  Log:31 - Bank closed successfully
+2018-04-14 11:10:15 INFO  Log:19 - Start of BankLog
+2018-04-14 11:10:16 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:10:17 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:10:17 INFO  Log:31 - Connection successfull: true
+2018-04-14 11:10:17 INFO  Log:31 - Account created with default balance:0, default account type: checking, and User ID: 97
+2018-04-14 11:10:17 INFO  Log:31 - Bank closed successfully
+2018-04-14 11:32:33 INFO  Log:19 - Start of BankLog
+2018-04-14 11:32:34 ERROR Log:25 - ORA-01045: user JACKSON8 lacks CREATE SESSION privilege; logon denied
+
+2018-04-14 19:32:27 INFO  Log:19 - Start of BankLog
+2018-04-14 19:32:28 ERROR Log:25 - ORA-01045: user JACKSON8 lacks CREATE SESSION privilege; logon denied
+
+2018-04-14 19:33:58 INFO  Log:19 - Start of BankLog
+2018-04-14 19:33:59 ERROR Log:25 - ORA-01045: user JACKSON8 lacks CREATE SESSION privilege; logon denied
+
+2018-04-14 19:34:24 INFO  Log:19 - Start of BankLog
+2018-04-14 19:34:26 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-14 19:35:39 INFO  Log:19 - Start of BankLog
+2018-04-14 19:35:40 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:35:40 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:35:40 ERROR Log:25 - At BankAdminConnect: User created: jackson0
+2018-04-14 19:35:41 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:35:41 ERROR Log:25 - At BankAdminConnect 108:ORA-01924: role 'BANK_USER' not granted or does not exist
+
+2018-04-14 19:35:41 INFO  Log:31 - Bank closed successfully
+2018-04-14 19:37:04 INFO  Log:19 - Start of BankLog
+2018-04-14 19:37:06 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:37:06 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:37:06 ERROR Log:25 - At BankAdminConnect: User created: jackson00
+2018-04-14 19:37:06 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:37:06 ERROR Log:25 - At BankAdminConnect 108:ORA-01932: ADMIN option not granted for role 'CONNECT'
+
+2018-04-14 19:37:06 INFO  Log:31 - Bank closed successfully
+2018-04-14 19:38:42 INFO  Log:19 - Start of BankLog
+2018-04-14 19:38:43 ERROR Log:25 - ORA-01045: user JACKSON8 lacks CREATE SESSION privilege; logon denied
+
+2018-04-14 19:39:03 INFO  Log:19 - Start of BankLog
+2018-04-14 19:39:04 ERROR Log:25 - ORA-01045: user JACKSON00 lacks CREATE SESSION privilege; logon denied
+
+2018-04-14 19:40:14 INFO  Log:19 - Start of BankLog
+2018-04-14 19:40:15 ERROR Log:25 - ORA-01045: user JACKSON00 lacks CREATE SESSION privilege; logon denied
+
+2018-04-14 19:40:58 INFO  Log:19 - Start of BankLog
+2018-04-14 19:40:59 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:40:59 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:40:59 ERROR Log:25 - At BankAdminConnect 68:ORA-01920: user name 'JACKSON00' conflicts with another user or role name
+
+2018-04-14 19:40:59 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:40:59 ERROR Log:25 - At BankAdminConnect 108:ORA-01031: insufficient privileges
+
+2018-04-14 19:40:59 INFO  Log:31 - Bank closed successfully
+2018-04-14 19:47:15 INFO  Log:19 - Start of BankLog
+2018-04-14 19:47:16 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:47:16 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:47:17 ERROR Log:25 - At BankAdminConnect: User created: jackson100
+2018-04-14 19:47:17 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:47:17 ERROR Log:25 - At BankAdminConnect 108:ORA-00942: table or view does not exist
+
+2018-04-14 19:47:17 INFO  Log:31 - Bank closed successfully
+2018-04-14 19:57:06 INFO  Log:19 - Start of BankLog
+2018-04-14 19:57:07 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:57:08 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:57:08 ERROR Log:25 - At BankAdminConnect 68:ORA-01920: user name 'JACKSON100' conflicts with another user or role name
+
+2018-04-14 19:57:08 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:57:08 ERROR Log:25 - At BankAdminConnect 108:ORA-00942: table or view does not exist
+
+2018-04-14 19:57:08 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:57:09 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:57:09 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 19:57:09 INFO  Log:31 - Bank closed successfully
+2018-04-14 19:57:28 INFO  Log:19 - Start of BankLog
+2018-04-14 19:57:29 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:57:29 INFO  Log:31 - Connection successfull: true
+2018-04-14 19:57:29 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 19:57:29 INFO  Log:31 - Bank closed successfully
+2018-04-14 20:04:51 INFO  Log:19 - Start of BankLog
+2018-04-14 20:04:52 INFO  Log:31 - Connection successfull: true
+2018-04-14 20:04:52 INFO  Log:31 - Connection successfull: true
+2018-04-14 20:04:52 INFO  Log:31 - Account created with default balance:0, default account type: checking, and User ID: 113
+2018-04-14 20:04:53 INFO  Log:31 - Bank closed successfully
+2018-04-14 20:13:58 INFO  Log:19 - Start of BankLog
+2018-04-14 20:13:59 INFO  Log:31 - Connection successfull: true
+2018-04-14 20:13:59 INFO  Log:31 - Connection successfull: true
+2018-04-14 20:13:59 INFO  Log:31 - ACCOUNT NUMBER FOUND: 113
+2018-04-14 20:13:59 INFO  Log:31 - Bank closed successfully
+2018-04-14 20:16:27 INFO  Log:19 - Start of BankLog
+2018-04-14 20:16:28 INFO  Log:31 - Connection successfull: true
+2018-04-14 20:16:29 INFO  Log:31 - Connection successfull: true
+2018-04-14 20:16:29 ERROR Log:25 - ResultSet.next was not called
+2018-04-14 20:16:29 INFO  Log:31 - Bank closed successfully
+2018-04-14 20:17:13 INFO  Log:19 - Start of BankLog
+2018-04-14 20:17:14 INFO  Log:31 - Connection successfull: true
+2018-04-14 20:17:15 INFO  Log:31 - Connection successfull: true
+2018-04-14 20:17:15 INFO  Log:31 - Bank closed successfully
+2018-04-14 20:18:01 INFO  Log:19 - Start of BankLog
+2018-04-14 20:18:02 INFO  Log:31 - Connection successfull: true
+2018-04-14 20:18:02 INFO  Log:31 - Connection successfull: true
+2018-04-14 20:18:02 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 20:18:02 INFO  Log:31 - Bank closed successfully
+2018-04-14 21:16:57 INFO  Log:19 - Start of BankLog
+2018-04-14 21:16:58 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:17:00 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:17:00 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 21:17:00 INFO  Log:31 - Bank closed successfully
+2018-04-14 21:27:36 INFO  Log:19 - Start of BankLog
+2018-04-14 21:27:37 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:27:37 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:27:37 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 21:27:37 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:27:38 ERROR Log:25 - ORA-06550: line 1, column 7:
+PLS-00201: identifier 'DEPOSIT' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+2018-04-14 21:27:38 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:27:39 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:27:39 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 21:27:40 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:27:40 ERROR Log:25 - Result set after last row
+2018-04-14 21:27:40 INFO  Log:31 - Bank closed successfully
+2018-04-14 21:35:06 INFO  Log:19 - Start of BankLog
+2018-04-14 21:35:07 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:35:08 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:35:08 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 21:35:08 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:35:08 ERROR Log:25 - ORA-06550: line 1, column 7:
+PLS-00201: identifier 'DEPOSIT' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+2018-04-14 21:35:08 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:35:09 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:35:09 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 21:35:09 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:35:09 INFO  Log:31 - ACCOUNT BALANCE: 200
+2018-04-14 21:35:09 INFO  Log:31 - Bank closed successfully
+2018-04-14 21:38:36 INFO  Log:19 - Start of BankLog
+2018-04-14 21:38:37 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:38:38 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:38:38 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 21:38:38 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:38:38 INFO  Log:31 - Balance updated
+2018-04-14 21:38:38 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:38:38 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:38:38 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 21:38:39 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:38:39 INFO  Log:31 - ACCOUNT BALANCE: 500
+2018-04-14 21:38:39 INFO  Log:31 - Bank closed successfully
+2018-04-14 21:40:31 INFO  Log:19 - Start of BankLog
+2018-04-14 21:40:33 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:40:34 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:40:34 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 21:40:34 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:40:34 INFO  Log:31 - Balance updated
+2018-04-14 21:40:34 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:40:35 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:40:35 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 21:40:35 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:40:35 INFO  Log:31 - ACCOUNT BALANCE: 800
+2018-04-14 21:40:35 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:40:35 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:40:35 INFO  Log:31 - ACCOUNT NUMBER FOUND: 116
+2018-04-14 21:40:36 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:40:36 INFO  Log:31 - Balance updated
+2018-04-14 21:40:36 INFO  Log:31 - Bank closed successfully
+2018-04-14 21:53:16 INFO  Log:19 - Start of BankLog
+2018-04-14 21:53:17 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:53:18 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:53:18 ERROR Log:25 - At BankAdminConnect: User created: joeyuser
+2018-04-14 21:53:19 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:53:19 ERROR Log:25 - At BankAdminConnect 108:ORA-00942: table or view does not exist
+
+2018-04-14 21:53:19 INFO  Log:31 - Bank closed successfully
+2018-04-14 21:59:56 INFO  Log:19 - Start of BankLog
+2018-04-14 21:59:58 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:59:59 INFO  Log:31 - Connection successfull: true
+2018-04-14 21:59:59 ERROR Log:25 - At BankAdminConnect 68:ORA-01920: user name 'JOEYUSER' conflicts with another user or role name
+
+2018-04-14 21:59:59 INFO  Log:31 - Bank closed successfully
+2018-04-14 22:00:12 INFO  Log:19 - Start of BankLog
+2018-04-14 22:00:14 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:00:14 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:00:15 ERROR Log:25 - At BankAdminConnect: User created: joeyusertest
+2018-04-14 22:00:15 INFO  Log:31 - Bank closed successfully
+2018-04-14 22:00:37 INFO  Log:19 - Start of BankLog
+2018-04-14 22:00:38 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:00:39 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:00:39 ERROR Log:25 - At BankAdminConnect 68:ORA-01920: user name 'JOEYUSERTEST' conflicts with another user or role name
+
+2018-04-14 22:00:39 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:00:39 ERROR Log:25 - At BankAdminConnect 108:ORA-00942: table or view does not exist
+
+2018-04-14 22:00:39 INFO  Log:31 - Bank closed successfully
+2018-04-14 22:01:53 INFO  Log:19 - Start of BankLog
+2018-04-14 22:01:54 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:01:54 INFO  Log:31 - Bank closed successfully
+2018-04-14 22:05:35 INFO  Log:19 - Start of BankLog
+2018-04-14 22:05:43 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:05:43 ERROR Log:25 - At BankAdminConnect 93:ORA-00942: table or view does not exist
+
+2018-04-14 22:05:46 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:05:47 ERROR Log:25 - At BankAdminConnect 68:ORA-01031: insufficient privileges
+
+2018-04-14 22:05:47 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:05:47 ERROR Log:25 - At BankAdminConnect 108:ORA-01031: insufficient privileges
+
+2018-04-14 22:05:48 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:05:48 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 22:05:48 INFO  Log:31 - Bank closed successfully
+2018-04-14 22:21:04 INFO  Log:19 - Start of BankLog
+2018-04-14 22:21:05 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:21:05 ERROR Log:25 - At BankAdminConnect 93:ORA-00942: table or view does not exist
+
+2018-04-14 22:21:05 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:21:05 ERROR Log:25 - At BankAdminConnect 68:ORA-01031: insufficient privileges
+
+2018-04-14 22:21:06 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:21:06 ERROR Log:25 - At BankAdminConnect 108:ORA-01031: insufficient privileges
+
+2018-04-14 22:21:06 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:21:06 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 22:21:06 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:21:06 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 22:21:06 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:21:06 ERROR Log:25 - Missing IN or OUT parameter at index:: 1
+2018-04-14 22:21:07 INFO  Log:31 - Bank closed successfully
+2018-04-14 22:22:55 INFO  Log:19 - Start of BankLog
+2018-04-14 22:22:57 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:22:57 ERROR Log:25 - At BankAdminConnect 118:ORA-00942: table or view does not exist
+
+2018-04-14 22:22:57 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:22:57 ERROR Log:25 - At BankAdminConnect 94:ORA-01031: insufficient privileges
+
+2018-04-14 22:22:57 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:22:57 ERROR Log:25 - At BankAdminConnect 137:ORA-01031: insufficient privileges
+
+2018-04-14 22:22:58 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:22:58 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 22:22:58 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:22:58 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 22:22:58 INFO  Log:31 - Bank closed successfully
+2018-04-14 22:31:31 INFO  Log:19 - Start of BankLog
+2018-04-14 22:31:32 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:31:32 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 22:31:33 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:31:33 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 22:31:33 INFO  Log:31 - Bank closed successfully
+2018-04-14 22:34:29 INFO  Log:19 - Start of BankLog
+2018-04-14 22:34:30 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:34:30 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 22:34:30 INFO  Log:31 - Connection successfull: true
+2018-04-14 22:34:30 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-14 22:34:31 INFO  Log:31 - Bank closed successfully
+2018-04-15 16:06:13 INFO  Log:19 - Start of BankLog
+2018-04-15 16:06:14 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:06:14 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-15 16:06:14 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:06:15 ERROR Log:25 - ORA-00942: table or view does not exist
+
+2018-04-15 16:06:15 INFO  Log:31 - Bank closed successfully
+2018-04-15 16:39:50 INFO  Log:19 - Start of BankLog
+2018-04-15 16:39:51 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:39:51 ERROR Log:25 - At BankUserConnect 36:ORA-00942: table or view does not exist
+
+2018-04-15 16:39:52 ERROR Log:25 - At BankAdminConnect 94:ORA-01031: insufficient privileges
+
+2018-04-15 16:39:52 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:39:52 ERROR Log:25 - At BankAdminConnect 52:ORA-01924: role 'BANK_ADMIN' not granted or does not exist
+
+2018-04-15 16:39:52 INFO  Log:31 - Bank closed successfully
+2018-04-15 16:40:14 INFO  Log:19 - Start of BankLog
+2018-04-15 16:40:15 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:40:15 ERROR Log:25 - At BankUserConnect 36:ORA-00942: table or view does not exist
+
+2018-04-15 16:40:17 ERROR Log:25 - At BankAdminConnect: User created: tom7
+2018-04-15 16:40:17 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:40:17 ERROR Log:25 - At BankAdminConnect 52:ORA-01932: ADMIN option not granted for role 'BANK_ADMIN'
+
+2018-04-15 16:40:17 INFO  Log:31 - Bank closed successfully
+2018-04-15 16:40:40 INFO  Log:19 - Start of BankLog
+2018-04-15 16:40:41 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:40:42 ERROR Log:25 - At BankAdminConnect 94:ORA-01920: user name 'TOM7' conflicts with another user or role name
+
+2018-04-15 16:40:42 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:40:42 INFO  Log:31 - At BankAdminConnect: Admin Role granted to tom7
+2018-04-15 16:40:42 INFO  Log:31 - Bank closed successfully
+2018-04-15 16:45:01 INFO  Log:19 - Start of BankLog
+2018-04-15 16:45:02 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:45:03 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:45:03 ERROR Log:25 - At BankAdminConnect: User created: jackson101
+2018-04-15 16:45:03 INFO  Log:31 - Connection successfull: true
+2018-04-15 16:45:03 ERROR Log:25 - At BankAdminConnect 137:ORA-01031: insufficient privileges
+
+2018-04-15 16:45:03 INFO  Log:31 - Bank closed successfully
+2018-04-15 16:55:38 INFO  Log:19 - Start of BankLog
+2018-04-15 16:55:40 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-15 17:09:34 INFO  Log:19 - Start of BankLog
+2018-04-15 17:09:36 INFO  Log:31 - Connection successfull: true
+2018-04-15 17:09:37 INFO  Log:31 - Connection successfull: true
+2018-04-15 17:09:37 ERROR Log:25 - ORA-00904: "ID": invalid identifier
+
+2018-04-15 17:09:37 INFO  Log:31 - Bank closed successfully
+2018-04-15 17:10:37 INFO  Log:19 - Start of BankLog
+2018-04-15 17:10:38 INFO  Log:31 - Connection successfull: true
+2018-04-15 17:10:39 INFO  Log:31 - Connection successfull: true
+2018-04-15 17:10:39 INFO  Log:31 - Got balance
+2018-04-15 17:10:39 INFO  Log:31 - Bank closed successfully
+2018-04-15 18:47:59 INFO  Log:19 - Start of BankLog
+2018-04-15 18:48:01 INFO  Log:31 - Connection successfull: true
+2018-04-15 18:48:02 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-15 18:48:02 ERROR Log:25 - Missing IN or OUT parameter at index:: 1
+2018-04-15 18:48:02 INFO  Log:31 - Bank closed successfully
+2018-04-15 18:51:27 INFO  Log:19 - Start of BankLog
+2018-04-15 18:51:28 INFO  Log:31 - Connection successfull: true
+2018-04-15 18:51:29 ERROR Log:25 - DEPOSIT:ORA-01017: invalid username/password; logon denied
+
+2018-04-15 18:51:30 ERROR Log:25 - Missing IN or OUT parameter at index:: 1
+2018-04-15 18:51:30 INFO  Log:31 - Bank closed successfully
+2018-04-15 19:41:35 INFO  Log:19 - Start of BankLog
+2018-04-15 19:41:36 INFO  Log:31 - Connection successfull: true
+2018-04-15 19:41:37 INFO  Log:31 - Bank closed successfully
+2018-04-15 19:42:00 INFO  Log:19 - Start of BankLog
+2018-04-15 19:42:01 INFO  Log:31 - Connection successfull: true
+2018-04-15 19:42:01 INFO  Log:31 - Bank closed successfully
+2018-04-15 19:58:04 INFO  Log:19 - Start of BankLog
+2018-04-15 19:58:05 INFO  Log:31 - Connection successfull: true
+2018-04-15 19:58:06 ERROR Log:25 - DEPOSIT:Could not commit with auto-commit set on
+2018-04-15 19:58:06 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:04:33 INFO  Log:19 - Start of BankLog
+2018-04-15 20:04:34 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:04:34 ERROR Log:25 - DEPOSIT:Invalid transaction isolation set. Must be either Connection.TRANSACTION_NONE or Connection.TRANSACTION_READ_UNCOMMITTED or Connection.TRANSACTION_READ_COMMITTED or Connection.RRANSACTION_REPEATABLE_READ or Connection.TRANSACTION_SERIALIZABLE
+2018-04-15 20:04:34 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:05:57 INFO  Log:19 - Start of BankLog
+2018-04-15 20:05:58 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:05:59 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:06:44 INFO  Log:19 - Start of BankLog
+2018-04-15 20:06:45 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:06:45 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:07:38 INFO  Log:19 - Start of BankLog
+2018-04-15 20:07:38 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:07:39 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:09:32 INFO  Log:19 - Start of BankLog
+2018-04-15 20:09:33 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:09:34 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:10:18 INFO  Log:19 - Start of BankLog
+2018-04-15 20:10:19 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:10:23 ERROR Log:25 - DEPOSIT:Could not commit with auto-commit set on
+2018-04-15 20:10:23 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:20:02 INFO  Log:19 - Start of BankLog
+2018-04-15 20:20:03 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:20:04 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:20:56 INFO  Log:19 - Start of BankLog
+2018-04-15 20:20:56 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:20:57 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:24:12 INFO  Log:19 - Start of BankLog
+2018-04-15 20:24:13 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:24:15 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:33:26 INFO  Log:19 - Start of BankLog
+2018-04-15 20:33:27 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:33:30 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:33:54 INFO  Log:19 - Start of BankLog
+2018-04-15 20:33:55 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:33:57 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:36:28 INFO  Log:19 - Start of BankLog
+2018-04-15 20:36:29 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:36:29 INFO  Log:31 - Approving
+2018-04-15 20:36:30 INFO  Log:31 - Approving
+2018-04-15 20:36:30 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:38:39 INFO  Log:19 - Start of BankLog
+2018-04-15 20:38:40 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:38:41 INFO  Log:31 - Approving
+2018-04-15 20:38:42 INFO  Log:31 - Approving
+2018-04-15 20:38:42 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:43:33 INFO  Log:19 - Start of BankLog
+2018-04-15 20:43:33 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:43:34 INFO  Log:31 - Approving
+2018-04-15 20:43:35 ERROR Log:25 - Withdraw:Invalid cursor position
+2018-04-15 20:43:35 INFO  Log:31 - Bank closed successfully
+2018-04-15 20:45:11 INFO  Log:19 - Start of BankLog
+2018-04-15 20:45:12 INFO  Log:31 - Connection successfull: true
+2018-04-15 20:45:13 INFO  Log:31 - Approving
+2018-04-15 20:45:13 INFO  Log:31 - Approving
+2018-04-15 20:45:13 INFO  Log:31 - Bank closed successfully

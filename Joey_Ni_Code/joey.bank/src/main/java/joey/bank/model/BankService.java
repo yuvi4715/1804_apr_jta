@@ -1,9 +1,21 @@
 package joey.bank.model;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Properties;
+
+import javax.sql.rowset.FilteredRowSet;
+
+import com.sun.rowset.FilteredRowSetImpl;
+
 import joey.bank.ConnectDB;
+import joey.bank.IdFilter;
+import joey.bank.Log;
+import joey.bank.userFilter;
 /**
  * BankService provides a filter to the BankUserInterface methods
  * @author joeyi
@@ -30,13 +42,79 @@ public class BankService {
 		ConnectDB.close();
 	}
 	
-	public static BankAdmin createAdmin(String username, String password, String lastname, String firstname)
+	public static int selectMenu(String username, String password)
 	{
-		BankAdmin admin=BankAdminConnect.insertAdmin(username, password, lastname, firstname);
 		
-		BankAdminConnect.createUser(username, password); //create user login
-		BankAdminConnect.grantAdmin(admin); //grant admin role
-		return admin;
+		try {
+			
+			FileInputStream in = new FileInputStream("src/main/resources/db.properties");
+			Properties props = new Properties();
+			props.load(in);
+			FilteredRowSet frs= new FilteredRowSetImpl();
+			//implements cachedRowSet, a disconnected rowset object that operates on its own data
+			frs.setUsername(props.getProperty("username"));
+			frs.setPassword(props.getProperty("password"));
+			frs.setUrl(props.getProperty("url")); //set isolation to make sure changes 
+			frs.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+			if(frs.getPassword().equals(password) && frs.getUsername().equals(username))
+			{	return 0; }
+			frs.setCommand("SELECT * FROM JOEY_INMARS.BANKADMIN WHERE USERNAME=? AND PASSWORD=?");
+			frs.setString(1, username);
+			frs.setString(2, password);
+			/*Connection con = DriverManager.getConnection(props.getProperty("url"), 
+					 props.getProperty("username"), 
+					 props.getProperty("password"));*/
+			//con.setAutoCommit(false);
+			frs.execute();
+			/*Name filter
+			 * userFilter nameFilter = new userFilter(username, 1);
+			userFilter passFilter = new userFilter(password, 2);
+			frs.beforeFirst();
+			frs.setFilter(nameFilter); //prints balance from id in column 1
+			frs.beforeFirst();
+			frs.setFilter(passFilter);*/
+			
+			if (frs.next()) 
+			{ 	System.out.println(frs.getString(1));
+				System.out.println(frs.getString(2));	
+				return 1;
+			}
+			
+			frs.setCommand("SELECT * FROM JOEY_INMARS.BANKUSER WHERE USERNAME=? AND PASSWORD=?");
+			frs.setString(1, username);
+			frs.setString(2, password);
+			frs.execute();
+			//frs.setFilter(nameFilter); //prints balance from id in column 1
+		//	frs.setFilter(passFilter);
+			if (frs.next()) 
+			{ 	//System.out.println(frs.getString(1));
+				//System.out.println(frs.getString(2));	
+				return 2;
+			}
+			
+			
+		        // Synchronizing the row
+		        // back to the DB
+					 //Auto-commit is on or turn setAutoCommit(false) then, let admin do the commit after even listener
+				//frs.addRowSetListener(listener); //listener
+			//	frs.acceptChanges(con);  //admin can add logic to the approval process before acceptChanges
+						
+
+		} catch (SQLException e1) {
+			Log.logError("DEPOSIT:" +e1.getMessage());
+		} catch (IOException e) {
+			e.printStackTrace();
+			Log.logError(e.getMessage());
+		}
+		return 3;
+		
+	}
+	public static void createAdmin(String username, String password, String lastname, String firstname)
+	{
+		admin.insertAdmin(username, password, lastname, firstname);
+		admin.createUser(username, password); //create user login
+		admin.grantAdmin(new BankAdmin(username, password, lastname, firstname)); //grant admin role
+		System.out.println("Admin created");
 	}
 	
 	public static void createAccount(BankUser user)
@@ -52,15 +130,15 @@ public class BankService {
 	
 	public static BankAdmin getBankAdmin(String lastname)
 	{
-		return BankAdminInterface.getAdmin("firstname");
+		return BankAdminInterface.getAdmin(lastname);
 	}
 	
-	public static BankUser insertUser(String username, String password, String lastname, String firstname, int admin)
+	public static void insertUser(String username, String password, String lastname, String firstname, int id)
 	{
-		BankUser user=BankAdminConnect.insertUser(username, password, lastname, firstname, admin);		
-		BankAdminConnect.createUser(username, password); //create user login
-		BankAdminConnect.grantUserRole(user);//grant USER role
-		return user;
+		admin.insertUser(username, password, lastname, firstname, id);		
+		admin.createUser(username, password); //create user login
+		admin.grantUserRole(new BankUser(username, password, lastname, firstname));//grant USER role
+		System.out.println("Bankuser created");
 	}
 	
 	public static BankUser getUser(String lastname, String firstname)
@@ -69,38 +147,36 @@ public class BankService {
 		
 	}
 
-	public static boolean updateAccount(BankUser user, float amount)
-	{
-		//if(BankAdminConnect.approve(user)) return instance.updateAccount(user, amount);
-		return false;
-		
-	}
 	
 	public static boolean deleteUser(String username, String password)
 	{
 		return admin.deleteUser(username, password);
 	}
-	
-	public static boolean insertAdmin(BankUser user)
+	public static int getAccountNumber(int id) 
 	{
-		return false;
-		
+		return account.getAccountNumber(id);
+	}
+	public static int getAccountNumber(BankUser user)
+	{
+		return account.getAccountNumber(user);
+	}
+	public static float AccountDeposit(int acct, float balance)
+	{
+		return account.deposit(acct, balance);
+	}
+	public static float getBalance(int acct)
+	{
+		return account.getBalance(acct);
 	}
 	
-	public static boolean deleteAdmin(BankUser user) 
+	public static int getUserBalance(int userid)
 	{
-		return false;
-		
+		return admin.getUserBalance(userid);
 	}
-
-	public boolean updateBalance(BankUser user) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public int getAccountNumber(BankUser user) {
-		// TODO Auto-generated method stub
-		return 0;
+	
+	public static float AccountWithdraw(int acc, float amount)
+	{
+		return account.withdraw(acc, amount);
 	}
 
 	public static float deposit(BankUser user, float balance) {
@@ -108,13 +184,13 @@ public class BankService {
 		return account.deposit(acct, balance);
 	}
 
-	public static void deposit(int account, float amount) {
-	    user.deposit(account, amount);
+	public static void deposit(int acct, float amount) {
+	    user.deposit(acct, amount);
 		
 	}
 	
-	public static void withdraw(int account, float amount) {
-		user.withdraw(account, amount);
+	public static void withdraw(int acct, float amount) {
+		user.withdraw(acct, amount);
 	}
 	
 	public static float withdraw(BankUser user, float balance) {
@@ -126,20 +202,9 @@ public class BankService {
 		return user.getBalance(username, password);
 	}
 
-	public BankAdmin createAdmin(BankAdmin admin) {
-		// TODO Auto-generated method stub
-		return null;
+	public static int getId(String username, String password)
+	{
+		return user.getId(username, password);
 	}
-
-	public void grantUserRole(BankUser user) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void createUser(BankUser user) {
-		// TODO Auto-generated method stub
-		
-	}
-
 
 }
