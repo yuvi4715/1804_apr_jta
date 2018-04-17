@@ -11,8 +11,8 @@ public class BankUser implements Serializable
 	private String lastName;
 	private String username;
 	private String password;
-	private boolean isApproved;
-	private boolean isAdmin;
+	private int isApproved;
+	private int isAdmin;
 	
 	public BankUser() {}
 
@@ -24,8 +24,8 @@ public class BankUser implements Serializable
 		this.lastName = lastName;
 		this.username = username;
 		this.password = password;
-		this.isApproved = false;
-		this.isAdmin = false;
+		this.isApproved = 0;
+		this.isAdmin = 0;
 	}
 	
 	
@@ -35,13 +35,15 @@ public class BankUser implements Serializable
 		return "BankUser [userID: " + userID + "| Name: " + fisrtName + " " + lastName + "]";
 	}
 
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((fisrtName == null) ? 0 : fisrtName.hashCode());
-		result = prime * result + (isAdmin ? 1231 : 1237);
-		result = prime * result + (isApproved ? 1231 : 1237);
+		result = prime * result + isAdmin;
+		result = prime * result + isApproved;
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + userID;
@@ -127,19 +129,19 @@ public class BankUser implements Serializable
 		this.password = password;
 	}
 
-	public boolean isApproved() {
+	public int isApproved() {
 		return isApproved;
 	}
 
-	public void setApproved(boolean isApproved) {
+	public void setApproved(int isApproved) {
 		this.isApproved = isApproved;
 	}
 
-	public boolean isAdmin() {
+	public int isAdmin() {
 		return isAdmin;
 	}
 
-	public void setAdmin(boolean isAdmin) {
+	public void setAdmin(int isAdmin) {
 		this.isAdmin = isAdmin;
 	} 
 		

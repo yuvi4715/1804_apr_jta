@@ -88,7 +88,7 @@ public class BankUserDAOImpl implements BankUserDAO
 	public boolean updateUserStatus(BankUser user) 
 	{
 		int index = 0;
-		int approved = user.isApproved()? 0 : 1;
+		int approved = user.isApproved()==0? 1 : 0;
 		try (Connection conn = ConnectionUtil.getConnection()) 
 		{
 			CallableStatement stmt = conn.prepareCall("{CALL update_user_approved(?, ?)}");
@@ -109,7 +109,7 @@ public class BankUserDAOImpl implements BankUserDAO
 	public boolean updateUserAmin(BankUser user) 
 	{
 		int index = 0;
-		int approved = user.isAdmin()? 0 : 1;
+		int approved = user.isAdmin()==0? 1 : 0;
 		try (Connection conn = ConnectionUtil.getConnection()) 
 		{
 			CallableStatement stmt = conn.prepareCall("{CALL update_admin(?, ?)}");

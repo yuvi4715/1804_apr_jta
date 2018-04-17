@@ -1,5 +1,6 @@
 package com.revature.application;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
@@ -45,14 +46,47 @@ public class BankActions
 	
 	public static void Login()
 	{
+		String answer = "";
+		String response = "";
+		System.out.println("");
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please enter your username");
+		answer = scan.nextLine();
+		System.out.println("Please enter your password");
+		response = scan.nextLine();
+		BankUser user = new BankUser();
+		Iterator<BankUser> it = BankUserService.getAllUsers().iterator();
+		while(it.hasNext())
+		{
+			System.out.println(user.getUsername());
+			System.out.println(user.getPassword());
+			user = it.next();
+			if ((user.getUsername().equals(answer)) && (user.getPassword().equals(response)))
+			{
+			
+				break;
+			}
+		}
 		
+		if(user.isAdmin()==1)
+		{
+			AdminActions(user);
+		}
+		else if(user.isApproved()== 1)
+		{
+			UserActions(user);
+		}
+		else 
+		{
+			System.out.println("Your Status has not yet been approved");
+		}
+		scan.close();
 	}
 	
 	public static void UserActions(BankUser user)
 	{
 		int input = 0;
 		int answer = 0;
-		int temp;
 		String response = "";
 		System.out.println("");
 		Scanner scan = new Scanner(System.in);
@@ -114,6 +148,101 @@ public class BankActions
 		
 	}
 	
+	
+	
+	public static void AdminActions(BankUser user)
+	{
+		int input = 0;
+		int answer = 0;
+		String response = "";
+		System.out.println("");
+		Scanner scan = new Scanner(System.in);
+	
+		    do 
+		    {	    
+		    	System.out.println("Please choose an option");
+				System.out.println("1: Approve Users \n2: Approve Admins \n3: Delete Users \n4: Delete Accounts \n5: Exit");
+				input = scan.nextInt();
+		    	switch (input)
+				{
+					case 1: // Approve Users
+					{
+						BankUser user1 = new BankUser();
+						Iterator<BankUser> it = BankUserService.getAllUsers().iterator();
+						while(it.hasNext())
+						{
+							user1 = it.next();
+							if (user.isApproved()==0)
+							{
+								System.out.println(user1);
+							}
+						}
+						System.out.println("What account would you like to approve?");
+						answer = scan.nextInt();
+						user1 = BankUserService.getUser(answer);
+						ApproveUser(user1);
+						
+					}
+							break;
+					case 2: //Approve Admins
+					{
+						BankUser user1 = new BankUser();
+						Iterator<BankUser> it = BankUserService.getAllUsers().iterator();
+						while(it.hasNext())
+						{
+							user1 = it.next();
+							if (user.isApproved()==0)
+							{
+								System.out.println(user1);
+							}
+						}
+						System.out.println("What account would you like to approve?");
+						answer = scan.nextInt();
+						user1 = BankUserService.getUser(answer);
+						MakeAdmin(user1);
+					}
+							break;
+					case 3: // Delete Users
+					{
+						BankUser user1 = new BankUser();
+						Iterator<BankUser> it = BankUserService.getAllUsers().iterator();
+						while(it.hasNext())
+						{
+							user1 = it.next();
+							System.out.println(user1);
+						}
+						System.out.println("What user would you like to delete?");
+						answer = scan.nextInt();
+						DeleteUser(answer);
+					}
+		                 	break;
+					case 4:// Delete Account
+					{
+						Account acc = new Account();
+						Iterator<Account> it = AccountService.getAllAccounts().iterator();
+						while(it.hasNext())
+						{
+							acc = it.next();
+							System.out.println(acc);
+						}
+						System.out.println("What account would you like to delete?");
+						response = scan.nextLine();
+						System.out.println("From what user??");
+						answer = scan.nextInt();
+						acc = AccountService.getAccount(answer, response);
+						DeleteAccount(acc.getAccountID());
+					}
+							break;
+					default: input = 5;
+							break;
+				}
+		    } 
+		    while(input != 5);
+			scan.close();
+		
+	}
+	
+	
 	public static void CreateUser()
 	{
 		String firstName;
@@ -131,6 +260,7 @@ public class BankActions
 		lastName = scan.next();
 		BankUser user = new BankUser(0,firstName,lastName,username,password);
 		log.info(BankUserService.insertUser(user));
+		System.out.println("Your User Id is:" + user.getUserID());
 		scan.close();
 	}
 	
