@@ -1,0 +1,9 @@
+2018-04-17 01:31:23 INFO  ExecuteBank2:55 - Login Successful
+2018-04-17 01:33:13 INFO  ExecuteBank2:17 - Login Successful
+2018-04-17 01:33:13 WARN  ExecuteBank2:18 - Login Failed
+2018-04-17 01:33:13 ERROR ExecuteBank2:19 - Error Printed
+2018-04-17 01:33:13 DEBUG ExecuteBank2:20 - Debug Printed
+2018-04-17 01:33:21 WARN  ExecuteBank2:52 - Login Failed
+2018-04-17 01:33:22 WARN  ExecuteBank2:52 - Login Failed
+2018-04-17 01:33:28 WARN  ExecuteBank2:52 - Login Failed
+2018-04-17 01:33:33 INFO  ExecuteBank2:56 - Login Successful
