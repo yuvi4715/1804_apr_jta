@@ -48,10 +48,11 @@ public class BankAccount{
                                  "2. Deposit\n" +
                                  "3. View balance\n" +
                                  "4. View waiting list\n" +
-                                 "5. Exit\n" +
+                                 "5. Log Out\n" +
+                                 "6. Exit\n" +
                                  "Enter option: ");
                 menuSelection = input.nextInt();
-            }while (menuSelection < 0 || menuSelection > 5);
+            }while (menuSelection < 0 || menuSelection > 6);
             if(menuSelection == 1)
                 modifyBalance(false);
             else if (menuSelection == 2)
@@ -60,6 +61,8 @@ public class BankAccount{
                 viewBalance();
             else if (menuSelection == 4)
                 showWaitingUsers();
+            else if (menuSelection == 5)
+                displayLogin();
             else
                 exitProgram();
         }
@@ -69,16 +72,20 @@ public class BankAccount{
                 System.out.print("1. Withdraw\n" + 
                                  "2. Deposit\n" +
                                  "3. View balance\n" +
-                                 "4. Exit\n" +
+                                 "4. Log Out\n" + 
+                                 "5. Exit\n" +
                                  "Enter option: ");
                 menuSelection = input.nextInt();
-            }while (menuSelection < 0 || menuSelection > 4);
+                input.nextLine();
+            }while (menuSelection < 0 || menuSelection > 5);
             if(menuSelection == 1)
                 modifyBalance(false);
             else if (menuSelection == 2)
                 modifyBalance(true);
             else if (menuSelection == 3)
                 viewBalance();
+            else if (menuSelection == 4)
+                displayLogin();
             else
                 exitProgram();
         }      
@@ -133,7 +140,7 @@ public class BankAccount{
                                "2. Create Account\n" +
                                "3. Exit\n" +
                                "Enter option: ");
-            menuSelection = Integer.parseInt(input.nextLine());
+            menuSelection = input.nextInt();
         }while (menuSelection < 0 || menuSelection > 3);
 
         if(menuSelection == 1)
