@@ -1,4 +1,4 @@
-package Bank;
+package Bank.DB;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

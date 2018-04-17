@@ -1,4 +1,6 @@
-package Bank;
+package Accounts;
+
+import Bank.UserAccount;
 
 public class AdminAccount extends Account
 {

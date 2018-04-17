@@ -1,4 +1,4 @@
-package Bank;
+package Accounts;
 /*
  * BASIC DEMO PLAN
  * 1. FIRE UP PROGRAM
@@ -10,6 +10,10 @@ package Bank;
  * 7. ANY QUESTIONS?
  */
 import org.apache.log4j.Logger;
+
+import Bank.BankService;
+import Bank.UserAccount;
+
 import java.io.*;
 import java.util.*;
 import java.sql.*;
@@ -59,7 +63,7 @@ public class BankMain {
 					}
 					case 4: 
 					{
-						log.error("User selected 4.\nExiting program.");
+						log.info("User selected 4.\nExiting program.");
 						System.exit(0);
 						break;
 					}
@@ -75,6 +79,7 @@ public class BankMain {
 			{
 				System.err.println("Invalid Input.");
 				log.error("User entered Invalid Input.");
+				scan.next();
 			}
 		}
 		log.error("YOU SHOULD NOT SEE THIS, OR ELSE SOMETHING BROKE.");
@@ -152,6 +157,7 @@ public class BankMain {
 		System.out.printf("$%.2f", user.getBalance());
 		System.out.println();
 		boolean loggedOn = true;
+		Scanner in = new Scanner(System.in);
 		
 		while(loggedOn)
 		{
@@ -162,7 +168,6 @@ public class BankMain {
 			
 			try
 			{
-				Scanner in = new Scanner(System.in);
 				int choice = in.nextInt();
 				
 				switch(choice)
@@ -200,6 +205,7 @@ public class BankMain {
 			{
 				System.err.println("Invalid Input.");
 				log.error("User entered Invalid Input.");
+				in.next();
 			}
 		}
 	}
@@ -273,6 +279,7 @@ public class BankMain {
 	public static void AdminMenu(AdminAccount admin)
 	{
 		boolean loggedOn = true;
+		Scanner in = new Scanner(System.in);
 		while(loggedOn)
 		{
 			System.out.println("ADMIN CONSOLE.");
@@ -284,9 +291,7 @@ public class BankMain {
 			
 			try
 			{
-				Scanner in = new Scanner(System.in);
 				int choice = in.nextInt();
-				
 				switch(choice)
 				{
 					case 1: 
@@ -322,6 +327,7 @@ public class BankMain {
 			{
 				System.err.println("Invalid Input.");
 				log.error("Invalid Input.");
+				in.next();
 			}
 		}
 	}

@@ -1,8 +1,11 @@
-package Bank;
+package Bank.DB;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import Accounts.AdminAccount;
+import Bank.UserAccount;
 
 public class AccountDaoImpl implements AccountDao
 {

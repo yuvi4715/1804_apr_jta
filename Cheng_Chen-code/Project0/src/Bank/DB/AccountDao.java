@@ -1,6 +1,9 @@
-package Bank;
+package Bank.DB;
 
 import java.util.List;
+
+import Accounts.AdminAccount;
+import Bank.UserAccount;
 
 public interface AccountDao 
 {
