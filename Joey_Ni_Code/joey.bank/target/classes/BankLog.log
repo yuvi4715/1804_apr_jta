@@ -1038,3 +1038,78 @@ PL/SQL: Statement ignored
 2018-04-17 00:20:23 INFO  Log:31 - Admin is notified and will not do stuff to break this process
 2018-04-17 00:20:23 INFO  Log:31 - Admin is notified and will not do stuff to break this process
 2018-04-17 00:20:23 INFO  Log:31 - Bank closed successfully
+2018-04-17 09:05:05 INFO  Log:19 - Start of BankLog
+2018-04-17 10:05:09 INFO  Log:19 - Start of BankLog
+2018-04-17 10:05:46 INFO  Log:31 - At BankAdminConnect: User created: joe
+2018-04-17 10:05:48 INFO  Log:31 - At BankAdminConnect: Admin Role granted to joe
+2018-04-17 10:05:48 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:07:01 INFO  Log:19 - Start of BankLog
+2018-04-17 10:11:09 INFO  Log:31 - At BankAdminConnect: User created: jack
+2018-04-17 10:11:10 INFO  Log:31 - At BankAdminConnect: BankUser Role granted to jack
+2018-04-17 10:11:11 INFO  Log:31 - Account created with default balance:0, default account type: checking, and User ID: 321
+2018-04-17 10:11:11 INFO  Log:31 - ACCOUNT NUMBER FOUND: 140
+2018-04-17 10:11:36 INFO  Log:31 - ACCOUNT NUMBER FOUND: 140
+2018-04-17 10:11:37 INFO  Log:31 - Balance updated
+2018-04-17 10:11:37 ERROR Log:25 - Result set after last row
+2018-04-17 10:11:37 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:23:51 INFO  Log:19 - Start of BankLog
+2018-04-17 10:23:58 INFO  Log:31 - Got balance
+2018-04-17 10:23:58 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:26:13 INFO  Log:19 - Start of BankLog
+2018-04-17 10:26:41 INFO  Log:31 - At BankAdminConnect: User created: jonathan
+2018-04-17 10:26:45 INFO  Log:31 - At BankAdminConnect: Admin Role granted to jonathan
+2018-04-17 10:26:45 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:27:30 INFO  Log:19 - Start of BankLog
+2018-04-17 10:28:15 INFO  Log:31 - At BankAdminConnect: User created: joseph
+2018-04-17 10:28:15 INFO  Log:31 - At BankAdminConnect: BankUser Role granted to joseph
+2018-04-17 10:28:15 INFO  Log:31 - Account created with default balance:0, default account type: checking, and User ID: 337
+2018-04-17 10:28:16 INFO  Log:31 - ACCOUNT NUMBER FOUND: 148
+2018-04-17 10:28:21 INFO  Log:31 - ACCOUNT NUMBER FOUND: 148
+2018-04-17 10:28:21 INFO  Log:31 - Balance updated
+2018-04-17 10:28:22 ERROR Log:25 - Result set after last row
+2018-04-17 10:28:22 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:29:54 INFO  Log:19 - Start of BankLog
+2018-04-17 10:30:08 INFO  Log:31 - Got balance
+2018-04-17 10:30:09 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:30:27 INFO  Log:19 - Start of BankLog
+2018-04-17 10:30:34 INFO  Log:31 - ACCOUNT NUMBER FOUND: 148
+2018-04-17 10:30:41 INFO  Log:31 - Admin is has done the thing, is notified and will not do stuff to break this process
+2018-04-17 10:30:41 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:38:55 INFO  Log:19 - Start of BankLog
+2018-04-17 10:39:02 INFO  Log:31 - Got balance
+2018-04-17 10:39:02 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:39:21 INFO  Log:19 - Start of BankLog
+2018-04-17 10:39:34 INFO  Log:31 - ACCOUNT NUMBER FOUND: 124
+2018-04-17 10:39:37 INFO  Log:31 - Admin is has done the thing, is notified and will not do stuff to break this process
+2018-04-17 10:39:37 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:41:34 INFO  Log:19 - Start of BankLog
+2018-04-17 10:41:39 INFO  Log:31 - Got balance
+2018-04-17 10:41:39 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:41:45 INFO  Log:31 - ACCOUNT NUMBER FOUND: 124
+2018-04-17 10:41:46 INFO  Log:31 - Admin has done the deposit/withdrawal, is notified of the change and will not do stuff to break this process
+2018-04-17 10:41:46 INFO  Log:31 - Bank closed successfully
+2018-04-17 10:42:03 INFO  Log:31 - ACCOUNT NUMBER FOUND: 124
+2018-04-17 10:42:07 INFO  Log:31 - Admin has done the deposit/withdrawal, is notified of the change and will not do stuff to break this process
+2018-04-17 10:42:07 INFO  Log:31 - Bank closed successfully
+2018-04-17 11:25:01 INFO  Log:19 - Start of BankLog
+2018-04-17 11:25:04 ERROR Log:25 - ORA-01017: invalid username/password; logon denied
+
+2018-04-17 11:25:07 ERROR Log:25 - DEPOSIT:Invalid cursor position
+2018-04-17 11:25:24 INFO  Log:19 - Start of BankLog
+2018-04-17 11:26:07 INFO  Log:31 - At BankAdminConnect: User created: joseph2
+2018-04-17 11:26:07 INFO  Log:31 - At BankAdminConnect: BankUser Role granted to joseph2
+2018-04-17 11:26:08 INFO  Log:31 - Account created with default balance:0, default account type: checking, and User ID: 353
+2018-04-17 11:26:08 INFO  Log:31 - ACCOUNT NUMBER FOUND: 156
+2018-04-17 11:26:19 INFO  Log:31 - ACCOUNT NUMBER FOUND: 156
+2018-04-17 11:26:20 INFO  Log:31 - Balance updated
+2018-04-17 11:26:20 ERROR Log:25 - Result set after last row
+2018-04-17 11:26:20 INFO  Log:31 - Bank closed successfully
+2018-04-17 11:26:59 INFO  Log:19 - Start of BankLog
+2018-04-17 11:27:07 INFO  Log:31 - Got balance
+2018-04-17 11:27:07 INFO  Log:31 - Bank closed successfully
+2018-04-17 11:27:17 INFO  Log:31 - ACCOUNT NUMBER FOUND: 156
+2018-04-17 11:27:17 INFO  Log:31 - Admin has done the deposit/withdrawal, is notified of the change and will not do stuff to break this process
+2018-04-17 11:27:17 INFO  Log:31 - Bank closed successfully
+2018-04-17 11:27:50 INFO  Log:31 - ACCOUNT NUMBER FOUND: 156
+2018-04-17 11:27:53 INFO  Log:31 - Admin has done the deposit/withdrawal, is notified of the change and will not do stuff to break this process
+2018-04-17 11:27:53 INFO  Log:31 - Bank closed successfully

@@ -58,7 +58,7 @@ public class ConnectDB
 	//Public method to return connection 
 	public static Connection getCon() throws SQLException
 	{
-		if(con.isClosed() || con==null) getConnection();
+		if(con==null || con.isClosed()) getConnection();
 		return con;
 	}
 	//Public getter for the singleton ConnectDB object

@@ -32,6 +32,7 @@ public class BankApp {
 		 *7. user request deposit/withdrawal
 		 *8. admin approves deposit/withdrawal and got notified of row updates
 		 */
+		
 		Scanner console = new Scanner(System.in);
 		System.out.println("Welcome to The Richest Bank");
 		System.out.println("Please enter your username");
@@ -50,12 +51,13 @@ public class BankApp {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 		BankService.openBank(); //opens bank/connection to database
 		int menu=BankService.selectMenu(username, password);
-		
+		while(true) {
 		switch(menu)
 		{
-		case 0: System.out.println("Welcome Boss: " +username + "Got a new employee?"); 
+		case 0: System.out.println("Welcome Boss: " +username + " You got a new employee?"); 
 				System.out.println("0: Create admin");
 				
 				break;
@@ -79,6 +81,7 @@ public class BankApp {
 		String pass;
 		String last;
 		String first;
+		int depo=0;
 		int action = console.nextInt();
 		switch(action)
 		{
@@ -104,7 +107,7 @@ public class BankApp {
 					System.out.println("New user: "+BankService.getUser(last, first));
 					System.out.println("New Bank Account: "+BankService.getAccountNumber(temp));
 					System.out.println("Initial deposit: ");
-					int depo=console.nextInt();
+					depo=console.nextInt();
 					BankService.deposit(temp, depo);
 					System.out.println("New balance: " +BankService.getBalance(BankService.getId(name, pass)));
 					break;
@@ -151,7 +154,7 @@ public class BankApp {
 		BankService.closeBank();
 	
 	//To cheat into this system: get admin last name, get admin id, create user using that admin id...
-	
+		}
 	}
 
 }

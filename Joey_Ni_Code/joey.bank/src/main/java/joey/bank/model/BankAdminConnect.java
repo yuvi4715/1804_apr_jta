@@ -201,7 +201,7 @@ public class BankAdminConnect implements BankAdminInterface, RowSetListener {
 
 	@Override
 	public void rowSetChanged(RowSetEvent event) {
-		Log.logInfo("Admin is has done the thing, is notified and will not do stuff to break this process");
+		Log.logInfo("Admin has done the deposit/withdrawal, is notified of the change and will not do stuff to break this process");
 		//Could have more logic to review row change/approve, but since this is simple deposit stuff...
 		
 		System.out.println("Row changed: Deposit/Withdrawal accepted");
