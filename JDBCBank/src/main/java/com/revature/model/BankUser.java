@@ -1,6 +1,12 @@
 package com.revature.model;
 
 import java.io.Serializable;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.revature.util.ConnectionUtil;
 
 public class BankUser implements Serializable 
 {
@@ -89,8 +95,26 @@ public class BankUser implements Serializable
 		return true;
 	}
 
-	public int getUserID() {
-		return userID;
+	public int getUserID(String username)
+	{
+		int index = 0;
+		try (Connection conn = ConnectionUtil.getConnection())
+		{
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM bank_user WHERE username = ?");
+			stmt.setString(++index, username);
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()) 
+			{
+				return rs.getInt("user_id");
+			}
+		} 
+		catch (SQLException sqle)
+		{
+			System.err.println(sqle.getMessage());
+			System.err.println("SQL State: " + sqle.getSQLState());
+			System.err.println("Error Code: " + sqle.getErrorCode());
+		}
+		return 0;
 	}
 
 	public void setUserID(int userID) {

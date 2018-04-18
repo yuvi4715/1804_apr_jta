@@ -92,8 +92,8 @@ public class BankUserDAOImpl implements BankUserDAO
 		try (Connection conn = ConnectionUtil.getConnection()) 
 		{
 			CallableStatement stmt = conn.prepareCall("{CALL update_user_approved(?, ?)}");
-			stmt.setInt(++index, 1 );	
-			stmt.setInt(++index, user.getUserID());
+			stmt.setInt(++index, approved );	
+			stmt.setInt(++index, user.getUserID(user.getUsername()));
 			return stmt.executeUpdate() > 0;
 		} 
 		catch (SQLException sqle) 
@@ -114,7 +114,7 @@ public class BankUserDAOImpl implements BankUserDAO
 		{
 			CallableStatement stmt = conn.prepareCall("{CALL update_admin(?, ?)}");
 			stmt.setInt(++index, approved );
-			stmt.setInt(++index, user.getUserID());
+			stmt.setInt(++index, user.getUserID(user.getUsername()));
 			return stmt.executeUpdate() > 0;
 		} 
 		catch (SQLException sqle) 
