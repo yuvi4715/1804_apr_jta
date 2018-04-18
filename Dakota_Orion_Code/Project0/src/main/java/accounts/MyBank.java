@@ -328,11 +328,11 @@ public class MyBank {
 									scan.next();
 								}
 								if(z.getType().equals("Credit")) {
-									z.setBalance(z.getBalance()-scanI);
+									z.setBalance(z.getBalance()-Math.abs(scanI));
 									Service.updateAccountsBean(z);
 								}
 								else {
-									z.setBalance(z.getBalance()+scanI);
+									z.setBalance(z.getBalance()+Math.abs(scanI));
 									Service.updateAccountsBean(z);
 								}
 							}
@@ -366,17 +366,17 @@ public class MyBank {
 										scan.next();
 									}
 									if(z.getType().equals("Credit")) {
-										if(z.getBalance()+scanI>z.getLimit()) {
+										if(z.getBalance()+Math.abs(scanI)>z.getLimit()) {
 											System.out.println("You don't have enought credit to do this");
 										}
 										else {
-											z.setBalance(z.getBalance()+scanI);
+											z.setBalance(z.getBalance()+Math.abs(scanI));
 											Service.updateAccountsBean(z);
 										}
 									}
 									else {
-										if(z.getBalance()>=scanI) {
-											z.setBalance(z.getBalance()-scanI);;
+										if(z.getBalance()>=Math.abs(scanI)) {
+											z.setBalance(z.getBalance()-Math.abs(scanI));;
 											Service.updateAccountsBean(z);
 										}
 										else {
