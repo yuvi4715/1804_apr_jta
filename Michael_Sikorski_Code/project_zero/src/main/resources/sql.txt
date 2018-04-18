@@ -1,0 +1,38 @@
+SQL Commands
+
+CREATE TABLE User (
+  	id int,
+  	first_name VARCHAR2(50),
+  	last_name VARCHAR2(50),
+  	account_type BOOL,	--0 = admin, 1 = client
+  	balance NUMBER(10),
+  	verified BOOL, --0 = unverified, 1 = verified
+  	CONSTRAINT PK_ID PRIMARY KEY (id)
+  );
+  
+CREATE TABLE bank_transaction (
+  	id INT,
+  	amount Double(10,2),
+  	whattime datetime,
+  	owner int,
+  	CONSTRAINT PK_ID PRIMARY KEY (id),
+   	CONSTRAINT FK_ID FOREIGN KEY (owner) REFERENCES User(id)
+  );
+  
+  CREATE TABLE bank_user(
+    id int PRIMARY KEY,
+    first_name VARCHAR2(50) NOT NULL,
+    last_name VARCHAR2(50) NOT NULL,
+    is_admin NUMBER(1) DEFAULT 0 NOT NULL,
+    balance NUMBER(9,2) DEFAULT 0 NOT NULL,
+    is_verified NUMBER(1) DEFAULT 0 NOT NULL
+);
+
+ CREATE TABLE bank_transaction (
+    t_id int PRIMARY KEY,
+    t_amount DECIMAL(5,2) CHECK (t_amount<15000) NOT NULL,
+    t_type NUMBER(1) DEFAULT 0 NOT NULL,
+    t_date date DEFAULT sysdate,
+    t_owner int,
+    CONSTRAINT FK_OWNER FOREIGN KEY (t_owner) REFERENCES bank_user(id)
+);

@@ -1,0 +1,16 @@
+Requirements:
+
+	Banking application - Console Program
+	
+	1) account creation (admin and user role)
+		1.1) admins must approve users before they can be used
+	
+	2) transactions, must support withdrawals and deposits
+
+	3) must use logging
+
+	4) everything must NOT be in the main method.
+
+	5) data must be persisted
+
+	6) collect data input from console
