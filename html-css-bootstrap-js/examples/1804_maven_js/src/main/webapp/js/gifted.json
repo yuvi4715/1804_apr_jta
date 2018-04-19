@@ -1,0 +1,22 @@
+[
+	{
+		"hero": "Daredevil",
+		"name": "Matt murdock",
+		"occupation": "Attorney"
+	},
+	{
+		"hero": "PowerMan",
+		"name": "Luke Cage",
+		"occupation": "Barber"
+	},
+	{
+		"hero": "Jem",
+		"name": "Jessica Jones",
+		"occupation": "Private Investigator"
+	},
+			{
+		"hero": "IronFist",
+		"name": "Dany Rand",
+		"occupation": "Billionaire"
+	}
+]
