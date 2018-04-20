@@ -25,7 +25,7 @@ public class ConnectionsWithPropertiesUtil {
 		try {
 			Properties props = new Properties();
 			in = new FileInputStream(
-					"src/main/resources/file.properties");
+					"src/main/resources/db.properties");
 			props.load(in);
 			return DriverManager.getConnection(props.getProperty("url"), props.getProperty("username"),
 					props.getProperty("password"));

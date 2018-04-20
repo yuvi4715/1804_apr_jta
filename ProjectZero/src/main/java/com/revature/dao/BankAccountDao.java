@@ -15,8 +15,10 @@ public interface BankAccountDao {
 	public List<accounts> getAllAccounts();
 	public boolean createAccount(accounts acc);
 	public accounts get(int accountNumber);
-	public boolean updateAccount(accounts updateAccount);        
+	public boolean updateAccount(user updateAccount);        
     public boolean deleteAccount(accounts deleteAccount);
+	boolean createAdmin(user c);
+    public user userVerification(String username, String password);
     
 	
 	

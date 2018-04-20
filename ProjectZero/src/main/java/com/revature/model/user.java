@@ -1,13 +1,39 @@
 package com.revature.model;
 
 public class user {
-	private String username = null, firstname = null, lastname = null, email = null,
+	private String username = null, password = null, firstname = null, lastname = null, email = null,
 			address = null;
-	private boolean isActive = true, isAdmin = true;
+	private boolean isActive = false, isAdmin = false;
+	private double balance = 0;
 	private accounts Checking;
 	private accounts Savings;
 	
 	
+	public String getPassword() {
+		return password;
+	}
+	public user(String username, String password, String firstname, String lastname, String email, String address,
+			boolean isActive, boolean isAdmin, double balance) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.address = address;
+		this.isActive = isActive;
+		this.isAdmin = isAdmin;
+		this.balance = balance;
+	}
+	
+	
+	
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public String getUsername() {
 		return username;
 	}
@@ -118,7 +144,7 @@ public class user {
 		return true;
 	}
 	public user(String username, String firstname, String lastname, String email, String address, boolean isActive,
-			boolean isAdmin) {
+			boolean isAdmin, double balance) {
 		super();
 		this.username = username;
 		this.firstname = firstname;
@@ -127,11 +153,16 @@ public class user {
 		this.address = address;
 		this.isActive = isActive;
 		this.isAdmin = isAdmin;
+		this.balance = balance;
 	}
 	@Override
 	public String toString() {
 		return "user [username=" + username + ", firstname=" + firstname + ", lastname=" + lastname + ", email=" + email
 				+ ", address=" + address + ", isActive=" + isActive + ", isAdmin=" + isAdmin + "]";
+	}
+	public double getBalance() {
+		// TODO Auto-generated method stub
+		return 0;
 	}		
 	
 	
