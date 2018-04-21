@@ -4,20 +4,27 @@
  * 
  * 
  * 
- * Event handlers ================= element.addEventListener(event, function,
+ * Event handlers ================= 
+ * element.addEventListener(event, function,
  * useCapture);
  * 
- * To find elements ================ document.getElementById(id)
- * document.getElementsByTagName(name) document.getElementsByClassName(name)
+ * To find elements ================ 
+ * document.getElementById(id)
+ * document.getElementsByTagName(name)
+ * document.getElementsByClassName(name)
  * document.querySelectorAll - css selectors
  * 
- * To change elements ===================== element.innerHTML = new html content
- * element.attribute = new value element.setAttribute(attribute, value)
+ * To change elements ===================== 
+ * element.innerHTML = new html content
+ * element.attribute = new value 
+ * element.setAttribute(attribute, value)
  * element.style.property = new style
  * 
  * To add and delete elements ============================
- * document.createElement(element) document.removeChild(element)
- * document.appendChild(element) document.replaceChild(element)
+ * document.createElement(element) 
+ * document.removeChild(element)
+ * document.appendChild(element) 
+ * document.replaceChild(element)
  * document.write(text)
  * 
  * Properties to navigate between nodes with JavaScript;
