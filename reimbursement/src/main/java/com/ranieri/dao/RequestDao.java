@@ -2,14 +2,13 @@ package com.ranieri.dao;
 
 import java.util.List;
 
-import com.ranieri.request.*;
+import com.ranieri.model.Request;
 
 public interface RequestDao {
 	
-	public Request getRequest();
 	public List<Request> getAllRequest();
-	public Request createRequest();
-	public Request updateRequest();
+	public boolean createRequest(String email, String reason, double amount, String image);
+	public boolean updateRequest(int requestID, String status, String manager);
 	
 
 }
