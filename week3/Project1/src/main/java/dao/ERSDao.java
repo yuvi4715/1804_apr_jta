@@ -9,14 +9,14 @@ import java.util.List;
  * Created by bryanvillegas on 4/19/18.
  */
 public interface ERSDao {
-    public boolean insertEmp(Employee user);
-    public boolean insertManager(Employee user);
-    public Employee getEmp(String user, String password);
-    public List<Employee> getAllEmps();
-    public boolean updateEmp();
+    boolean insertEmp(Employee user);
+    //boolean insertManager(Employee user);
+    Employee getEmp(String user, String password);
+    List<Employee> getAllEmps();
+    //public boolean updateEmp();
 
-    public boolean insertRequest();
-    public List<Requests> getAllRequests();
-    public boolean updateRequests();
-    public boolean deleteRequests();
+    public boolean insertRequest(int id, double amount, String pur);
+    public List<Requests> getAllRequests(int id);
+    boolean updateRequests(int id, int manId);
+    //public boolean deleteRequests();
 }
