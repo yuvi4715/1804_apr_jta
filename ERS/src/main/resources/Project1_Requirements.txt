@@ -1,0 +1,51 @@
+Expense Reimbursement System (ERS) - Presentation on first day of - Week 5
+
+
+
+-An Employee/Manager can login
+-An Employee/Manager can logout
+
+-An Employee can view the Employee Homepage
+-A Manager can view the Manager Homepage
+
+++An Employee can view their pending reimbursement requests -> QUERY IS SET, DAO DEFINED
+++An Employee can view their resolved reimbursement requests -> QUERY IS SET, DAO DEFINED
+
+++An Employee can submit a reimbursement request -> PROCEDUE IS SET, DAO DEFINED
+
+++An Employee can view their information -> QUERY IS SET, DAO DEFINED
+++An Employee can update their information -> PROCEDURE IS SET, DAO DEFINED
+
+++A Manager can view reimbursement requests from a single Employee -> QUERY IS SET, DAO DEFINED
+++A Manager can view all pending requests from all employees --> QUERY IS SET, DAO DEFINED
+++A Manager can view all resolved requests from all employees and see which manager resolved it --> QUERY IS SET, DAO DEFINED
+++A Manager can view all Employees -> QUERY IS SET, DAO DEFINED
+
+++A Manager can approve/deny pending reimbursement requests -> PROCEDUE IS SET, DAO DEFINED
+
+
+-A Manager can view images of the receipts from reimbursement requests (hard /do last)
+-An Employee can upload an image of his/her receipt as part of the reimbursement request (hard / do last)
+------------------------------------------------------------------
+-An Employee receives an email when one of their reimbursement requests is resolved (optional)
+-A Manager can register an Employee, which sends the Employee an email with their username and temp password (optional)
+-An Employee can reset their password (Optional - tied with above functional requirement)
+
+Technologies:
+-Java 1.8 -> Setup in Maven Project
+-JSPs (optional), JSTL(optional)
+-Servlets -> Setup Maven Dependency
+-JDBC -> Setup Maven Dependency
+-SQL -> Mostly Done
+-PL/SQL -> Mostly Done
+-HTML/CSS/Javascript
+-Bootstrap
+-AJAX (required in atleast 2 functionalities)
+-JUnit -> Setup Maven Dependency
+-log4j -> Setup Maven Dependency
+
+Environment:
+-Tomcat
+-Oracle 11g Database (AWS RDS)
+-Eclipse/Spring Tools Suite
+-SQL Developer
