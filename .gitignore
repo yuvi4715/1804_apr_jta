@@ -22,3 +22,17 @@
 hs_err_pid*
 /.metadata/
 /.recommenders/
+ERS/src/main/resources/db.properties
+bankaccount/src/main/resources/db.properties
+bankaccount/target
+ERS/.eslintrc.json
+ERS/.project
+ERS/target
+Servers
+RemoteSystemsTempFiles
+Pokemon_DAO
+jdbcexample
+allthingsweb
+1804_apr_java
+ERS/.settings
+ERS/.vscode

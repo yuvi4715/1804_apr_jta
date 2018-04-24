@@ -8,20 +8,20 @@ Expense Reimbursement System (ERS) - Presentation on first day of - Week 5
 -An Employee can view the Employee Homepage
 -A Manager can view the Manager Homepage
 
-++An Employee can view their pending reimbursement requests -> QUERY IS SET, DAO DEFINED
-++An Employee can view their resolved reimbursement requests -> QUERY IS SET, DAO DEFINED
+++An Employee can view their pending reimbursement requests -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++An Employee can view their resolved reimbursement requests -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
 
-++An Employee can submit a reimbursement request -> PROCEDUE IS SET, DAO DEFINED
+++An Employee can submit a reimbursement request -> PROCEDUE IS SET, DAO DEFINED AND IMPLEMENTED
 
-++An Employee can view their information -> QUERY IS SET, DAO DEFINED
-++An Employee can update their information -> PROCEDURE IS SET, DAO DEFINED
+++An Employee can view their information -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++An Employee can update their information -> PROCEDURE IS SET, DAO DEFINED AND IMPLEMENTED
 
-++A Manager can view reimbursement requests from a single Employee -> QUERY IS SET, DAO DEFINED
-++A Manager can view all pending requests from all employees --> QUERY IS SET, DAO DEFINED
-++A Manager can view all resolved requests from all employees and see which manager resolved it --> QUERY IS SET, DAO DEFINED
-++A Manager can view all Employees -> QUERY IS SET, DAO DEFINED
+++A Manager can view reimbursement requests from a single Employee -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++A Manager can view all pending requests from all employees --> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++A Manager can view all resolved requests from all employees and see which manager resolved it --> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++A Manager can view all Employees -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
 
-++A Manager can approve/deny pending reimbursement requests -> PROCEDUE IS SET, DAO DEFINED
+++A Manager can approve/deny pending reimbursement requests -> PROCEDUE IS SET, DAO DEFINED AND IMPLEMENTED
 
 
 -A Manager can view images of the receipts from reimbursement requests (hard /do last)
