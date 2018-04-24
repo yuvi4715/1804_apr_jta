@@ -17,10 +17,10 @@ public class EmployeeService {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Employee test =dao.getEmployee("tester@test.com", "test");
-		Employee test2 =dao.getEmployee("bruce@wayne.com", "batman");
-		//System.out.println(test);
-		System.out.println(test2);
+	//	Employee test =dao.getEmployee("tester@test.com", "test");
+		//Employee test2 =dao.getEmployee("bruce@wayne.com", "batman");
+	//	System.out.println(test);
+	//	System.out.println(test2);
 		
 
 	}

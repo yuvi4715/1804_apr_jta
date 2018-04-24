@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Manager Page</title>
+
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+
+</head>
+<body>
+
+
+<form method= "get" action = "servlet">
+
+  <div class="container">
+    <label for="requestID"><b>Request ID</b></label>
+    <input type="number" placeholder="Enter request id number" name="id_number" required>
+
+    <label for="status"><b>Status</b></label>
+    <input type="text" placeholder="Type in new status" name="status" required>
+
+    <button type="submit" id ="update_request">Update</button>
+   
+  </div>
+
+</form>
+
+
+<div>
+<h1>Manager Page</h1>
+<table id = "all_requests">
+<th>Request ID</th>
+<th>Requester</th>
+<th>Reason</th>
+<th>Amount</th>
+<th>Status</th>
+<th>Image </th>
+
+
+</table>
+</div>
+
+<script type="text/javascript">
+
+
+
+</script>
+</body>
+</html>

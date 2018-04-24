@@ -30,8 +30,8 @@ public static RequestDao dao = RequestDaoImpl.getInstance();
 	
 	public static void main(String[] args) {
 		
-//		List<Request> test = dao.getAllRequest();	
-//		test.forEach(System.out::println);
+//	List<Request> test = dao.getAllRequest();	
+//	test.forEach(System.out::println);
 		
 //		dao.createRequest("tester@test.com", "hibachi dinner", 1900, "image29");
 //		dao.updateRequest(8, "denied", "evil boss");
