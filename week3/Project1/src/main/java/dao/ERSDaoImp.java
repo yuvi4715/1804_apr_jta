@@ -136,4 +136,26 @@ public class ERSDaoImp implements ERSDao{
         return false;
     }
     //public boolean deleteRequests(){}
+    public List<Requests> getAllEmpRequests(){
+        int index = 0;
+        try (Connection conn = ConnectionUtil.getConnection()) {
+            List<Requests> requests = new ArrayList<>();
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM request");
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                requests.add(new Requests(rs.getInt("request_id"), rs.getString("purpose"),
+                        rs.getDouble("request_amount"), rs.getInt("requested_by"),
+                        (Integer)rs.getInt("approved_by"), rs.getBoolean("status")));
+            }
+            return requests;
+        } catch (SQLException sqle) {
+            System.err.println(sqle.getMessage());
+            System.err.println("SQL State: " + sqle.getSQLState());
+            System.err.println("Error Code: " + sqle.getErrorCode());
+        }
+        return null;
+
+    }
 }

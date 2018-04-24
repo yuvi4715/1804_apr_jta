@@ -15,8 +15,9 @@ public interface ERSDao {
     List<Employee> getAllEmps();
     //public boolean updateEmp();
 
-    public boolean insertRequest(int id, double amount, String pur);
-    public List<Requests> getAllRequests(int id);
+    boolean insertRequest(int id, double amount, String pur);
+    List<Requests> getAllRequests(int id);
+    List<Requests> getAllEmpRequests();
     boolean updateRequests(int id, int manId);
     //public boolean deleteRequests();
 }

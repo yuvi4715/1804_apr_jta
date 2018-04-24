@@ -31,5 +31,8 @@ public class ERSService {
     public static boolean updateRequests(int id, int manId){
         return dao.updateRequests(id, manId);
     }
+    public static List<Requests> getAllEmpRequests(){
+        return dao.getAllEmpRequests();
+    }
 
 }

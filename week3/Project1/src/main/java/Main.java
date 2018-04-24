@@ -84,7 +84,7 @@ public class Main{
                     viewEmpInfo(emp);
                     break;
                 case 5:
-                    updateEmpInfo();
+                    updateEmpInfo(emp);
                     break;
                 case 6:
                     System.out.println("Logged out.");
@@ -99,9 +99,6 @@ public class Main{
     public static void viewEmpInfo(Employee emp){
         System.out.println(emp.getFirstName() + emp.getLastName() + emp.getEmpID());
     }
-
-    //Employee can update employees info
-    public static void updateEmpInfo(){}
 
     //Employee can view all their pending requests
     public static void  viewRequestPending(Employee emp){
@@ -202,10 +199,8 @@ public class Main{
             }
         }
     }
-    //Manager can view all requests from a single employee
-    public static void viewSingleEmpReq(){}
 
-    //Manager login
+    //Manager login CHANGE THIS - USE GET MANAGER
     public static void managerLogin(){
         String username,password;
         Scanner sc = new Scanner(System.in);
@@ -259,8 +254,46 @@ public class Main{
     }
 
     //Manager can view all pending requests
-    public static void  viewAllReimburstPending(){}
+    public static void  viewAllReimburstPending(){
+        List<Requests> requests = ERSService.getAllEmpRequests();
+        if(requests == null){
+            System.out.println("Could not get any requests.");
+
+        }
+        else {
+            System.out.println("\nRequest ID             Amount      Purpose");
+            System.out.println("--------------------------------------------");
+            for (Requests req : requests) {
+                if(req.isApproved() == false){
+                    System.out.printf("%d%-20s%.2f", req.getRequestID(), " ", req.getAmount());
+                    System.out.print("     " + req.getPurpose() + "\n\n");
+                }
+            }
+        }
+    }
     //Manager can view all approved requests
-    public static void viewAllReimburstApproved(){}
+    public static void viewAllReimburstApproved(){
+        List<Requests> requests = ERSService.getAllEmpRequests();
+        if(requests == null){
+            System.out.println("Could not get any requests.");
+
+        }
+        else {
+            System.out.println("\nRequest ID             Amount      Purpose");
+            System.out.println("--------------------------------------------");
+            for (Requests req : requests) {
+                if(req.isApproved() == true){
+                    System.out.printf("%d%-20s%.2f", req.getRequestID(), " ", req.getAmount());
+                    System.out.print("     " + req.getPurpose() + "\n\n");
+                }
+            }
+        }
+    }
+    //Employee can update employees info
+    public static void updateEmpInfo(Employee emp){
+
+    }
+    //Manager can view all requests from a single employee
+    public static void viewSingleEmpReq(){}
 
 }
