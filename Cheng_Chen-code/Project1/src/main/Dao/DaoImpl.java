@@ -381,6 +381,8 @@ public class DaoImpl implements EmployeeDao, ManagerDao, ReimbursementDao
 			{
 				employees.add(new Employee(rs.getString("email"), rs.getString("pass"), rs.getString("empname")));
 			}
+			
+			return employees;
 		}
 		catch (SQLException sqle) 
 		{
