@@ -16,12 +16,22 @@
   	<description></description>
   	<servlet-class>com.revature.ers.servelets.Hello2</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>FrontController</servlet-name>
+  	<display-name>FrontController</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.ers.servelets.FrontController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>HelloWorld</servlet-name>
-  	<url-pattern>*.do</url-pattern>
+  	<url-pattern>/html/HelloWorld</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>Hello2</servlet-name>
-  	<url-pattern>*.dotoo</url-pattern>
+  	<url-pattern>/html/Hello2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FrontController</servlet-name>
+  	<url-pattern>/html/FrontController</url-pattern>
   </servlet-mapping>
 </web-app>
