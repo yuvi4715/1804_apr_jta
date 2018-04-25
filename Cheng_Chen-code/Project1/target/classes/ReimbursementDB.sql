@@ -61,4 +61,5 @@ END;
 /
 INSERT INTO manager (email, pass, mananame) VALUES ('sysadmin', 'sysadmin', 'Jackie Chen');
 INSERT INTO employee (email, pass, empname) VALUES ('test', 'test', 'tester');
-SELECT * FROM employee;
+
+--exec insert_reimb(1.00, 'test', 'TEST INSERT 1.00');

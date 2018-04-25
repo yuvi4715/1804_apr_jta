@@ -26,62 +26,62 @@ public class ReimbursementService
 		return dao.updateReimbursement(r);
 	}
 	
-	public List<Reimbursement> getAllReimbursements()
+	public static List<Reimbursement> getAllReimbursements()
 	{
 		return dao.getAllReimbursements();
 	}
 	
-	public List<Reimbursement> getAllPending()
+	public static List<Reimbursement> getAllPending()
 	{
 		return dao.getAllPending();
 	}
 	
-	public List<Reimbursement> getAllResolved()
+	public static List<Reimbursement> getAllResolved()
 	{
 		return dao.getAllResolved();
 	}
 	
-	public List<Reimbursement> getAllPendingForE(Employee e)
+	public static List<Reimbursement> getAllPendingForE(Employee e)
 	{
 		return dao.getAllPendingForE(e);
 	}
 	
-	public List<Reimbursement> getAllResolvedForE(Employee e)
+	public static List<Reimbursement> getAllResolvedForE(Employee e)
 	{
 		return dao.getAllResolvedForE(e);
 	}
 	
-	public boolean insertManager(Manager m)
+	public static boolean insertManager(Manager m)
 	{
 		return dao.insertManager(m);
 	}
 	
-	public Manager getManager(String email)
+	public static Manager getManager(String email)
 	{
 		return dao.getManager(email);
 	}
 	
-	public boolean updateManager(Manager m)
+	public static boolean updateManager(Manager m)
 	{
 		return dao.updateManager(m);
 	}
 	
-	public boolean insertEmployee(Employee e)
+	public static boolean insertEmployee(Employee e)
 	{
 		return dao.insertEmployee(e);
 	}
 	
-	public Employee getEmployee(String email)
+	public static Employee getEmployee(String email)
 	{
 		return dao.getEmployee(email);
 	}
 	
-	public boolean updateEmployee(Employee e)
+	public static boolean updateEmployee(Employee e)
 	{
 		return dao.updateEmployee(e);
 	}
 	
-	public List<Employee> getAllEmployees()
+	public static List<Employee> getAllEmployees()
 	{
 		return dao.getAllEmployees();
 	}
