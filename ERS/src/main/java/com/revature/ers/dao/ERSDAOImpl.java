@@ -211,5 +211,36 @@ public class ERSDAOImpl implements ERSDAO{
 		return null;
 	}
 
+	@Override
+	public ERS_User getUser(ERS_User user) {
+		int index = 0;
+		try (Connection conn = ConnectionUtil.getConnection()){
+			//Create a PreparedStatement object to get a result set that should
+			//contain the an ERS_User if the credentials are correct, otherwise it's null
+			PreparedStatement stmt = conn.prepareStatement("SELECT * ERS_User WHERE email = ? AND passwd = ?");
+			stmt.setString(++index, user.getEmail());
+			stmt.setString(++index, user.getPasswd());
+
+			ResultSet rs = stmt.executeQuery();
+
+			//Log if credentials were correct or not
+            if (rs.next() == false){
+                log.error("Incorrect credentials, login failed.");
+                return null;
+            }
+            else   
+				log.info("Successfully retrieved the user with the provided credentials.");
+			
+			return new ERS_User(rs.getInt("user_id"), rs.getString("passwd"), rs.getString("firstName"), 
+				rs.getString("lastName"), rs.getString("email"), rs.getInt("isManager"));
+
+		} catch (SQLException e) {
+			System.out.println("An error ocurred when communicating with the database.");
+            log.error(e.getMessage());
+			log.error("SQL State: " + e.getSQLState());
+			log.error("Error Code: " + e.getErrorCode());
+		}
+		return null;
+	}
 }
 

@@ -43,4 +43,8 @@ public class ERS_Service{
     public List<Request> man_view_emp_requests(int requester){
         return dao.man_view_emp_requests(requester);
     }
+
+    public ERS_User getUser(String email, String passwd){
+        return dao.getUser(new ERS_User(0, passwd, "first", "last", email, 0));
+    }
 }
