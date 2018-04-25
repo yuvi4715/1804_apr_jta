@@ -12,6 +12,10 @@ public class MainLogin {
 		
 	}
 	
+	public static int someInt() {
+		return 9;
+	}
+	
 	public static String employeeInformation() {
 		Employee test = EmployeeService.getEmployee("tester@test.com", "test");
 		

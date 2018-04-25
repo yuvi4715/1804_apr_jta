@@ -29,6 +29,7 @@ private static EmployeeDaoImpl instance;
 	
 	public Employee getEmployee(String email, String password) {
 		try(Connection conn = ConnectionWProp.getConnection()){
+			System.out.println("Successfully connected");
 			
 			PreparedStatement stmt = conn.prepareCall("SELECT email, password, authorization FROM employee WHERE email = ? and password = ?");
 			stmt.setString(1, email );
@@ -41,6 +42,7 @@ private static EmployeeDaoImpl instance;
 								
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			System.out.println("from inside the dao impl");
 			e.printStackTrace();
 		}
 		return null;

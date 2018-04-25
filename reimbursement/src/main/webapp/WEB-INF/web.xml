@@ -5,13 +5,13 @@
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
 	<servlet>
-		<servlet-name>TestServlet</servlet-name>
-		<display-name>TestServlet</display-name>
+		<servlet-name>FController</servlet-name>
+		<display-name>FController</display-name>
 		<description></description>
-		<servlet-class>com.ranieri.servlet.TestServlet</servlet-class>
+		<servlet-class>com.ranieri.servlet.FController</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>TestServlet</servlet-name>
-		<url-pattern>/TestServlet</url-pattern>
+		<servlet-name>FController</servlet-name>
+		<url-pattern>/FController</url-pattern>
 	</servlet-mapping>
 </web-app>

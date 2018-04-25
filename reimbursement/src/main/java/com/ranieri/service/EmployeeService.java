@@ -7,7 +7,7 @@ import com.ranieri.model.Employee;
 public class EmployeeService {
 
 	
-	public static EmployeeDao dao = EmployeeDaoImpl.getInstance();
+	private static EmployeeDao dao = EmployeeDaoImpl.getInstance();
 	
 	private EmployeeService() {};
 	
