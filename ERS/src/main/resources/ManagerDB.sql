@@ -91,10 +91,10 @@ END;
 /
 
 --Create procedure to approve a request
-CREATE OR REPLACE PROCEDURE modify_request(a_request_id IN INTEGER, new_status IN VARCHAR2)
+CREATE OR REPLACE PROCEDURE modify_request(a_request_id IN INTEGER, new_status IN VARCHAR2, a_reviewer IN INTEGER)
 AS
 BEGIN
-    UPDATE Request SET status = new_status WHERE request_id = a_request_id;
+    UPDATE Request SET status = new_status, review_date = TO_DATE(CURRENT_DATE, 'DD-MON-YY'), reviewer = a_reviewer WHERE request_id = a_request_id;
     COMMIT;
 END;
 /
@@ -119,7 +119,7 @@ BEGIN
         SELECT request_id_seq.nextval INTO : NEW.request_id FROM dual;
     END IF;
     IF : NEW.request_date IS NULL THEN
-        SELECT TO_DATE(CURRENT_DATE, 'DD-MON-YYYY') INTO : NEW.request_date FROM dual;
+        SELECT TO_DATE(CURRENT_DATE, 'DD-MON-YY') INTO : NEW.request_date FROM dual;
     END IF;
 END;
 /
@@ -200,7 +200,7 @@ DELETE FROM ERS_User WHERE user_id = 102;
 UPDATE ERS_User SET isManager = 1 WHERE user_id = 102;
 
 --Update a specifit request
-UPDATE Request SET status = 'PENDING' WHERE request_id = 101;
+exec modify_request(105, 'APPROVED', 102);
 
 --View current date
 SELECT TO_CHAR(CURRENT_DATE, 'DD-MON-YYYY HH:MI') FROM dual;

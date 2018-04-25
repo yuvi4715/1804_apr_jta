@@ -60,14 +60,15 @@ public class ERSDAOImpl implements ERSDAO{
 	}
 
 	@Override
-	public boolean modify_request(Request request) {
+	public boolean modify_request(Request request, ERS_User user) {
 		int index = 0;
         try (Connection conn = ConnectionUtil.getConnection()){
 			//Create a CallableStatement object to call the procedure modify_request() and pass
 			//the arguments which are in the Request object
-            CallableStatement stmt = conn.prepareCall("{CALL modify_request(?,?)}");
+            CallableStatement stmt = conn.prepareCall("{CALL modify_request(?,?,?)}");
             stmt.setInt(++index, request.getRequest_id());
-            stmt.setString(++index, request.getStatus());
+			stmt.setString(++index, request.getStatus());
+			stmt.setInt(++index, user.getUser_id());
 
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {

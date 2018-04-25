@@ -17,8 +17,11 @@ public class ERS_Service{
         return dao.insert_request(request);
     }
 
-    public boolean modify_request(Request request){
-        return dao.modify_request(request);
+    public boolean modify_request(Request request, ERS_User user){
+        if(user.getIsManager() == 1)
+            return dao.modify_request(request, user);
+        else 
+            return false;
     }
 
     public boolean modify_user(ERS_User user){

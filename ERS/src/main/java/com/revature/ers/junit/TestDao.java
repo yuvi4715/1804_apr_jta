@@ -33,10 +33,11 @@ public class TestDao {
 
 	@Ignore
 	public void testModify_request() {
-		Request request = new Request(105,101,0,10.0,"JUnit testing, and somehow spent $10", 
+		ERS_User user = new ERS_User(102, "pass1", "JUnit", "Test", "JUnit@test.com", 1);
+		Request request = new Request(105,101,0,10.0,"JUnit testing, and somehow spent $5", 
 				"DENIED", new Date(1L), new Date(1L));
 		ERSDAO dao = new ERSDAOImpl();
-		assertTrue("Insert of request is: ", dao.modify_request(request));
+		assertTrue("Insert of request is: ", dao.modify_request(request, user));
 	}
 
 	@Ignore
@@ -62,7 +63,7 @@ public class TestDao {
 		assertTrue("Check if boolean is true: ", test);
 	}
 
-	@Ignore
+	@Test
 	public void testMan_view_all_requests() {
 		ERSDAO dao = new ERSDAOImpl();
 		List<Request> requestList = dao.man_view_all_requests();
@@ -94,7 +95,7 @@ public class TestDao {
 		assertTrue("Check if boolean is true: ", test);
 	}
 
-	@Test
+	@Ignore
 	public void testMan_view_emp_requests() {
 		ERSDAO dao = new ERSDAOImpl();
 		List<Request> requestList = dao.man_view_emp_requests(101);
