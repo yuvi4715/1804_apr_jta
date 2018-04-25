@@ -4,6 +4,10 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <context-param>
+  	<param-name>BestQBAllTime</param-name>
+  	<param-value>Joe Montana</param-value>
+  </context-param>
   <servlet>
   	<servlet-name>HelloWorld</servlet-name>
   	<display-name>HelloWorld</display-name>
@@ -25,6 +29,16 @@
   	<servlet-class>com.revature.servlets.ThirdServlet</servlet-class>
   	<load-on-startup>1</load-on-startup>
   </servlet>
+  <servlet>
+  	<servlet-name>ServletContextConfig</servlet-name>
+  	<display-name>ServletContextConfig</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.servlets.ServletContextConfig</servlet-class>
+  	<init-param>
+  		<param-name>BestQB</param-name>
+  		<param-value>Tom Brady</param-value>
+  	</init-param>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>HelloWorld</servlet-name>
   	<url-pattern>/HelloWorld</url-pattern>
@@ -36,6 +50,10 @@
   <servlet-mapping>
   	<servlet-name>ThirdServlet</servlet-name>
   	<url-pattern>/ThirdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletContextConfig</servlet-name>
+  	<url-pattern>/ServletContextConfig</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
   	<welcome-file>welcome1.html</welcome-file>

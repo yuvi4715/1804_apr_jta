@@ -24,6 +24,10 @@ public class SecondServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		System.out.println("doGet - SecondServlet");
+		
+		System.out.println(getServletContext().getAttribute("s3"));
+		System.out.println(getServletContext().getAttribute("s4"));
+		
 		PrintWriter pw = response.getWriter();
 		pw.println("<html>\r\n" + 
 				"<body>\r\n" + 
