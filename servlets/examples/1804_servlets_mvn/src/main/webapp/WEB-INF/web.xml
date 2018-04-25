@@ -9,12 +9,21 @@
   	<display-name>HelloWorld</display-name>
   	<description></description>
   	<servlet-class>com.revature.servlets.HelloWorld</servlet-class>
+  	<load-on-startup>3</load-on-startup>
   </servlet>
   <servlet>
   	<servlet-name>SecondServlet</servlet-name>
   	<display-name>SecondServlet</display-name>
   	<description></description>
   	<servlet-class>com.revature.servlets.SecondServlet</servlet-class>
+  	<load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet>
+  	<servlet-name>ThirdServlet</servlet-name>
+  	<display-name>ThirdServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.servlets.ThirdServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
   	<servlet-name>HelloWorld</servlet-name>
@@ -22,6 +31,13 @@
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>SecondServlet</servlet-name>
-  	<url-pattern>*.do</url-pattern>
+  	<url-pattern>/SecondServlet</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ThirdServlet</servlet-name>
+  	<url-pattern>/ThirdServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+  	<welcome-file>welcome1.html</welcome-file>
+  </welcome-file-list>	
 </web-app>

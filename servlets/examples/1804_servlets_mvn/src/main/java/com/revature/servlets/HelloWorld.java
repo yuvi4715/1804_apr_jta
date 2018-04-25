@@ -3,6 +3,7 @@ package com.revature.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,10 +17,10 @@ public class HelloWorld extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-//	public void init(ServletConfig config) throws ServletException {
-//		// TODO Auto-generated method stub
-//	}
-//
+	public void init(ServletConfig config) throws ServletException {
+		System.out.println("init method - HelloWorld");
+	}
+
 //	public void destroy() {
 //		// TODO Auto-generated method stub
 //	}
@@ -31,7 +32,7 @@ public class HelloWorld extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Hello world - get method");
-		System.out.println("doGet");
+		System.out.println("doGet - HelloWorld");
 		PrintWriter pw = response.getWriter();
 		pw.println();
 		response.setContentType("text/html");
