@@ -14,11 +14,19 @@ public class ConnectionUtil {
 	final static Logger log = Logger.getLogger(ConnectionUtil.class); 
 	private ConnectionUtil() {}
 	
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			log.warn("Exception thrown adding oracle driver.",e);
+		}
+	}
+
 	public static Connection getConnection() {
 		InputStream in = null;
 		try {
 			Properties props = new Properties();
-			in = new FileInputStream("src/main/resources/db.properties");
+			in = new FileInputStream("C:\\STS\\Workspace\\ERS\\src\\main\\resources\\db.properties");
 			props.load(in);
 			return DriverManager.getConnection(props.getProperty("url"), props.getProperty("username"), props.getProperty("password"));
 			
