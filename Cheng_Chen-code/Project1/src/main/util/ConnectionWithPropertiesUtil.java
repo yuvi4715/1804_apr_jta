@@ -14,13 +14,25 @@ public class ConnectionWithPropertiesUtil {
 	{
 	}
 	
+	static
+	{
+		try 
+		{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}
+		catch(ClassNotFoundException e)
+		{
+			System.out.println("Woops");
+		}
+	}
+	
 	public static Connection getConnection()
 	{
 		InputStream in = null;
 		try
 		{
 			Properties props = new Properties();
-			in = new FileInputStream("src/main/resources/DB.properties");
+			in = new FileInputStream("C:\\Users\\jacki_000\\Source\\Repos\\1804_apr_jta\\Cheng_Chen-code\\Project1\\src\\main\\resources\\DB.properties");
 			props.load(in);
 			return DriverManager.getConnection(props.getProperty("jdbc.url"),props.getProperty("jdbc.username"),props.getProperty("jdbc.password"));
 		} 
