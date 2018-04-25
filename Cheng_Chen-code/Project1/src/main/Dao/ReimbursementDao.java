@@ -15,5 +15,5 @@ public interface ReimbursementDao
 	public List<Reimbursement> getAllResolved();
 	public List<Reimbursement> getAllPendingForE(Employee e);
 	public List<Reimbursement> getAllResolvedForE(Employee e);
-	
 }
+

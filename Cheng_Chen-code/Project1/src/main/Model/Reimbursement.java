@@ -1,18 +1,18 @@
 package main.Model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Reimbursement {
 	private int ID;
 	private String email;
-	private int status;
+	private String status;
 	private double amount;
 	private String manager;
 	private String purpose;
 	private Date requested;
 	private Date approved;
 
-	public Reimbursement(int newid, String e, int s, double a, String m, String p, Date r, Date appdate) 
+	public Reimbursement(int newid, String e, String s, double a, String m, String p, Date r, Date appdate) 
 	{
 		ID = newid;
 		email = e;
@@ -44,12 +44,12 @@ public class Reimbursement {
 		email = e;
 	}
 
-	public int getStatus() 
+	public String getStatus() 
 	{
 		return status;
 	}
 
-	public void setStatus(int s) 
+	public void setStatus(String s) 
 	{
 		status = s;
 	}
