@@ -2,28 +2,19 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-	    crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Login</title>
 </head>
 
 <body>
 	<div>
-		<form method="get" action="FrontController" name="textfield1" id="but1">
-			<input type="text" placeholder="Enter text here.">
-			<input type="submit" value="GO">
+		<form method="post" action="login.do">
+			<input type="text" name="username" placeholder="Enter username">
+			<br><input type="password" name="password" placeholder="Enter password">
+			<br><input type="submit" value="Log In">
 		</form>
 	</div>
-
-	<div>
-		<form method="post" action="FrontController" name="textfield2" id="but2">
-			<input type="text" placeholder="Enter text here.">
-			<input type="submit" value="GO">
-		</form>
-	</div>
-
-	<script type="text/javasrcipt" src="../js/checkLogin.js"></script>
 </body>
 
 </html>

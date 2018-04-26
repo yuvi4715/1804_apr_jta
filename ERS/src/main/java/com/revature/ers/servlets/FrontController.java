@@ -1,4 +1,4 @@
-package com.revature.ers.servelets;
+package com.revature.ers.servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -14,11 +14,11 @@ public class FrontController extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().append(RequestHelper.process(request).toString());
+        request.getRequestDispatcher(RequestHelper.process(request)).forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served as a: P O S T");
+		request.getRequestDispatcher(RequestHelper.process(request)).forward(request, response);
 	}
 
 }

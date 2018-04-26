@@ -32,17 +32,17 @@ Expense Reimbursement System (ERS) - Presentation on first day of - Week 5
 -An Employee can reset their password (Optional - tied with above functional requirement)
 
 Technologies:
--Java 1.8 -> Setup in Maven Project
--JSPs (optional), JSTL(optional)
--Servlets -> Setup Maven Dependency
--JDBC -> Setup Maven Dependency
--SQL -> Mostly Done
--PL/SQL -> Mostly Done
--HTML/CSS/Javascript
--Bootstrap
+-Java 1.8 -> Setup in Maven Project, set up
+-JSPs (optional), JSTL(optional), No JSP, they're bad practice
+-Servlets -> Setup Maven Dependency, In progress
+-JDBC -> Setup Maven Dependency, Basically done
+-SQL -> Mostly Done, Basically done
+-PL/SQL -> Mostly Done, Basically done
+-HTML/CSS/Javascript -> Basically done
+-Bootstrap -> Will use for login and home pages
 -AJAX (required in atleast 2 functionalities)
--JUnit -> Setup Maven Dependency
--log4j -> Setup Maven Dependency
+-JUnit -> Setup Maven Dependency, already used
+-log4j -> Setup Maven Dependency, already used
 
 Environment:
 -Tomcat

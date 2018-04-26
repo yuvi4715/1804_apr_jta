@@ -12,6 +12,6 @@
   </servlet>
   <servlet-mapping>
   	<servlet-name>FrontController</servlet-name>
-  	<url-pattern>/html/FrontController</url-pattern>
+  	<url-pattern>*.do</url-pattern>
   </servlet-mapping>
 </web-app>
