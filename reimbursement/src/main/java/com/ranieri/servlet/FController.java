@@ -31,9 +31,10 @@ public class FController extends HttpServlet  {
 		String password = request.getParameter("psw");
 	//	Employee test = EmployeeService.getEmployee(email, password);
 	//	Employee test = EmployeeService.getEmployee("tester@test.com", "test");
-	
-		response.getWriter().append("Served at: FController connection "+ request.getParameter("email") +email).append(RequestHelper.process(request));
-		
+	//	response.sendRedirect("/reimbursement/html/managerPage.html");
+
+		//response.getWriter().append("Served at: FController connection "+ request.getParameter("email") +email).append(RequestHelper.process(request));
+		response.getWriter().append("Served at: fcontroller it should not go here ").append(request.getContextPath());
 	}
 
 

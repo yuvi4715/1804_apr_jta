@@ -16,13 +16,23 @@ package com.ranieri.util;
 					
 		}
 		
+		
+		
+		static {
+			try {
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+			} catch (ClassNotFoundException e) {
+				System.out.println("hello");
+			}
+		}
+		
 		public static  Connection getConnection() {
 			
 			InputStream in = null;
 			
 			try {
 				Properties props = new Properties();
-				in = new FileInputStream("src/main/resources/db.properties");
+				in = new FileInputStream("C:\\SpringToolSuite\\Projects\\reimbursement\\src\\main\\resources\\db.properties");
 				props.load(in);
 				return DriverManager.getConnection(props.getProperty("jdbc.url"), props.getProperty("jdbc.username"), props.getProperty("jdbc.password"));
 				

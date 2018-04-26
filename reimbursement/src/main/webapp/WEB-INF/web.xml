@@ -10,8 +10,18 @@
 		<description></description>
 		<servlet-class>com.ranieri.servlet.FController</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>MasterServlet</servlet-name>
+		<display-name>MasterServlet</display-name>
+		<description></description>
+		<servlet-class>com.ranieri.servlet.MasterServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>FController</servlet-name>
 		<url-pattern>/FController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MasterServlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 </web-app>

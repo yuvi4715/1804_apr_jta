@@ -2,6 +2,9 @@ package com.ranieri.servlet;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ranieri.controller.EmployeeController;
+import com.ranieri.controller.ManagerController;
 import com.ranieri.model.Employee;
 import com.ranieri.service.EmployeeService;
 
@@ -12,8 +15,12 @@ public class RequestHelper {
 public static String process(HttpServletRequest req) {
 		
 		switch (req.getRequestURI()) {
-		case "/reimbursement/FController":
-			return "how are you doing"+ req.getParameter("email");//"I sucessfully reached the sql database"+EmployeeService.getEmployee(req.getParameter("name"), req.getParameter("psw"));
+		case "/reimbursement/login.do":
+			return  EmployeeController.getEmployee(req);
+			
+		case "/reimbursement/manager.do":
+				return ManagerController.updateReimbursement(req);
+				
 		default:
 				return "unable to reach database";
 		
