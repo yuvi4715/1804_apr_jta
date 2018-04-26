@@ -7,7 +7,19 @@ import com.revature.ers.model.ERS_User;
 import com.revature.ers.model.Request;
 
 public class ERS_Service{
-    private static ERSDAO dao = new ERSDAOImpl();
+    private static ERSDAO dao = ERSDAOImpl.getERSDAOImpl();
+    private static ERS_Service service;
+
+    private ERS_Service(){
+
+    }
+
+    public static ERS_Service getERS_Service(){
+        if(service == null)
+            return service = new ERS_Service();
+        else 
+            return service;
+    }
 
     public boolean insert_user(ERS_User user){
         return dao.insert_user(user);

@@ -1,7 +1,5 @@
 package com.revature.ers.dao;
 
-import org.apache.log4j.Logger;
-
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,9 +10,21 @@ import java.util.List;
 
 import com.revature.ers.model.*;
 import com.revature.ers.util.ConnectionUtil;
+import com.revature.ers.util.*;
 
 public class ERSDAOImpl implements ERSDAO{
-    final static Logger log = Logger.getLogger(ERSDAO.class); 
+	private static ERSDAOImpl ersdaoimpl;
+
+	private ERSDAOImpl(){
+	}
+
+	public static ERSDAOImpl getERSDAOImpl(){
+		if (ersdaoimpl == null)
+			return ersdaoimpl = new ERSDAOImpl();
+		else
+			return ersdaoimpl;
+	}
+
 	@Override
 	public boolean insert_user(ERS_User user) {
         int index = 0;
@@ -31,9 +41,9 @@ public class ERSDAOImpl implements ERSDAO{
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
 			System.out.println("An error ocurrend when communicating with the database.");
-            log.error(e.getMessage());
-			log.error("SQL State: " + e.getSQLState());
-			log.error("Error Code: " + e.getErrorCode());
+            LogUtil.logger.error(e.getMessage());
+			LogUtil.logger.error("SQL State: " + e.getSQLState());
+			LogUtil.logger.error("Error Code: " + e.getErrorCode());
         }
 		return false;
 	}
@@ -52,9 +62,9 @@ public class ERSDAOImpl implements ERSDAO{
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
 			System.out.println("An error ocurrend when communicating with the database.");
-            log.error(e.getMessage());
-			log.error("SQL State: " + e.getSQLState());
-			log.error("Error Code: " + e.getErrorCode());
+            LogUtil.logger.error(e.getMessage());
+			LogUtil.logger.error("SQL State: " + e.getSQLState());
+			LogUtil.logger.error("Error Code: " + e.getErrorCode());
         }
 		return false;
 	}
@@ -73,9 +83,9 @@ public class ERSDAOImpl implements ERSDAO{
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
 			System.out.println("An error ocurrend when communicating with the database.");
-            log.error(e.getMessage());
-			log.error("SQL State: " + e.getSQLState());
-			log.error("Error Code: " + e.getErrorCode());
+            LogUtil.logger.error(e.getMessage());
+			LogUtil.logger.error("SQL State: " + e.getSQLState());
+			LogUtil.logger.error("Error Code: " + e.getErrorCode());
         }
 		return false;
 	}
@@ -96,9 +106,9 @@ public class ERSDAOImpl implements ERSDAO{
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
 			System.out.println("An error ocurred when communicating with the database.");
-            log.error(e.getMessage());
-			log.error("SQL State: " + e.getSQLState());
-			log.error("Error Code: " + e.getErrorCode());
+            LogUtil.logger.error(e.getMessage());
+			LogUtil.logger.error("SQL State: " + e.getSQLState());
+			LogUtil.logger.error("Error Code: " + e.getErrorCode());
         }
 		return false;
 	}
@@ -124,9 +134,9 @@ public class ERSDAOImpl implements ERSDAO{
 			return requestList;
 		} catch (SQLException e){
 			System.out.println("An error ocurred when communicating with the database.");
-            log.error(e.getMessage());
-			log.error("SQL State: " + e.getSQLState());
-			log.error("Error Code: " + e.getErrorCode());
+            LogUtil.logger.error(e.getMessage());
+			LogUtil.logger.error("SQL State: " + e.getSQLState());
+			LogUtil.logger.error("Error Code: " + e.getErrorCode());
 		}
 		return null;
 	}
@@ -150,9 +160,9 @@ public class ERSDAOImpl implements ERSDAO{
 			return requestList;
 		} catch (SQLException e){
 			System.out.println("An error ocurred when communicating with the database.");
-            log.error(e.getMessage());
-			log.error("SQL State: " + e.getSQLState());
-			log.error("Error Code: " + e.getErrorCode());
+            LogUtil.logger.error(e.getMessage());
+			LogUtil.logger.error("SQL State: " + e.getSQLState());
+			LogUtil.logger.error("Error Code: " + e.getErrorCode());
 		}
 		return null;
 	}
@@ -177,9 +187,9 @@ public class ERSDAOImpl implements ERSDAO{
 			return requestList;
 		} catch (SQLException e){
 			System.out.println("An error ocurred when communicating with the database.");
-            log.error(e.getMessage());
-			log.error("SQL State: " + e.getSQLState());
-			log.error("Error Code: " + e.getErrorCode());
+            LogUtil.logger.error(e.getMessage());
+			LogUtil.logger.error("SQL State: " + e.getSQLState());
+			LogUtil.logger.error("Error Code: " + e.getErrorCode());
 		}
 		return null;
 	}
@@ -204,9 +214,9 @@ public class ERSDAOImpl implements ERSDAO{
 			return requestList;
 		} catch (SQLException e){
 			System.out.println("An error ocurred when communicating with the database.");
-            log.error(e.getMessage());
-			log.error("SQL State: " + e.getSQLState());
-			log.error("Error Code: " + e.getErrorCode());
+            LogUtil.logger.error(e.getMessage());
+			LogUtil.logger.error("SQL State: " + e.getSQLState());
+			LogUtil.logger.error("Error Code: " + e.getErrorCode());
 		}
 		return null;
 	}
@@ -225,20 +235,20 @@ public class ERSDAOImpl implements ERSDAO{
 
 			//Log if credentials were correct or not
             if (rs.next() == false){
-                log.error("Incorrect credentials, login failed.");
+                LogUtil.logger.error("Incorrect credentials, login failed.");
                 return null;
             }
             else   
-				log.info("Successfully retrieved the user with the provided credentials.");
+				LogUtil.logger.info("Successfully retrieved the user with the provided credentials.");
 			
 			return new ERS_User(rs.getInt("user_id"), rs.getString("passwd"), rs.getString("firstName"), 
 				rs.getString("lastName"), rs.getString("email"), rs.getInt("isManager"));
 
 		} catch (SQLException e) {
 			System.out.println("An error ocurred when communicating with the database.");
-            log.error(e.getMessage());
-			log.error("SQL State: " + e.getSQLState());
-			log.error("Error Code: " + e.getErrorCode());
+            LogUtil.logger.error(e.getMessage());
+			LogUtil.logger.error("SQL State: " + e.getSQLState());
+			LogUtil.logger.error("Error Code: " + e.getErrorCode());
 		}
 		return null;
 	}

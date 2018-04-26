@@ -5,31 +5,11 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  	<servlet-name>HelloWorld</servlet-name>
-  	<display-name>HelloWorld</display-name>
-  	<description></description>
-  	<servlet-class>com.revature.ers.servelets.HelloWorld</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>Hello2</servlet-name>
-  	<display-name>Hello2</display-name>
-  	<description></description>
-  	<servlet-class>com.revature.ers.servelets.Hello2</servlet-class>
-  </servlet>
-  <servlet>
   	<servlet-name>FrontController</servlet-name>
   	<display-name>FrontController</display-name>
   	<description></description>
   	<servlet-class>com.revature.ers.servelets.FrontController</servlet-class>
   </servlet>
-  <servlet-mapping>
-  	<servlet-name>HelloWorld</servlet-name>
-  	<url-pattern>/html/HelloWorld</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Hello2</servlet-name>
-  	<url-pattern>/html/Hello2</url-pattern>
-  </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>FrontController</servlet-name>
   	<url-pattern>/html/FrontController</url-pattern>
