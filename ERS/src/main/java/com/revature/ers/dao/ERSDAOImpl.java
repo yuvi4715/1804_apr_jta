@@ -227,7 +227,7 @@ public class ERSDAOImpl implements ERSDAO{
 		try (Connection conn = ConnectionUtil.getConnection()){
 			//Create a PreparedStatement object to get a result set that should
 			//contain the an ERS_User if the credentials are correct, otherwise it's null
-			PreparedStatement stmt = conn.prepareStatement("SELECT * ERS_User WHERE email = ? AND passwd = ?");
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM ERS_User WHERE email = ? AND passwd = ?");
 			stmt.setString(++index, user.getEmail());
 			stmt.setString(++index, user.getPasswd());
 
@@ -252,5 +252,6 @@ public class ERSDAOImpl implements ERSDAO{
 		}
 		return null;
 	}
+	
 }
 

@@ -12,6 +12,7 @@ import com.revature.ers.dao.ERSDAO;
 import com.revature.ers.dao.ERSDAOImpl;
 import com.revature.ers.model.ERS_User;
 import com.revature.ers.model.Request;
+import com.revature.ers.service.ERS_Service;
 
 public class TestDao {
 
@@ -110,4 +111,18 @@ public class TestDao {
 		assertTrue("Check if boolean is true: ", test);
 	}
 
+	@Test
+	public void testGetUser(){
+		ERS_Service serv = ERS_Service.getERS_Service();
+		ERS_User user = serv.getUser("user1@ERS.com", "pass1");
+		if(user != null){
+			System.out.println(user.toString());
+			assertTrue(true);
+		}
+		else {
+			System.out.println("user is null.");
+			assertTrue(false);
+		}
+		
+	}
 }

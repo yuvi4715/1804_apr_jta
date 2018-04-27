@@ -6,10 +6,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class FrontController extends HttpServlet {
+public class MasterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public FrontController() {
+    public MasterServlet() {
         super();
     }
 
