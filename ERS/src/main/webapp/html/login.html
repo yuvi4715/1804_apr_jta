@@ -2,17 +2,20 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	    crossorigin="anonymous">
 	<meta charset="UTF-8">
 	<title>Login</title>
 </head>
 
 <body>
 	<div>
-		<form method="post" action="login.do">
+		<form method="GET" action="login.do">
 			<input type="text" name="email" placeholder="Enter email">
-			<br><input type="password" name="password" placeholder="Enter password">
-			<br><input type="submit" value="Log In">
+			<br>
+			<input type="password" name="password" placeholder="Enter password">
+			<br>
+			<input type="submit" value="Log In">
 		</form>
 	</div>
 </body>
