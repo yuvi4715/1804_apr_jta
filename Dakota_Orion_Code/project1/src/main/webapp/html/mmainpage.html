@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Main Page</title>
+<!-- <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+
+<link href="../css/mainpage.css" rel="stylesheet" id="mainpage-css">
+</head>
+
+<body>
+ <ul >
+	<li><a href="#" onclick="home()">Home</a></li>
+	<li><a href="#submitRequest" onclick="submit()">Submit Request</a></li>
+	<li><a href="#allPending" onclick="getAllPending()">All Pending</a></li>
+	<li><a href="#allResolved" onclick="getAllResolved()">All Resolved</a></li>
+	<li><a href="#allEmployees" onclick="getAllEmployees()">All Employees</a></li>
+	<li><a href="#allEmployees" onclick="getRequest()">An Employee's Requests</a></li>
+	<li><a href="#employeeRequests" onclick="getAllRequests()">Employee's Requests</a></li>
+	<li><a href="#infomation" id="info" onclick="getInfo()">Information</a></li>
+	<li><a href="login.html" id="logout">Logout</a></li>
+ </ul>
+        <div class="table-container">
+        	<table id="request-table" class="table">
+        		<thead>
+        			<tr>
+        			<th scope="col">Request ID</th>
+        			<th scope="col">Ammount</th>
+        			<th scope="col">Requester</th>
+        			<th scope="col">Reviewed By</th>
+        			<th scope="col">Status</th>
+        			<th scope="col">Request Date</th>
+        			<th scope="col">Review Date</th>
+        			<th scope="col">Image</th>
+        			</tr>
+        		</thead>
+        		<tbody id = "request-body"></tbody>
+        	</table>
+        </div>
+        <div class="table-container2">
+        	<table id="employee-table" class="table">
+        		<thead>
+        			<tr>
+        			<th scope="col">Employee ID</th>
+        			<th scope="col">First Name</th>
+        			<th scope="col">Last Name</th>
+        			<th scope="col">Username</th>
+        			<th scope="col">Password</th>
+        			<th scope="col">Email</th>
+        			<th scope="col">Employee Role</th>  
+        			</tr>
+        		</thead>
+        		<tbody id = "employee-body"></tbody>
+        	</table>
+        </div>
+        <script type="text/javascript" src="../js/mmainpage.js"></script>
+</body>
+</html>

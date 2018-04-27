@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+<link href="../css/login.css" rel="stylesheet" id="login-css">
+</head>
+<body>
+    <div class="container">
+        <div class="card card-container">
+            <img id="profile-img" class="revature-img-card" src="http://www.speakerboxpr.com/wp-content/uploads/2016/10/Revature_CMYK.jpg">
+            <p id="profile-name" class="profile-name-card"></p>
+            <form method="post" action = "/project1/login.do" class="form-signin">
+                <input type="text" name="username" id="loginUsername" class="form-control" placeholder="Username" required autofocus>
+                <input type="password" name="password" id="loginPassword" class="form-control" placeholder="Password" required>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Login</button>
+            </form><!-- /form -->
+            <a href="signup.html" class="sign-up">
+            	Sign-up
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+</body>
+</html>

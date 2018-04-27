@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign Up</title>
+<link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+<link href="../css/signup.css" rel="stylesheet" id="signup-css">
+</head>
+<body>
+    <div class="container">
+        <div class="card card-container">
+            <img id="profile-img" class="revature-img-card" src="http://www.speakerboxpr.com/wp-content/uploads/2016/10/Revature_CMYK.jpg"/>
+            <p id="profile-name" class="profile-name-card"></p>
+            <form method="post" action="/project1/signup.do" class="form-signin">
+                <input type="text" name="inputUsername" id="signupUsername" class="form-control" placeholder="Username" required>
+                <input type="password" name="inputPassword" id="signupPassword" class="form-control" placeholder="Password" required>
+                <input type="text" name="inputFirstName" id="signupFirstName" class="form-control" placeholder="First Name" required>
+                <input type="text" name="inputLastName" id="signupLastName" class="form-control" placeholder="Last Name" required>
+                <input type="email" name="inputEmail" id="signupEmail" class="form-control" placeholder="Email address" required autofocus>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" name="isManager" value="Manager"> Create Manager Account
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign Up</button>
+            </form><!-- /form -->
+            <a href="login.html" class="login">
+            	Go to login page
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+</body>
+</html>
