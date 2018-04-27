@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans>
+  <bean name="Richard">
+    <strain>Pinto</strain>
+    <yield>1</yield>
+    <mass>2000.0</mass>
+    <tasty>false</tasty>
+  </bean>
+  <bean name="Frederico">
+    <strain>Legume</strain>
+    <yield>120</yield>
+    <mass>20.0</mass>
+    <tasty>true</tasty>
+  </bean>
+  <bean name="Alice">
+    <strain>Garbonzo</strain>
+    <yield>5</yield>
+    <mass>85.0</mass>
+    <tasty>true</tasty>
+  </bean>
+</beans>
