@@ -8,7 +8,7 @@
   	<servlet-name>FrontController</servlet-name>
   	<display-name>FrontController</display-name>
   	<description></description>
-  	<servlet-class>com.revature.ers.servelets.FrontController</servlet-class>
+  	<servlet-class>com.revature.ers.servlets.FrontController</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>FrontController</servlet-name>

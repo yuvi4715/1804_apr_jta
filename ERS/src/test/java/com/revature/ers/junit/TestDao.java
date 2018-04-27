@@ -62,7 +62,7 @@ public class TestDao {
 		assertTrue("Check if boolean is true: ", test);
 	}
 
-	@Test
+	@Ignore
 	public void testMan_view_all_requests() {
 		ERSDAO dao = ERSDAOImpl.getERSDAOImpl();
 		List<Request> requestList = dao.man_view_all_requests();
