@@ -1,0 +1,50 @@
+<div class="well">
+    <h1>DIRECTIVES</h1>
+    <p>Directives are used to provide instruction within the DOM.
+        <br>They arguably proivde directions for angular within the view of the application. (The html) All directives are provided
+        by the angular library as well as offering the developer a means to create their own custom directives.
+    </p>
+    <!-- Note: Directives are always preceded with ng.
+        This provides an easy way to identify a directive. -->
+    <h3>*ngIf</h3>
+    <p>We can use *ngIf to determine whether or not we should show and element. It serves as a conditional where if it's true,
+        we show the element, else we hide it.
+    </p>
+    <div class="well" style="background-color:beige">
+        <p>Why do some Directives have an '*' before them, and others don't?</p>
+
+        <input type="button" (click)="toggleAnswer()" [value]="buttonValue">
+        <br>
+        <p *ngIf="visible;else elseBlock">The * is simply syntactic sugar that points out that the directive in question can be used to change the structure
+            of the html page. e.g. removing or adding elements.
+        </p>
+        <!-- NOTE: ng-template is NOT a directive, but a tag -->
+        <ng-template #elseBlock>
+            <p style="color:red">ELSE BLOCK</p>
+        </ng-template>
+    </div>
+    <h3>ngStyle</h3>
+    <p>ngStyle is a directive that is used for applying and object 
+        that represents the css of an element. By utilizing this, we 
+        can dynamically style any tag in our html.
+    </p>
+    <div class="well" [ngStyle]="styleObject">
+        <p>Text</p>
+    </div>
+    <h3>*ngFor</h3>
+    <p>*ngFor is a tag that can add elements from a list.
+        We can use it to duplicate whatever element it is in, for each element
+        in the provided list. (Note: This is a structural directive, just like
+        *ngIf)
+    </p>
+    <table style="border:3px dotted">
+        <tr><th>EMPLOYEE NAME</th><th>EMPLOYEE ID</th></tr>
+        <tr *ngFor="let x of emps">
+            <td>{{x.name}}</td>
+            <td>{{x.id}}</td>
+        </tr>
+    </table>
+    <div custom-directive>
+        Some practice text
+    </div>
+</div>

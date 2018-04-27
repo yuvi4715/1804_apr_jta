@@ -1,0 +1,9 @@
+<h2>POSTS</h2>
+<table border = "2px">
+    <tr>
+        <th>POST ID</th><th>POST TITLE</th><th>POST CONTENT</th>
+    </tr>
+    <tr *ngFor="let post of posts">
+        <td>{{post.id}}</td><td>{{post.title}}</td><td>{{post.content}}</td>
+    </tr>
+</table>

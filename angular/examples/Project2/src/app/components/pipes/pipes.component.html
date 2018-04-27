@@ -1,0 +1,22 @@
+<div class="well">
+    <h1>PIPES</h1>
+    <p>In AngularJS there was a feature called filters.
+        What filters did, was give you a way to modify model data before
+        it got presented in the view. You would pull data from the controller
+        and alter it before it got to the view.
+    </p>
+    <p>Angular 4 has this feature as well. And it works just like filter,
+        except we call it 'piping' in angular 4.
+    </p>
+    <div *ngFor="let x of names">
+        <p>{{x | uppercase}}</p>
+    </div>
+    <p>In the above example, we take a collection of names,
+        and pass it through a pipe that converts the Strings to upper case.
+    </p>
+    <p>My Custom pipe incoming!</p>
+    <div>
+        <input [(ngModel)]="alterWords"><br>
+        {{alterWords | custompipe}}
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="well">
+    <h3>String Interpolation</h3>
+    <p>Angular uses a concept called data binding.
+        This boils down to how we can connect our front end (view)
+        to our backend (components).
+        Any data in our components needs to have a way to be transferred
+        to the View (html file).
+
+        One way to do this, is to use String interpolation.
+    </p>
+    <div>The value of componentVariable is: <b style="color:red">{{componentVariable}}</b></div>
+    <p>The above example demonstrated pullting information from the component and displaying
+        it on the view. String interpolation is essentially and expression langauge, in that,
+        it can also perform expressions within.
+    </p>
+    <div>The value of 2 + 7 = {{2 + 7}} </div>
+    <div>The author of this site is: {{someObject.author}}</div>
+    <h3>Property Binding</h3>
+    <p>Property binding is, yet, another way to bind business to the view.</p>
+    <p>Buy applying square brackets to a tag attribute, we bind it as a property.</p>
+    <p>NOTE: ngStyle is a directive provided by angular.</p>
+    <div [ngStyle]=styleObject (click)=changeStyle()>I am stylized</div>
+    <p>ngStyle is the property bound to a variable on the backend. In this case, 
+        ngStyle looks for an object that can change the css of whatever element it is applied
+        to.
+    </p>
+    <h3>EVENT BINDING</h3>
+    <p>Event binding is used to pass information from the view to the component.</p>
+    <p>Events are designated with parentheticals. -Jeff</p>
+    <div (click)="doubleNum()">Click on me to double the number: {{num}}</div>
+    <h3>Two Way Databinding</h3>
+    <p>Up to this point, we have only seen, one way databinding. 
+        IE, taking data from the view and passing it to the component.
+        Or, taking data from the component and passing it to the view.
+        With two-way binding, we provide a way to not only change data from the component
+        with interaction on the view, but also represent the changed variable at the view level
+        as well.
+    </p>
+    <div>
+        <input [(ngModel)]="input">{{input}}
+    </div>
+</div>
