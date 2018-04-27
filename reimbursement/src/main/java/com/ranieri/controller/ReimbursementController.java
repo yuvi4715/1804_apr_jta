@@ -28,10 +28,10 @@ public static String doRequest(HttpServletRequest req) {
 	
 }
 
-public static String getEmployeeReimbursemt(String email) {
+public static String getEmployeeReimbursemt(HttpServletRequest req) {
 	
 	List<Request> list = RequestService.getAllRequests();
-	
+	String email = req.getParameter("email");
 	String data ="";
 	for(Request x : list) {
 		

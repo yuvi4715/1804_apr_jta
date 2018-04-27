@@ -28,6 +28,9 @@ public static String process(HttpServletRequest req) {
 		case "/reimbursement/createRequest.do":
 			return ReimbursementController.doRequest(req);
 			
+		case "/reimbursement/getAllMyReimbursements.do":
+			return ReimbursementController.getEmployeeReimbursemt(req);
+			
 		default:
 				return "unable to reach database";
 		
