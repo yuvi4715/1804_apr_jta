@@ -26,7 +26,7 @@ public class ConnectionUtil {
 		InputStream in = null;
 		try {
 			Properties props = new Properties();
-			in = new FileInputStream("/home/kevin/Workspace/ERS/src/main/resources/dp.properties");
+			in = new FileInputStream("C:\\Workspace\\ERS\\src\\main\\resources\\db.properties");
 			props.load(in);
 			return DriverManager.getConnection(props.getProperty("url"), props.getProperty("username"), props.getProperty("password"));
 			
