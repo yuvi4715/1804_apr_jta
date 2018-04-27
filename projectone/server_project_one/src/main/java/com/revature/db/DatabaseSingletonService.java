@@ -6,6 +6,13 @@ import com.revature.models.ReinbursementRequest;
 
 public class DatabaseSingletonService {
 	private static DatabaseSingleton db = DatabaseSingletonImpl.getInstance();
+	
+	public static DatabaseSingleton getDb() {
+		return db;
+	}
+	public static void setDb(DatabaseSingleton db) {
+		DatabaseSingletonService.db = db;
+	}
 	private DatabaseSingletonService() {}
 	public static Employee loginEmployee(Employee e, String password) {
 		return db.login(e, password);

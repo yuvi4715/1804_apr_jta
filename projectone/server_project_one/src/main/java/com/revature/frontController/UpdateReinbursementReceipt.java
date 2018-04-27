@@ -94,9 +94,7 @@ public class UpdateReinbursementReceipt extends FrontCommand {
 						rr.setImageURL(image);
 					if (DESCRIPTION != null)
 						rr.setImageURL(DESCRIPTION);
-					if (HANDLEDBY != null) {
-						rr.setHandledBy(DatabaseSingletonService.readManager(HANDLEDBY));
-					}
+					rr.setHandledBy(DatabaseSingletonService.readManager((String) request.getSession(false).getAttribute(ProcessLoginPost.USERIDKEY)));
 					short statusDouble = -1;
 					try {
 						if (STATUS != null)

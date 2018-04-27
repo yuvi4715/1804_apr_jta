@@ -23,6 +23,15 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 	final static Logger log = Logger.getLogger(DatabaseSingletonImpl.class);
 
 	private Connection con;
+	
+	public Connection getCon() {
+		return con;
+	}
+
+	public void setCon(Connection con) {
+		this.con = con;
+	}
+
 	private static final DatabaseSingletonImpl instance = new DatabaseSingletonImpl();
 
 	/**
