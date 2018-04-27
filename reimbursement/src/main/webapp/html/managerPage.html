@@ -58,6 +58,8 @@ console.log(status)
 
 function updateReimbursement() {
 	
+	var cookie = document.cookie;
+	var manager = cookie.substring(9)
 	var reimbursementID = document.getElementById("reimbursementID").value;
 	var status = document.getElementById("statusID").value;
 	console.log(reimbursementID+ "  succesfully did function   "+ status)
@@ -71,7 +73,7 @@ function updateReimbursement() {
 	  xhttp.open("POST", "/reimbursement/manager.do");
 	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-	  xhttp.send("ID="+reimbursementID);
+	  xhttp.send("ID="+reimbursementID+"&status="+status+"&manager="+manager);
 	
 	
 }

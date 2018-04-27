@@ -14,9 +14,11 @@ public class ManagerController {
 	
 public static String updateReimbursement(HttpServletRequest req) {
 		
-		System.out.println("the ajax made it this far thank god!!");
-		System.out.println(req.getParameter("ID"));
-		//RequestService.updateRequest(Integer.parseInt(req.getParameter("id_number")) , req.getParameter("status"), "test manager");
+//		System.out.println("the ajax made it this far thank god!!");
+//		System.out.println(req.getParameter("ID"));
+//		System.out.println(req.getParameter("status"));
+//		System.out.println(req.getParameter("manager"));
+		RequestService.updateRequest(Integer.parseInt(req.getParameter("ID")) , req.getParameter("status"), req.getParameter("manager"));
 		
 		
 		return "successfully updated";
