@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login</title>
+<title>Submit Request</title>
 <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -14,14 +14,11 @@
         <div class="card card-container">
             <img id="profile-img" class="revature-img-card" src="http://www.speakerboxpr.com/wp-content/uploads/2016/10/Revature_CMYK.jpg">
             <p id="profile-name" class="profile-name-card"></p>
-            <form method="get" action = "/project1/login.do" class="form-signin">
-                <input type="text" name="username" id="username" class="form-control" placeholder="Username" required autofocus>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Login</button>
+            <form method="get" action = "/project1/esubmitRequest.do" class="form-signin">
+                <input type="text" name="ammount" id="ammount" class="form-control" placeholder="amount" required autofocus>
+                <input type="text" name="purpose" id="purpose" class="form-control" placeholder="purpose" required>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Submit Request</button>
             </form><!-- /form -->
-            <a href="signup.html" class="sign-up">
-            	Sign-up
-            </a>
         </div><!-- /card-container -->
     </div><!-- /container -->
 </body>

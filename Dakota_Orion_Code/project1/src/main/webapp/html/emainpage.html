@@ -12,11 +12,47 @@
 <body>
 <ul>
 	<li><a href="#">Home</a></li>
-	<li><a href="#submitRequest">Submit Request</a></li>
-	<li><a href="#Pending">Pending</a></li>
-	<li><a href="#Resolved">Resolved</a></li>
-	<li><a href="#infomation">Information</a>
-	<li><a href="#logout">Logout</a></li>
+	<li><a href="esubmitrequest.html" onclick="submit()">Submit Request</a></li>
+	<li><a href="#allMyRequests" onClick="getAllMyRequests()">All My Requests</a></li>
+	<li><a href="#infomation" id="info" onclick="getInfo()">Information</a></li>
+	<li><a href="login.html">Logout</a></li>
 </ul>
+<div>
+ 	</div>
+        <div class="table-container">
+        	<table id="request-table" class="table">
+        		<thead>
+        			<tr>
+        			<th scope="col">Request ID</th>
+        			<th scope="col">Amount</th>
+        			<th scope="col">Requester</th>
+        			<th scope="col">Reviewed By</th>
+        			<th scope="col">Status</th>
+        			<th scope="col">Purpose</th>
+        			<th scope="col">Request Date</th>
+        			<th scope="col">Review Date</th>
+        			<th scope="col">Image</th>
+        			</tr>
+        		</thead>
+        		<tbody id = "request-body"></tbody>
+        	</table>
+        </div>
+        <div class="table-container2">
+        	<table id="employee-table" class="table">
+        		<thead>
+        			<tr>
+        			<th scope="col">Employee ID</th>
+        			<th scope="col">First Name</th>
+        			<th scope="col">Last Name</th>
+        			<th scope="col">Username</th>
+        			<th scope="col">Password</th>
+        			<th scope="col">Email</th>
+        			<th scope="col">Employee Role</th>  
+        			</tr>
+        		</thead>
+        		<tbody id = "employee-body"></tbody>
+        	</table>
+        </div>
+        <script type="text/javascript" src="../js/emainpage.js"></script>
 </body>
 </html>

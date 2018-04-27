@@ -2,6 +2,7 @@ package com.revature.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -27,17 +28,14 @@ public class ProjectServlet extends HttpServlet {
     }
 
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println("doInit");
 	}
 
 
 	public void destroy() {
-		System.out.println("doDestroy");
 	}
 
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doService");
 		super.service(request, response);
 	}
 
@@ -45,28 +43,28 @@ public class ProjectServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		/*System.out.println("doGet");
-		RequestDispatcher rd = request.getRequestDispatcher("SecondServlet");
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-        PrintWriter pw = response.getWriter();
-        response.setContentType("text/html");
-        String s1 = request.getParameter("username");
-        String s2 = request.getParameter("password");
-        pw.print("<html><body><div>" + s1 + " : " + s2 + ", are the values entered" +"<html><body><div>");
-        rd.include(request, response);
-        pw.close();*/
+		PrintWriter pw = response.getWriter();
+		String str = request.getRequestURI();
+		response.setContentType("application/json");
+		if(str.equals("/project1/login.do")||str.equals("/project1/signup.do")||str.equals("/project1/msubmitRequest.do")||str.equals("/project1/esubmitRequest.do")) {
+			response.sendRedirect(RequestHelper.process(request));
+		}
+		else {
+			ObjectMapper map = new ObjectMapper();
+			map.writeValue(pw, RequestHelper.oprocess(request));
+		}
+		pw.flush();
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doPost");
+		System.out.println(request.getReader().readLine());
+		PrintWriter pw = response.getWriter();
 		String str = request.getRequestURI();
 		response.setContentType("application/json");
-		PrintWriter pw = response.getWriter();
-		if(str.equals("/project1/login.do")||str.equals("/project1/signup.do")) {
+		if(str.equals("/project1/login.do")||str.equals("/project1/signup.do")||str.equals("/project1/msubmitRequest.do")||str.equals("/project1/esubmitRequest.do")) {
 			response.sendRedirect(RequestHelper.process(request));
 		}
 		else {

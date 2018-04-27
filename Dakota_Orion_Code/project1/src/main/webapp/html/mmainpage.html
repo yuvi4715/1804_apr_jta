@@ -16,25 +16,33 @@
 
 <body>
  <ul >
-	<li><a href="#" onclick="home()">Home</a></li>
-	<li><a href="#submitRequest" onclick="submit()">Submit Request</a></li>
+	<li><a href="#">Home</a></li>
+	<li><a href="msubmitrequest.html" onclick="submit()">Submit Request</a></li>
 	<li><a href="#allPending" onclick="getAllPending()">All Pending</a></li>
 	<li><a href="#allResolved" onclick="getAllResolved()">All Resolved</a></li>
 	<li><a href="#allEmployees" onclick="getAllEmployees()">All Employees</a></li>
-	<li><a href="#allEmployees" onclick="getRequest()">An Employee's Requests</a></li>
+	<li><a href="#anEmployeesRequests" onclick="getRequest()">An Employee's Requests</a></li>
 	<li><a href="#employeeRequests" onclick="getAllRequests()">Employee's Requests</a></li>
+	<li><a href="#approveRequests" onclick="approveRequest()">Approve Request</a></li>
 	<li><a href="#infomation" id="info" onclick="getInfo()">Information</a></li>
 	<li><a href="login.html" id="logout">Logout</a></li>
  </ul>
+ 	<div>
+ 	<input type="text" name="getId" id="getId" placeholder="ID of an Employee">
+ 	</div>
+ 	<div>
+ 	<input type="text" name="aId" id="aId" placeholder="ID of request to approve">
+ 	</div>
         <div class="table-container">
         	<table id="request-table" class="table">
         		<thead>
         			<tr>
         			<th scope="col">Request ID</th>
-        			<th scope="col">Ammount</th>
+        			<th scope="col">Amount</th>
         			<th scope="col">Requester</th>
         			<th scope="col">Reviewed By</th>
         			<th scope="col">Status</th>
+        			<th scope="col">Purpose</th>
         			<th scope="col">Request Date</th>
         			<th scope="col">Review Date</th>
         			<th scope="col">Image</th>

@@ -5,8 +5,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.log4j.Logger;
 
 //import org.apache.log4j.logger;
 import connection.ConnectionWithProperties;
@@ -20,18 +23,18 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 		}
 		return instance;
 	}
-	//final static //logger //log = //logger.get//logger(MyBank.class);
+	final static Logger log = Logger.getRootLogger();
 	public boolean insertRequest(Request req) {
 		try(Connection conn = ConnectionWithProperties.getConnection()){
 			CallableStatement stmt = conn.prepareCall("CALL insert_request(?,?,?)");
 			stmt.setInt(1, req.getAmmount());
 			stmt.setInt(2, req.getRequester());
 			stmt.setString(3, req.getPurpose());
-			//log.info("Creating  into database");
+			log.info("Creating Request in database");
 			return stmt.executeUpdate()>0;
 			
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -39,18 +42,20 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 		return false;
 	}
 
-	public Request getRequest(int id) {
+	public List<Request> getRequest(int id) {
 		try(Connection conn = ConnectionWithProperties.getConnection()){
-			PreparedStatement stmt = conn.prepareStatement("SELECT ammount, requester, reviewed_by, status, purpose, image, request_date, review_date FROM Request WHERE request_id = ?");
+			List<Request> Request = new ArrayList<>();
+			PreparedStatement stmt = conn.prepareStatement("SELECT request_id, ammount, requester, reviewed_by, status, purpose, image, request_date, review_date FROM Request WHERE requester = ?");
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
 			
 			if(rs.next()) {
-				Request temp= new Request(id,rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getString(4),rs.getString(5),rs.getBlob(6),rs.getDate(7),rs.getDate(8));
-				return temp;
+				Request temp= new Request(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),rs.getString(5),rs.getString(6),rs.getBlob(7),rs.getDate(8),rs.getDate(9));
+				Request.add(temp);
 			}
+			return Request;
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -72,7 +77,7 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 			}
 			return Request;
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -84,8 +89,8 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 		try(Connection conn = ConnectionWithProperties.getConnection()){
 			List<Request> Request = new ArrayList<>();
 			
-			PreparedStatement stmt = conn.prepareStatement("SELECT request_id, ammount, requester, reviewed_by, status, purpose, image, request_date, review_date FROM Request Where status<>?");
-			stmt.setString(1, "Resolved");
+			PreparedStatement stmt = conn.prepareStatement("SELECT request_id, ammount, requester, reviewed_by, status, purpose, image, request_date, review_date FROM Request Where status=?");
+			stmt.setString(1, "Pending");
 			ResultSet rs = stmt.executeQuery();
 			
 			while(rs.next()) {
@@ -94,7 +99,7 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 			}
 			return Request;
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -115,7 +120,7 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 			}
 			return Request;
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -123,20 +128,38 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 		return null;
 	}
 
+	public boolean approveRequest(int reqID) {
+		try(Connection conn = ConnectionWithProperties.getConnection()){
+			PreparedStatement stmt = conn.prepareCall("UPDATE request SET status=?, review_date=? WHERE request_id=?");
+			stmt.setString(1,"Resolved");
+			stmt.setTimestamp(2, new Timestamp(System.currentTimeMillis()));
+			stmt.setInt(3,reqID);
+			log.info("Approving a request in the database");
+			return stmt.executeUpdate()>0;
+			
+		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			System.err.println(e.getMessage());
+			System.err.println("SQL State: " + e.getSQLState());
+			System.err.println("Error Code: " + e.getErrorCode());
+		}
+		return false;
+	}
+	
 	public boolean updateRequest(Request req) {
 		try(Connection conn = ConnectionWithProperties.getConnection()){
-			CallableStatement stmt = conn.prepareCall("CALL update_request(?,?,?,?,?,?)");
+			PreparedStatement stmt = conn.prepareCall("CALL update_request(?,?,?,?,?,?)");
 			stmt.setInt(1,req.getRequestId());
 			stmt.setInt(2, req.getRequester());
 			stmt.setInt(3, req.getReviewedBy());
 			stmt.setString(4, req.getStatus());
 			stmt.setDate(5, req.getReviewDate());
 			stmt.setBlob(6, req.getImage());
-			//log.info("Updating a  in the database");
+			log.info("Updating a Request in the database");
 			return stmt.executeUpdate()>0;
 			
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -153,11 +176,11 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 			stmt.setString(4, Employee.getPassword());
 			stmt.setString(5, Employee.getEmail());
 			stmt.setString(6, Employee.getEmpRole());
-			//log.info("Creating a new Employee in database");
+			log.info("Creating a new Employee in database");
 			return stmt.executeUpdate()>0;
 			
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -176,7 +199,7 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 				return temp;
 			}
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -195,7 +218,7 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 				return temp;
 			}
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -214,7 +237,7 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 				return temp;
 			}
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -235,7 +258,7 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 			}
 			return Employee;
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -253,11 +276,11 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 			stmt.setString(5, Employee.getPassword());
 			stmt.setString(6, Employee.getEmail());
 			stmt.setString(7, Employee.getEmpRole());
-			//log.info("Updating an Employee in the database");
+			log.info("Updating an Employee in the database");
 			return stmt.executeUpdate()>0;
 			
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -269,10 +292,10 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 		try(Connection conn = ConnectionWithProperties.getConnection()){
 			CallableStatement stmt= conn.prepareCall("CALL delete_employee_by_id(?)");
 			stmt.setInt(1, a);
-			//log.info("Deleting an Employee in database");
+			log.info("Deleting an Employee in database");
 			return stmt.executeUpdate()>0;
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -284,10 +307,10 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 		try(Connection conn = ConnectionWithProperties.getConnection()){
 			CallableStatement stmt= conn.prepareCall("CALL delete_employee_by_username(?)");
 			stmt.setString(1, str);
-			//log.info("Deleting an Employee in database");
+			log.info("Deleting an Employee in database");
 			return stmt.executeUpdate()>0;
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());
@@ -299,10 +322,10 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 		try(Connection conn = ConnectionWithProperties.getConnection()){
 			CallableStatement stmt= conn.prepareCall("CALL delete_employee_by_email(?)");
 			stmt.setString(1, str);
-			//log.info("Deleting an Employee in database");
+			log.info("Deleting an Employee in database");
 			return stmt.executeUpdate()>0;
 		} catch (SQLException e) {
-			//log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
 			System.err.println(e.getMessage());
 			System.err.println("SQL State: " + e.getSQLState());
 			System.err.println("Error Code: " + e.getErrorCode());

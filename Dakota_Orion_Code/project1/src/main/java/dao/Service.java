@@ -9,7 +9,7 @@ public class Service {
 		return dao2.insertRequest(req);
 	}
 
-	public static Request getRequest(int id) {
+	public static List<Request> getRequest(int id) {
 		return dao2.getRequest(id);
 	}
 	
@@ -24,9 +24,13 @@ public class Service {
 	public static List<Request> getAllRequests() {
 		return dao2.getAllRequests();
 	}
-
-	public static boolean updateRequest(Request req) {
+	
+	public boolean updateRequest(Request req) {
 		return dao2.updateRequest(req);
+	}
+
+	public static boolean approveRequest(int reqId) {
+		return dao2.approveRequest(reqId);
 	}
 
 	public static boolean insertEmployee(Employee Employee) {

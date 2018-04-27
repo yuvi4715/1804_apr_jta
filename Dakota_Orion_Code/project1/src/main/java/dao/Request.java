@@ -2,6 +2,9 @@ package dao;
 
 import java.sql.Blob;
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.Format;
+import java.text.SimpleDateFormat;
 
 public class Request {
 	int requestId;
@@ -13,6 +16,21 @@ public class Request {
 	java.sql.Blob image;
 	java.sql.Date requestDate;
 	java.sql.Date reviewDate;
+	String questDate;
+	String viewDate;
+	
+	public String getQuestDate() {
+		return questDate;
+	}
+	public void setQuestDate(String questDate) {
+		this.questDate = questDate;
+	}
+	public String getViewDate() {
+		return viewDate;
+	}
+	public void setViewDate(String viewDate) {
+		this.viewDate = viewDate;
+	}
 	public int getRequestId() {
 		return requestId;
 	}
@@ -29,7 +47,7 @@ public class Request {
 	public String toString() {
 		return "Request [requestId=" + requestId + ", ammount=" + ammount + ", requester=" + requester + ", reviewedBy="
 				+ reviewedBy + ", status=" + status + ", purpose=" + purpose + ", image=" + image + ", requestDate="
-				+ requestDate + ", reviewDate=" + reviewDate + "]";
+				+ requestDate + ", reviewDate=" + reviewDate + ", questDate=" + questDate + ", viewDate="+viewDate+"]";
 	}
 	public Request() {}
 	public Request(int requestId, int ammount, int requester, int reviewedBy, String status, String purpose, Blob image,
@@ -44,6 +62,13 @@ public class Request {
 		this.image = image;
 		this.requestDate = requestDate;
 		this.reviewDate = reviewDate;
+		DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+		if(this.requestDate!=null) {
+			questDate = df.format(this.requestDate);
+		}
+		if(this.reviewDate!=null) {
+			viewDate = df.format(this.reviewDate);
+		}
 	}
 	@Override
 	public int hashCode() {
