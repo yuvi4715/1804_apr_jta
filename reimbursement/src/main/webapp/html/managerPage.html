@@ -32,33 +32,49 @@ tr:nth-child(even) {
 
   <div class="container">
     <label for="requestID"><b>Request ID</b></label>
-    <input type="number" placeholder="Enter request id number" name="id_number" required>
+    <input id="reimbursementID"  type="text" placeholder="Enter request id number" name="id_number" required>
 
     <label for="status"><b>Status</b></label>
-    <input type="text" placeholder="Type in new status" name="status" required>
+    <input id = "statusID" type="text" placeholder="Type in new status" name="status"   required>
 
-    <button type="submit" id ="update_request">Update</button>
-   
+    <button type="button" id ="update_request" onclick= "updateReimbursement()">Update</button>
+    
   </div>
 
 </form>
 
 
-<div>
-<h1>Manager Page</h1>
-<table id = "all_requests">
-<th>Request ID</th>
-<th>Requester</th>
-<th>Reason</th>
-<th>Amount</th>
-<th>Status</th>
-<th>Image </th>
-
-
-</table>
-</div>
 
 <script type="text/javascript">
+var x = document.cookie;
+console.log(x);
+console.log("hello")
+
+
+var reimbursementID = document.getElementById("reimbursementID").value;
+var status = document.getElementById("statusID").value;
+
+console.log(status)
+
+function updateReimbursement() {
+	
+	var reimbursementID = document.getElementById("reimbursementID").value;
+	var status = document.getElementById("statusID").value;
+	console.log(reimbursementID+ "  succesfully did function   "+ status)
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	console.log("sent the info")
+	    }
+	  };
+	  xhttp.open("POST", "/reimbursement/manager.do");
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+	  xhttp.send("ID="+reimbursementID);
+	
+	
+}
 
 
 
