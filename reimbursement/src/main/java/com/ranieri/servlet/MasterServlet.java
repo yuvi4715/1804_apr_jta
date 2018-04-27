@@ -46,8 +46,9 @@ public class MasterServlet extends HttpServlet {
 		}catch (NullPointerException e){
 			System.out.println("This is an okay null exception for now");
 		}
+		
 		System.out.println(json);
-
+		response.getWriter().append(json);
 	}
 
 }

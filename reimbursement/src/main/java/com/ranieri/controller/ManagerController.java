@@ -1,9 +1,12 @@
 package com.ranieri.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ranieri.model.Request;
 import com.ranieri.service.EmployeeService;
 import com.ranieri.service.RequestService;
 
@@ -24,5 +27,25 @@ public static String updateReimbursement(HttpServletRequest req) {
 		return "successfully updated";
 			
 	}
+
+public static String showAllRemibursemets(HttpServletRequest req) {
+	
+	
+	List<Request> list = RequestService.getAllRequests();
+	
+	String data ="";
+	for(Request x : list) {	
+		data= data +x +"\n";
+	}
+//	System.out.println(data);
+	
+	return data;
+	
+}
+
+
+
+
+
 
 }

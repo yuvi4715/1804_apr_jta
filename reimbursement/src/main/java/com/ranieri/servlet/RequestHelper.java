@@ -19,7 +19,10 @@ public static String process(HttpServletRequest req) {
 			return  EmployeeController.getEmployee(req);
 			
 		case "/reimbursement/manager.do":
-				return ManagerController.updateReimbursement(req);
+			return ManagerController.updateReimbursement(req);
+		
+		case "/reimbursement/getAllReimbursements.do":
+			return ManagerController.showAllRemibursemets(req);
 				
 		default:
 				return "unable to reach database";

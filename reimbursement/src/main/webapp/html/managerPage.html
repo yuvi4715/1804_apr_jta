@@ -5,28 +5,10 @@
 <title>Manager Page</title>
 
 
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-</style>
-
-
 </head>
 <body>
 
+<h3 id = "loggedInAs"></h3>
 
 <form method= "post" action = "/reimbursement/manager.do">
 
@@ -40,6 +22,18 @@ tr:nth-child(even) {
     <button type="button" id ="update_request" onclick= "updateReimbursement()">Update</button>
     
   </div>
+  
+  <div>
+  
+  
+<textarea id = "all_reimbursements"rows="40" cols="150">
+Press refresh to get information
+</textarea>
+  
+    <button type="button" id ="refresh_request" onclick= "showReimbursements()">Refresh</button>
+  
+  </div>
+  
 
 </form>
 
@@ -47,6 +41,7 @@ tr:nth-child(even) {
 
 <script type="text/javascript">
 var x = document.cookie;
+
 console.log(x);
 console.log("hello")
 
@@ -75,8 +70,34 @@ function updateReimbursement() {
 
 	  xhttp.send("ID="+reimbursementID+"&status="+status+"&manager="+manager);
 	
+}
+
+
+function showReimbursements() {
+	
+	
+	console.log("  succesfully started showReimbursements ")
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	
+	    	var test = this.responseText;
+	    	console.log(test);
+	    	document.getElementById("all_reimbursements").innerHTML = this.responseText;
+	    	console.log("sucessucesffully finished showReimbursements");
+	    	
+	    }
+	  };
+	  xhttp.open("POST", "/reimbursement/getAllReimbursements.do");
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhttp.send();
 	
 }
+
+
+
+
 
 
 

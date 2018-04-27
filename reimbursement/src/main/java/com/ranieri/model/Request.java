@@ -84,8 +84,8 @@ public class Request {
 
 	@Override
 	public String toString() {
-		return "Request [requestID=" + requestID + ", email=" + email + ", reason=" + reason + ", amount=" + amount
-				+ ", status=" + status + ", manager=" + manager + ", image=" + image + "]";
+		return " RequestID=" + requestID + ", requestor" + email + ",  " + reason + ",  $" + amount
+				+ ",  " + status + ", viewed by  " + manager + ", image description  " + image + "";
 	}
 	
 	
