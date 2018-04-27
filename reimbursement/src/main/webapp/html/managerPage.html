@@ -42,6 +42,8 @@ Press refresh to get information
 <script type="text/javascript">
 var x = document.cookie;
 
+document.getElementById("loggedInAs").innerHTML = x.substring(9);
+
 console.log(x);
 console.log("hello")
 
@@ -54,7 +56,7 @@ console.log(status)
 function updateReimbursement() {
 	
 	var cookie = document.cookie;
-	var manager = cookie.substring(9)
+	var manager = document.getElementById("loggedInAs").innerHTML;
 	var reimbursementID = document.getElementById("reimbursementID").value;
 	var status = document.getElementById("statusID").value;
 	console.log(reimbursementID+ "  succesfully did function   "+ status)
@@ -62,7 +64,7 @@ function updateReimbursement() {
 	var xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = function() {
 	    if (this.readyState == 4 && this.status == 200) {
-	    	console.log("sent the info")
+	    	console.log("sent the info" + manager)
 	    }
 	  };
 	  xhttp.open("POST", "/reimbursement/manager.do");

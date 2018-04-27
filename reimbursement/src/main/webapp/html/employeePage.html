@@ -8,26 +8,64 @@
 
 <h1>Employee Request form</h1>
 
+<h3 id = "loggedInAs"></h3>
+
 
 <form method= "get" action = "servlet">
 
   <div class="container">
 
     <label for="reason"><b>Reason</b></label>
-    <input type="text" placeholder="What is it you bought" name="reason" required>
+    <input id = "reason_input" type="text" placeholder="What is it you bought" name="reason" required>
     
     <label for="amount"><b>amount</b></label>
-    <input type="number" placeholder="Reimbursement request amount" name="amount" required>
+    <input id = "amount_input" type="text" placeholder="Reimbursement request amount" name="amount" required>
     
     <label for="imgur"><b>image </b></label>
-    <input type="text" placeholder="temporary string for image" name="imgur" required>
+    <input id = "image_input" type="text" placeholder="temporary string for image" name="imgur" required>
     
     
-    <button type="submit" id ="request_submit">Submit</button>
+    <button type="button" id ="request_submit" onclick = "updateReimbursement()">Submit</button>
    
   </div>
 
 </form>
 
+<textarea id = "all_reimbursements"rows="40" cols="150">
+Press refresh to get information
+</textarea>
+  
+    <button type="button" id ="refresh_request" onclick= "showMyReimbursements()">Refresh</button>
+  
+
+
+
+<script type="text/javascript">
+var x = document.cookie;
+document.getElementById("loggedInAs").innerHTML = x.substring(9);
+
+function updateReimbursement() {
+	
+	var email = document.getElementById("loggedInAs").innerHTML;
+	var reason = document.getElementById("reason_input").value;
+	var amount = document.getElementById("amount_input").value;
+	var image = document.getElementById("image_input").value;
+	console.log(email+ "  succesfully did function  for amount "+ amount)
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	console.log("sent the info" )
+	    }
+	  };
+	  xhttp.open("POST", "/reimbursement/createRequest.do");
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+	  xhttp.send("email="+email+"&reason="+reason+"&amount="+amount+"&image="+image);
+	
+}
+
+
+</script>
 </body>
 </html>
