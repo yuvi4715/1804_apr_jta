@@ -581,12 +581,15 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 						readManager(rs.getString("handledBy")), readEmployee(rs.getString("owner")),
 						rs.getString("description"), rs.getDouble("amount"), rs.getShort("status"),
 						rs.getBoolean("isDeleted"));
+				log.info(temp[i-1]);
 			}
 			int resultCount = i;
 			if (resultCount < RESULTS_PER_PAGE) {
 				ReinbursementRequest[] result = new ReinbursementRequest[resultCount];
-				for (int j = 0; j < resultCount; j++)
+				for (int j = 0; j < resultCount; j++) {					
 					result[j] = temp[j];
+					log.info(result[j]);
+				}
 				return result;
 			}
 			return temp;

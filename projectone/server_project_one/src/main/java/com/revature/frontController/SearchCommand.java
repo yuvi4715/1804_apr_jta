@@ -22,6 +22,7 @@ import com.revature.models.ReinbursementRequest;
 
 public class SearchCommand extends FrontCommand {
 	final static Logger log = Logger.getLogger(SearchCommand.class);
+
 	@Override
 	public void process() throws ServletException, IOException {
 		if (request.getSession(false) == null) {
@@ -82,16 +83,39 @@ public class SearchCommand extends FrontCommand {
 					e.printStackTrace();
 				}
 				ReinbursementRequest[] result = null;
+				log.info(approved);
+				log.info(query);
+				boolean customSearch = query.toLowerCase().contains("user:") && query.split("user:").length > 0;
+				log.info(customSearch);
 				if ((Boolean) request.getSession(false).getAttribute(ProcessLoginPost.ISADMINKEY)) {
-					if(Boolean.parseBoolean(request.getParameter("getAproved")))
-						result = DatabaseSingletonService.getAllRRSearch(pageInt, query);
-					else 
-						result = DatabaseSingletonService.getAllUnresolvedRRsSearch(pageInt, query);
+					if (Boolean.parseBoolean(approved)) {
+						if (!customSearch)
+							result = DatabaseSingletonService.getAllRRSearch(pageInt, query);
+						else {
+							log.info("Aproved is running");
+							String s = query.split("user:")[1].split(" ")[0];
+							log.info("email:" + s);
+							log.info("wholequery:" + query);
+							result = DatabaseSingletonService.getAllRRs(pageInt, s);
+						}
+					} else {
+						if (!customSearch)
+							result = DatabaseSingletonService.getAllUnresolvedRRsSearch(pageInt, query);
+						else {
+							log.info("Unaproved is running");
+							String s = query.split("user:")[1].split(" ")[0];
+							log.info("email:" + s);
+							log.info("wholequery:" + query);
+							result = DatabaseSingletonService.getAllUnresolvedRRs(pageInt, s);
+						}
+					}
 				} else {
-					if(Boolean.parseBoolean(request.getParameter("getAproved")))
-						result = DatabaseSingletonService.getAllRRsSearch(pageInt,(String) request.getSession(false).getAttribute(ProcessLoginPost.USERIDKEY), query);
-					else 
-						result = DatabaseSingletonService.getAllUnresolvedRRsSearch(pageInt, (String) request.getSession(false).getAttribute(ProcessLoginPost.USERIDKEY),query);
+					if (Boolean.parseBoolean(approved))
+						result = DatabaseSingletonService.getAllRRsSearch(pageInt,
+								(String) request.getSession(false).getAttribute(ProcessLoginPost.USERIDKEY), query);
+					else
+						result = DatabaseSingletonService.getAllUnresolvedRRsSearch(pageInt,
+								(String) request.getSession(false).getAttribute(ProcessLoginPost.USERIDKEY), query);
 				}
 				jaxbMarshaller.marshal(result, System.out);
 				jaxbMarshaller.marshal(result, response.getWriter());
