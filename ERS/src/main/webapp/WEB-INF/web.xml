@@ -7,8 +7,18 @@
   	<description></description>
   	<servlet-class>com.revature.ers.servlets.MasterServlet</servlet-class>
   </servlet>
+	<servlet>
+		<servlet-name>AjaxServlet</servlet-name>
+  	<display-name>AjaxServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.ers.ajax.AjaxServlet</servlet-class>
+	</servlet>
   <servlet-mapping>
   	<servlet-name>MasterServlet</servlet-name>
   	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+	<servlet-mapping>
+  	<servlet-name>AjaxServlet</servlet-name>
+  	<url-pattern>*.ajax</url-pattern>
   </servlet-mapping>
 </web-app>

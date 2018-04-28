@@ -22,7 +22,7 @@ public class LoginController{
 		}
 		else {
 			System.out.println("I got a user!");
-			/* Storing loggedCustomer to current session
+			/* Storing loggedUser to current session
 			SESSION SCOPE IS AVAILABLE ONLY IN THIS REQUEST (CLIENT) */
 			request.getSession().setAttribute("loggedUser", loggedUser);
 			
