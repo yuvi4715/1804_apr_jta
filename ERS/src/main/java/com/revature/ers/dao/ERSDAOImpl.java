@@ -146,8 +146,8 @@ public class ERSDAOImpl implements ERSDAO{
 		int index = 0;
 		try (Connection conn = ConnectionUtil.getConnection()){
 			//Create a PreparedStatement object to get a result set that should
-			//contain all the requests by all the employees.
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Request ORDER BY request_id");
+			//contain all the resolved requests by all the employees.
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Request WHERE status <> 'PENDING' ORDER BY request_id");
 
 			ResultSet rs = stmt.executeQuery();
 			index = -1;
@@ -245,6 +245,31 @@ public class ERSDAOImpl implements ERSDAO{
 				rs.getString("lastName"), rs.getString("email"), rs.getInt("isManager"));
 
 		} catch (SQLException e) {
+			System.out.println("An error ocurred when communicating with the database.");
+            LogUtil.logger.error(e.getMessage());
+			LogUtil.logger.error("SQL State: " + e.getSQLState());
+			LogUtil.logger.error("Error Code: " + e.getErrorCode());
+		}
+		return null;
+	}
+
+	@Override
+	public List<ERS_User> man_view_all_emp() {
+		int index = 0;
+		try (Connection conn = ConnectionUtil.getConnection()){
+			//Create a PreparedStatement object to get a result set that should
+			//contain the requests depending on the user_id provided by the manager
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM ERS_User ORDER BY user_id");
+
+			ResultSet rs = stmt.executeQuery();
+			index = -1;
+			List<ERS_User> userList = new ArrayList<>();
+			while(rs.next()){
+				userList.add(++index, new ERS_User(rs.getInt("user_id"), "dummy", rs.getString("firstName"), 
+				rs.getString("lastName"), rs.getString("email"), rs.getInt("isManager")));
+			}
+			return userList;
+		} catch (SQLException e){
 			System.out.println("An error ocurred when communicating with the database.");
             LogUtil.logger.error(e.getMessage());
 			LogUtil.logger.error("SQL State: " + e.getSQLState());

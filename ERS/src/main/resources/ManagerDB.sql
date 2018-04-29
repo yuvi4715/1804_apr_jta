@@ -167,6 +167,7 @@ SELECT firstName, lastName, user_id, email FROM ERS_User WHERE isManager = 0;
 SELECT * FROM ERS_User;
 --View all from Request
 SELECT * FROM Request;
+SELECT * FROM Request WHERE status <> 'PENDING';
 --View all requests employees
 SELECT * FROM ERS_User NATURAL JOIN Request;
 --View all pending requests

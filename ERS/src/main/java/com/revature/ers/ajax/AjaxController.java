@@ -78,4 +78,58 @@ public class AjaxController{
         }
         return "No user logged in";
     }
+
+    public static String getAllEmp(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("Im in getAllEmp");
+        List<ERS_User> list = ERS_Service.getERS_Service().getAllUsers();
+        if(list != null){
+            try {
+                System.out.println("List is not null after all.");
+                String str = new ObjectMapper().writeValueAsString(list);
+                return str;
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+            System.out.println("We failed man.");
+            return null;
+        }
+        else
+            return null;
+    }
+
+    public static String manCertReq(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("Im in manCertReq");
+        List<Request> list = ERS_Service.getERS_Service().man_view_certain_requests(request.getParameter("status"));
+        if(list != null){
+            try {
+                System.out.println("List is not null after all.");
+                String str = new ObjectMapper().writeValueAsString(list);
+                return str;
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+            System.out.println("We failed man.");
+            return null;
+        }
+        else
+            return null;
+    }
+
+    public static String manAllReq(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("Im in manCertReq");
+        List<Request> list = ERS_Service.getERS_Service().man_view_all_requests();
+        if(list != null){
+            try {
+                System.out.println("List is not null after all.");
+                String str = new ObjectMapper().writeValueAsString(list);
+                return str;
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+            System.out.println("We failed man.");
+            return null;
+        }
+        else
+            return null;
+    }
 }

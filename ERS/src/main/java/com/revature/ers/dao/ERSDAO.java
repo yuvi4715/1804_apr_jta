@@ -14,4 +14,5 @@ public interface ERSDAO{
     public List<Request> man_view_certain_requests(String status);
     public List<Request> man_view_emp_requests(int requester);
     public ERS_User getUser(ERS_User user);
+    public List<ERS_User> man_view_all_emp();
 }

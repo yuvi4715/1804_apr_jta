@@ -15,9 +15,9 @@ Expense Reimbursement System (ERS) - Presentation on first day of - Week 5
 ++++An Employee can update their information -> PROCEDURE IS SET, DAO DEFINED AND IMPLEMENTED
 
 ++A Manager can view reimbursement requests from a single Employee -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
-++A Manager can view all pending requests from all employees --> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
-++A Manager can view all resolved requests from all employees and see which manager resolved it --> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
-++A Manager can view all Employees -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++++A Manager can view all pending requests from all employees --> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++++A Manager can view all resolved requests from all employees and see which manager resolved it --> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++++A Manager can view all Employees -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
 
 ++A Manager can approve/deny pending reimbursement requests -> PROCEDUE IS SET, DAO DEFINED AND IMPLEMENTED
 

@@ -15,6 +15,12 @@ public class AjaxHelper{
                 return AjaxController.modifyUser(request, response);
             case "/ERS/html/getuser.ajax":
                 return AjaxController.getUser(request, response);
+            case "/ERS/html/getallemp.ajax":
+                return AjaxController.getAllEmp(request, response);
+            case "/ERS/html/mancertreq.ajax":
+                return AjaxController.manCertReq(request, response);
+            case "/ERS/html/manallreq.ajax":
+                return AjaxController.manAllReq(request, response);
             default:
                 return "/html/404.html";
         }

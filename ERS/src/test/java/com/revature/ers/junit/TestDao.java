@@ -125,4 +125,17 @@ public class TestDao {
 		}
 		
 	}
+
+	@Ignore
+	public void testGetAllUsers(){
+		List<ERS_User> userlist = ERS_Service.getERS_Service().getAllUsers();
+		boolean test = false;
+		if (userlist != null){
+			test = true;
+		}
+		for (ERS_User user : userlist){
+			System.out.println(user.toString());
+		}
+		assertTrue(test);
+	}
 }

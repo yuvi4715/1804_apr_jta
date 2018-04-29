@@ -59,4 +59,8 @@ public class ERS_Service{
     public ERS_User getUser(String email, String passwd){
         return dao.getUser(new ERS_User(0, passwd, "first", "last", email, 0));
     }
+
+    public List<ERS_User> getAllUsers(){
+        return dao.man_view_all_emp();
+    }
 }

@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-    <p>WELCOME HOME.</p>
 
+<body>
     <div>
-            <button id="empDenReq">View Denied Requests.</button>
-            <button id="empAppReq">View Approved Requests</button>
-            <button id="empPenReq">View Pending Requests</button>
+        <h1>Welcome Home, Manager</h1>
+        Your information:
+        <ul id="myInfo">
+        </ul>
     </div>
 
-<script type="text/javascript" src="../js/empViewCertainReq.js"></script>
+    <div>
+        <button id="theH3">Click to view all employees</button>
+        <button id="toggletable">Toggle Table</button>
+        <br><label>•</label>
+        <table style="width: 100%;display: none" id="theemptable">
+            <thead id="theemphead">
+
+            </thead>
+            <tbody id="theempbody">
+
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 id="anH3">Requests will appear in the table below:</h3>
+        <button id="manAllReq">View all resolved requests.</button>
+        <button id="manPenReq">View all pending requests.</button>
+        <br><label>•</label>
+        <table style="width:100%" border="1" id="thetable">
+            <thead>
+                <th>Request ID</th>
+                <th>Reviewer ID</th>
+                <th>Amount</th>
+                <th>Request Date</th>
+                <th>Review Date</th>
+                <th>Status</th>
+                <th>Purpose</th>
+            </thead>
+            <tbody id="thebody">
+
+            </tbody>
+    </div>
+    <script type="text/javascript" src="../js/manager.js"></script>
 </body>
+
 </html>
