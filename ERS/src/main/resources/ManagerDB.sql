@@ -200,11 +200,13 @@ DELETE FROM ERS_User WHERE user_id = 102;
 UPDATE ERS_User SET isManager = 1 WHERE user_id = 102;
 
 --Update a specifit request
-exec modify_request(105, 'APPROVED', 102);
+exec modify_request(119, 'APPROVED', 102);
 
 --View current date
 SELECT TO_CHAR(CURRENT_DATE, 'DD-MON-YYYY HH:MI') FROM dual;
 
 SELECT * FROM ERS_User WHERE email = 'user1@ERS.com' AND passwd = 'pass1';
+
+DELETE FROM Request;
 
 COMMIT;

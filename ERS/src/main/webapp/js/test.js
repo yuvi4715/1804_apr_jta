@@ -17,9 +17,8 @@ function getUser(){
 		 if (xhttp.readyState == 4 && xhttp.status == 200) { 
 			//Grabbing JSON object from response body.
 			//THIS EXECUTES LAST WITHIN THIS FUNCTION
-			
 			var ajaxObject = JSON.parse(xhttp.responseText);
-			console.log("object is: " + ajaxObject);
+			console.log(ajaxObject)
 			setValues(ajaxObject);
 		 }
 		};

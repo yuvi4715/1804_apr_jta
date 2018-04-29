@@ -5,9 +5,10 @@ import javax.servlet.http.HttpServletResponse;
 
 public class AjaxHelper{
     public static String process(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("URI is: " + request.getRequestURI());
         switch(request.getRequestURI()){
-            case "/ERS/html/test.ajax":
-                return AjaxController.getUser(request, response);
+            case "/ERS/html/certreq.ajax":
+                return AjaxController.empViewCertainReq(request, response);
             default:
                 return "/html/404.html";
         }
