@@ -9,6 +9,8 @@ public class AjaxHelper{
         switch(request.getRequestURI()){
             case "/ERS/html/certreq.ajax":
                 return AjaxController.empViewCertainReq(request, response);
+            case "/ERS/html/insertreq.ajax":
+                return AjaxController.insertReq(request, response);
             default:
                 return "/html/404.html";
         }

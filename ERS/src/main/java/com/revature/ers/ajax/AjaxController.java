@@ -1,5 +1,6 @@
 package com.revature.ers.ajax;
 
+import java.sql.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,34 +13,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
 
 public class AjaxController{
-    private static ERS_User user;
-
-    //Mainly for tests with Ajax
-    public static String getUser(HttpServletRequest request, HttpServletResponse response){
-        //ERS_User myuser = (ERS_User) request.getSession().getAttribute("loggedUser");
-        //System.out.println("Logged user is: " + myuser.toString());
-        //System.out.println("We got: " + request.getParameter("email"));
-        //System.out.println("And: " + request.getParameter("passwd"));
-        user = ERS_Service.getERS_Service().getUser(request.getParameter("email"), request.getParameter("passwd"));
-        if(user != null){
-            try {
-                String str = new ObjectMapper().writeValueAsString(user);
-                //System.out.println("Got the user!");
-                //System.out.println("This is: " + str);
-                return str;
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
-            }
-            return "We failed";
-        }
-        else
-            return "User was null";
-    }
 
     public static String empViewCertainReq(HttpServletRequest request, HttpServletResponse response){
         System.out.println("Im in empViewCertReq");
-        ERS_User user = (ERS_User) request.getSession().getAttribute("loggedUser");
-        System.out.println(user);
         List<Request> list = ERS_Service.getERS_Service().emp_view_certain_requests((ERS_User) request.getSession().getAttribute("loggedUser"), request.getParameter("status"));
         if(list != null){
             try {
@@ -54,5 +30,17 @@ public class AjaxController{
         }
         else
             return null;
+    }
+
+    public static String insertReq(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("Im in insertReq");
+        ERS_User user = (ERS_User) request.getSession().getAttribute("loggedUser");
+        Request req = new Request(0, user.getUser_id(), 0, Double.parseDouble(request.getParameter("amount")), 
+        request.getParameter("purpose"),"PENDING", new Date(1L), new Date(1L));
+        if(ERS_Service.getERS_Service().insert_request(req)){
+            return "Insert succeeded";
+        }
+        else 
+            return "Insert failed.";
     }
 }

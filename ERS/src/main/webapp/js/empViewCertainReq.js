@@ -1,16 +1,18 @@
 /* Adding listener to the check button 
     Executes getUsername function */
-var table;
+
+var thebody;
 window.onload = function () {
     document.getElementById("empDenReq").addEventListener("click", getDenReq);
     document.getElementById("empAppReq").addEventListener("click", getAppReq);
     document.getElementById("empPenReq").addEventListener("click", getPenReq);
-    table = document.getElementById("theTable");
+    document.getElementById("submitReq").addEventListener("click", insertRequest);
+    thebody = document.getElementById("thebody");
 }
 
 function getPenReq() {
 
-    console.log("Looking for Pending Requests.")
+    console.log("Looking for pending Requests.")
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         //If ready state is DONE and HTTP Status is OK
@@ -19,6 +21,7 @@ function getPenReq() {
             //THIS EXECUTES LAST WITHIN THIS FUNCTION
             var ajaxObject = JSON.parse(xhttp.responseText);
             console.log(ajaxObject);
+            document.getElementById("theH3").innerHTML = "Showing " + ajaxObject.length + " Pending requests.";
             insertToTable(ajaxObject);
         }
     };
@@ -30,7 +33,7 @@ function getPenReq() {
 }
 
 function getDenReq() {
-    console.log("Looking for Pending Requests.")
+    console.log("Looking for denied Requests.")
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         //If ready state is DONE and HTTP Status is OK
@@ -38,7 +41,9 @@ function getDenReq() {
             //Grabbing JSON object from response body.
             //THIS EXECUTES LAST WITHIN THIS FUNCTION
             var ajaxObject = JSON.parse(xhttp.responseText);
-            console.log(ajaxObject)
+            console.log(ajaxObject);
+            document.getElementById("theH3").innerHTML = "Showing " + ajaxObject.length + " Denied requests.";
+            insertToTable(ajaxObject);
         }
     };
     //Opening connection for endpoint
@@ -49,7 +54,7 @@ function getDenReq() {
 }
 
 function getAppReq() {
-    console.log("Looking for Pending Requests.")
+    console.log("Looking for approved Requests.")
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         //If ready state is DONE and HTTP Status is OK
@@ -57,8 +62,9 @@ function getAppReq() {
             //Grabbing JSON object from response body.
             //THIS EXECUTES LAST WITHIN THIS FUNCTION
             var ajaxObject = JSON.parse(xhttp.responseText);
-            console.log(ajaxObject)
-            insertToTable(ajaxObject)
+            console.log(ajaxObject);
+            document.getElementById("theH3").innerHTML = "Showing " + ajaxObject.length + " Approved requests.";
+            insertToTable(ajaxObject);
         }
     };
     //Opening connection for endpoint
@@ -69,6 +75,8 @@ function getAppReq() {
 }
 
 function insertToTable(ajaxObject) {
+    //Delete all current rows.
+    document.getElementById('thebody').innerHTML = "";
     let i = 0;
     for (i = 0; i < ajaxObject.length; i++) {
         //Create row and columns elements
@@ -102,6 +110,31 @@ function insertToTable(ajaxObject) {
         row.appendChild(status);
         row.appendChild(purpose);
 
-        table.appendChild(row);
+        //Add row to the table.
+        thebody.appendChild(row);
     }
+}
+
+function insertRequest() {
+    let amount = document.getElementById("reqAmount").value;
+    let purpose = document.getElementById("reqPurpose").value;
+    console.log("Inserting request.");
+    console.log("amount is: " + amount);
+    console.log("purpose is: " + purpose);
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        //If ready state is DONE and HTTP Status is OK
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //Grabbing JSON object from response body.
+            //THIS EXECUTES LAST WITHIN THIS FUNCTION
+            var text = xhttp.responseText;
+            console.log("Result was: " + text);
+            
+        }
+    };
+    //Opening connection for endpoint
+    xhttp.open("POST", "http://localhost:8080/ERS/html/insertreq.ajax?amount="+amount+"&purpose="+purpose, true);
+
+    //Sending request to endpoint
+    xhttp.send();
 }

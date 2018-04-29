@@ -4,23 +4,31 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Employee Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <p>WELCOME HOME.</p>
-
+    <h>WELCOME HOME, EMPLOYEE.</h>
+    <br>
     <div>
+        <br> Submit a request:
+        <br> Amount:
+        <input type="text" id="reqAmount"> Purpose:
+        <input type="text" id="reqPurpose">
+        <button id="submitReq">Submit Request</button>
+    </div>
+    <div>
+        <br>
         <button id="empDenReq">View Denied Requests.</button>
         <button id="empAppReq">View Approved Requests</button>
         <button id="empPenReq">View Pending Requests</button>
     </div>
     <div>
-        <h2>Requests will appear in the table below:</h2>
+        <h3 id="theH3">Requests will appear in the table below:</h3>
 
-        <table style="width:100%" border="1" id="theTable">
-            <tr>
+        <table style="width:100%" border="1" id="thetable">
+            <thead>
                 <th>Request ID</th>
                 <th>Reviewer ID</th>
                 <th>Amount</th>
@@ -28,8 +36,10 @@
                 <th>Review Date</th>
                 <th>Status</th>
                 <th>Purpose</th>
-            </tr>
-            
+            </thead>
+            <tbody id="thebody">
+
+            </tbody>
         </table>
     </div>
 

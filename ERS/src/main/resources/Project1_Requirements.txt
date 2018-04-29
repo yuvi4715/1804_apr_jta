@@ -1,12 +1,10 @@
 Expense Reimbursement System (ERS) - Presentation on first day of - Week 5
 
++An Employee/Manager can login -> Takes you to their respective HTML
++An Employee/Manager can logout -> Takes you to their respective HTML
 
-
--An Employee/Manager can login
--An Employee/Manager can logout
-
--An Employee can view the Employee Homepage
--A Manager can view the Manager Homepage
++An Employee can view the Employee Homepage -> Takes you to their respective HTML
++A Manager can view the Manager Homepage -> Takes you to their respective HTML
 
 ++An Employee can view their pending reimbursement requests -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
 ++An Employee can view their resolved reimbursement requests -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
@@ -40,7 +38,7 @@ Technologies:
 -PL/SQL -> Mostly Done, Basically done
 -HTML/CSS/Javascript -> Basically done
 -Bootstrap -> Will use for login and home pages
--AJAX (required in atleast 2 functionalities)
+-AJAX (required in atleast 2 functionalities) -> Donezo
 -JUnit -> Setup Maven Dependency, already used
 -log4j -> Setup Maven Dependency, already used
 
