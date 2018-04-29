@@ -25,9 +25,13 @@ public class LoginController{
 			/* Storing loggedUser to current session
 			SESSION SCOPE IS AVAILABLE ONLY IN THIS REQUEST (CLIENT) */
 			request.getSession().setAttribute("loggedUser", loggedUser);
-			
 			//Forward user to hit another controller
 			return "home.do";
 		}
-    }
+	}
+	
+	public static String logout(HttpServletRequest request){
+		request.getSession().removeAttribute("loggedUser");
+		return "login.html";
+	}
 }

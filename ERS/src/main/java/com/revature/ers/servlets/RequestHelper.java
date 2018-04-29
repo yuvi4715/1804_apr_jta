@@ -12,6 +12,8 @@ public class RequestHelper{
                 return LoginController.login(request);
             case "/ERS/html/home.do":
                 return HomeController.home(request);
+            case "/ERS/html/logout.do":
+                return LoginController.logout(request);
             default:
                 return "/html/404.html";
         }
