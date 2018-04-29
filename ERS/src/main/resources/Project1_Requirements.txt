@@ -1,18 +1,18 @@
 Expense Reimbursement System (ERS) - Presentation on first day of - Week 5
 
-+An Employee/Manager can login -> Takes you to their respective HTML
-+An Employee/Manager can logout -> Takes you to their respective HTML
+++++An Employee/Manager can login -> Takes you to their respective HTML
+++++An Employee/Manager can logout -> Takes you to their respective HTML
 
-+An Employee can view the Employee Homepage -> Takes you to their respective HTML
-+A Manager can view the Manager Homepage -> Takes you to their respective HTML
+++++An Employee can view the Employee Homepage -> Takes you to their respective HTML
+++++A Manager can view the Manager Homepage -> Takes you to their respective HTML
 
-++An Employee can view their pending reimbursement requests -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
-++An Employee can view their resolved reimbursement requests -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++++An Employee can view their pending reimbursement requests -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++++An Employee can view their resolved reimbursement requests -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
 
-++An Employee can submit a reimbursement request -> PROCEDUE IS SET, DAO DEFINED AND IMPLEMENTED
+++++An Employee can submit a reimbursement request -> PROCEDUE IS SET, DAO DEFINED AND IMPLEMENTED
 
-++An Employee can view their information -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
-++An Employee can update their information -> PROCEDURE IS SET, DAO DEFINED AND IMPLEMENTED
+++++An Employee can view their information -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
+++++An Employee can update their information -> PROCEDURE IS SET, DAO DEFINED AND IMPLEMENTED
 
 ++A Manager can view reimbursement requests from a single Employee -> QUERY IS SET, DAO DEFINED AND IMPLEMENTED
 ++A Manager can view all pending requests from all employees --> QUERY IS SET, DAO DEFINED AND IMPLEMENTED

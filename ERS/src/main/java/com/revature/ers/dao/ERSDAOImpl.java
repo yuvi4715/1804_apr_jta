@@ -119,7 +119,7 @@ public class ERSDAOImpl implements ERSDAO{
 		try (Connection conn = ConnectionUtil.getConnection()){
 			//Create a PreparedStatement object to get a result set that should
 			//contain the requests depending on the 'status' provided by the employee
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Request WHERE requester = ? AND status = ?");
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Request WHERE requester = ? AND status = ? ORDER BY request_id");
 			stmt.setInt(++index, user.getUser_id());
 			stmt.setString(++index, status);
 
@@ -147,7 +147,7 @@ public class ERSDAOImpl implements ERSDAO{
 		try (Connection conn = ConnectionUtil.getConnection()){
 			//Create a PreparedStatement object to get a result set that should
 			//contain all the requests by all the employees.
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Request");
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Request ORDER BY request_id");
 
 			ResultSet rs = stmt.executeQuery();
 			index = -1;
@@ -173,7 +173,7 @@ public class ERSDAOImpl implements ERSDAO{
 		try (Connection conn = ConnectionUtil.getConnection()){
 			//Create a PreparedStatement object to get a result set that should
 			//contain the requests depending on the 'status' provided by the manager
-			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Request WHERE status = ?");
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Request WHERE status = ? ORDER BY request_id");
 			stmt.setString(++index, status);
 
 			ResultSet rs = stmt.executeQuery();

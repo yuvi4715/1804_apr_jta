@@ -2,12 +2,16 @@
     Executes getUsername function */
 
 var thebody;
+var myInfo;
 window.onload = function () {
     document.getElementById("empDenReq").addEventListener("click", getDenReq);
     document.getElementById("empAppReq").addEventListener("click", getAppReq);
     document.getElementById("empPenReq").addEventListener("click", getPenReq);
     document.getElementById("submitReq").addEventListener("click", insertRequest);
+    document.getElementById("modifyUser").addEventListener("click", modifyUser);
     thebody = document.getElementById("thebody");
+    myInfo = document.getElementById("myInfo");
+    showMyInfo();
 }
 
 function getPenReq() {
@@ -96,8 +100,13 @@ function insertToTable(ajaxObject) {
         //Properly format date
         var requdate = new Date(ajaxObject[i].request_date);
         reqDate.textContent = requdate.getMonth() + "/" + requdate.getDate() + "/" + requdate.getFullYear()
+
         var revidate = new Date(ajaxObject[i].review_date);
-        revDate.textContent = revidate.getMonth() + "/" + revidate.getDate() + "/" + revidate.getFullYear()
+        if (revidate.getFullYear() === 1969) {
+            revDate.textContent = "N/A"
+        } else {
+            revDate.textContent = revidate.getMonth() + "/" + revidate.getDate() + "/" + revidate.getFullYear()
+        }
         status.textContent = ajaxObject[i].status;
         purpose.textContent = ajaxObject[i].purpose;
 
@@ -129,12 +138,88 @@ function insertRequest() {
             //THIS EXECUTES LAST WITHIN THIS FUNCTION
             var text = xhttp.responseText;
             console.log("Result was: " + text);
-            
+
         }
     };
     //Opening connection for endpoint
-    xhttp.open("POST", "http://localhost:8080/ERS/html/insertreq.ajax?amount="+amount+"&purpose="+purpose, true);
+    xhttp.open("POST", "http://localhost:8080/ERS/html/insertreq.ajax?amount=" + amount + "&purpose=" + purpose, true);
 
     //Sending request to endpoint
     xhttp.send();
+}
+
+function modifyUser() {
+    let parameters = "";
+    //Get values
+    let firstN = document.getElementById("newFirst").value;
+    let lastN = document.getElementById("newLast").value;
+    let email = document.getElementById("newEmail").value;
+    let passwd = document.getElementById("newPass").value;
+    console.log("Modifying user.");
+    console.log(firstN);
+    console.log(lastN);
+    console.log(email);
+    console.log(passwd);
+
+    //Append to a string
+    if (firstN != "")
+        parameters += "firstN=" + firstN;
+    if (lastN != "")
+        parameters += "&lastN=" + lastN;
+    if (email != "")
+        parameters += "&email=" + email;
+    if (passwd != "")
+        parameters += "&passwd=" + passwd;
+    console.log(parameters);
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        //If ready state is DONE and HTTP Status is OK
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //Grabbing JSON object from response body.
+            //THIS EXECUTES LAST WITHIN THIS FUNCTION
+            var text = xhttp.responseText;
+            console.log("Result was: " + text);
+
+        }
+    };
+    //Opening connection for endpoint
+    xhttp.open("POST", "http://localhost:8080/ERS/html/modifyuser.ajax?" + parameters, true);
+
+    //Sending request to endpoint
+    xhttp.send();
+}
+
+function showMyInfo() {
+    myInfo.innerHTML = "";
+    let firstN = document.createElement("li");
+    let lastN = document.createElement("li");
+    let email = document.createElement("li");
+    let passwd = document.createElement("li");
+
+    console.log("Looking for logged user.")
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        //If ready state is DONE and HTTP Status is OK
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //Grabbing JSON object from response body.
+            //THIS EXECUTES LAST WITHIN THIS FUNCTION
+            var ajaxObject = JSON.parse(xhttp.responseText);
+            console.log(ajaxObject);
+            firstN.textContent = "First Name: " + ajaxObject.firstName;
+            lastN.textContent = "Last Name: " + ajaxObject.lastName;
+            email.textContent = "Email: " + ajaxObject.email;
+            passwd.textContent = "Password: ********";
+
+            myInfo.appendChild(firstN);
+            myInfo.appendChild(lastN);
+            myInfo.appendChild(email);
+            myInfo.appendChild(passwd);
+        }
+    };
+    //Opening connection for endpoint
+    xhttp.open("POST", "http://localhost:8080/ERS/html/getuser.ajax", true);
+
+    //Sending request to endpoint
+    xhttp.send();
+
 }

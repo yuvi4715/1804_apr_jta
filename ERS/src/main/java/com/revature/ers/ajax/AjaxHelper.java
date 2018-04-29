@@ -11,6 +11,10 @@ public class AjaxHelper{
                 return AjaxController.empViewCertainReq(request, response);
             case "/ERS/html/insertreq.ajax":
                 return AjaxController.insertReq(request, response);
+            case "/ERS/html/modifyuser.ajax":
+                return AjaxController.modifyUser(request, response);
+            case "/ERS/html/getuser.ajax":
+                return AjaxController.getUser(request, response);
             default:
                 return "/html/404.html";
         }

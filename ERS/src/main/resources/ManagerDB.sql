@@ -191,7 +191,7 @@ exec insert_request(10.00, 103, 'Testing the procedure, and I spent $10 somehow.
 exec insert_request(10.00, 104, 'Testing the procedure, and I spent $10 somehow...');
 
 --Modify user info, given a user_id
-exec modify_user('ModUser1','ModOne1','ModUser1@ERS.com','pass2',101);
+exec modify_user('ModUser1','ModOne1','Manager1@ERS.com','pass2',101);
 
 --Delete a specific user
 DELETE FROM ERS_User WHERE user_id = 102;

@@ -9,8 +9,22 @@
 </head>
 
 <body>
-    <h>WELCOME HOME, EMPLOYEE.</h>
-    <br>
+
+    <div>
+        <h1>Welcome Home</h1>
+        Your information:
+        <ul id="myInfo">
+        </ul>
+    </div>
+    <div>
+        Update your information (leave blank if you want no changes):
+        <br>
+        <input type="text" id="newFirst" placeholder="New First Name"> •
+        <input type="text" id="newLast" placeholder="New Last Name"> •
+        <input type="text" id="newEmail" placeholder="New Email"> •
+        <input type="text" id="newPass" placeholder="New Password">
+        <button id="modifyUser">Submit Changes</button>
+    </div>
     <div>
         <br> Submit a request:
         <br> Amount:
@@ -41,6 +55,9 @@
 
             </tbody>
         </table>
+    </div>
+    <div>
+        <button id="logout">Log Out</button>
     </div>
 
     <script type="text/javascript" src="../js/empViewCertainReq.js"></script>
