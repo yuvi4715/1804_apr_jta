@@ -1,0 +1,687 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>JDBC Log HTML</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Sat Apr 28 23:52:05 EDT 2018<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:52</td>
+<td title="Message">Exception creating a new customer</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.insert(CustomerDaoJdbc.java:36)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.registerCustomer(CustomerService.java:29)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:10)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>60097</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:79</td>
+<td title="Message">Exception creating a new customer with stored procedure</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.insertProcedure(CustomerDaoJdbc.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.registerCustomerSecure(CustomerService.java:34)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:14)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>121092</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:130</td>
+<td title="Message">Exception selecting all customers</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.selectAll(CustomerDaoJdbc.java:112)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.listAllUsers(CustomerService.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:18)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>181174</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:105</td>
+<td title="Message">Exception selecting a customer</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.select(CustomerDaoJdbc.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.login(CustomerService.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:21)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>241249</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:150</td>
+<td title="Message">Exception getting customer hash</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.getCustomerHash(CustomerDaoJdbc.java:138)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.login(CustomerService.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:21)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>JDBC Log HTML</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Sun Apr 29 00:03:34 EDT 2018<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:52</td>
+<td title="Message">Exception creating a new customer</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.insert(CustomerDaoJdbc.java:36)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.registerCustomer(CustomerService.java:29)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:10)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>JDBC Log HTML</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Sun Apr 29 00:04:14 EDT 2018<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:52</td>
+<td title="Message">Exception creating a new customer</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.insert(CustomerDaoJdbc.java:36)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.registerCustomer(CustomerService.java:29)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:11)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>60083</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:79</td>
+<td title="Message">Exception creating a new customer with stored procedure</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.insertProcedure(CustomerDaoJdbc.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.registerCustomerSecure(CustomerService.java:34)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:14)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>60083</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:79</td>
+<td title="Message">Exception creating a new customer with stored procedure</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.insertProcedure(CustomerDaoJdbc.java:60)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.registerCustomerSecure(CustomerService.java:34)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:15)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>120167</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:130</td>
+<td title="Message">Exception selecting all customers</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.selectAll(CustomerDaoJdbc.java:112)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.listAllUsers(CustomerService.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:18)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>120162</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:130</td>
+<td title="Message">Exception selecting all customers</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.selectAll(CustomerDaoJdbc.java:112)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.listAllUsers(CustomerService.java:39)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:19)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>180247</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:105</td>
+<td title="Message">Exception selecting a customer</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.select(CustomerDaoJdbc.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.login(CustomerService.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:21)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>180237</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:105</td>
+<td title="Message">Exception selecting a customer</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.select(CustomerDaoJdbc.java:87)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.login(CustomerService.java:45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:22)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>240332</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:150</td>
+<td title="Message">Exception getting customer hash</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.getCustomerHash(CustomerDaoJdbc.java:138)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.login(CustomerService.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:21)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
+
+<tr>
+<td>240324</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="root category">root</td>
+<td>CustomerDaoJdbc.java:150</td>
+<td title="Message">Exception getting customer hash</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:25)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.CustomerDaoJdbc.getCustomerHash(CustomerDaoJdbc.java:138)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.service.CustomerService.login(CustomerService.java:53)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.Main.main(Main.java:22)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 10 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.SocketTimeoutException: connect timed out
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.socketConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Socket.java:589)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 15 more
+</td></tr>
