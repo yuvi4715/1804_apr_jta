@@ -1,15 +1,12 @@
 var myInfo;
 var theemphead;
 var theempbody;
-var theemptable;
 var thebody;
 window.onload = function () {
 
     document.getElementById("theH3").addEventListener("click", getAllEmp);
     theempbody = document.getElementById("theempbody");
     theemphead = document.getElementById("theemphead");
-    theemptable = document.getElementById("theemptable");
-    document.getElementById("toggletable").addEventListener("click", toggletable);
     document.getElementById("manAllReq").addEventListener("click", manAllReq);
     document.getElementById("manPenReq").addEventListener("click", manPenReq);
     document.getElementById("manEmpReq").addEventListener("click", manCertEmp);
@@ -64,14 +61,6 @@ function DenyRequest() {
 
     //Sending request to endpoint
     xhttp.send();
-}
-
-function toggletable() {
-    if (theemptable.style.display === "none") {
-        theemptable.style.display = "block";
-    } else {
-        theemptable.style.display = "none";
-    }
 }
 
 function showMyInfo() {
@@ -177,7 +166,7 @@ function insertToTable(ajaxObject) {
 
         //Add row to the table.
         theempbody.appendChild(row);
-        theemptable.style.display = "block";
+        //theemptable.style.display = "block";
     }
 }
 

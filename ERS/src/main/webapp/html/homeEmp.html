@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Employee Homepage</title>
@@ -10,45 +12,77 @@
 
 <body>
 
-    <div>
-        <h1>Welcome Home, Employee</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-11">
+                <h1>Welcome Home, Manager</h1>
+            </div>
+            <div class="col-sm-1">
+                <form action="logout.do" method="POST">
+                    <br>
+                    <button class="btn btn-primary" onclick="submit">Log Out</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
         Your information:
         <ul id="myInfo">
         </ul>
-        <div>
-            <br>
-            <form action="logout.do" method="POST">
-                <input type="submit" value="Log Out">
-            </form>
-            <br>
-        </div>
     </div>
-    <div>
+    <div class="container-fluid">
         Update your information (leave blank if you want no changes):
         <br>
-        <input type="text" id="newFirst" placeholder="New First Name"> •
-        <input type="text" id="newLast" placeholder="New Last Name"> •
-        <input type="text" id="newEmail" placeholder="New Email"> •
-        <input type="text" id="newPass" placeholder="New Password">
-        <button id="modifyUser">Submit Changes</button>
+        <div class="row">
+            <div class="col-sm-2">
+                <input type="text" id="newFirst" placeholder="New First Name" class="form-control">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" id="newLast" placeholder="New Last Name" class="form-control">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" id="newEmail" placeholder="New Email" class="form-control">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" id="newPass" placeholder="New Password" class="form-control">
+            </div>
+            <div class="col-sm-2">
+                <button id="modifyUser" class="btn btn-primary">Submit Changes</button>
+            </div>
+        </div>
     </div>
-    <div>
+    <div class="container-fluid">
         <br> Submit a request:
-        <br> Amount:
-        <input type="text" id="reqAmount"> Purpose:
-        <input type="text" id="reqPurpose">
-        <button id="submitReq">Submit Request</button>
+        <div class="row">
+            <div class="col-sm-5">
+                <input type="text" id="reqAmount" class="form-control" placeholder="Amount">
+            </div>
+            <div class="col-sm-5">
+                <input type="text" id="reqPurpose" class="form-control" placeholder="Purpose">
+            </div>
+            <div class="col-sm-2">
+                <button id="submitReq" class="btn btn-primary">Submit Request</button>
+            </div>
+        </div>
     </div>
-    <div>
+    <div class="container-fluid">
         <br>
-        <button id="empDenReq">View Denied Requests.</button>
-        <button id="empAppReq">View Approved Requests</button>
-        <button id="empPenReq">View Pending Requests</button>
+        <div class="row">
+            <div class="col-md-2">
+                <button id="empDenReq" class="btn btn-primary">View Denied Requests.</button>
+            </div>
+            <div class="col-md-2">
+                <button id="empAppReq" class="btn btn-primary">View Approved Requests</button>
+            </div>
+            <div class="col-md-2">
+                <button id="empPenReq" class="btn btn-primary">View Pending Requests</button>
+            </div>
+        </div>
     </div>
-    <div>
+    <div class="container-fluid">
         <h3 id="theH3">Requests will appear in the table below:</h3>
-
-        <table style="width:100%" border="1" id="thetable">
+        <table class="table table-striped" id="thetable">
             <thead>
                 <th>Request ID</th>
                 <th>Reviewer ID</th>
@@ -59,11 +93,9 @@
                 <th>Purpose</th>
             </thead>
             <tbody id="thebody">
-
             </tbody>
         </table>
     </div>
-
     <script type="text/javascript" src="../js/employee.js"></script>
 </body>
 
