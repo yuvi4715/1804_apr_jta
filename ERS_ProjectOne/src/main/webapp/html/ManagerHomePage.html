@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Manager Home</title>
+<!-- CSS Link -->
+<link rel="stylesheet" href="../css/LoginPage.css">
+</head>
+<body>
+<!-- Tabs -->
+<div class="tab">
+  <button class="tablinks" onclick="openLogin(event, 'ManagerHome')">Manager Home</button>
+  <button class="tablinks" onclick="openLogin(event, 'AllPendingRequest')">View All Pending Requests</button>
+  <button class="tablinks" onclick="openLogin(event, 'AllResolvedRequest')">View All Resolved Requests</button>
+  <button class="tablinks" onclick="openLogin(event, 'ApprovalTab')">Approve/Deny Pending Requests</button>
+  <button class="tablinks" onclick="openLogin(event, 'AllEmployee')">View All Employees</button>
+  <button class="tablinks" onclick="openLogin(event, 'SearchEmployee')">Search For An Employee's Request</button>
+</div>
+<!-- Home Tab -->
+ <div id="ManagerHome" class="tabcontent">
+ <h3>Manager Home</h3>
+ <div class="login">
+  <form method="post" action="/ERS_ProjectOne/managerLogout.do">
+  <input type="submit" value="Logout">
+  </form>
+ <form action="/ERS_ProjectOne/createEmployee.do" method="post">  
+<table>  
+<tr><td style="color:rgb(255,255,255)">FirstName:</td><td><input type="text" name="firstName"/></td></tr> 
+<tr><td style="color:rgb(255,255,255)">LastName:</td><td><input type="text" name="lastName"/></td></tr> 
+<tr><td style="color:rgb(255,255,255)">UserName:</td><td><input type="text" name="userName"/></td></tr> 
+<tr><td style="color:rgb(255,255,255)">Password:</td><td><input type="password" name="password"/></td></tr>  
+<tr><td style="color:rgb(255,255,255)">Email:</td><td><input type="email" name="email"/></td></tr> 
+<tr><td colspan="2"><input type="submit" value="Create Employee"/></td></tr>  
+</table> 
+</form>
+</div>
+</div>
+<!-- Pending Tab -->
+ <div id="AllPendingRequest" class="tabcontent">
+ <h3>Here are all pending requests:</h3>
+ <div class="login">
+ <form action="/ERS_ProjectOne/employeePendingRequests.do" method="post">  
+ <input type="button"  onclick="loadAllPendingRequests()" value="View all pending requests">
+</form>
+</div>
+</div>
+<!-- Resolved Tab -->
+ <div id="AllResolvedRequest" class="tabcontent">
+ <h3>Here are all resolved requests:</h3>
+ <div class="login">
+ <form action="/ERS_ProjectOne/employeeResolvedRequests.do" method="post">  
+  <input type="button"  onclick="loadAllResolvedRequests()" value="View all resolved requests">
+</form>
+</div>
+</div>
+<!-- View Employee Tab -->
+ <div id="AllEmployee" class="tabcontent">
+ <h3>View all employees within the company:</h3>
+ <div class="login">
+ <form action="/ERS_ProjectOne/viewEmployee.do" method="post">  
+   <input type="button"  onclick="loadEmployee()" value="View all employees">
+</form>
+</div>
+<!-- Search Employee Tab -->
+</div>
+ <div id="SearchEmployee" class="tabcontent">
+ <h3>Find reimbursement requests of an employee:</h3>
+ <div class="login">
+ <form action="/ERS_ProjectOne/searchEmployee.do" method="post">
+   <input  type="text" name="eUser" placeholder="Employee Username" required="required" />  
+   <input type="button" onclick="loadSearch()" class="btn btn-primary btn-block btn-small" value="Search Employee">
+</form>
+</div>
+</div>
+<!-- Approval Tab -->
+ <div id="ApprovalTab" class="tabcontent">
+ <h3>Approve/Deny Pending Reimbursement Requests</h3>
+ <div class="login">
+ <form action="/ERS_ProjectOne/approveRequest.do" method="post">
+   <input  type="text" name="approveID" placeholder="Request ID to approve" required="required" />  
+   <button id="eButton" type="button" class="btn btn-primary btn-block btn-small">Approve</button>
+</form>
+ <form action="/ERS_ProjectOne/denyRequest.do" method="post">
+   <input  type="text" name="denyID" placeholder="Request ID to deny" required="required" />  
+   <button id="eButton" type="button" class="btn btn-primary btn-block btn-small">Deny</button>
+</form>
+</div>
+</div>
+<!-- JavaScript link -->
+<script type="text/javascript" src="../js/ManagerHomePage.js"></script>
+</body>
+</html>

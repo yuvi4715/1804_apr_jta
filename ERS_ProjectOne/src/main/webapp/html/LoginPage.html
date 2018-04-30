@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>ERS Login</title>
+<!-- CSS Link -->
+<link rel="stylesheet" href="../css/LoginPage.css">
+</head>
+<body>
+
+<!-- Tabs -->
+<div class="tab">
+  <button class="tablinks" onclick="openLogin(event, 'EmployeeLogin')">Employee Login</button>
+  <button class="tablinks" onclick="openLogin(event, 'ManagerLogin')">Manager Login</button>
+</div>
+
+<!-- Employee Tab -->
+<div id="EmployeeLogin" class="tabcontent">
+<h3>Employee</h3>
+  <div class="login">
+    <form method="post" action="/ERS_ProjectOne/employeeLogin.do">
+        <input  type="text" name="eUser" placeholder="Employee Username" required="required" />
+        <input  type="password" name="ePass" placeholder="Password" required="required" />
+        <button id="eButton" type="submit" class="btn btn-primary btn-block btn-small">Login</button>
+    </form>
+</div>
+</div>
+
+<!-- Manager Tab -->
+<div id="ManagerLogin" class="tabcontent">
+<h3>Manager</h3>
+  <div class="login">
+    <form method="post" action="/ERS_ProjectOne/managerLogin.do">
+        <input name="mUser" type="text" placeholder="Manager Username" required="required" />
+        <input name="mPass" type="password" placeholder="Password" required="required" />
+        <button id="mButton" type="submit" class="btn btn-primary btn-block btn-small">Login</button>
+    </form>
+</div>
+</div>
+
+<!-- JavaScript link -->
+<script type="text/javascript" src="../js/LoginPage.js"></script>
+</body>
+</html>

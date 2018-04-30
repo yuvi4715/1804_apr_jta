@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Employee Home</title>
+<!-- CSS Link -->
+<link rel="stylesheet" href="../css/LoginPage.css">
+</head>
+<body>
+<div>
+<!-- Tabs -->
+<div class="tab">
+	<button class="tablinks" onclick="openLogin(event, 'EmployeeHome')">Employee Home</button>
+ 	<button class="tablinks" onclick="openLogin(event, 'EmployeeView')">View Profile</button>
+ 	<button class="tablinks" onclick="openLogin(event, 'EmployeeEdit')">Edit Profile</button>
+ 	<button class="tablinks" onclick="openLogin(event, 'EmployeeRequest')">Make Reimbursement Requests</button>
+ 	<button class="tablinks" onclick="openLogin(event, 'PendingRequest')">Pending Reimbursement Requests</button>
+ 	<button class="tablinks" onclick="openLogin(event, 'ResolvedRequest')">Resolved Reimbursement Requests</button>
+</div>
+
+<!-- Employee Home Tab -->
+<div id="EmployeeHome" class="tabcontent">
+<h3>Home</h3>
+  <div class="login">
+   <form method="post" action="/ERS_ProjectOne/employeeLogout.do">
+  <input class="btn btn-primary btn-block btn-small" type="submit" value="Logout">
+  </form>
+</div>
+</div>
+
+<!-- Employee View Tab -->
+<div id="EmployeeView" class="tabcontent">
+<h3>Your Account Information</h3>
+  <div class="login">
+  <form method="post" action="/ERS_ProjectOne/myEmployee.do">
+  <table>  
+<tr><td colspan="2"><input type="button" onclick="loadmyEmployee()" value="View Your Account Information"/></td></tr>  
+</table>
+  </form>
+</div>
+</div>
+
+<!-- Employee Edit Tab -->
+ <div id="EmployeeEdit" class="tabcontent">
+ <h3>Edit Account Information</h3>
+ <div class="login">
+ <form method="post" action="/ERS_ProjectOne/editEmployee.do">
+	<table>
+		<tr>
+			<td style="color:rgb(255,255,255)">First Name</td>
+			<td><input type="text" name="firstName" size="25"></td>
+		</tr>
+		<tr>
+			<td style="color:rgb(255,255,255)">Last Name</td>
+			<td><input type="text" name="lastName" size="25"></td>
+		</tr>
+		<tr>
+			<td style="color:rgb(255,255,255)">Email</td>
+			<td><input type="text" name="email" size="25"></td>
+		</tr>
+		<tr>
+			<td style="color:rgb(255,255,255)">Password</td>
+			<td><input type="text" name="ePass" size="25"></td>
+		</tr>
+	</table>
+	<p>
+		<input class="btn btn-primary btn-block btn-small" type="submit" value="Edit Information">
+	</p>
+</form>
+</div>
+</div>
+
+<!-- Reimbursement Tab -->
+ <div id="EmployeeRequest" class="tabcontent">
+ <h3>Make New Reimbursement Requests</h3>
+ <div class="login">
+ <form action="/ERS_ProjectOne/submitRequest.do" method="post">  
+<table>  
+<tr><td style="color:rgb(255,255,255)">Request Amount:</td><td><input type="text" name="requestAmount"/></td></tr> 
+<tr><td style="color:rgb(255,255,255)">Purpose:</td><td><input type="text" name="purpose"/></td></tr> 
+<tr><td colspan="2"><input type="submit" value="Submit New Request"/></td></tr>  
+</table>
+</form>
+</div>
+</div>
+
+<!-- Reimbursement Pending Tab -->
+ <div id="PendingRequest" class="tabcontent">
+ <h3>View Pending Reimbursement Requests</h3>
+ <div class="login">
+ <form action="/ERS_ProjectOne/specificPendingRequests.do" method="post">  
+	<input type="button" onclick="loadmyPendingRequests()" value="View all pending requests">
+</form>
+</div>
+</div>
+
+<!-- Reimbursement Resolved Tab -->
+ <div id="ResolvedRequest" class="tabcontent">
+ <h3>View Pending Reimbursement Requests</h3>
+ <div class="login">
+ <form action="/ERS_ProjectOne/specificResolvedRequests.do" method="post">
+   <table>  
+<tr><td colspan="2"><input type="button" onclick="loadmyResolvedRequests()" value="View Resolved Reimbursement Requests"/></td></tr>  
+</table> 
+</form>
+</div>
+</div>
+
+</div>
+<!-- JavaScript link -->
+<script type="text/javascript" src="../js/EmployeeHomePage.js"></script>
+</body>
+</html>
