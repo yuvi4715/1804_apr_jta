@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Manager Homepage</title>
+</head>
+<body>
+	<div class="form-group">
+            <button class="btn btn-primary" onclick="pending()">Pending Requests</button>
+        </div>  
+          <div class="form-group">
+            <button onclick="rr()" class="btn btn-primary">Resolved Requests</button>
+        </div>
+        <div class="form-group">
+            <button onclick="vae()" class="btn btn-primary">View All Employees</button>
+        </div>
+        <div class="form-group">
+        <form method="get" action="ApproveOrDenyRequest.do">
+            <button class="btn btn-primary">Approve or Deny Request</button>
+            <input id="requestId" type="text" class="form-control" name="RequestId" placeholder="Request ID" />
+             <input id="status" type="text" class="form-control" name="Status" placeholder="Status" />
+         </form>
+        </div>
+        <div class="form-group">
+            <button onclick="hr()" class="btn btn-primary">Open User Requests</button>
+            <input id="openUser" type="text" class="form-control" name="username" placeholder="Username" />
+        </div>
+     	
+     <div id="session"></div>
+
+<script>
+let session = document.getElementById('session');
+function pending(){
+	while (session.firstChild) {
+	    session.removeChild(session.firstChild);
+	}
+	console.log("pending");
+	let xhr = new XMLHttpRequest();
+	xhr.open('POST', 'AllPendingRequests.do');
+	xhr.send();
+
+	xhr.onreadystatechange=()=>{
+		if(xhr.readyState===4&&xhr.status===200){
+			let x = document.createTextNode(xhr.responseText);
+			session.appendChild(x);
+			console.log(xhr.responseText); 
+		}
+	}
+}
+
+function rr(){
+	while (session.firstChild) {
+	    session.removeChild(session.firstChild);
+	}
+	let xhr = new XMLHttpRequest();
+	xhr.open('POST', 'Resolved.do');
+	xhr.send();
+
+	xhr.onreadystatechange=()=>{
+		if(xhr.readyState===4&&xhr.status===200){
+			let x = document.createTextNode(xhr.responseText);
+			session.appendChild(x);
+			console.log(xhr.responseText); 
+		}
+	}
+}
+
+function vae(){
+	while (session.firstChild) {
+	    session.removeChild(session.firstChild);
+	}
+	let xhr = new XMLHttpRequest();
+	xhr.open('POST', 'AllEmployees.do');
+	xhr.send();
+
+	xhr.onreadystatechange=()=>{
+		if(xhr.readyState===4&&xhr.status===200){
+			let x = document.createTextNode(xhr.responseText);
+			session.appendChild(x);
+			console.log(xhr.responseText); 
+		}
+	}
+}
+
+function adr(){
+	while (session.firstChild) {
+	    session.removeChild(session.firstChild);
+	}
+	let xhr = new XMLHttpRequest();
+	xhr.open('POST', 'ApproveOrDenyRequest.do');
+	xhr.send();
+
+	xhr.onreadystatechange=()=>{
+		if(xhr.readyState===4&&xhr.status===200){
+			let x = document.createTextNode(xhr.responseText);
+			session.appendChild(x);
+			console.log(xhr.responseText); 
+		}
+	}
+}
+
+function hr(){
+	let val = document.getElementById("openUser").value;
+	console.log(val);
+	
+	while (session.firstChild) {
+	    session.removeChild(session.firstChild);
+	}
+	let xhr = new XMLHttpRequest();
+	xhr.open('POST', `OpenSpecificUserRequests.do?username=${val}`);
+	xhr.send();
+
+	xhr.onreadystatechange=()=>{
+		if(xhr.readyState===4&&xhr.status===200){
+			let x = document.createTextNode(xhr.responseText);
+			session.appendChild(x);
+			console.log(xhr.responseText); 
+		}
+	}
+}
+
+</script>
+</body>
+</html>

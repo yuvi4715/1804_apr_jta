@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Information</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+	<div class="form-group">
+		<form method="get" action="SubmitRequest.do">
+            <button class="btn btn-primary">Submit Request</button>
+            <input type="text" class="form-control" name="amount" placeholder="Amount"/>
+            <input type="text" class="form-control" name="purpose" placeholder="Purpose">
+        </form>
+        </div>
+        
+        <div class="form-group">
+            <button class="btn btn-primary" onclick="pending()">Pending Requests</button>
+        </div>  
+        
+        <div class="form-group">
+            <button class="btn btn-primary" onclick="denied()">Denied Requests</button>
+        </div>  
+        
+        <div class="form-group">
+            <button class="btn btn-primary" onclick="approved()">Approved Requests</button>
+        </div>  
+        
+        <div class="form-group">
+            <button class="btn btn-primary" onclick="view()">View Info</button>
+        </div>  
+        
+        <form method="get" action="UpdateEmployeeInfo.do">
+           <div class="form-group">
+            <label for="formGroupExampleInput">Username</label>
+            <input type="text" class="form-control" name="username" placeholder="Username" />
+        </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Password</label>
+            <input type="text" class="form-control" name="password" placeholder="Password" />
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">First Name</label>
+            <input type="text" class="form-control" name="firstName" placeholder="first Name" />
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Last Name</label>
+            <input type="text" class="form-control" name="lastName" placeholder="last Name" />
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">email</label>
+            <input type="text" class="form-control" name="email" placeholder="Email" />
+            </div>
+        
+        <div id="remember" class="checkbox">
+        	<label>
+        		<input type="checkbox" name="manager" value="manager"> Create Manager Account
+        	
+        	</label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Update Account</button>
+        </form>
+     	
+     <div id="session"></div>
+	
+   	 
+    <script>
+    let session = document.getElementById('session');
+    function pending(){
+    	while (session.firstChild) {
+    	    session.removeChild(session.firstChild);
+    	}
+    	console.log("pending");
+    	let xhr = new XMLHttpRequest();
+    	xhr.open('POST', 'PendingUserRequests.do');
+    	xhr.send();
+
+    	xhr.onreadystatechange=()=>{
+    		if(xhr.readyState===4&&xhr.status===200){
+    			let x = document.createTextNode(xhr.responseText);
+    			session.appendChild(x);
+    			console.log(xhr.responseText); 
+    		}
+    	}
+    }
+    
+    function denied(){
+    	while (session.firstChild) {
+    	    session.removeChild(session.firstChild);
+    	}
+    	let xhr = new XMLHttpRequest();
+    	xhr.open('POST', 'DeniedUserRequests.do');
+    	xhr.send();
+
+    	xhr.onreadystatechange=()=>{
+    		if(xhr.readyState===4&&xhr.status===200){
+    			let x = document.createTextNode(xhr.responseText);
+    			session.appendChild(x);
+    			console.log(xhr.responseText); 
+    		}
+    	}
+    }
+    
+    function approved(){
+    	while (session.firstChild) {
+    	    session.removeChild(session.firstChild);
+    	}
+    	let xhr = new XMLHttpRequest();
+    	xhr.open('POST', 'ApprovedUserRequests.do');
+    	xhr.send();
+
+    	xhr.onreadystatechange=()=>{
+    		if(xhr.readyState===4&&xhr.status===200){
+    			let x = document.createTextNode(xhr.responseText);
+    			session.appendChild(x);
+    			console.log(xhr.responseText); 
+    		}
+    	}
+    }
+    
+    function view(){
+    	while (session.firstChild) {
+    	    session.removeChild(session.firstChild);
+    	}
+    	let xhr = new XMLHttpRequest();
+    	xhr.open('POST', 'EmployeeHomeRequest.do');
+    	xhr.send();
+
+    	xhr.onreadystatechange=()=>{
+    		if(xhr.readyState===4&&xhr.status===200){
+    			let x = document.createTextNode(xhr.responseText);
+    			session.appendChild(x);
+    			console.log(xhr.responseText); 
+    		}
+    	}
+    }
+    </script>
+</body>
+</html>
