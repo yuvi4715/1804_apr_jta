@@ -132,4 +132,32 @@ public class AjaxController{
         else
             return null;
     }
+
+    public static String manCertEmp(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("Im in manCertEmp");
+        List<Request> list = ERS_Service.getERS_Service().man_view_emp_requests(Integer.parseInt(request.getParameter("requester")));
+        if(list != null){
+            try {
+                System.out.println("List is not null after all.");
+                String str = new ObjectMapper().writeValueAsString(list);
+                return str;
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+            System.out.println("We failed man.");
+            return null;
+        }
+        else
+            return null;
+    }
+
+    public static String modRequest(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("I'm in modRequest");
+        ERS_User user = (ERS_User) request.getSession().getAttribute("loggedUser");
+        Request req = new Request(Integer.parseInt(request.getParameter("requestid")),0,user.getUser_id(),0,"", request.getParameter("status"), new Date(1L), new Date(1L));
+        if(ERS_Service.getERS_Service().modify_request(req, user))
+            return "Modified successfully.";
+        else
+            return "Failed to modify request.";
+    }
 }

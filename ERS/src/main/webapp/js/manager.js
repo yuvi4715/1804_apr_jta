@@ -12,12 +12,61 @@ window.onload = function () {
     document.getElementById("toggletable").addEventListener("click", toggletable);
     document.getElementById("manAllReq").addEventListener("click", manAllReq);
     document.getElementById("manPenReq").addEventListener("click", manPenReq);
+    document.getElementById("manEmpReq").addEventListener("click", manCertEmp);
+    document.getElementById("appReq").addEventListener("click", ApproveRequest);
+    document.getElementById("DenReq").addEventListener("click", DenyRequest);
     thebody = document.getElementById("thebody");
     myInfo = document.getElementById("myInfo");
     showMyInfo();
 }
 
-function toggletable(){
+function ApproveRequest() {
+    console.log("Modifying a request")
+    let aRequestID = document.getElementById("requestID").value / 1;
+    console.log(aRequestID);
+    console.log(typeof (aRequestID));
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        //If ready state is DONE and HTTP Status is OK
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //Grabbing JSON object from response body.
+            //THIS EXECUTES LAST WITHIN THIS FUNCTION
+            let text = xhttp.responseText;
+            console.log("Result was: " + text);
+        }
+    };
+    //Opening connection for endpoint
+    xhttp.open("POST", "http://localhost:8080/ERS/html/modareq.ajax?requestid="+aRequestID +"&status=APPROVED", true);
+
+    //Sending request to endpoint
+    xhttp.send();
+}
+
+function DenyRequest() {
+    console.log("Modifying a request")
+    let aRequestID = document.getElementById("requestID").value / 1;
+    console.log(aRequestID);
+    console.log(typeof (aRequestID));
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        //If ready state is DONE and HTTP Status is OK
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //Grabbing JSON object from response body.
+            //THIS EXECUTES LAST WITHIN THIS FUNCTION
+            let text = xhttp.responseText;
+            console.log("Result was: " + text);
+        }
+    };
+    //Opening connection for endpoint
+    xhttp.open("POST", "http://localhost:8080/ERS/html/modareq.ajax?requestid="+aRequestID +"&status=DENIED", true);
+
+    //Sending request to endpoint
+    xhttp.send();
+}
+
+function toggletable() {
     if (theemptable.style.display === "none") {
         theemptable.style.display = "block";
     } else {
@@ -84,7 +133,7 @@ function insertToTable(ajaxObject) {
     //Delete all current rows.
     document.getElementById("theempbody").innerHTML = "";
     document.getElementById("theemphead").innerHTML = "";
-    
+
     //Create head columns for the table.
     let huserid = document.createElement("th");
     let hfirstname = document.createElement("th");
@@ -142,7 +191,7 @@ function manAllReq() {
             //THIS EXECUTES LAST WITHIN THIS FUNCTION
             var ajaxObject = JSON.parse(xhttp.responseText);
             console.log(ajaxObject);
-            document.getElementById("anH3").innerHTML = "Showing " + ajaxObject.length + " Approved requests.";
+            document.getElementById("anH3").innerHTML = "Showing " + ajaxObject.length + " Resolved requests.";
             insertToReqTable(ajaxObject);
         }
     };
@@ -163,7 +212,7 @@ function manPenReq() {
             //THIS EXECUTES LAST WITHIN THIS FUNCTION
             var ajaxObject = JSON.parse(xhttp.responseText);
             console.log(ajaxObject);
-            document.getElementById("anH3").innerHTML = "Showing " + ajaxObject.length + " Approved requests.";
+            document.getElementById("anH3").innerHTML = "Showing " + ajaxObject.length + " Pending requests.";
             insertToReqTable(ajaxObject);
         }
     };
@@ -182,6 +231,7 @@ function insertToReqTable(ajaxObject) {
         //Create row and columns elements
         let row = document.createElement("tr");
         let reqID = document.createElement("td");
+        let requester = document.createElement("td");
         let revID = document.createElement("td");
         let amount = document.createElement("td");
         let reqDate = document.createElement("td");
@@ -191,6 +241,7 @@ function insertToReqTable(ajaxObject) {
 
         //Insert values into the columns.
         reqID.textContent = ajaxObject[i].request_id;
+        requester.textContent = ajaxObject[i].requester;
         revID.textContent = ajaxObject[i].reviewer;
         amount.textContent = ajaxObject[i].req_amount;
         //Properly format date
@@ -208,6 +259,7 @@ function insertToReqTable(ajaxObject) {
 
         //Assign the value to the columns
         row.appendChild(reqID);
+        row.appendChild(requester);
         row.appendChild(revID);
         row.appendChild(amount);
         row.appendChild(reqDate);
@@ -218,4 +270,29 @@ function insertToReqTable(ajaxObject) {
         //Add row to the table.
         thebody.appendChild(row);
     }
+}
+
+function manCertEmp() {
+    console.log("Looking for Employee's Requests.")
+    let aRequester = document.getElementById("requester").value / 1;
+    console.log(aRequester);
+    console.log(typeof (aRequester));
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        //If ready state is DONE and HTTP Status is OK
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //Grabbing JSON object from response body.
+            //THIS EXECUTES LAST WITHIN THIS FUNCTION
+            var ajaxObject = JSON.parse(xhttp.responseText);
+            console.log(ajaxObject);
+            document.getElementById("anH3").innerHTML = "Showing " + ajaxObject.length + " employee requests.";
+            insertToReqTable(ajaxObject);
+        }
+    };
+    //Opening connection for endpoint
+    xhttp.open("POST", "http://localhost:8080/ERS/html/mancertemp.ajax?requester=" + aRequester, true);
+
+    //Sending request to endpoint
+    xhttp.send();
 }

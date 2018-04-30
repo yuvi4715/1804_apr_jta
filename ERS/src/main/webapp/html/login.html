@@ -2,21 +2,29 @@
 <html lang="en">
 
 <head>
-	
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
 	<meta charset="UTF-8">
 	<title>Login</title>
 </head>
 
 <body>
-	<div>
-		<form method="POST" action="login.do">
-			<input type="text" name="email" placeholder="Enter email">
-			<br>
-			<input type="password" name="password" placeholder="Enter password">
-			<br>
-			<input type="submit" value="Log In">
-		</form>
+	<div class="login-page">
+		<div class="form">
+			<form class="login-form" method="POSt" action="login.do">
+				<input type="text" placeholder="email" name="email" />
+				<input type="password" placeholder="password" name="password" />
+				<button onclick="submit">login</button>
+			</form>
+		</div>
 	</div>
+	<script>
+		$('.message a').click(function () {
+			$('form').animate({
+				height: "toggle",
+				opacity: "toggle"
+			}, "slow");
+		});
+	</script>
 </body>
 
 </html>

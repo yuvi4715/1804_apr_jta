@@ -14,12 +14,19 @@
         Your information:
         <ul id="myInfo">
         </ul>
+        <div>
+            <br>
+            <form action="logout.do" method="POST">
+                <input type="submit" value="Log Out">
+            </form>
+            <br>
+        </div>
     </div>
 
     <div>
-        <button id="theH3">Click to view all employees</button>
+        <button id="theH3">View all employees</button>
         <button id="toggletable">Toggle Table</button>
-        <br><label>•</label>
+        <br>
         <table style="width: 100%;display: none" id="theemptable">
             <thead id="theemphead">
 
@@ -33,10 +40,18 @@
         <h3 id="anH3">Requests will appear in the table below:</h3>
         <button id="manAllReq">View all resolved requests.</button>
         <button id="manPenReq">View all pending requests.</button>
-        <br><label>•</label>
+        <br>
+        <input type="text" id="requester" placeholder="Enter employee ID">
+        <button id="manEmpReq">View requests from a given employee</button>
+        <br>
+        <input type="text" id="requestID" placeholder="Enter request ID">
+        <button id="appReq" value="APPROVED">Approve</button>
+        <button id="DenReq" value="DENIED">Deny</button>
+        <br>
         <table style="width:100%" border="1" id="thetable">
             <thead>
                 <th>Request ID</th>
+                <th>Requester</th>
                 <th>Reviewer ID</th>
                 <th>Amount</th>
                 <th>Request Date</th>

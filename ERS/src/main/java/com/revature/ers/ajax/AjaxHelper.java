@@ -21,6 +21,10 @@ public class AjaxHelper{
                 return AjaxController.manCertReq(request, response);
             case "/ERS/html/manallreq.ajax":
                 return AjaxController.manAllReq(request, response);
+            case "/ERS/html/mancertemp.ajax":
+                return AjaxController.manCertEmp(request, response);
+            case "/ERS/html/modareq.ajax":
+                return AjaxController.modRequest(request, response);
             default:
                 return "/html/404.html";
         }
