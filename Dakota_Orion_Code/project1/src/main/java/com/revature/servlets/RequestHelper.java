@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import dao.Employee;
 import dao.Request;
@@ -12,17 +13,22 @@ import dao.Service;
 
 public class RequestHelper {
 	static Employee cur;
-	public static String process(HttpServletRequest request) {
+	public static String process(HttpServletRequest request, HttpSession session) {
+		cur = (Employee) session.getAttribute("curUser");
 		System.out.println(request.getRequestURI());
 		switch(request.getRequestURI()) {
 		
 		case "/project1/login.do":
 			System.out.println("login");
-			return login(request);
+			String x =login(request);
+			session.setAttribute("curUser", cur);
+			return x;
 			
 		case "/project1/signup.do":
 			System.out.println("signup");
-			return signup(request);
+			String y = signup(request);
+			session.setAttribute("curUser", cur);
+			return y;
 			
 		case "/project1/msubmitRequest.do":
 			System.out.println("msubmit request");
@@ -38,7 +44,8 @@ public class RequestHelper {
 		}
 	}
 	
-	public static Object oprocess(HttpServletRequest request) {
+	public static Object oprocess(HttpServletRequest request,HttpSession session) {
+		cur = (Employee) session.getAttribute("curUser");
 		System.out.println(request.getRequestURI());
 		switch(request.getRequestURI()) {
 		
@@ -69,7 +76,15 @@ public class RequestHelper {
 		case "/project1/html/approveRequest.do":
 			System.out.println("approving request");
 			return approveRequest(request);
-		
+			
+		case "/project1/html/denyRequest.do":
+			System.out.println("denying request");
+			return denyRequest(request);
+			
+		case "/project1/html/update.do":
+			System.out.println("update");
+			session.setAttribute("curUser", cur);
+			return update(request);
 		case "/project1/html/getAllMyRequests.do":
 			System.out.println("get all my requests");
 			return getAllMyRequests(request);
@@ -95,12 +110,14 @@ public class RequestHelper {
 			cur=new Employee(0,request.getParameter("inputFirstName"),request.getParameter("inputLastName"),
 					request.getParameter("inputUsername"), request.getParameter("inputPassword"), request.getParameter("inputEmail"), "Manager");
 			Service.insertEmployee(cur);
+			cur=Service.getEmployeeByUsername(cur.getUsername());
 			return "html/mmainpage.html";
 		}
 		else {
 			cur=new Employee(0,request.getParameter("inputFirstName"),request.getParameter("inputLastName"),
 					request.getParameter("inputUsername"), request.getParameter("inputPassword"), request.getParameter("inputEmail"), "Employee");
 			Service.insertEmployee(cur);
+			cur=Service.getEmployeeByUsername(cur.getUsername());
 			return "html/emainpage.html";
 		}
 	}
@@ -165,7 +182,20 @@ public class RequestHelper {
 	
 	public static Object approveRequest(HttpServletRequest request) {
 		int x = Integer.parseInt(request.getParameter("aId"));
-		System.out.println(x);
-		return Service.approveRequest(x);
+		return Service.approveRequest(x,cur.getEmpId());
+	}
+	
+	public static Object denyRequest(HttpServletRequest request) {
+		int x = Integer.parseInt(request.getParameter("aId"));
+		return Service.denyRequest(x,cur.getEmpId());
+	}
+	
+	public static Object update(HttpServletRequest request) {
+		cur.setFirstName(request.getParameter("fname"));
+		cur.setLastName(request.getParameter("lname"));
+		System.out.println(cur);
+		boolean bool = Service.updateEmployee(cur);
+		cur=Service.getEmployeeByID(cur.getEmpId());
+		return bool;
 	}
 }

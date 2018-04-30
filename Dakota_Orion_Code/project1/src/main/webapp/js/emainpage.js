@@ -5,7 +5,6 @@ let employeesTable;
 let requestsTable;
 let tableBody = document.getElementById('employee-body');
 let tableBody2 = document.getElementById('request-body');
-
 function getInfo(){
 	console.log("get my info");
 	while (tableBody.firstChild) {
@@ -111,5 +110,17 @@ function getAllMyRequests(){
 			        tableBody2.appendChild(row);
 				});
 		}
+	}
+}
+function update(){
+	console.log("update");
+	let val1 = document.getElementById('fname').value;
+	let val2 = document.getElementById('lname').value;
+	console.log(val1);
+	console.log(val2);
+	if(val1!=null&&val2!=null){
+		let xhr = new XMLHttpRequest();
+		xhr.open('POST', `update.do?fname=${val1}&lname=${val2}`);
+		xhr.send();
 	}
 }

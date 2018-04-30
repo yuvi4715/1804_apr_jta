@@ -49,7 +49,7 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
 			
-			if(rs.next()) {
+			while(rs.next()) {
 				Request temp= new Request(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getInt(4),rs.getString(5),rs.getString(6),rs.getBlob(7),rs.getDate(8),rs.getDate(9));
 				Request.add(temp);
 			}
@@ -67,8 +67,9 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 		try(Connection conn = ConnectionWithProperties.getConnection()){
 			List<Request> Request = new ArrayList<>();
 			
-			PreparedStatement stmt = conn.prepareStatement("SELECT request_id, ammount, requester, reviewed_by, status, purpose, image, request_date, review_date FROM Request Where status=?");
-			stmt.setString(1, "Resolved");
+			PreparedStatement stmt = conn.prepareStatement("SELECT request_id, ammount, requester, reviewed_by, status, purpose, image, request_date, review_date FROM Request WHERE status=? OR status=?");
+			stmt.setString(1, "Approve");
+			stmt.setString(2, "Deny");
 			ResultSet rs = stmt.executeQuery();
 			
 			while(rs.next()) {
@@ -128,12 +129,32 @@ public class RequestEmployeeDaoImpl implements EmployeeDao, RequestDao{
 		return null;
 	}
 
-	public boolean approveRequest(int reqID) {
+	public boolean approveRequest(int reqID, int id) {
 		try(Connection conn = ConnectionWithProperties.getConnection()){
-			PreparedStatement stmt = conn.prepareCall("UPDATE request SET status=?, review_date=? WHERE request_id=?");
-			stmt.setString(1,"Resolved");
+			PreparedStatement stmt = conn.prepareCall("UPDATE request SET status=?, review_date=?, reviewed_by=? WHERE request_id=?");
+			stmt.setString(1,"Approve");
 			stmt.setTimestamp(2, new Timestamp(System.currentTimeMillis()));
-			stmt.setInt(3,reqID);
+			stmt.setInt(3, id);
+			stmt.setInt(4,reqID);
+			log.info("Approving a request in the database");
+			return stmt.executeUpdate()>0;
+			
+		} catch (SQLException e) {
+			log.error("SQL Exception thrown, SQL State: " + e.getSQLState());
+			System.err.println(e.getMessage());
+			System.err.println("SQL State: " + e.getSQLState());
+			System.err.println("Error Code: " + e.getErrorCode());
+		}
+		return false;
+	}
+	
+	public boolean denyRequest(int reqID, int id) {
+		try(Connection conn = ConnectionWithProperties.getConnection()){
+			PreparedStatement stmt = conn.prepareCall("UPDATE request SET status=?, review_date=?, reviewed_by=? WHERE request_id=?");
+			stmt.setString(1,"Deny");
+			stmt.setTimestamp(2, new Timestamp(System.currentTimeMillis()));
+			stmt.setInt(3, id);
+			stmt.setInt(4,reqID);
 			log.info("Approving a request in the database");
 			return stmt.executeUpdate()>0;
 			

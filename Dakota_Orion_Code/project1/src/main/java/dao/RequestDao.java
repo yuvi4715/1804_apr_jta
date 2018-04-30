@@ -8,6 +8,7 @@ public interface RequestDao {
 	public List<Request> getAllRequests();
 	public List<Request> getResolvedRequests();
 	public List<Request> getUnresolvedRequests();
-	public boolean approveRequest(int reqId);
+	public boolean approveRequest(int reqId, int id);
 	public boolean updateRequest(Request req);
+	public boolean denyRequest(int x, int empId);
 }

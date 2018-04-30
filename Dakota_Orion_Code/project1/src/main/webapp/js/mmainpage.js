@@ -348,3 +348,34 @@ function approveRequest(){
 		xhr.send();
 	}
 }
+
+function denyRequest(){
+	console.log("deny request");
+	let val = document.getElementById('aId').value;
+	console.log(val);
+	if(val!=null){
+		let xhr = new XMLHttpRequest();
+		xhr.open('POST', `denyRequest.do?aId=${val}`);
+		xhr.send();
+	}
+}
+
+function update(){
+	console.log("update");
+	let val1 = document.getElementById('fname').value;
+	let val2 = document.getElementById('lname').value;
+	console.log(val1);
+	console.log(val2);
+	if(val1!=null&&val2!=null){
+		let xhr = new XMLHttpRequest();
+		xhr.open('POST', `update.do?fname=${val1}&lname=${val2}`);
+		xhr.send();
+	}
+}
+
+function logout(){
+	console.log("logout");
+	let xhr = new XMLHttpRequest();
+	xhr.open('POST', 'logout.do');
+	xhr.send();
+}

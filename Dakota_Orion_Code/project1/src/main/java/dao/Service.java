@@ -29,8 +29,8 @@ public class Service {
 		return dao2.updateRequest(req);
 	}
 
-	public static boolean approveRequest(int reqId) {
-		return dao2.approveRequest(reqId);
+	public static boolean approveRequest(int reqId, int id) {
+		return dao2.approveRequest(reqId, id);
 	}
 
 	public static boolean insertEmployee(Employee Employee) {
@@ -67,5 +67,9 @@ public class Service {
 
 	public static boolean deleteEmployeeByEmail(String str) {
 		return dao1.deleteEmployeeByEmail(str);
+	}
+
+	public static boolean denyRequest(int x, int empId) {
+		return dao2.denyRequest(x,empId);
 	}
 }
