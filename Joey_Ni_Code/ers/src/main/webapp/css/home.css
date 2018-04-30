@@ -1,0 +1,106 @@
+body{
+background-color:#33383E;
+
+}
+body, html{
+    height: 100%;
+    width: 100%;
+}
+.login input{
+width:150px;;
+background-color:#1D1E22;
+border: 0px solid;
+padding:5px;
+color:#33383E;
+
+}
+
+
+.my-container{
+    display: table-cell;
+    vertical-align: middle;
+    height: 600px;
+}
+body{
+    display: table;
+    
+}
+
+.login{
+width:320px;
+padding:20px;
+background-color:#1D1E22;
+border-radius:10px;
+margin-right: auto;
+    margin-left: auto;
+
+}
+#user{
+    margin-bottom:-10px;
+}
+#pass{
+    margin-top:-10px;
+    margin-bottom:0px;
+}
+
+hr{
+border:2px solid;
+background-color: #33383E;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    background: #33383E;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    float:right;
+}
+#mini-circle{
+    width: 70px;
+    height: 70px;
+    background: #1D1E22;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:15px;
+    display:table;
+}
+
+#register{
+	color: red;
+	margin-top:16px;
+	position: relative;
+	
+}
+
+.ring{
+    margin-top:-96px;
+    margin-left: 0px;
+    float: right;
+    margin-right: -70px;
+}
+.arrow-right {
+	width: 0; 
+	height: 0; 
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid #33383E;
+    line-height: 70px;
+     display: block;
+     vertical-align: middle;
+    margin-left: 26px
+}
+.table{
+  display: table-cell;
+  height: 100%;
+  padding-bottom: 0%;
+  /* height: 70px; */
+  vertical-align: middle;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}

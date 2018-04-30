@@ -1,0 +1,2062 @@
+2018-04-29 00:53:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:53:29 INFO  Log:41 - USERNAME not found
+2018-04-29 00:53:29 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 00:53:30 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 00:53:30 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 00:57:18 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:57:18 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:57:19 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:59:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:59:58 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:59:59 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:01:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:01:34 INFO  Log:41 - USERNAME not found
+2018-04-29 01:01:34 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 01:01:34 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 01:01:34 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 01:01:34 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 01:01:35 INFO  Log:41 - EID not found
+2018-04-29 01:01:35 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:01:35 INFO  Log:41 - EID not found
+2018-04-29 01:01:35 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:02:03 INFO  Log:41 - USERNAME not found
+2018-04-29 01:02:03 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 01:02:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:02:03 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 01:02:03 INFO  Log:41 - USERNAME not found
+2018-04-29 01:02:03 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 01:02:03 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 01:02:04 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 01:02:04 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 01:02:04 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 01:02:04 INFO  Log:41 - EID not found
+2018-04-29 01:02:04 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:04 INFO  Log:41 - EID not found
+2018-04-29 01:02:04 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:04 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 01:02:04 INFO  Log:41 - EID not found
+2018-04-29 01:02:04 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:04 INFO  Log:41 - EID not found
+2018-04-29 01:02:04 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:18 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:02:18 INFO  Log:41 - USERNAME not found
+2018-04-29 01:02:18 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 01:02:18 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 01:02:19 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 01:02:19 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 01:02:19 INFO  Log:41 - EID not found
+2018-04-29 01:02:19 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:19 INFO  Log:41 - EID not found
+2018-04-29 01:02:19 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:02:20 INFO  Log:41 - USERNAME not found
+2018-04-29 01:02:20 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 01:02:21 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 01:02:21 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 01:02:21 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 01:02:21 INFO  Log:41 - EID not found
+2018-04-29 01:02:21 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:21 INFO  Log:41 - EID not found
+2018-04-29 01:02:21 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:02:29 INFO  Log:41 - USERNAME not found
+2018-04-29 01:02:29 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 01:02:30 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 01:02:30 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 01:02:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:02:30 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 01:02:31 INFO  Log:41 - USERNAME not found
+2018-04-29 01:02:31 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 01:02:31 INFO  Log:41 - EID not found
+2018-04-29 01:02:31 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:31 INFO  Log:41 - EID not found
+2018-04-29 01:02:31 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:02:34 INFO  Log:41 - USERNAME not found
+2018-04-29 01:02:34 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 01:02:34 ERROR Log:35 - User DROP error:ORA-01935: missing user or role name
+
+2018-04-29 01:02:34 ERROR Log:35 - User creation error:ORA-01935: missing user or role name
+
+2018-04-29 01:02:34 ERROR Log:35 - Manager Role error:ORA-00987: missing or invalid username(s)
+
+2018-04-29 01:02:35 INFO  Log:41 - EID not found
+2018-04-29 01:02:35 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:02:35 INFO  Log:41 - EID not found
+2018-04-29 01:02:35 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:35 INFO  Log:41 - USERNAME not found
+2018-04-29 01:02:35 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 01:02:36 ERROR Log:35 - User DROP error:ORA-01935: missing user or role name
+
+2018-04-29 01:02:36 ERROR Log:35 - User creation error:ORA-01935: missing user or role name
+
+2018-04-29 01:02:36 ERROR Log:35 - Manager Role error:ORA-00987: missing or invalid username(s)
+
+2018-04-29 01:02:37 INFO  Log:41 - EID not found
+2018-04-29 01:02:37 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:37 INFO  Log:41 - EID not found
+2018-04-29 01:02:37 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 01:02:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:02:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 01:02:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 09:13:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 09:20:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 09:20:21 INFO  Log:41 - USERNAME not found
+2018-04-29 09:20:21 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 09:20:21 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 09:20:21 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 09:20:21 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 09:20:22 INFO  Log:41 - EID not found
+2018-04-29 09:20:22 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 09:20:22 INFO  Log:41 - EID not found
+2018-04-29 09:20:22 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 09:20:27 INFO  Log:41 - USERNAME not found
+2018-04-29 09:20:27 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 09:20:32 INFO  Log:41 - USERNAME not found
+2018-04-29 09:20:32 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 09:20:32 ERROR Log:35 - User DROP error:ORA-01935: missing user or role name
+
+2018-04-29 09:20:32 ERROR Log:35 - User creation error:ORA-01935: missing user or role name
+
+2018-04-29 09:20:32 ERROR Log:35 - Manager Role error:ORA-00987: missing or invalid username(s)
+
+2018-04-29 09:20:33 INFO  Log:41 - EID not found
+2018-04-29 09:20:33 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 09:20:33 INFO  Log:41 - EID not found
+2018-04-29 09:20:33 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 09:27:14 INFO  Log:41 - EID not found
+2018-04-29 09:27:14 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 09:37:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 10:26:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 10:26:03 INFO  Log:41 - EID not found
+2018-04-29 10:26:03 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 10:34:44 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 10:34:45 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 10:59:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 10:59:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:01:39 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:01:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:03:10 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 11:03:11 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 11:03:22 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:03:23 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:03:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:03:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:12:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:12:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:12:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:12:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:13:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:13:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:13:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:13:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:18:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:18:58 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:18:59 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:19:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:20:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:20:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:20:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:20:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:21:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:21:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:21:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:21:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:23:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:23:18 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:41:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:41:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:41:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:41:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:42:54 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:42:55 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:42:56 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:42:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:48:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:48:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:48:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:48:36 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:52:14 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:52:15 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:52:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:52:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:55:54 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 11:55:55 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:00:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:00:58 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:03:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:03:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:03:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:03:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:03:44 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:03:45 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:36:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:36:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:36:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:36:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:37:37 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:37:38 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:40:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:40:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:41:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:41:54 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:44:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:44:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:44:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:44:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:45:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:45:31 ERROR Log:35 - User DROP error:ORA-01935: missing user or role name
+
+2018-04-29 12:45:31 ERROR Log:35 - User creation error:ORA-01935: missing user or role name
+
+2018-04-29 12:45:31 ERROR Log:35 - Manager Role error:ORA-00987: missing or invalid username(s)
+
+2018-04-29 12:45:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 12:45:33 ERROR Log:35 - User DROP error:ORA-01935: missing user or role name
+
+2018-04-29 12:45:34 ERROR Log:35 - User creation error:ORA-01935: missing user or role name
+
+2018-04-29 12:45:34 ERROR Log:35 - Manager Role error:ORA-00987: missing or invalid username(s)
+
+2018-04-29 13:01:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:01:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:01:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:01:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:01:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:01:10 ERROR Log:35 - User DROP error:ORA-01935: missing user or role name
+
+2018-04-29 13:01:11 ERROR Log:35 - User creation error:ORA-01935: missing user or role name
+
+2018-04-29 13:01:11 ERROR Log:35 - Manager Role error:ORA-00987: missing or invalid username(s)
+
+2018-04-29 13:01:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:01:12 ERROR Log:35 - User DROP error:ORA-01935: missing user or role name
+
+2018-04-29 13:01:13 ERROR Log:35 - User creation error:ORA-01935: missing user or role name
+
+2018-04-29 13:01:13 ERROR Log:35 - Manager Role error:ORA-00987: missing or invalid username(s)
+
+2018-04-29 13:03:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:03:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:03:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:03:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:04:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:04:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:04:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:04:48 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:04:49 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:04:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:04:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:05:35 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:05:35 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:05:36 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:05:36 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:10:10 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:10:10 ERROR Log:35 - ORA-01005: null password given; logon denied
+
+2018-04-29 13:10:11 ERROR Log:35 - ORA-01005: null password given; logon denied
+
+2018-04-29 13:10:12 ERROR Log:35 - ORA-01005: null password given; logon denied
+
+2018-04-29 13:10:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:10:31 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:10:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:10:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:10:32 INFO  Log:41 - USERNAME not found
+2018-04-29 13:10:32 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 13:10:32 INFO  Log:41 - EID not found
+2018-04-29 13:10:32 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 13:10:33 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:10:33 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:10:34 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:15:22 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:15:22 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:15:23 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:15:23 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:15:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:15:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:15:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:15:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:16:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:16:54 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:16:55 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:16:56 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:18:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:18:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:18:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:18:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:18:48 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:18:49 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:19:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:19:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:19:37 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:19:38 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:20:45 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:20:46 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:20:47 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:20:48 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:26:57 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:26:58 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:26:59 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:27:00 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:29:06 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:29:07 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:29:08 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:29:09 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 13:32:55 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:32:55 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:32:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 13:32:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:02:49 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:02:49 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:02:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:02:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:04:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:04:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:04:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:04:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:05:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:05:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:05:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:05:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:06:19 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:06:22 ERROR Log:35 - User DROP error:ORA-01935: missing user or role name
+
+2018-04-29 14:06:22 ERROR Log:35 - User creation error:ORA-01935: missing user or role name
+
+2018-04-29 14:06:24 ERROR Log:35 - Manager Role error:ORA-00987: missing or invalid username(s)
+
+2018-04-29 14:28:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:28:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:28:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:28:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:30:38 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:30:38 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:30:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:30:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:31:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:31:23 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:31:27 ERROR Log:35 - No suitable driver found for jdbc:oracle:thin:@joey1instance.csfau227p39z.us-east-1.rds.amazonaws.com:1521:ORCL 
+2018-04-29 14:31:27 ERROR Log:35 - Not a manager
+2018-04-29 14:34:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:34:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:34:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:34:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:34:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 14:34:28 ERROR Log:35 - User DROP error:ORA-01935: missing user or role name
+
+2018-04-29 14:34:28 ERROR Log:35 - User creation error:ORA-01935: missing user or role name
+
+2018-04-29 14:34:28 ERROR Log:35 - Manager Role error:ORA-00987: missing or invalid username(s)
+
+2018-04-29 14:34:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:28:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:28:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:28:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:28:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:29:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:29:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:29:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:29:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:30:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:30:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:30:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:30:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:37:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:37:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:37:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:37:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:41:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:41:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:41:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:41:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:42:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:42:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:42:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:42:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:46:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:46:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:46:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:46:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:46:37 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:46:38 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:48:15 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:48:15 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:48:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:48:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:48:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:48:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:48:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:48:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:49:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:49:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:49:18 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:49:18 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:50:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:50:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:50:48 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:50:48 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:50:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:50:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:50:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:50:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:53:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:53:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:53:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 15:53:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:01:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:01:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:01:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:01:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:01:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:01:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:01:44 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:01:44 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:02:39 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:02:39 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:02:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:02:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:02:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:02:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:02:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:02:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:03:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:03:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:03:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:03:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:03:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:03:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:03:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:03:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:25:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:25:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:25:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:25:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:27:44 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:27:45 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:27:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:27:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:29:36 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:29:36 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:29:36 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:29:36 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:29:38 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:29:38 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:29:38 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:29:38 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:37:05 INFO  Log:41 - USERNAME not found
+2018-04-29 16:37:05 INFO  Log:41 - USERNAME not found
+2018-04-29 16:37:05 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:37:05 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:37:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:37:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:37:06 INFO  Log:41 - EID not found
+2018-04-29 16:37:06 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:37:06 INFO  Log:41 - EID not found
+2018-04-29 16:37:06 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:37:06 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 16 ms., Authentication lapse 0 ms.
+2018-04-29 16:37:06 INFO  Log:41 - USERNAME not found
+2018-04-29 16:37:06 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:37:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:37:07 INFO  Log:41 - EID not found
+2018-04-29 16:37:07 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:37:36 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 32 ms., Authentication lapse 0 ms.
+2018-04-29 16:37:43 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 26 ms., Authentication lapse 0 ms.
+2018-04-29 16:37:43 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 26 ms., Authentication lapse 0 ms.
+2018-04-29 16:37:44 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 15 ms., Authentication lapse 0 ms.
+2018-04-29 16:37:44 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 36 ms., Authentication lapse 0 ms.
+2018-04-29 16:39:51 INFO  Log:41 - USERNAME not found
+2018-04-29 16:39:51 INFO  Log:41 - USERNAME not found
+2018-04-29 16:39:51 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:39:51 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:39:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:39:52 INFO  Log:41 - EID not found
+2018-04-29 16:39:52 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:39:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:39:52 INFO  Log:41 - EID not found
+2018-04-29 16:39:52 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:39:52 INFO  Log:41 - USERNAME not found
+2018-04-29 16:39:52 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:39:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:39:52 INFO  Log:41 - USERNAME not found
+2018-04-29 16:39:52 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:39:53 INFO  Log:41 - EID not found
+2018-04-29 16:39:53 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:39:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:39:53 INFO  Log:41 - EID not found
+2018-04-29 16:39:53 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:40:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:40:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:40:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:40:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:40:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:40:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:40:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:40:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:43:24 INFO  Log:41 - USERNAME not found
+2018-04-29 16:43:24 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:43:24 INFO  Log:41 - USERNAME not found
+2018-04-29 16:43:24 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:43:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:43:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:43:25 INFO  Log:41 - EID not found
+2018-04-29 16:43:25 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:43:25 INFO  Log:41 - EID not found
+2018-04-29 16:43:25 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:43:25 INFO  Log:41 - USERNAME not found
+2018-04-29 16:43:25 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:43:26 INFO  Log:41 - USERNAME not found
+2018-04-29 16:43:26 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:43:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:43:26 INFO  Log:41 - EID not found
+2018-04-29 16:43:26 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:43:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:43:26 INFO  Log:41 - EID not found
+2018-04-29 16:43:26 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:43:53 INFO  Log:41 - USERNAME not found
+2018-04-29 16:43:53 INFO  Log:41 - USERNAME not found
+2018-04-29 16:43:53 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:43:53 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:43:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:43:53 INFO  Log:41 - EID not found
+2018-04-29 16:43:53 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:43:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:43:54 INFO  Log:41 - EID not found
+2018-04-29 16:43:54 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:43:54 INFO  Log:41 - USERNAME not found
+2018-04-29 16:43:54 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:43:54 INFO  Log:41 - USERNAME not found
+2018-04-29 16:43:54 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:43:54 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:43:54 INFO  Log:41 - EID not found
+2018-04-29 16:43:54 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:43:54 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 16:43:55 INFO  Log:41 - EID not found
+2018-04-29 16:43:55 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 16:46:55 INFO  Log:41 - USERNAME not found
+2018-04-29 16:46:55 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:46:56 INFO  Log:41 - USERNAME not found
+2018-04-29 16:46:56 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:46:56 INFO  Log:41 - USERNAME not found
+2018-04-29 16:46:56 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:46:57 INFO  Log:41 - USERNAME not found
+2018-04-29 16:46:57 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:46:57 INFO  Log:41 - USERNAME not found
+2018-04-29 16:46:57 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:46:58 INFO  Log:41 - USERNAME not found
+2018-04-29 16:46:58 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:46:58 INFO  Log:41 - USERNAME not found
+2018-04-29 16:46:58 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:46:59 INFO  Log:41 - USERNAME not found
+2018-04-29 16:46:59 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:53:45 INFO  Log:41 - USERNAME not found
+2018-04-29 16:53:45 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:53:46 INFO  Log:41 - USERNAME not found
+2018-04-29 16:53:46 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:53:47 INFO  Log:41 - USERNAME not found
+2018-04-29 16:53:47 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:53:48 INFO  Log:41 - USERNAME not found
+2018-04-29 16:53:48 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:55:14 INFO  Log:41 - USERNAME not found
+2018-04-29 16:55:14 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:55:15 INFO  Log:41 - USERNAME not found
+2018-04-29 16:55:15 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:55:16 INFO  Log:41 - USERNAME not found
+2018-04-29 16:55:16 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 16:55:17 INFO  Log:41 - USERNAME not found
+2018-04-29 16:55:17 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:06:38 INFO  Log:41 - USERNAME not found
+2018-04-29 17:06:38 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:06:38 INFO  Log:41 - USERNAME not found
+2018-04-29 17:06:38 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:06:40 INFO  Log:41 - USERNAME not found
+2018-04-29 17:06:40 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:06:41 INFO  Log:41 - USERNAME not found
+2018-04-29 17:06:41 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:07:07 INFO  Log:41 - USERNAME not found
+2018-04-29 17:07:07 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:07:07 INFO  Log:41 - USERNAME not found
+2018-04-29 17:07:07 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:07:08 INFO  Log:41 - USERNAME not found
+2018-04-29 17:07:08 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:07:08 INFO  Log:41 - USERNAME not found
+2018-04-29 17:07:08 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:07:09 INFO  Log:41 - USERNAME not found
+2018-04-29 17:07:09 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:07:09 INFO  Log:41 - USERNAME not found
+2018-04-29 17:07:09 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:07:10 INFO  Log:41 - USERNAME not found
+2018-04-29 17:07:10 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:07:10 INFO  Log:41 - USERNAME not found
+2018-04-29 17:07:10 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:08:31 INFO  Log:41 - USERNAME not found
+2018-04-29 17:08:31 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:08:32 INFO  Log:41 - USERNAME not found
+2018-04-29 17:08:32 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:08:33 INFO  Log:41 - USERNAME not found
+2018-04-29 17:08:33 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:08:33 INFO  Log:41 - USERNAME not found
+2018-04-29 17:08:33 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:03 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:03 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:04 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:04 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:05 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:05 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:06 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:06 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:10 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:10 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:10 INFO  Log:41 - EID not found
+2018-04-29 17:20:10 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:10 INFO  Log:41 - EID not found
+2018-04-29 17:20:10 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:11 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:20:11 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:20:11 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:20:11 INFO  Log:41 - EID not found
+2018-04-29 17:20:11 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:11 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:11 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:12 INFO  Log:41 - EID not found
+2018-04-29 17:20:12 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:12 INFO  Log:41 - EID not found
+2018-04-29 17:20:12 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:12 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:20:12 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:20:13 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:20:13 INFO  Log:41 - EID not found
+2018-04-29 17:20:13 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:25 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:25 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:25 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:25 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:26 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:26 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:26 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:26 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:27 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:27 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:27 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:27 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:28 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:28 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:28 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:28 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:33 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:33 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:33 INFO  Log:41 - EID not found
+2018-04-29 17:20:33 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:33 INFO  Log:41 - EID not found
+2018-04-29 17:20:33 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:34 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:20:34 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:20:34 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:20:34 INFO  Log:41 - EID not found
+2018-04-29 17:20:34 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:35 INFO  Log:41 - USERNAME not found
+2018-04-29 17:20:35 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:20:35 INFO  Log:41 - EID not found
+2018-04-29 17:20:35 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:35 INFO  Log:41 - EID not found
+2018-04-29 17:20:35 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:20:35 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:20:36 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:20:37 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:20:39 INFO  Log:41 - EID not found
+2018-04-29 17:20:39 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:34 INFO  Log:41 - USERNAME not found
+2018-04-29 17:23:34 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:23:35 INFO  Log:41 - USERNAME not found
+2018-04-29 17:23:35 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:23:36 INFO  Log:41 - USERNAME not found
+2018-04-29 17:23:36 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:23:37 INFO  Log:41 - USERNAME not found
+2018-04-29 17:23:37 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:23:42 INFO  Log:41 - USERNAME not found
+2018-04-29 17:23:42 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:23:42 INFO  Log:41 - EID not found
+2018-04-29 17:23:42 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:42 INFO  Log:41 - EID not found
+2018-04-29 17:23:42 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:42 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:23:42 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:23:43 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:23:43 INFO  Log:41 - EID not found
+2018-04-29 17:23:43 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:43 INFO  Log:41 - USERNAME not found
+2018-04-29 17:23:43 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:23:44 INFO  Log:41 - EID not found
+2018-04-29 17:23:44 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:44 INFO  Log:41 - EID not found
+2018-04-29 17:23:44 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:44 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:23:44 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:23:44 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:23:44 INFO  Log:41 - EID not found
+2018-04-29 17:23:44 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:45 INFO  Log:41 - USERNAME not found
+2018-04-29 17:23:45 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:23:45 INFO  Log:41 - EID not found
+2018-04-29 17:23:45 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:45 INFO  Log:41 - EID not found
+2018-04-29 17:23:45 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:45 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:23:46 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:23:46 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:23:46 INFO  Log:41 - EID not found
+2018-04-29 17:23:46 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:46 INFO  Log:41 - USERNAME not found
+2018-04-29 17:23:46 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:23:47 INFO  Log:41 - EID not found
+2018-04-29 17:23:47 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:47 INFO  Log:41 - EID not found
+2018-04-29 17:23:47 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:23:47 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:23:47 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:23:47 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:23:47 INFO  Log:41 - EID not found
+2018-04-29 17:23:47 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:24:09 INFO  Log:41 - USERNAME not found
+2018-04-29 17:24:09 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:24:10 INFO  Log:41 - USERNAME not found
+2018-04-29 17:24:10 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:24:11 INFO  Log:41 - USERNAME not found
+2018-04-29 17:24:11 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:24:12 INFO  Log:41 - USERNAME not found
+2018-04-29 17:24:12 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:26:08 INFO  Log:41 - USERNAME not found
+2018-04-29 17:26:08 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:26:09 INFO  Log:41 - EID not found
+2018-04-29 17:26:09 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:26:09 INFO  Log:41 - EID not found
+2018-04-29 17:26:09 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:26:09 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:26:10 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:26:10 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:26:10 INFO  Log:41 - EID not found
+2018-04-29 17:26:10 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:26:10 INFO  Log:41 - USERNAME not found
+2018-04-29 17:26:10 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 17:26:11 INFO  Log:41 - EID not found
+2018-04-29 17:26:11 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:26:11 INFO  Log:41 - EID not found
+2018-04-29 17:26:11 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:26:11 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:26:11 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:26:11 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:26:11 INFO  Log:41 - EID not found
+2018-04-29 17:26:11 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 17:27:36 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 114 ms., Authentication lapse 0 ms.
+2018-04-29 17:27:36 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 67 ms., Authentication lapse 0 ms.
+2018-04-29 17:28:22 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:28:22 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:28:22 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:28:22 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:28:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:28:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:28:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:28:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:29:55 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:29:56 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:29:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:29:58 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 17:36:27 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:36:27 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:36:27 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 17:36:28 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 17:36:29 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 17:36:29 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 20:12:06 INFO  Log:41 - RID not found
+2018-04-29 20:12:06 INFO  Log:41 - RID not found, cannot find request
+2018-04-29 20:19:35 INFO  Log:41 - RID not found
+2018-04-29 20:19:35 INFO  Log:41 - RID not found, cannot find request
+2018-04-29 21:04:50 INFO  Log:41 - RID not found
+2018-04-29 21:04:50 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 07:03:44 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:03:44 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:03:44 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:03:44 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:08:02 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:08:02 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:08:02 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:08:02 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:11:20 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:11:20 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:11:20 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:11:20 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-30 07:15:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:15:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:15:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:15:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:16:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:16:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:16:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:16:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:16:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:16:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:17:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:17:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:17:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:17:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:17:51 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 07:17:52 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 07:17:53 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 07:17:54 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 07:18:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:18:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:18:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:18:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 07:24:16 INFO  Log:41 - RID not found
+2018-04-30 07:24:16 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 07:24:24 INFO  Log:41 - RID not found
+2018-04-30 07:24:24 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 07:24:38 INFO  Log:41 - RID not found
+2018-04-30 07:24:38 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 07:25:05 INFO  Log:41 - RID not found
+2018-04-30 07:25:05 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 08:14:00 INFO  Log:41 - RID not found
+2018-04-30 08:14:00 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 08:22:45 INFO  Log:41 - RID not found
+2018-04-30 08:22:45 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 08:23:09 INFO  Log:41 - RID not found
+2018-04-30 08:23:09 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 08:25:01 INFO  Log:41 - RID not found
+2018-04-30 08:25:01 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 08:25:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 08:25:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 08:33:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 08:33:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 09:59:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 09:59:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 09:59:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 09:59:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:00:34 INFO  Log:41 - RID not found
+2018-04-30 10:00:34 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 10:01:14 INFO  Log:41 - RID not found
+2018-04-30 10:01:14 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 10:26:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:26:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:26:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:26:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:27:02 INFO  Log:41 - RID not found
+2018-04-30 10:27:02 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 10:28:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:18 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:28:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:29:46 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:29:46 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:29:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:29:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:30:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:30:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:30:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:30:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:32:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:32:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:32:48 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:32:48 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:34:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:34:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:34:36 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:34:36 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:34:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:34:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:34:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:34:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:34:48 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:34:48 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:35:14 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:14 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:15 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:15 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:22 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:22 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:24 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:24 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:32 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:32 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:33 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:33 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 10:35:46 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:35:46 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:35:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:35:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:37:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:37:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:37:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:37:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:37:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:37:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:40:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:40:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:40:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:40:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:40:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:40:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:40:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:40:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:41:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:41:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:41:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:41:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:41:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:41:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:41:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:41:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:42:55 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:42:55 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:42:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:42:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:43:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:43:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:43:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:43:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:43:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:43:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:43:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:43:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:43:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:43:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:44:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:44:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:44:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:44:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:44:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:44:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:44:17 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 16 ms., Authentication lapse 0 ms.
+2018-04-30 10:44:17 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 17 ms., Authentication lapse 0 ms.
+2018-04-30 10:44:17 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 28 ms., Authentication lapse 0 ms.
+2018-04-30 10:45:46 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:45:46 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:45:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:45:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:45:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:45:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:48:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:48:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:48:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:48:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:49:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:49:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:49:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:49:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:49:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:49:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:52:45 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:52:45 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:52:45 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:52:45 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:53:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:53:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:53:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:53:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:54:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:54:29 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-30 10:54:29 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-30 10:54:29 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-30 10:54:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:54:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:54:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:54:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:57:13 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:57:14 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:57:14 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:57:14 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:57:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:57:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:57:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:57:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:57:36 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:57:37 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:02 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:02 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 10:58:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:08:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:08:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:08:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:08:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:08:58 INFO  Log:41 - EID not found
+2018-04-30 11:08:58 INFO  Log:41 - EID not found, cannot find you
+2018-04-30 11:08:58 INFO  Log:41 - EID not found
+2018-04-30 11:08:58 INFO  Log:41 - EID not found, cannot submit request
+2018-04-30 11:14:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:14:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:14:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:14:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:14:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:14:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:15:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:15:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:15:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:15:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:16:15 INFO  Log:41 - RID not found
+2018-04-30 11:16:15 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 11:33:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:33:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:33:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:33:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:34:19 INFO  Log:41 - RID not found
+2018-04-30 11:34:19 INFO  Log:41 - RID not found, cannot find request
+2018-04-30 11:37:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:37:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:38:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:38:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:38:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:38:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:38:13 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:38:13 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:38:14 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:38:14 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:40:02 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:40:02 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:40:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:40:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:44:59 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:44:59 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:45:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:45:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:45:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:45:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:45:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:45:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:46:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:46:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:46:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:46:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:47:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:47:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:47:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:47:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:47:19 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:47:19 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:47:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:47:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:50:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:50:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:50:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:50:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 11:56:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:33:56 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:33:56 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:33:56 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:33:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:43:45 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:43:45 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:43:46 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:43:46 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:44:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:44:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:45:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:45:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:45:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:45:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:45:46 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:45:46 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:45:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:45:47 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:49:15 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 12:50:06 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 12:50:06 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 12:50:07 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 12:50:07 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-30 12:58:56 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:58:56 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:58:56 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 12:58:56 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:01:13 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:01:13 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:03:36 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:03:37 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:04:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:04:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:06:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:06:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:06:14 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:06:14 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:07:13 ERROR Log:35 - Manager get ID ORA-00942: table or view does not exist
+
+2018-04-30 13:07:13 INFO  Log:41 - Invalid approval code, MID or RID not found
+2018-04-30 13:07:13 INFO  Log:41 - Cannot get request
+2018-04-30 13:09:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:09:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:09:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:09:09 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:10:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:10:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:10:02 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:10:02 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:10:10 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:10:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:10:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:10:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:12:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:13:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:13:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:13:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:13:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:14:29 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 4973 ms., Authentication lapse 0 ms.
+2018-04-30 13:14:29 ERROR Log:35 - Not a manager
+2018-04-30 13:14:29 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 4973 ms., Authentication lapse 0 ms.
+2018-04-30 13:14:29 ERROR Log:35 - Not a manager
+2018-04-30 13:14:39 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 2743 ms., Authentication lapse 0 ms.
+2018-04-30 13:14:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:15:35 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 99 ms., Authentication lapse 0 ms.
+2018-04-30 13:15:35 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 15 ms., Authentication lapse 0 ms.
+2018-04-30 13:17:10 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 26 ms., Authentication lapse 0 ms.
+2018-04-30 13:17:10 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 27 ms., Authentication lapse 0 ms.
+2018-04-30 13:19:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:19:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:19:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:19:05 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:20:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:20:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:20:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:20:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:21:12 ERROR Log:35 - Manager get ID ORA-00942: table or view does not exist
+
+2018-04-30 13:21:12 INFO  Log:41 - Invalid approval code, MID or RID not found
+2018-04-30 13:21:12 INFO  Log:41 - Cannot get request
+2018-04-30 13:22:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:22:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:22:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:22:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:25:02 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:25:02 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:25:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:25:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:27:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:27:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:27:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:27:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:27:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:27:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:27:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:27:51 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:29:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:29:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:29:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:29:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:29:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:29:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:29:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:29:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:37:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:38:15 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:38:15 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:38:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:38:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:38:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:38:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:38:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:38:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:28 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:37 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:37 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:39 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:40:39 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:42:23 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:42:23 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:42:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:42:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:44:18 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 18 ms., Authentication lapse 0 ms.
+2018-04-30 13:44:30 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 20 ms., Authentication lapse 0 ms.
+2018-04-30 13:44:30 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 26 ms., Authentication lapse 0 ms.
+2018-04-30 13:44:30 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 19 ms., Authentication lapse 0 ms.
+2018-04-30 13:44:40 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 24 ms., Authentication lapse 0 ms.
+2018-04-30 13:44:40 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 30 ms., Authentication lapse 0 ms.
+2018-04-30 13:44:40 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 29 ms., Authentication lapse 0 ms.
+2018-04-30 13:44:40 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 21 ms., Authentication lapse 0 ms.
+2018-04-30 13:44:54 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 30 ms., Authentication lapse 0 ms.
+2018-04-30 13:44:58 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 16 ms., Authentication lapse 0 ms.
+2018-04-30 13:44:58 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 21 ms., Authentication lapse 0 ms.
+2018-04-30 13:45:00 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 29 ms., Authentication lapse 0 ms.
+2018-04-30 13:45:19 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 20 ms., Authentication lapse 0 ms.
+2018-04-30 13:45:19 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 33 ms., Authentication lapse 0 ms.
+2018-04-30 13:45:20 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 20 ms., Authentication lapse 0 ms.
+2018-04-30 13:45:20 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 21 ms., Authentication lapse 0 ms.
+2018-04-30 13:48:26 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 16 ms., Authentication lapse 0 ms.
+2018-04-30 13:48:26 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 20 ms., Authentication lapse 0 ms.
+2018-04-30 13:48:26 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 21 ms., Authentication lapse 0 ms.
+2018-04-30 13:48:26 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 33 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:16 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 18 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:16 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 21 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:16 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 18 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:16 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 19 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 16 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 15 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 16 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 22 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 14 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 16 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 16 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 19 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 16 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 21 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:33 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 18 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:34 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 18 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:34 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 18 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:34 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 17 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:34 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 21 ms., Authentication lapse 0 ms.
+2018-04-30 13:53:34 ERROR Log:35 - IO Error: Got minus one from a read call, connect lapse 18 ms., Authentication lapse 0 ms.
+2018-04-30 13:54:58 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:54:58 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:54:58 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:54:58 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 13:56:02 INFO  Log:41 - EID not found
+2018-04-30 13:56:02 INFO  Log:41 - EID not found, cannot find you
+2018-04-30 14:01:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 14:01:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 14:01:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 14:01:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 14:01:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-30 14:02:17 INFO  Log:41 - EID not found
+2018-04-30 14:02:17 INFO  Log:41 - EID not found, cannot find you

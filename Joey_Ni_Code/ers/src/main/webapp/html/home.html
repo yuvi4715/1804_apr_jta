@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ERS Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+	integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="/ers/css/home.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-3">
+				<!-- --CUSTOM -- -->
+				<div class="my-container">
+					<div class="login form-group">
+						<form id="loginForm" action="/ers/login.do" method="post">
+							<input type="email" id="user" name="username" placeholder="Username" /><br />
+							<hr />
+							<input type="password" id="pass" name="password"
+								placeholder="Password" maxLength="10" />
+								<input type="submit" hidden="true" />
+						</form>
+						<p id="message" style="text-color:white">-</p>
+						<div class="ring">
+
+							<div id="circle">
+
+								<div id="mini-circle">
+
+									<div class="table">
+										<div class="arrow-right"></div>
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="ring">
+					<div id="circle">
+						<div id="mini-circle">
+							<button type="button" id="register" class="btn btn-link" onclick="location.href='register.html';">Register</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4"></div>
+
+	</div>
+	
+	<!-- <script type="text/javascript" src="/ers/js/login.js"></script>-->
+	
+	<script>
+	$(document).ready(function(){
+		
+		$('#loginForm').keypress(function(e){
+			var key = e.which || e.keyCode;
+			if (key ==13)
+			{
+				let username = document.getElementById("user").value;
+				let password = document.getElementById("pass").value;
+				document.cookie1='username='+username;
+				document.cookie2='password='+password;
+				if (username == null | password == null)
+					{ alert("Please enter valid username");}
+				$.ajax({
+				url: "/ers/login.do",
+				type: "POST",
+				data: { username: username,
+					  password: password
+				      },
+				      
+			    success: function(data){
+			    	window.location.replace("/ers/html/user.html");
+					alert("success"+data);},
+					
+				error: function(){
+					window.location.replace("/ers/html/home.html");
+					alert("invalid login");
+				}
+			    
+				});
+			}
+		});
+	});
+	</script>
+
+</body>
+</html>

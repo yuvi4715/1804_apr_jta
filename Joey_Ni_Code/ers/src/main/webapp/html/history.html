@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Table</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<header><h1>Requests</h1></header>
+<form>
+<input id="reid" type="text" placeholder="Employee ID">
+<input id="rid" type="text" placeholder="Request ID">
+  <legend>Request Types</legend>
+ <div class="form-group">
+    <div class="custom-control custom-checkbox">
+      <input class="custom-control-input" id="pending" type="checkbox" checked="">
+      <label class="custom-control-label" for="customCheck1">Pending</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input class="custom-control-input" id="resolved" type="checkbox" checked="">
+      <label class="custom-control-label" for="customCheck2">Resolved</label>
+    </div>
+  </div>
+    
+   
+<button id="submitBtn" type="submit" class="btn btn-danger">Submit</button>
+<button id="searchBtn" type="button" class="btn btn-primary">Search</button>
+<button id="allBtn" type="button" class="btn btn-success">All</button>
+</form>
+<table id=requestTable class="table table-hover">
+  <thead>
+   <tr class="table-success">
+      <th scope="row">Request ID</th>
+      <th scope="row">Amount </th>
+    <th scope="row">Purpose </th>
+     <th scope="row">Status </th>
+     <th scope="row">Request Time </th>
+     <th scope="row">Review Time </th>
+     <th scope="row">Manager ID </th>
+    </tr>
+  </thead>
+<tr></tr>
+</table> 
+<div id='display'>Requests</div>
+<div id='display1'>Requests</div>
+<div id='display2'>Requests</div>
+<button class="btn btn-primary" id="home" type="button">Home</button>
+<button id="logoutBtn"  type="button" class="btn btn-danger">Logout</button>
+<script type="text/javascript" src="../js/index.js"></script>
+<script>
+$('document').ready(function(){
+	$('#searchBtn').click(function(){
+	  $.ajax({
+			url: '/ers/getRequest.do',
+			type: 'POST',
+			data: {
+					reid:$('#reid').val(),
+					rid: $('#rid').val()
+		          },
+			success: function(responseText){
+				$('#display1').append(responseText);
+				//window.location.replace("/ers/html/request.html");
+				console.log("success"+responseText);
+				alert("success"+responseText);
+				}
+			});
+	});
+	$('#allBtn').click(function(){
+		 $.ajax({
+				url: '/ers/getAllRequests.do',
+				type: 'POST',
+				success: function(responseText){
+					console.log(responseText);
+					$('#display').append(responseText);
+					//$('#requestTable').html("success"+responseText);
+					  $.each(responseText,function(key,value)
+					  {
+	                      var NewRow = '<tr><td">'+value.rid+'</td>';
+	                          NewRow += '<td>'+value.amount+'</td>';
+	                          NewRow += '<td>'+value.purpose+'</td>';
+	                          NewRow += '<td>'+value.rmid+'</td>';
+	                          NewRow += '<td>'+value.reid+'</td>';
+	                          NewRow += '<td>'+value.status+'</td>';
+	                          NewRow += '</tr>';
+	                          $('#requestTable').append(NewRow);
+					  });
+					}
+			 	});
+	});
+	$('#submitBtn').click(function(){
+		 $.ajax({
+			url: '/ers/getEmployeeRequests.do',
+			type: 'POST',
+			data: {
+				reid:$('#reid').val()
+			},
+			success: function(responseText){
+				$('#display2').append(responseText);
+				console.log("success"+responseText);
+			/*	  $.each(responseText,function(key,value)
+				  {
+                      var NewRow = '<tr><td">'+value.rid+'</td>';
+                          NewRow += '<td>'+value.amount+'</td>';
+                          NewRow += '<td>'+value.purpose+'</td>';
+                          NewRow += '<td>'+value.rmid+'</td>';
+                          NewRow += '<td>'+value.reid+'</td>';
+                          NewRow += '<td>'+value.status+'</td>';
+                          NewRow += '</tr>';
+                          $('#requestTable').append(NewRow);
+				  });*/
+			},
+			error: function(responseText){
+				$('#display').append(responseText);
+			}
+		 	});
+			});
+		
+});
+</script>
+</body>
+</html>

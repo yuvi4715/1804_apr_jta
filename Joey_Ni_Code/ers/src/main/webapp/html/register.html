@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/register.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<button class="btn btn-primary" id="logout" type="button">Logout</button>
+<form id="registerForm">
+  <fieldset>
+    <legend>Legend</legend>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="staticEmail">Email</label>
+      <div class="col-sm-10">
+        <input class="form-control-plaintext" id="staticEmail" type="text" readonly="" value="email@example.com">
+      </div>
+    </div>
+    <div class="form-group has-danger">
+      <label for="inputEmail1">Email address</label>
+      <input class="form-control is-invalid" id="email" aria-describedby="emailHelp" type="email" placeholder="Enter email">
+      <small class="form-text text-muted" id="emailHelp">Your email will be your username to login.</small>
+      <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input class="form-control" id="password" type="password" placeholder="Password" maxLength="10">
+      <small class="form-text text-muted" id="passwordHelp">You password should be 10 chars max.</small>
+    </div>
+  <div class="form-group has-success">
+  <label class="form-control-label" for="inputSuccess1">Lastname</label>
+  <input class="form-control is-valid" id="lastname" type="text" value="correct value">
+  <div class="valid-feedback">Success! You've done it.</div>
+</div>
+
+<div class="form-group has-danger">
+  <label class="form-control-label" for="inputDanger1">Firstname</label>
+  <input class="form-control is-invalid" id="firstname" type="text" value="wrong value">
+</div>
+  
+    <div class="form-group">
+      <label for="inputFile">File input</label>
+      <input class="form-control-file" id="inputFile" aria-describedby="fileHelp" type="file">
+      <small class="form-text text-muted" id="fileHelp">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+    </div>
+ 
+   
+    <button class="btn btn-primary" id="submitBtn" type="submit" action="../js/dynamicForm.js" method="post" >Submit</button>
+  </fieldset>
+</form>
+
+<script type="text/javascript" src="../js/dynamicForm.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script>
+$('#submitBtn').click(function(){
+	 $.ajax({
+		url: '/ers/register.do',
+		type: 'POST',
+		success: function(responseText){
+			$('#display').append(responseText);
+			console.log("success"+responseText);
+		/*	  $.each(responseText,function(key,value)
+			  {
+                  var NewRow = '<tr><td">'+value.rid+'</td>';
+                      NewRow += '<td>'+value.amount+'</td>';
+                      NewRow += '<td>'+value.purpose+'</td>';
+                      NewRow += '<td>'+value.rmid+'</td>';
+                      NewRow += '<td>'+value.reid+'</td>';
+                      NewRow += '<td>'+value.status+'</td>';
+                      NewRow += '</tr>';
+                      $('#requestTable').append(NewRow);
+			  });*/
+		},
+		success: function(responseText){
+			alert(responseText);
+		}
+	 	});
+		});
+	
+</script>
+</body>
+</html>

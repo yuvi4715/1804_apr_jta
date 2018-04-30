@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/ers/css/bootstrap.min.css">
+<link rel="stylesheet" href="/ers/css/JoeyCustom.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<form>
+							<input type="text" id="rid" name="rid" placeholder="rid" /><br />
+							<hr />
+							<input type="text" id="uid" name="uid" placeholder="mid" /><br />
+							<hr />
+							<input type="text" id="ap" name="ap" placeholder="ap" />
+							 <button id="submitBtn" type="submit">submit</button>
+</form>
+<script>
+	$(document).ready(function(){
+		
+		$('#submitBtn').click(function(e){
+			
+			let rid = document.getElementById("rid").value;
+			let UID = document.getElementById("uid").value;
+			let ap = document.getElementById("ap").value;
+				$.ajax({
+				url: "/ers/approveRequest.do",
+				data: { rid: rid,
+						UID: UID,
+						ap: ap
+				      },
+				type: "POST",
+			    success: function(data){
+			    	//window.location.replace("/ers/html/user.html");
+					alert("success"+data);},
+				error: function(){
+					//window.location.replace("/ers/html/home.html");
+					alert("failure" +data);
+				}
+			    
+				});
+			
+		});
+	});
+	</script>
+</body>
+</html>

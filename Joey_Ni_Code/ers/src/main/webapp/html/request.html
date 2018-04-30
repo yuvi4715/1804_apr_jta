@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Requests</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/register.css">
+<link rel="stylesheet" href="../css/JoeyCustom.css">
+
+</head>
+<body>
+<div id="display-rid" class="form-group">
+  <fieldset disabled="">
+    <label class="control-label" for="Request RID">Request RID</label>
+    <input disabled="" class="form-control" id="readOnly" type="text" placeholder="">
+  </fieldset>
+</div>
+
+
+<div class="form-group">
+  <label class="col-form-label col-form-label-lg" for="inputLarge">EID</label>
+  <input class="form-control form-control-lg" id="reid" type="text" placeholder="Your Employee ID#">
+</div>
+
+<div class="form-group">
+  <label class="col-form-label" for="inputDefault">Purpose</label>
+  <input class="form-control" id="purpose" type="text" placeholder="Reimbursement Purpose">
+</div>
+
+<div class="form-group">
+  <label class="control-label">Amount</label>
+  <div class="form-group">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">$</span>
+      </div>
+      <input class="form-control" id="amount" aria-label="Amount (to the nearest dollar)" type="text">
+      
+    </div>
+  </div>
+</div>
+ <button class="btn btn-primary" id="home" type="button" >Home</button>
+  <button class="btn btn-success" id="requestBtn" type="button">Request History</button>
+    <button class="btn btn-primary" id="submitBtn" type="submit">Submit</button>
+    <button class="btn btn-primary" id="approveBtn" type="submit">Approve</button>
+<button id="logout"  type="button" class="btn btn-danger">Logout</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$('document').ready(function(){
+$('#approveBtn').click(function(){
+	window.location.replace("/ers/html/approveRequest.html");
+});
+$('#submitBtn').click(function(){
+	console.log($('#reid').val());
+	console.log($('#purpose').val()),
+	$.ajax({
+		url: '/ers/submitRequest.do',
+		data: {
+				reid:$('#reid').val(),
+			  	purpose:$('#purpose').val(),
+			  	amount:$('#amount').val()
+	          },
+		type: 'POST',
+		success: function(data){
+			//window.location.replace("/ers/html/request.html");
+			alert("success"+data);
+			}
+		});
+	});
+$('#home').click(function(){
+	window.location.replace("/ers/html/user.html");
+});
+$('#requestBtn').click(function(){
+		window.location.replace("/ers/html/history.html");
+});
+$('#logoutBtn').click(function(){
+	$.ajax({
+		url: '/ers/logout.do',
+		type:'POST',
+		success: function(){
+			window.location.href= "/ers/html/home.html";
+			alert("You have logged out");}
+		
+		
+	});
+});
+});
+</script>
+</body>
+</html>

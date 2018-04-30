@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Homepage</title>
+<link rel="stylesheet" href="/ers/css/bootstrap.min.css">
+<link rel="stylesheet" href="/ers/css/JoeyCustom.css">
+
+</head>
+
+<body>
+<!--  This is the home page of the user. Page content determined by AJAX response.
+JavaScript populates page content based on XHR object.
+In previous case, XHR object talks to the server to check login details;
+servlet talks to DAO, DAO talks to database, responses returned through the pipeline
+AJAX XHR object gets response, javaScript determines action based on the response.
+<script type="text/javascript" src="/ers/js/homepage.js"></script>
+-->
+ <button class="btn btn-success" id="employeeBtn" type="button">Employee</button>
+  <button class="btn btn-success" id="allEmployee" type="button">All Employees</button>
+ <button class="btn btn-success" id="updateBtn" type="submit">Update</button>
+ <button class="btn btn-success" id="requestBtn" type="button">Request</button>
+<button id="logoutBtn"  type="button" class="btn btn-danger">Logout</button>
+<div id="display">Welcome:</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+/*function getJSessionId(){
+    var jsId = document.cookie.match('/JSESSIONID=[^;]+/');
+    if(jsId != null) {
+        if (jsId instanceof Array)
+            jsId = jsId[0].substring(11);
+        else
+            jsId = jsId.substring(11);
+    }
+    return jsId;
+}
+function getEmployee(){
+	var xhttp = new XMLHttpRequest();
+	
+	xhttp.onreadystatechange = function() {
+		
+	  if (this.readyState == 4 && this.status == 200) {
+	    document.getElementById("display").innerHTML += this.responseText;
+	  }
+	};
+	xhttp.open("POST", "/ers/getEmployee.do");
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send();
+}
+function update(){
+	var xhttp = new XMLHttpRequest();
+	$('#display').html("Newst info: "+document.cookie);
+	xhttp.onreadystatechange = function() {
+		
+	  if (this.readyState == 4 && this.status == 200) {
+	    document.getElementById("display").innerHTML += this.responseText;
+	  }
+	};
+	xhttp.open("POST", "/ers/updateEmployee.do", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send();
+}*/
+$('document').ready(function(){
+	/*$('#employeeBtn').click(function(){
+		$('#display').html(getJSessionId());
+	});*/
+$('#employeeBtn').click(function(){
+	$('#display').append("employee");
+	$.ajax({
+		url: '/ers/getEmployee.do',
+		type: 'POST',
+		success: function(data){
+			alert(data);
+			$('#display').append(data);
+		}
+	});
+	
+});
+$('#allEmployee').click(function(){
+	window.location.replace("/ers/html/employeetable.html");
+});
+$('#updateBtn').click(function(){
+	$('#display').append("Newst info: ");
+	$.ajax({
+		url: '/ers/updateEmployee.do',
+		type: 'POST',
+		success: function(data){
+			$('#display').html(data);
+		}
+	});
+});
+$('#requestBtn').click(function(){
+	window.location.replace("/ers/html/request.html");
+});
+$('#logoutBtn').click(function(){
+	$.ajax({
+		url: '/ers/logout.do',
+		type:'POST',
+		success: function(){
+			window.location.href= "/ers/html/home.html";
+			alert("You have logged out");}
+	});
+});
+});
+</script>
+</body>
+</html>

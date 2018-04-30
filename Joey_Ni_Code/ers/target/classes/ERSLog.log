@@ -1,0 +1,992 @@
+2018-04-19 00:30:13 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 00:40:41 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 00:40:42 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 00:40:42 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 00:40:42 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 00:40:42 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 00:43:23 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 00:43:23 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 00:43:23 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 00:43:23 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 00:43:24 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:02:31 ERROR Log:31 - ORA-06550: line 1, column 7:
+PLS-00201: identifier 'GET_EMPLOYEE' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+2018-04-19 01:02:31 ERROR Log:31 - ORA-06550: line 1, column 7:
+PLS-00201: identifier 'GET_EMPLOYEE' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+2018-04-19 01:11:13 ERROR Log:31 - ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GET_EMPLOYEE'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+2018-04-19 01:11:13 ERROR Log:31 - ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GET_EMPLOYEE'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+2018-04-19 01:11:14 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:13:29 ERROR Log:31 - Invalid column type: 2012
+2018-04-19 01:13:29 ERROR Log:31 - Invalid column type: 2012
+2018-04-19 01:13:30 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:17:35 ERROR Log:31 - Invalid column type: 2012
+2018-04-19 01:17:36 ERROR Log:31 - Invalid column type: 2012
+2018-04-19 01:17:37 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:21:19 ERROR Log:31 - Invalid column type: 2012
+2018-04-19 01:21:20 ERROR Log:31 - Invalid column type: 2012
+2018-04-19 01:21:20 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:24:23 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:25:24 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:28:00 ERROR Log:31 - operation not allowed: Ordinal binding and Named binding cannot be combined!
+2018-04-19 01:28:01 ERROR Log:31 - operation not allowed: Ordinal binding and Named binding cannot be combined!
+2018-04-19 01:28:01 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:29:51 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:37:51 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:38:30 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:41:28 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:45:03 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:49:43 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:51:14 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:53:52 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:56:37 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 01:57:45 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 08:31:13 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 08:33:44 ERROR Log:31 - ResultSet.next was not called
+2018-04-19 08:33:45 ERROR Log:31 - ResultSet.next was not called
+2018-04-19 08:33:46 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 08:34:19 ERROR Log:31 - ResultSet.next was not called
+2018-04-19 08:34:20 ERROR Log:31 - ResultSet.next was not called
+2018-04-19 08:34:20 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 08:35:08 ERROR Log:31 - ResultSet.next was not called
+2018-04-19 08:35:09 ERROR Log:31 - ResultSet.next was not called
+2018-04-19 08:35:09 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 08:35:50 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 08:36:41 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 08:37:22 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 09:07:11 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 16:59:23 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 19:07:32 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 19:09:54 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 19:16:58 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 20:05:35 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 20:13:09 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 20:21:56 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 20:23:17 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 20:27:20 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 20:33:23 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 20:46:50 INFO  Log:37 - EID not found
+2018-04-19 20:46:50 INFO  Log:37 - EID not found, cannot submit request
+2018-04-19 20:46:52 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 21:21:34 INFO  Log:37 - EID not found
+2018-04-19 21:21:34 INFO  Log:37 - EID not found, cannot submit request
+2018-04-19 21:21:36 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 21:26:12 INFO  Log:37 - EID not found
+2018-04-19 21:26:12 INFO  Log:37 - EID not found, cannot submit request
+2018-04-19 21:26:14 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-19 21:44:27 INFO  Log:37 - EID not found
+2018-04-19 21:44:27 INFO  Log:37 - EID not found, cannot submit request
+2018-04-19 21:44:30 ERROR Log:31 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005391) violated
+ORA-06512: at "JOEY_INMARS.INSERT_EMPLOYEE", line 7
+ORA-06512: at line 1
+
+2018-04-20 10:24:00 ERROR Log:35 - ORA-00900: invalid SQL statement
+ORA-06512: at "JOEY_INMARS.ADD_USER", line 6
+ORA-06512: at "JOEY_INMARS.AFTER_INSERT_MANAGER", line 2
+ORA-04088: error during execution of trigger 'JOEY_INMARS.AFTER_INSERT_MANAGER'
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 7
+ORA-06512: at line 1
+
+2018-04-20 10:40:29 ERROR Log:35 - ORA-00900: invalid SQL statement
+ORA-06512: at "JOEY_INMARS.ADD_USER", line 6
+ORA-06512: at "JOEY_INMARS.AFTER_INSERT_MANAGER", line 2
+ORA-04088: error during execution of trigger 'JOEY_INMARS.AFTER_INSERT_MANAGER'
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 7
+ORA-06512: at line 1
+
+2018-04-20 11:04:32 ERROR Log:35 - ORA-00900: invalid SQL statement
+ORA-06512: at "JOEY_INMARS.ADD_USER", line 6
+ORA-06512: at "JOEY_INMARS.AFTER_INSERT_MANAGER", line 2
+ORA-04088: error during execution of trigger 'JOEY_INMARS.AFTER_INSERT_MANAGER'
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 7
+ORA-06512: at line 1
+
+2018-04-20 11:05:46 ERROR Log:35 - ORA-00900: invalid SQL statement
+ORA-06512: at "JOEY_INMARS.ADD_USER", line 6
+ORA-06512: at "JOEY_INMARS.AFTER_INSERT_MANAGER", line 2
+ORA-04088: error during execution of trigger 'JOEY_INMARS.AFTER_INSERT_MANAGER'
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 7
+ORA-06512: at line 1
+
+2018-04-20 13:23:11 WARN  Log:30 - Deleting an employee will delete all of the employees too.
+2018-04-20 13:23:12 INFO  Log:41 - EID not found
+2018-04-20 13:23:12 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:23:14 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 13:23:15 INFO  Log:41 - EID not found
+2018-04-20 13:23:15 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:23:15 INFO  Log:41 - EID not found
+2018-04-20 13:23:15 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:23:15 INFO  Log:41 - RID not found
+2018-04-20 13:23:15 INFO  Log:41 - RID not found, cannot find request
+2018-04-20 13:23:15 INFO  Log:41 - Invalid approval code or RID not found
+2018-04-20 13:23:15 INFO  Log:41 - Cannot approve request
+2018-04-20 13:23:15 INFO  Log:41 - RID not found
+2018-04-20 13:23:15 INFO  Log:41 - RID not found, cannot find request
+2018-04-20 13:25:28 INFO  Log:41 - EID not found
+2018-04-20 13:25:28 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:25:28 INFO  Log:41 - EID not found
+2018-04-20 13:25:28 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:25:28 INFO  Log:41 - EID not found
+2018-04-20 13:25:28 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:25:28 INFO  Log:41 - EID not found
+2018-04-20 13:25:28 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:30:38 INFO  Log:41 - EID not found
+2018-04-20 13:30:38 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:30:38 INFO  Log:41 - EID not found
+2018-04-20 13:30:38 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:30:40 INFO  Log:41 - EID not found
+2018-04-20 13:30:40 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:30:40 INFO  Log:41 - EID not found
+2018-04-20 13:30:40 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:37:18 INFO  Log:41 - EID not found
+2018-04-20 13:37:18 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:37:18 INFO  Log:41 - EID not found
+2018-04-20 13:37:18 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:37:22 INFO  Log:41 - EID not found
+2018-04-20 13:37:22 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:37:22 INFO  Log:41 - EID not found
+2018-04-20 13:37:22 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:44:53 INFO  Log:41 - EID not found
+2018-04-20 13:44:53 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:44:53 INFO  Log:41 - EID not found
+2018-04-20 13:44:53 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:44:54 INFO  Log:41 - EID not found
+2018-04-20 13:44:54 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:44:54 INFO  Log:41 - EID not found
+2018-04-20 13:44:54 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:50:02 INFO  Log:41 - EID not found
+2018-04-20 13:50:02 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:50:02 INFO  Log:41 - EID not found
+2018-04-20 13:50:02 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:50:02 ERROR Log:35 - ORA-00904: "EID": invalid identifier
+
+2018-04-20 13:50:36 INFO  Log:41 - EID not found
+2018-04-20 13:50:36 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:50:36 INFO  Log:41 - EID not found
+2018-04-20 13:50:36 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:53:28 INFO  Log:41 - EID not found
+2018-04-20 13:53:28 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 13:53:28 INFO  Log:41 - EID not found
+2018-04-20 13:53:28 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 13:53:28 INFO  Log:41 - EID not found
+2018-04-20 13:53:28 INFO  Log:41 - EID not found, cannot find request
+2018-04-20 14:02:29 INFO  Log:41 - EID not found
+2018-04-20 14:02:29 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:29 INFO  Log:41 - EID not found
+2018-04-20 14:02:29 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:02:29 INFO  Log:41 - EID not found
+2018-04-20 14:02:29 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:29 INFO  Log:41 - EID not found
+2018-04-20 14:02:30 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:02:30 INFO  Log:41 - EID not found
+2018-04-20 14:02:30 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:30 INFO  Log:41 - EID not found
+2018-04-20 14:02:30 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:02:30 INFO  Log:41 - EID not found
+2018-04-20 14:02:30 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:30 INFO  Log:41 - EID not found
+2018-04-20 14:02:30 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:02:30 INFO  Log:41 - EID not found
+2018-04-20 14:02:30 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:30 INFO  Log:41 - EID not found
+2018-04-20 14:02:30 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:02:30 INFO  Log:41 - EID not found
+2018-04-20 14:02:30 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:30 INFO  Log:41 - EID not found
+2018-04-20 14:02:30 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:02:31 INFO  Log:41 - EID not found
+2018-04-20 14:02:31 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:31 INFO  Log:41 - EID not found
+2018-04-20 14:02:31 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:02:31 INFO  Log:41 - EID not found
+2018-04-20 14:02:31 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:31 INFO  Log:41 - EID not found
+2018-04-20 14:02:31 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:02:31 INFO  Log:41 - EID not found
+2018-04-20 14:02:31 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:31 INFO  Log:41 - EID not found
+2018-04-20 14:02:31 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:02:31 INFO  Log:41 - EID not found
+2018-04-20 14:02:31 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:31 INFO  Log:41 - EID not found
+2018-04-20 14:02:31 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:31 INFO  Log:41 - USERNAME not found
+2018-04-20 14:02:31 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-20 14:02:31 INFO  Log:41 - Username taken, please try a new one
+2018-04-20 14:02:31 INFO  Log:41 - Username taken, cannot create another 
+2018-04-20 14:02:31 INFO  Log:41 - EID not found
+2018-04-20 14:02:31 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:33 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 14:02:35 INFO  Log:41 - EID not found
+2018-04-20 14:02:35 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:02:35 INFO  Log:41 - EID not found
+2018-04-20 14:02:35 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:02:35 INFO  Log:41 - EID not found
+2018-04-20 14:02:35 INFO  Log:41 - EID not found, cannot find request
+2018-04-20 14:02:35 INFO  Log:41 - RID not found
+2018-04-20 14:02:35 INFO  Log:41 - RID not found, cannot find request
+2018-04-20 14:04:14 INFO  Log:41 - EID not found
+2018-04-20 14:04:14 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:04:14 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 14:04:15 INFO  Log:41 - EID not found
+2018-04-20 14:04:15 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:04:15 INFO  Log:41 - EID not found
+2018-04-20 14:04:15 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:04:15 INFO  Log:41 - EID not found
+2018-04-20 14:04:15 INFO  Log:41 - EID not found, cannot find request
+2018-04-20 14:04:16 INFO  Log:41 - RID not found
+2018-04-20 14:04:16 INFO  Log:41 - RID not found, cannot find request
+2018-04-20 14:08:18 INFO  Log:41 - EID not found
+2018-04-20 14:08:18 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:08:19 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 14:08:20 INFO  Log:41 - EID not found
+2018-04-20 14:08:20 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 14:08:20 INFO  Log:41 - EID not found
+2018-04-20 14:08:20 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 14:08:21 INFO  Log:41 - EID not found
+2018-04-20 14:08:21 INFO  Log:41 - EID not found, cannot find request
+2018-04-20 14:08:23 INFO  Log:41 - RID not found
+2018-04-20 14:08:23 INFO  Log:41 - RID not found, cannot find request
+2018-04-20 15:16:50 INFO  Log:41 - EID not found
+2018-04-20 15:16:50 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:16:51 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 15:16:53 INFO  Log:41 - EID not found
+2018-04-20 15:16:53 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:16:53 INFO  Log:41 - EID not found
+2018-04-20 15:16:53 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 15:16:53 INFO  Log:41 - EID not found
+2018-04-20 15:16:53 INFO  Log:41 - EID not found, cannot find request
+2018-04-20 15:24:48 INFO  Log:41 - EID not found
+2018-04-20 15:24:48 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:24:49 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 15:24:51 INFO  Log:41 - EID not found
+2018-04-20 15:24:51 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:24:51 INFO  Log:41 - EID not found
+2018-04-20 15:24:51 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 15:24:51 INFO  Log:41 - EID not found
+2018-04-20 15:24:51 INFO  Log:41 - EID not found, cannot find request
+2018-04-20 15:49:35 INFO  Log:41 - EID not found
+2018-04-20 15:49:35 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:49:36 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 15:49:37 INFO  Log:41 - EID not found
+2018-04-20 15:49:37 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:49:37 INFO  Log:41 - EID not found
+2018-04-20 15:49:37 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 15:49:38 INFO  Log:41 - EID not found
+2018-04-20 15:49:38 INFO  Log:41 - EID not found, cannot find request
+2018-04-20 15:52:03 INFO  Log:41 - EID not found
+2018-04-20 15:52:03 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:52:04 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 15:52:06 INFO  Log:41 - EID not found
+2018-04-20 15:52:06 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:52:07 INFO  Log:41 - EID not found
+2018-04-20 15:52:07 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 15:52:07 INFO  Log:41 - EID not found
+2018-04-20 15:52:07 INFO  Log:41 - EID not found, cannot find request
+2018-04-20 15:54:28 INFO  Log:41 - EID not found
+2018-04-20 15:54:28 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:54:29 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 15:54:30 INFO  Log:41 - EID not found
+2018-04-20 15:54:30 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:54:30 INFO  Log:41 - EID not found
+2018-04-20 15:54:30 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 15:54:31 INFO  Log:41 - EID not found
+2018-04-20 15:54:31 INFO  Log:41 - EID not found, cannot find request
+2018-04-20 15:55:38 INFO  Log:41 - EID not found
+2018-04-20 15:55:38 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:55:39 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 15:55:42 INFO  Log:41 - EID not found
+2018-04-20 15:55:42 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:55:42 INFO  Log:41 - EID not found
+2018-04-20 15:55:42 INFO  Log:41 - EID not found, cannot submit request
+2018-04-20 15:55:42 INFO  Log:41 - EID not found
+2018-04-20 15:55:42 INFO  Log:41 - EID not found, cannot find request
+2018-04-20 15:58:38 INFO  Log:41 - EID not found
+2018-04-20 15:58:38 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 15:58:41 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 16:12:46 INFO  Log:41 - EID not found
+2018-04-20 16:12:46 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 16:12:49 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 16:18:48 INFO  Log:41 - EID not found
+2018-04-20 16:18:48 INFO  Log:41 - EID not found, cannot find you
+2018-04-20 16:18:49 ERROR Log:35 - ORA-00001: unique constraint (JOEY_INMARS.SYS_C005398) violated
+ORA-06512: at "JOEY_INMARS.INSERT_MANAGER", line 8
+ORA-06512: at line 1
+
+2018-04-20 17:33:06 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-20 17:33:06 ERROR Log:35 - IO Error: The Network Adapter could not establish the connection
+2018-04-26 10:19:51 ERROR Log:35 - src\main\resources\userdb.properties (The system cannot find the path specified)
+2018-04-26 10:19:51 ERROR Log:35 - src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:25:03 ERROR Log:35 - src\main\resources\userdb.properties (The system cannot find the path specified)
+2018-04-26 10:25:03 ERROR Log:35 - src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:25:23 ERROR Log:35 - src\main\resources\userdb.properties (The system cannot find the path specified)
+2018-04-26 10:25:23 ERROR Log:35 - src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:25:52 ERROR Log:35 - src\main\resources\userdb.properties (The system cannot find the path specified)
+2018-04-26 10:25:52 ERROR Log:35 - src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:33:41 ERROR Log:35 - src\main\resources\userdb.properties (The system cannot find the path specified)
+2018-04-26 10:33:42 ERROR Log:35 - \ers\src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:40:17 ERROR Log:35 - \ers\src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:40:17 ERROR Log:35 - \ers\src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:40:17 ERROR Log:35 - \ers\src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:40:17 ERROR Log:35 - \ers\src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:40:17 ERROR Log:35 - \ers\src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:40:17 ERROR Log:35 - \ers\src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:40:17 ERROR Log:35 - \ers\src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:40:17 ERROR Log:35 - \ers\src\main\resources\userdb.properties (The system cannot find the path specified)
+2018-04-26 10:40:17 ERROR Log:35 - \ers\src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:44:37 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-26 10:48:04 ERROR Log:35 - src\main\resources\userdb.properties (The system cannot find the path specified)
+2018-04-26 10:48:04 ERROR Log:35 - src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:49:14 ERROR Log:35 - src\main\resources\userdb.properties (The system cannot find the path specified)
+2018-04-26 10:49:14 ERROR Log:35 - src\main\resources\db.properties (The system cannot find the path specified)
+2018-04-26 10:53:38 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-26 13:34:53 ERROR Log:35 - ORA-01045: user HELLO@WORLD.COM lacks CREATE SESSION privilege; logon denied
+
+2018-04-27 10:00:36 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 15:46:40 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 15:47:58 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 15:50:42 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 16:11:40 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 16:23:37 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 16:27:09 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 16:27:17 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 16:29:08 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 16:48:13 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 16:55:33 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-27 18:07:12 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 13:35:43 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 13:46:37 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 14:10:18 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 14:26:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 14:26:07 INFO  Log:41 - USERNAME not found
+2018-04-28 14:26:07 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-28 14:41:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 14:41:50 INFO  Log:41 - USERNAME not found
+2018-04-28 14:41:50 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-28 14:43:55 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 14:43:55 INFO  Log:41 - USERNAME not found
+2018-04-28 14:43:55 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-28 14:45:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 14:45:04 INFO  Log:41 - USERNAME not found
+2018-04-28 14:45:04 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-28 14:53:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 14:58:59 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 14:59:23 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 15:05:29 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 15:08:42 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 15:08:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:12:48 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 15:13:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:14:48 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:14:57 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:15:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:16:39 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:18:22 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:19:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:20:36 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:21:45 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:21:58 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:22:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:22:44 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 15:22:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:25:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:26:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:27:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:28:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:30:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:30:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:33:32 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:33:54 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:35:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:35:13 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:36:23 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:41:13 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:48:59 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:51:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 15:51:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 16:11:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 16:11:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 16:11:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 16:11:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 16:12:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 16:12:29 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 16:12:43 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:13:27 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:14:12 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:14:25 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:18:03 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:18:44 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:27:20 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:27:48 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:39:27 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:40:36 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:42:52 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:47:18 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 16:48:27 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:49:56 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:50:15 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:51:03 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:51:48 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:52:14 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:57:51 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:59:31 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 16:59:43 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 17:00:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 17:01:27 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 17:01:41 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 17:16:11 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 17:16:24 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 17:18:01 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 17:18:14 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 17:18:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 17:51:22 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 17:51:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 17:51:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 17:51:34 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@4a14031a
+2018-04-28 17:51:35 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 17:54:22 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@4a14031a
+2018-04-28 17:54:22 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:01:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:01:18 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:01:18 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@1713fedc
+2018-04-28 18:01:18 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:29:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:29:33 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:29:34 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@6ec15a97
+2018-04-28 18:29:34 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:31:40 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 18:31:49 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:31:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:31:50 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@28f5d54d
+2018-04-28 18:31:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:53:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:53:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:53:42 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@796b1e8c
+2018-04-28 18:53:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:54:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:54:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:54:01 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@796b1e8c
+2018-04-28 18:54:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 18:58:29 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 19:07:39 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 19:07:44 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 19:08:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:08:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:08:01 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@58a5bbbf
+2018-04-28 19:08:02 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:09:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:09:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:09:03 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@58a5bbbf
+2018-04-28 19:09:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:18:58 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 19:19:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:19:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:19:07 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@58c33fa6
+2018-04-28 19:19:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:53:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:53:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:53:12 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@542b3887
+2018-04-28 19:53:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:55:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:55:11 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:55:11 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@60ed5eb2
+2018-04-28 19:55:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:56:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:56:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:56:30 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@60ed5eb2
+2018-04-28 19:56:30 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:59:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:59:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 19:59:26 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@14fc3608
+2018-04-28 19:59:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:17:00 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:17:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:17:01 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@62326cfd
+2018-04-28 20:17:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:20:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:20:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:20:05 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@66c3023f
+2018-04-28 20:20:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:20:31 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:20:32 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@66c3023f
+2018-04-28 20:21:26 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:21:27 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:21:27 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@66b63610
+2018-04-28 20:24:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:24:50 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:24:51 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@2324e81f
+2018-04-28 20:26:01 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:26:02 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 20:26:02 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@2324e81f
+2018-04-28 21:22:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:22:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:22:41 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@4094d600
+2018-04-28 21:23:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:23:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:23:53 ERROR Log:35 - Servlet Context org.apache.catalina.core.ApplicationContextFacade@4094d600
+2018-04-28 21:29:19 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:29:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:43:12 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:43:13 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:44:19 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:44:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:58:39 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 21:58:40 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 22:28:41 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 22:28:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 22:28:53 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 22:50:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 22:50:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 22:50:39 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 22:53:43 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 23:06:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 23:06:22 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 23:06:31 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 23:19:11 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 23:19:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 23:19:21 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 23:21:59 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 23:23:16 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 23:25:18 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-28 23:50:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 23:50:25 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 23:55:42 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-28 23:55:43 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:02:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:02:20 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:04:13 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:04:14 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:17:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:17:07 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:24:08 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:24:08 INFO  Log:41 - USERNAME not found
+2018-04-29 00:24:08 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 00:24:09 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 00:24:09 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 00:24:09 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 00:24:09 INFO  Log:41 - EID not found
+2018-04-29 00:24:09 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 00:24:09 INFO  Log:41 - EID not found
+2018-04-29 00:24:09 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 00:24:48 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 00:27:52 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 00:39:00 ERROR Log:35 - ORA-01017: invalid username/password; logon denied
+
+2018-04-29 00:39:16 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:39:17 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:40:52 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:40:53 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:41:06 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:41:06 INFO  Log:41 - USERNAME not found
+2018-04-29 00:41:06 INFO  Log:41 - USERNAME not found, please register or check spelling
+2018-04-29 00:41:06 ERROR Log:35 - User DROP error:ORA-00921: unexpected end of SQL command
+
+2018-04-29 00:41:07 ERROR Log:35 - User creation error:ORA-00922: missing or invalid option
+
+2018-04-29 00:41:07 ERROR Log:35 - Manager Role error:ORA-00933: SQL command not properly ended
+
+2018-04-29 00:41:07 INFO  Log:41 - EID not found
+2018-04-29 00:41:07 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 00:41:07 INFO  Log:41 - EID not found
+2018-04-29 00:41:07 INFO  Log:41 - EID not found, cannot find you
+2018-04-29 00:47:03 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:47:04 ERROR Log:35 - ORA-00942: table or view does not exist
+
+2018-04-29 00:47:05 ERROR Log:35 - ORA-00942: table or view does not exist
+

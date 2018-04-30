@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Table</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<header><h1>Employees</h1></header>
+<form>
+<input type="text" placeholder="Employee ID" id="employeeid">
+<input type="text" placeholder="Employee Lastname" id="employeename">
+<input type="email" placeholder="Employee Email" id="employeeemail">
+<button id="submitBtn" type="button" class="btn btn-danger">Submit</button>
+<button id="searchBtn" type="button" class="btn btn-primary">Search</button>
+<button id="clearBtn" type="reset" class="btn btn-success">Clear</button>
+</form>
+<table id=empTable class="table table-hover">
+  <thead>
+   <tr class="table-success">
+      <th scope="row">Employee ID</th>
+    <th scope="row">Employee Name </th>
+     <th scope="row">Employee Email </th>
+    </tr>
+  </thead>
+
+</table> 
+<div id="display">Employees:</div>
+ <button class="btn btn-primary" id="home" type="button">Home</button>
+<button id="logout"  type="button" class="btn btn-danger">Logout</button>
+<script type="text/javascript" src="../js/index.js"></script>
+<script>
+$('document').ready(function(){
+$('#submitBtn').click(function(){
+	 $.ajax({
+			url: '/ers/getAllEmployees.do',
+			type: 'POST',
+			success: function(responseText){
+				console.log(responseText);
+				$('#display').append(responseText);
+				//$('#empTable').html("success"+responseText);
+				  $.each(responseText,function(key,value)
+				  {
+                     var NewRow = '<tr><td">'+value.rid+'</td>';
+                         NewRow += '<td>'+value.amount+'</td>';
+                         NewRow += '<td>'+value.purpose+'</td>';
+                         NewRow += '<td>'+value.rmid+'</td>';
+                         NewRow += '<td>'+value.reid+'</td>';
+                         NewRow += '<td>'+value.status+'</td>';
+                         NewRow += '</tr>';
+                         $('#empTable').append(NewRow);
+				  });
+				}
+		 	});
+	});
+});</script>
+</body>
+</html>
