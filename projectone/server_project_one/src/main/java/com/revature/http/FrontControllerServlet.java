@@ -21,11 +21,11 @@ public class FrontControllerServlet extends HttpServlet {
 	final static Logger log = Logger.getLogger(FrontControllerServlet.class);
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
-    public FrontControllerServlet() {
-    }
+	/**
+	 * Default constructor.
+	 */
+	public FrontControllerServlet() {
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -54,15 +54,17 @@ public class FrontControllerServlet extends HttpServlet {
         	String key = (String)attribNames.nextElement();
         	log.info(key+" "+request.getAttribute(key));
         }
-		FrontCommand command = Dispatcher.getCommand(request);
+		FrontCommand command = Dispatcher.getCommand(request.getHeader("command"));
 		command.init(getServletContext(), request, response);
 		command.process();
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		log.info("POST");
 		doGet(request, response);
 	}

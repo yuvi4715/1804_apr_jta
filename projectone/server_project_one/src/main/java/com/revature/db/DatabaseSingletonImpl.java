@@ -171,6 +171,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			stmt.setString(++index, e.getEmail());
 			return stmt.executeUpdate() > 0;
 		} catch (SQLException sqle) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			System.err.println(sqle.getMessage());
 			System.err.println("SQL State: " + sqle.getSQLState());
 			System.err.println("Error Code: " + sqle.getErrorCode());
@@ -190,6 +197,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			stmt.setString(++index, m.getEmail());
 			return stmt.executeUpdate() > 0;
 		} catch (SQLException sqle) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			System.err.println(sqle.getMessage());
 			System.err.println("SQL State: " + sqle.getSQLState());
 			System.err.println("Error Code: " + sqle.getErrorCode());
@@ -213,6 +227,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			stmt.setInt(++index, r.getStatus());
 			return stmt.executeUpdate() > 0;
 		} catch (SQLException sqle) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			System.err.println(sqle.getMessage());
 			System.err.println("SQL State: " + sqle.getSQLState());
 			System.err.println("Error Code: " + sqle.getErrorCode());
@@ -233,6 +254,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 
 			return stmt.executeUpdate() > 0;
 		} catch (SQLException sqle) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			System.err.println(sqle.getMessage());
 			System.err.println("SQL State: " + sqle.getSQLState());
 			System.err.println("Error Code: " + sqle.getErrorCode());
@@ -253,6 +281,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 
 			return stmt.executeUpdate() > 0;
 		} catch (SQLException sqle) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			System.err.println(sqle.getMessage());
 			System.err.println("SQL State: " + sqle.getSQLState());
 			System.err.println("Error Code: " + sqle.getErrorCode());
@@ -275,6 +310,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			stmt.setShort(++index, r.getStatus());
 			return stmt.executeUpdate() > 0;
 		} catch (SQLException sqle) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			System.err.println(sqle.getMessage());
 			System.err.println("SQL State: " + sqle.getSQLState());
 			System.err.println("Error Code: " + sqle.getErrorCode());
@@ -294,8 +336,14 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 				return new Employee(rs.getString("fname"), rs.getString("lname"), rs.getString("email"),
 						rs.getBoolean("isDeleted"));
 		} catch (SQLException e1) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e1);
-			return null;
 		} finally {
 			if (stmt != null)
 				try {
@@ -320,6 +368,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 				return new Manager(rs.getString("fname"), rs.getString("lname"), rs.getString("email"),
 						rs.getBoolean("isDeleted"));
 		} catch (SQLException e1) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e1);
 			return null;
 		} finally {
@@ -351,6 +406,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 						rs.getBoolean("isDeleted"));
 			}
 		} catch (SQLException e1) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e1);
 			return null;
 		} finally {
@@ -398,6 +460,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 				return new Employee(rs.getString("fname"), rs.getString("lname"), rs.getString("email"),
 						rs.getBoolean("isDeleted"));
 		} catch (SQLException e1) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e1);
 			return null;
 		} finally {
@@ -427,6 +496,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 				return new Manager(rs.getString("fname"), rs.getString("lname"), rs.getString("email"),
 						rs.getBoolean("isDeleted"));
 		} catch (SQLException e1) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e1);
 			return null;
 		} finally {
@@ -469,6 +545,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			}
 			return temp;
 		} catch (SQLException e) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e);
 		} finally {
 			if (statement != null)
@@ -510,6 +593,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			}
 			return temp;
 		} catch (SQLException e) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e);
 		} finally {
 			if (statement != null)
@@ -549,6 +639,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			}
 			return temp;
 		} catch (SQLException e) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e);
 		} finally {
 			if (statement != null)
@@ -594,6 +691,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			}
 			return temp;
 		} catch (SQLException e) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e);
 		} finally {
 			if (statement != null)
@@ -636,6 +740,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			}
 			return temp;
 		} catch (SQLException e) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e);
 		} finally {
 			if (statement != null)
@@ -681,6 +792,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			}
 			return temp;
 		} catch (SQLException e) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e);
 		} finally {
 			if (statement != null)
@@ -726,6 +844,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			}
 			return temp;
 		} catch (SQLException e) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e);
 		} finally {
 			if (statement != null)
@@ -770,6 +895,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			}
 			return temp;
 		} catch (SQLException e) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e);
 		} finally {
 			if (statement != null)
@@ -814,6 +946,13 @@ public class DatabaseSingletonImpl implements DatabaseSingleton {
 			}
 			return temp;
 		} catch (SQLException e) {
+			try {
+				if(con.isClosed())
+					initDB();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
 			log.error(e);
 		} finally {
 			if (statement != null)
