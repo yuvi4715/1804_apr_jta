@@ -13,7 +13,6 @@ import main.util.ConnectionWithPropertiesUtil;
 
 public class DaoImpl implements EmployeeDao, ManagerDao, ReimbursementDao
 {
-	
 	private static DaoImpl instance;
 	final static Logger log = Logger.getLogger(DaoImpl.class);
 	
@@ -175,7 +174,35 @@ public class DaoImpl implements EmployeeDao, ManagerDao, ReimbursementDao
 		}
 		return null;
 	}
+	
+	public List<Reimbursement> getAllForE(Employee e) 
+	{
+		try(Connection conn = ConnectionWithPropertiesUtil.getConnection())
+		{
+			List<Reimbursement> reimbursements = new ArrayList<>();
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM reimb WHERE email = ?");
+			stmt.setString(1, e.getEmail());
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next())
+			{
+				reimbursements.add(new Reimbursement(rs.getInt("reimb_id"), rs.getString("email"),
+						rs.getString("status"), rs.getDouble("amount"), rs.getString("reviewer"),
+						rs.getString("purpose"), rs.getDate("request_date"), rs.getDate("review_date")));
+			}
+			
+			return reimbursements;
+		}
+		catch (SQLException sqle) 
+		{
+			log.error(sqle.getMessage());
+			log.error("SQL State: " + sqle.getSQLState());
+			log.error("Error Code: " + sqle.getErrorCode());
+		}
+		return null;
+	}
 
+	
 	@Override
 	public List<Reimbursement> getAllPendingForE(Employee e) 
 	{

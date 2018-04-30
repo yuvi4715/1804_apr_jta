@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Manager View</title>
+
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+
+</head>
+<body>
+
+	<h1>Manager Main Page</h1>
+	<ul >
+		<li><a href="#allPending" onclick="getAllPending()">View All Pending Requests</a></li>
+		<li><a href="#allResolved" onclick="getAllResolved()">View All Resolved Requests</a></li>
+		<li><a href="#allEmployees" onclick="getAllEmployees()">View All Employees</a></li>
+		<li><a href="index.jsp">Logout</a></li>
+ 	</ul>
+ 		
+ 	<input type="text" name="email" id="email" placeholder="Enter Employee Email">
+	<a href="#AllRequestsforEmployee" onclick="getRequest()">Get All Requests for Employee:</a>
+ 	
+	
+	<h2>Reimbursement Approval Form</h2>
+	<form method= "get" action = "/Project1/resolveRequest.do">
+
+  		<div class="container">
+    		<label for="requestID"><b>Request ID</b></label>
+    		<input type="number" placeholder="Enter request id number" name="requestID" required> <br>
+
+    		<input type="radio" name="status" value="Approved" required> Approve<br>
+  			<input type="radio" name="status" value="Denied"> Deny<br>
+
+    		<button type="submit" id ="update_request">Update</button>
+   
+  		</div>
+
+	</form>
+
+
+	<div class="table-container">
+        	<table id="request-table" class="table">
+        		<thead>
+        			<tr>
+        			<th scope="col">Request ID</th>
+        			<th scope="col">Requester</th>
+        			<th scope="col">Amount</th>
+        			<th scope="col">Purpose</th>
+        			<th scope="col">Status</th>
+        			<th scope="col">Reviewed By</th>
+        			<th scope="col">Request Date</th>
+        			<th scope="col">Review Date</th>
+        			<th scope="col">Image</th>
+        			</tr>
+        		</thead>
+        		<tbody id = "request-body"></tbody>
+        	</table>
+	</div>
+	
+	<div class="table-container2">
+        	<table id="employee-table" class="table">
+        		<thead>
+        			<tr>
+        			<th scope="col">Name</th>
+        			<th scope="col">Email</th>
+        			</tr>
+        		</thead>
+        		<tbody id = "employee-body"></tbody>
+        	</table>
+        </div>
+
+<script type="text/javascript" src="../js/ManagerMain.js">
+</script>
+</body>
+</html>

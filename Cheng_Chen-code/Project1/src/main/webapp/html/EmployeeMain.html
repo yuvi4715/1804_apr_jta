@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Reimbursement Request</title>
+
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+
+
+</head>
+<body>
+	<h1>Employee Main Page</h1>
+	<ul>
+		<li><a href="#allMyRequests" onClick="getAllMyRequests()">My Requests</a></li>
+		<li><a href="#infomation" id="info" onclick="getInfo()">Information</a></li>
+		<li><a href="index.jsp">Logout</a></li>
+	</ul>
+	<div class="table-container2">
+        	<table id="employee-table" class="table">
+        		<thead>
+        			<tr>
+        			<th scope="col">Name</th>
+        			<th scope="col">Email</th>
+        			</tr>
+        		</thead>
+        		<tbody id = "employee-body"></tbody>
+        	</table>
+        </div>
+	<h1>Employee Request Form</h1>
+	<form method= "get" action = "/Project1/esubmitRequest.do">
+	
+	  <div class="container">
+	
+	    <label for="purpose"><b>Purpose</b></label>
+	    <input type="text" placeholder="Purpose for reimbursement request" name="purpose" required>
+	    
+	    <label for="amount"><b>amount</b></label>
+	    <input type="number" step="0.01" placeholder="Reimbursement request amount" name="amount" required>
+	    
+	    <label for="image"><b>image </b></label>
+	    <input type="text" placeholder="placeholder for image" name="image">
+	    
+	    
+	    <button type="submit" id ="request_submit">Submit</button>
+	   
+	  </div>
+	
+	</form>
+	
+	<div class="table-container">
+        	<table id="request-table" class="table">
+        		<thead>
+        			<tr>
+        			<th scope="col">Request ID</th>
+        			<th scope="col">Requester</th>
+        			<th scope="col">Amount</th>
+        			<th scope="col">Purpose</th>
+        			<th scope="col">Status</th>
+        			<th scope="col">Reviewed By</th>
+        			<th scope="col">Request Date</th>
+        			<th scope="col">Review Date</th>
+        			<th scope="col">Image</th>
+        			</tr>
+        		</thead>
+        		<tbody id = "request-body"></tbody>
+        	</table>
+        </div>
+    
+	<script type="text/javascript" src="../js/EmployeeMain.js"></script>
+</body>
+</html>

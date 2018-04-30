@@ -1,17 +1,31 @@
 package main.Model;
 
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
-public class Reimbursement {
-	private int ID;
-	private String email;
-	private String status;
-	private double amount;
-	private String manager;
-	private String purpose;
-	private Date requested;
-	private Date approved;
-
+public class Reimbursement 
+{
+	int ID;
+	String email;
+	String status;
+	double amount;
+	String manager;
+	String purpose;
+	Date requested;
+	Date approved;
+	String requestDate;
+	String viewDate;
+	
+	//FOR NEW REQUESTS
+	public Reimbursement(double a, String requester, String p)
+	{
+		amount = a;
+		email = requester;
+		purpose = p;
+	}
+	
+	
 	public Reimbursement(int newid, String e, String s, double a, String m, String p, Date r, Date appdate) 
 	{
 		ID = newid;
@@ -22,6 +36,14 @@ public class Reimbursement {
 		purpose = p;
 		requested = r;
 		approved = appdate;
+		
+		DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+		
+		if(this.requested != null)
+			requestDate = df.format(this.requested);
+		
+		if(this.approved != null)
+			viewDate = df.format(this.approved);
 	}
 
 	public int getID() 
@@ -102,5 +124,7 @@ public class Reimbursement {
 	public void setApprovedDate(Date a)
 	{
 		approved = a;
+		DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+		viewDate = df.format(this.approved);
 	}
 }

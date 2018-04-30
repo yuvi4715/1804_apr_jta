@@ -41,6 +41,11 @@ public class ReimbursementService
 		return dao.getAllResolved();
 	}
 	
+	public static List<Reimbursement> getAllForE(Employee e)
+	{
+		return dao.getAllForE(e);
+	}
+	
 	public static List<Reimbursement> getAllPendingForE(Employee e)
 	{
 		return dao.getAllPendingForE(e);
