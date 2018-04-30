@@ -1,0 +1,106 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<display-name>LoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FrontControllerServlet</servlet-name>
+  	<display-name>FrontControllerServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.frontcontroller.FrontControllerServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletLogin</servlet-name>
+  	<display-name>ServletLogin</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.frontcontroller.ServletLogin</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GETRECEIPTS</servlet-name>
+  	<display-name>GETRECEIPTS</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.frontcontroller.GETRECEIPTS</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReimbursementRequestPost</servlet-name>
+  	<display-name>ReimbursementRequestPost</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.frontcontroller.ReimbursementRequestPost</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EntriesUpdate</servlet-name>
+  	<display-name>EntriesUpdate</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.frontcontroller.EntriesUpdate</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReimbursementUpdate</servlet-name>
+  	<display-name>ReimbursementUpdate</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.frontcontroller.ReimbursementUpdate</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogOutServlet</servlet-name>
+  	<display-name>LogOutServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.frontcontroller.LogOutServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetReimbursementsByEmployeeServlet</servlet-name>
+  	<display-name>GetReimbursementsByEmployeeServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.frontcontroller.GetReimbursementsByEmployeeServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FrontControllerServlet</servlet-name>
+  	<url-pattern>/FrontControllerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletLogin</servlet-name>
+  	<url-pattern>/ServletLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GETRECEIPTS</servlet-name>
+  	<url-pattern>/GETRECEIPTS</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReimbursementRequestPost</servlet-name>
+  	<url-pattern>/ReimbursementRequestPost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EntriesUpdate</servlet-name>
+  	<url-pattern>/EntriesUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReimbursementUpdate</servlet-name>
+  	<url-pattern>/ReimbursementUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogOutServlet</servlet-name>
+  	<url-pattern>/LogOutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetReimbursementsByEmployeeServlet</servlet-name>
+  	<url-pattern>/GetReimbursementsByEmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+  <welcome-file>index.html</welcome-file>
+  <welcome-file>table.html</welcome-file>
+    <welcome-file>tableManager.html</welcome-file>
+  
+  </welcome-file-list>
+  
+  
+</web-app>

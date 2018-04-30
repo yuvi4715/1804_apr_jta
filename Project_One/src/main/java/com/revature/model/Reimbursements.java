@@ -1,18 +1,29 @@
 package com.revature.model;
 
-import java.sql.Date;
+import java.sql.Timestamp;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+@XmlRootElement
 
 public class Reimbursements {
+	Reimbursements() {
+		
+	}
 
 	private int reimb_id;
 	private double reimb_amount;
-	private Date reimb_request;
-	private Date reimb_review;
+	private Timestamp reimb_request;
+	private Timestamp reimb_review;
+	@XmlElement
 	private String reimb_purpose;
 	private int reimb_requester;
 	private int reimb_reviewer;
-	private int reimb_status;
+	private String reimb_status;
 
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -26,12 +37,14 @@ public class Reimbursements {
 		result = prime * result + reimb_requester;
 		result = prime * result + ((reimb_review == null) ? 0 : reimb_review.hashCode());
 		result = prime * result + reimb_reviewer;
-		result = prime * result + reimb_status;
+		result = prime * result + ((reimb_status == null) ? 0 : reimb_status.hashCode());
 		return result;
 	}
 
-	public Reimbursements(int reimb_id, double reimb_amount, Date reimb_request, Date reimb_review,
-			String reimb_purpose, int reimb_requester, int reimb_reviewer, int reimb_status) {
+
+
+	public Reimbursements(int reimb_id, double reimb_amount, Timestamp reimb_request, Timestamp reimb_review,
+			String reimb_purpose, int reimb_requester, int reimb_reviewer, String reimb_status) {
 		super();
 		this.reimb_id = reimb_id;
 		this.reimb_amount = reimb_amount;
@@ -50,6 +63,7 @@ public class Reimbursements {
 				+ ", reimb_requester=" + reimb_requester + ", reimb_reviewer=" + reimb_reviewer + ", reimb_status="
 				+ reimb_status + "]";
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -83,19 +97,23 @@ public class Reimbursements {
 			return false;
 		if (reimb_reviewer != other.reimb_reviewer)
 			return false;
-		if (reimb_status != other.reimb_status)
+		if (reimb_status == null) {
+			if (other.reimb_status != null)
+				return false;
+		} else if (!reimb_status.equals(other.reimb_status))
 			return false;
 		return true;
 	}
-
+	
+	@XmlElement
 	public int getReimb_id() {
 		return reimb_id;
 	}
-
+	
 	public void setReimb_id(int reimb_id) {
 		this.reimb_id = reimb_id;
 	}
-
+	@XmlElement
 	public double getReimb_amount() {
 		return reimb_amount;
 	}
@@ -103,23 +121,23 @@ public class Reimbursements {
 	public void setReimb_amount(double reimb_amount) {
 		this.reimb_amount = reimb_amount;
 	}
-
-	public Date getReimb_request() {
+	@XmlElement
+	public Timestamp getReimb_request() {
 		return reimb_request;
 	}
 
-	public void setReimb_request(Date reimb_request) {
+	public void setReimb_request(Timestamp reimb_request) {
 		this.reimb_request = reimb_request;
 	}
-
-	public Date getReimb_review() {
+	@XmlElement
+	public Timestamp getReimb_review() {
 		return reimb_review;
 	}
 
-	public void setReimb_review(Date reimb_review) {
+	public void setReimb_review(Timestamp reimb_review) {
 		this.reimb_review = reimb_review;
 	}
-
+	@XmlElement
 	public String getReimb_purpose() {
 		return reimb_purpose;
 	}
@@ -127,7 +145,7 @@ public class Reimbursements {
 	public void setReimb_purpose(String reimb_purpose) {
 		this.reimb_purpose = reimb_purpose;
 	}
-
+	@XmlElement
 	public int getReimb_requester() {
 		return reimb_requester;
 	}
@@ -135,7 +153,7 @@ public class Reimbursements {
 	public void setReimb_requester(int reimb_requester) {
 		this.reimb_requester = reimb_requester;
 	}
-
+	@XmlElement
 	public int getReimb_reviewer() {
 		return reimb_reviewer;
 	}
@@ -143,12 +161,12 @@ public class Reimbursements {
 	public void setReimb_reviewer(int reimb_reviewer) {
 		this.reimb_reviewer = reimb_reviewer;
 	}
-
-	public int getReimb_status() {
+	@XmlElement
+	public String getReimb_status() {
 		return reimb_status;
 	}
 
-	public void setReimb_status(int reimb_status) {
+	public void setReimb_status(String reimb_status) {
 		this.reimb_status = reimb_status;
 	}
 

@@ -18,9 +18,12 @@ public class ConnectionUtil {
 		InputStream in = null;
 		try {
 			Properties props = new Properties();
-			in = new FileInputStream("src/main/resources/db.properties");
+			in = new FileInputStream("/Users/ramnerylugo/Documents/workspace-sts-3.9.3.RELEASE/Project_One/src/main/resources/db.properties");
 			props.load(in);
-			return DriverManager.getConnection(props.getProperty("url"), props.getProperty("username"), props.getProperty("password"));
+			Class.forName("oracle.jdbc.OracleDriver");
+			
+		return DriverManager.getConnection(props.getProperty("url"), props.getProperty("username"), props.getProperty("password"));
+		}catch(ClassNotFoundException e) {
 			
 		} catch (SQLException e){
 			logger.error(e.getMessage());
