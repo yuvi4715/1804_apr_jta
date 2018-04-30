@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Watchtower Reimbursement</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/user.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container">
+
+    <div class="tab">
+        <button class="tablinks" onclick="openSection(event, 'Submit')">Submit Reimbursement</button>
+        <button class="tablinks" onclick="openSection(event, 'Pending')">Pending</button>
+        <button class="tablinks" onclick="openSection(event, 'Resolved')">Resolved</button>
+        <button class="tablinks" onclick="openSection(event, 'Update')">Update Information</button>
+        <button class="tablinks" onclick="openSection(event, 'Logout')">Logout</button>
+
+    </div>
+
+    <div id="Submit" class="tabcontent">
+        <div class="py-5 text-center">
+            <h2>Reimbursement Form</h2>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="purpose">Reason for Reimbursement</label>
+            <input type="text" class="form-control" id="purpose" placeholder="Purpose" required>
+            <div class="invalid-feedback">
+                Enter a valid request.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="reimbursementAmount">Requested Amount</label>
+            <input type="number" class="form-control" id="reimbursementAmount" placeholder="Amount" required>
+            <div class="invalid-feedback">
+                Enter a number.
+            </div>
+        </div>
+
+            <button id="submitRequest" class="btn btn-lg btn-primary btn-block">Submit</button>
+    </div>
+
+
+    <div id="Pending" class="tabcontent">
+
+        <table class="table table-striped" id="bigPending">
+            <thead>
+            <th>Request ID</th>
+            <th>Purpose</th>
+            <th>Amount</th>
+            <th>Request Date</th>
+            </thead>
+            <tbody id="pendingTable"></tbody>
+        </table>
+
+        <button type="button" id="submitPendingRequest" name="submitPendingRequest"
+                class="btn btn-sm btn-secondary">Load Table</button>
+
+    </div>
+
+    <div id="Resolved" class="tabcontent">
+        <table class="table table-striped" id="bigApproving">
+            <thead>
+            <th>Request ID</th>
+            <th>Purpose</th>
+            <th>Amount</th>
+            <th>Request Date</th>
+            <th>Manager</th>
+            <th>Approved Date</th>
+            </thead>
+            <tbody id="approvingTable"></tbody>
+        </table>
+
+        <button type="button" id="submitApprovedRequest" name="submitApprovedRequest"
+                class="btn btn-sm btn-secondary">Load Table</button>
+
+    </div>
+    <div id="Update" class="tabcontent">
+        <p>Update</p>
+
+    </div>
+
+    <div id="Logout" class="tabcontent">
+
+        <button type="button" id="logoutButton" name="logoutButton"
+                class="btn btn-sm btn-primary">Logout</button>
+
+    </div>
+
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">
+            Justice League Watchtower
+        </p>
+    </footer>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="../js/userJS.js"></script>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+
+    (function () {
+        'use strict';
+
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            let forms = document.getElementsByClassName('needs-validation');
+
+            // Loop over them and prevent submission
+            let validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+
+    //
+    // Function to make tabs for employees
+    function openSection(evt, cityName) {
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+
+
+
+</script>
+</body>
+</html>
