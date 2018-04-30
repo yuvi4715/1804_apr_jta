@@ -1,0 +1,48 @@
+<!--
+	Author: Michael Sikorski
+	Date: 4/29/2018
+
+	Project One - Reimbursement Request System
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Employee Home Page</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script src="../js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</head>
+
+<body class="bg-dark">
+	<nav class="navbar navbar-expand-sm navbar-light"
+		style="background-color: #e3f2fd;">
+		<a class="navbar-brand" href="#">Employee Home</a>
+		<!--  enctype="multipart/form-data"  -->
+		<form class="form-inline" id="form">
+			<input class="form-control mr-sm-2" id="email" placeholder="Email" name="email"
+				type="email" required> <input class="form-control mr-sm-2" name="password"
+				placeholder="Password" id="password" type="password" required>
+			<button class="btn btn-success my-2 my-sm-0" type="button" onclick="loginEmployee()"
+				id="employeeLogin">Login</button>
+		</form>
+		<ul class="navbar-nav justify-content-end ml-auto">
+			<li><a class="nav-link" href="ManagerLogin.html">Looking for
+					the Manager Home page?</a></li>
+		</ul>
+	</nav>
+	<p id="message" style="color:red;position:absolute;z-index:4"></p>
+	<div class="embed-responsive embed-responsive-4by3">
+		<iframe id="pipContent" class="embed-responsive-item"
+			src="employeeLoggedOut.html"></iframe>
+	</div>
+
+	<footer class="sticky-footer text-white">
+		<div class="container">
+			<div class="text-center">
+				<small>Michael Sikorski © Project 1</small>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>

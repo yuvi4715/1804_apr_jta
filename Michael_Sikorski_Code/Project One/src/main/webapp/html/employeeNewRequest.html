@@ -1,0 +1,36 @@
+<!--
+	Author: Michael Sikorski
+	Date: 4/29/2018
+
+	Project One - Reimbursement Request System
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>New Request</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script src="../js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</head>
+
+<body style="padding:45px">
+	<h3>Please fill out the following form</h3>
+	<form>
+		<div class="form-group">
+			<label>Request Amount: </label> <input
+				type="number" class="form-control" name="requestAmount" id="requestAmount" min="1"
+				placeholder="Enter the amount for your reimbursement request" required="required"><small
+				class="form-text text-muted">Reimbursement requests must be
+				&lt; $10,000</small>
+		</div>
+		<div class="form-group">
+			<label>Description: </label> <input
+				type="text" class="form-control" name="requestDescription" id="requestDescription"
+				placeholder="Enter a short description for your reimbursement" required="required">
+		</div>
+		<button type="button" class="btn btn-primary" onclick="submitRequest()">Submit</button>
+	</form>
+	<p id="message"></p>
+	<script src="../js/submitRequest.js"></script>
+</body>
+</html>
