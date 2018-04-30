@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Employee Home</h2>
+	<h5 id="userHeader"></h5>
+	<div>
+		<h4>Create new ticket</h4>
+		<form>
+			<input type="text" id="amount" placeholder="Enter amount" style="width: 100px""/>
+			<input type="text" id="reason" placeholder="Enter reason for reimbursement" style="width: 200px"/>
+			<button type="reset" id="submitButton">Submit</button>
+		</form>
+		<p id="ticketCreateText"></p>
+	</div>
+	<div>
+		<h4>Your Reimbursement Tickets</h4>
+		<form>
+			<button type="button" id="pendingButton">View Pending</button>
+			<button type="button" id="resolvedButton">View Resolved</button>
+			<button type="button" id="viewallButton">View All</button>
+		</form>
+		<table border="1" id="ticketTable">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Amount</th>
+					<th>Reason</th>
+					<th>Status</th>
+					<th>Manager</th>
+					<th>Request Date</th>
+					<th>Review Date</th>
+				</tr>
+			</thead>			
+			<tbody id="tableBody"></tbody>
+		</table>
+	</div>
+	<br><br>
+	<div>
+		<button type="button" id="logoutButton">Logout</button>
+	</div>
+	<script type="text/javascript" src="../js/EmployeeHome2.js"></script>
+</body>
+</html>

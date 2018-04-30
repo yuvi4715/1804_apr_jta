@@ -11,4 +11,8 @@ public class EmployeeService {
 	public static Employee login(String email, String pass) {
 		return dao.login(email, pass);
 	}
+	
+	public static Employee managerLogin(String email, String pass) {
+		return dao.managerLogin(email, pass);
+	}
 }

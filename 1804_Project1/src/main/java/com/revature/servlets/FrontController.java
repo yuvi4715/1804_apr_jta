@@ -29,8 +29,7 @@ public class FrontController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		ObjectMapper objMapper = new ObjectMapper();	
-		
+		ObjectMapper objMapper = new ObjectMapper();			
 		Object obj = RequestHelper.process(request);
 		String objString = objMapper.writeValueAsString(obj);
 		System.out.println(objString);

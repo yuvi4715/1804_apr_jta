@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Manager Home</title>
+</head>
+<body>
+	<h2>Manager Home</h2>
+	<h5 id="userHeader"></h5>
+	<div>
+		<h4>Approve / Deny Requests</h4>
+		<form>
+			<input type="text" id="reqId" placeholder="Enter request Id" style="width: 100px"/>
+			<input type="checkbox" id="approveDeny" value="approve">
+    		<label for="approveDeny">Approve? (Will deny if not checked)</label>
+			<button type="reset" id="submitButton">Submit</button>
+		</form>
+		<p id="updateText"></p>
+	</div>
+	<div>
+		<h4>Reimbursement Tickets</h4>
+		<form>
+			<input type="text" id="empEmail" placeholder="Enter Employee Email" style="width: 150px"/>
+			<button type="reset" id="searchButton">Search</button>
+			<button type="button" id="pendingButton">View Pending</button>
+			<button type="button" id="resolvedButton">View Resolved</button>
+			<button type="button" id="viewallButton">View All</button>
+		</form>
+		<table border="1" id="ticketTable">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Employee</th>
+					<th>Amount</th>					
+					<th>Reason</th>
+					<th>Status</th>
+					<th>Manager</th>
+					<th>Request Date</th>
+					<th>Review Date</th>
+				</tr>
+			</thead>			
+			<tbody id="tableBody"></tbody>
+		</table>
+	</div>
+	<br><br>
+	<div>
+		<button type="button" id="logoutButton">Logout</button>
+	</div>
+	<script type="text/javascript" src="../js/ManagerHome.js"></script>
+</body>
+</html>

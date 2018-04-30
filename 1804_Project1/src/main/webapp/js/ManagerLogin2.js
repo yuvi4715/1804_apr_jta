@@ -1,6 +1,8 @@
+/**
+ * 
+ */
 
-
- window.onload = function(){
+window.onload = function(){
  	
  	//var cookie = document.cookie;
  	var textField = document.getElementById("loginText");
@@ -21,7 +23,7 @@
  				if (userObj.loginStatus == "Success") {
  					console.log("Success has been achieved!");
  					document.cookie="username="+userObj.email;
- 					window.location.href = "http://localhost:8025/1804_Project1/html/EmployeeHome.html"
+ 					window.location.href = "http://localhost:8025/1804_Project1/html/ManagerHome.html"
  				} else if (userObj.loginStatus == "Incorrect Password"){
  					console.log("Incorrect Password, Try again.");
  					textField.textContent = "Incorrect Password, Try again.";
