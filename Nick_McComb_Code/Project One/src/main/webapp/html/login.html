@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Reimbursement Portal</title>
+</head>
+<body>
+	<h2>Login</h2>
+	<h4>Employee Login</h4>
+	<form method="post" action="/ProjectOne/userLogin.do">
+		<input type="email" id="employeeName" name="empLog" placeholder="enter your email">
+		<input type="password" id="employeePassword" name="empPass" placeholder = "enter your password">
+		<input type="submit" name="uLogButton" value="login">
+	</form>
+	<form action="employeecreation.html">
+		<input type="submit" value="Create new employee account">
+	</form>
+	
+	<br>
+	<br>
+	<br>
+	<h4>Administrator Login</h4>
+	<form method="post" action="/ProjectOne/adminLogin.do">
+		<input type="email" id="adminName" name="admLog" placeholder="enter your email">
+		<input type="password" id="adminPassword" name="admPass" placeholder = "enter your password">
+		<input type="submit" name="aLogButton2" value="login">
+	</form>	
+	<form action="admincreation.html">
+		<input type="submit" value="Create new administrator account">
+	</form>
+</body>
+</html>

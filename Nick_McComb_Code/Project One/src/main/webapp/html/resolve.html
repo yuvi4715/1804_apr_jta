@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="POST" action="/ProjectOne/resolveRequest.do">
+		<input type="number" name="rid">
+		<select name="stat">
+			<option value="Approved">Approve</option>
+			<option value="Denied">Deny</option>
+			<option value="Processing">Mark for Later</option>
+		</select>
+		<input type="text" id="comment" name="comm" placeholder = "Enter Comments" maxlength="50">
+		<input type="submit" id="sButton" value="Submit">
+	</form>
+	<script type="text/javascript" src="../js/resolution.js"></script>
+</body>
+</html>

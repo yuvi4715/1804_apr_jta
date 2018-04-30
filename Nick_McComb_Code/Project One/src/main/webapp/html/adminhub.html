@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Administrator Hub</h1>
+
+<br>
+<form method="POST">
+		<input type="button" id="sButton" value="View Pending Requests">
+	</form>
+	<form method="POST">
+		<input type="button" id="sButton2" value="View Resolved Requests">
+	</form>
+	<form method="POST">
+		<input type="button" id="sButton3" value="View All Requests">
+	</form>
+	<form action="resolve.html">
+		<input type="submit" value="Resolve a request.">
+	</form>
+	<form method="POST" action="/ProjectOne/logout.do">
+		<input type="submit" id="logout" value="Log Out">
+	</form>
+	<table id="requestsTable">
+	<caption>Requests</caption>
+	<tr>
+		<th id="rID1">Request ID | </th>
+		<th id="amount">Request Amount | </th>
+		<th id="rID2">Requester ID | </th>
+		<th id="handler">Handler ID | </th>
+		<th id="stat">Request Status | </th>
+		<th id="purp">Request Purpose | </th>
+		<th id="comm">Handler Comment | </th>
+		
+	</tr>
+	</table>
+	<div id="Requests"></div>
+	<script type="text/javascript" src="../js/adminFunctionality.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="POST">
+		<input type="button" id="sButton" value="View Pending Requests">
+	</form>
+	<form method="POST">
+		<input type="button" id="sButton2" value="View Resolved Requests">
+	</form>
+	<form action="employeehub.html">
+		<input type="submit" value="Back">
+	</form>
+	<table id="requestsTable">
+	<caption>Requests</caption>
+	<tr>
+		<th id="amount">Request Amount | </th>
+		<th id="handler">Handler ID | </th>
+		<th id="stat">Request Status | </th>
+		<th id="purp">Request Purpose | </th>
+		<th id="comm">Handler Comment | </th>
+	</tr>
+	</table>
+	<div id="Requests"></div>
+	<script type="text/javascript" src="../js/myPendingRequests.js"></script>
+</body>
+</html>
