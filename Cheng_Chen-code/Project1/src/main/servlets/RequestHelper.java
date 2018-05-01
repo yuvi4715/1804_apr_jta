@@ -25,11 +25,11 @@ public class RequestHelper
 				return login(request);
 				
 			case "/Project1/msubmitRequest.do":
-				System.out.println("msubmit request");
+				System.out.println("manager submitting request");
 				return msubmitRequest(request);
 				
 			case "/Project1/esubmitRequest.do":
-				System.out.println("esubmit request");
+				System.out.println("employee submitting request");
 				return esubmitRequest(request);
 				
 			case "/Project1/resolveRequest.do":
@@ -61,7 +61,7 @@ public class RequestHelper
 				return getResolvedRequests(request);
 				
 			case "/Project1/html/getUnresolvedRequests.do":
-				System.out.println("getUnresolvedRequests");
+				System.out.println("getPendingRequests");
 				return getPendingRequests(request);
 				
 			case "/Project1/html/getRequestsFor.do":

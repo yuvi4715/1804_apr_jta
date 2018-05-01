@@ -11,7 +11,7 @@
 <form method= "get" action = "/Project1/login.do">
 
   <div class="container">
-    <label for="email"><b>email address</b></label>
+    <label for="email"><b>Email Address</b></label>
     <input type="text" placeholder="Enter Company email" name="email" required>
 
     <label for="psw"><b>Password</b></label>
