@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Reimbursement System</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<style>
+div {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 30em;
+	height: 18em;
+	margin-top: -9em; /*set to a negative number 1/2 of your height*/
+	margin-left: -15em; /*set to a negative number 1/2 of your width*/
+	border: 1px solid #ccc;
+	background-color: #f3f3f3;
+}
+
+</style>
+</head>
+<body>
+	<h2 align="center">Welcome to the employee reimbursement System</h2>
+	<div class="container" id="myDiv">
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<h3>Enter your login credentials</h3>
+				<form>
+					<input type="text" id="username" required /> <input
+						type="password" id="password" required /> <input type="button"
+						id="loginButton" value="Login">
+				</form>
+				<p id="text" align="center"></p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/Login.js"></script>
+</body>
+</html>

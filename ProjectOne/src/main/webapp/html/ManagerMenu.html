@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Manager Menu</title>
+<style>
+table, th, td {
+	border: 2px solid blue;
+    border-radius: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+</style>
+</head>
+<body>
+	<input type="button" id="logOutButton" style="float: right;" value="LogOut">
+	<h2>Welcome to the Manager Menu!</h2>
+	<br>
+	<div>
+		<h4 align="center" id="mainheader">Employees Currently Hired</h4>
+		<input type="button" id="populateEmployees" value="All employees">
+		<input type="button" id="populateAllRequests" value="All Requests">
+		<input type="button" id="allPendingButton" value="All Pending Requests">
+		<input type="button" id="allApprovedButton" value="All Resolved Requests">
+		<table style="width: 100%"  id="employeeTable">
+			<tr>
+				<th id="col1">Email</th>
+				<th id="col2">First Name</th>
+				<th id="col3">Last Name</th>
+				<th id="col4">UserName</th>
+				<th id="col5">Position</th>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript" src="../js/ManagerMenu.js"></script>
+</body>
+</html>

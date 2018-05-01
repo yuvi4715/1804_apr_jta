@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Menu</title>
+<style>
+table, th, td {
+	border: 2px solid green;
+	border-radius: 5px;
+}
+
+tr:nth-child(even) {
+	background-color: #80ff80
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<input type="button" id="logOutButton" style="float: right;"
+		value="LogOut">
+	<section>
+		<div class="container">
+			<h2>Your Information</h2>
+			<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">Your email</div>
+					<div class="panel-body" id="infoEmail"></div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Your Name</div>
+					<div class="panel-body" id="infoName"></div>
+					<input type="text" id="firstNameBox" placeholder="FirstName Here">
+					<input type="text" id="lastNameBox" placeholder="LastName here">
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Your username</div>
+					<div class="panel-body" id="infoUsername"></div>
+
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Your Password</div>
+					<div class="panel-body" id="infoPassword"></div>
+					<input type="text" id="passwordBox"
+						placeholder="Enter new password here">
+				</div>
+			</div>
+			<input type="button" id="updateInfoButton" value="Update your info!">
+		</div>
+	</section>
+
+	<br>
+	<div>
+		<h4 align="center" id="mainheader">Your information</h4>
+		<input type="button" id="getAllRequests" value="Pending Requests">
+		<input type="button" id="allResolvedRequests"
+			value="Resolved Requests">
+		<table style="width: 100%" id="requestTable">
+			<tr>
+				<th id="col1">Email</th>
+				<th id="col2">First Name</th>
+				<th id="col3">Last Name</th>
+				<th id="col4">UserName</th>
+				<th id="col5">Position</th>
+			</tr>
+		</table>
+	</div>
+	<div class="container">
+		<h2>Submit a request</h2>
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">Enter the amount and reason of your
+					request.</div>
+				<div class="panel-body" id="infoEmail"></div>
+				<input type="text" id="amountBox" placeholder="Enter the amount"
+					required> <input type="text" id="purposeBox"
+					placeholder="Reason" required> <input type="button"
+					id="submitRequest" value="Submit request">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/EmployeeMenu.js"></script>
+</body>
+</html>
