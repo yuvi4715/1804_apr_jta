@@ -1,0 +1,107 @@
+@CHARSET "ISO-8859-1";
+
+html, body {
+	
+    width: 100%;
+    background-color: #e0e0e0;
+}
+
+.button1 {
+	background-color : #dcffd1;
+    border-style: dotted;
+    color: grey;
+    padding: 7px 66px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    position:fixed; 
+}
+
+#centre {
+	
+    
+    position: fixed;
+    bottom: 90%;
+    left: 40%;
+    
+   
+}
+#image1
+{
+	position:fixed;
+	left: 5%;
+	top : 3%
+}
+#image2{
+	
+	right: 5%;
+	position :fixed;
+	top: 3%
+}
+
+.container {
+	
+	background-color : #efffeb;
+	bottom : 20%;
+	position : fixed;
+	left : 30.5%;
+	padding : 190px 258px;
+	
+	
+}
+ #requests{ 
+	
+	/* make a border */
+	width : 50%;
+	position: fixed;
+	left: 25.5%;
+	top : 30%;
+	border:1;
+	border-color: #bd9ac2;
+	color : #484848;
+} 
+
+
+#middle{
+	position: fixed;
+	bottom: 10%;
+	left: 34%;
+	color: grey;
+   
+}
+
+
+
+#part{
+	
+  position: fixed; 
+	top: 15%;
+	left: 44%;
+}
+
+#popup{
+	left :50%;
+	padding: 7px 66px;
+}
+
+#abc {
+
+opacity:.95;
+display:none;
+background-color:#313131;
+overflow:auto
+}
+#abc0 {
+
+opacity:.95;
+display:none;
+background-color:#313131;
+overflow:auto
+}
+
+div#popupContact {
+font-family:'Raleway',sans-serif
+}

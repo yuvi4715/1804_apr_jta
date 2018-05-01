@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="../css/pagetwo.css" rel="stylesheet">
+
+</head>
+<body>
+<section><!-- This section is for the button to submit a new request -->
+<button id = centre class = "button1" onclick="Createreq()">Create a new Request</button><br>
+</section>
+
+<section> <!-- CREATE REQUESTS -->
+
+<div id="part" style="overflow:hidden;">
+
+<div id="abc0">
+<!-- Popup Div Starts Here -->
+<div id="popupContact">
+
+<table>
+	<tr>
+            <td>
+              <input type="text" id = "requestdetails" placeholder="requestdetails" class = "form-control">
+              </td>
+              </tr><tr> 
+            <td>       
+              <input type="text" id="requestamount" placeholder="requestamount" class="form-control">      
+              </td>
+              </tr><tr>
+            <td>
+            <button type = "button" id = button2 onclick= "sendreq()">Submit</button>
+            </td>
+            </tr> 
+    </table> 
+    
+
+
+</div>
+<!-- Popup Div Ends Here -->
+
+<!-- Display Popup Button -->
+
+</div>
+</div>
+</section>
+
+
+<section><!-- images -->
+<div>
+<div id = "image1">
+<img src = "0[1].png" alt = "Profile logo" style= "width:20px; height:10;" href="" onclick ="updateInformation()">
+</div>
+<div id = "image2">
+<img src = "icon_email[1].png" alt = "Message Logo" style = "width:20px; height:10;" href="">
+</div>
+</div>
+</section>
+
+
+
+<section>
+
+<div id="part" style="overflow:hidden;">
+
+<div id="abc">
+<!-- Popup Div Starts Here -->
+<div id="popupContact">
+
+<table>
+	<tr>
+           <td>
+           	  <label class = "" id = "approve"> 
+              <input type="radio" checked = "checked" name = "radio1" value  = "Y">
+              <span class = "checkmark" ></span>Approve
+              </label>
+           </td>
+           <td>
+           	  <label class = "" id = "decline"> 
+              <input type="radio"  name = "radio1" value = "D">
+              <span class = "checkmark" ></span>Decline
+              </label>
+           </td>
+    </tr>
+    </table> 
+    
+
+
+</div>
+<!-- Popup Div Ends Here -->
+
+<!-- Display Popup Button -->
+
+<button type="button" id="popup" onclick="submitrequestapproval()">Submit</button>
+</div>
+</div>
+</section>
+
+
+
+<!-- <section class = "container"> --><!-- This section is for listing all tickets by user which can be filtered -->
+ <table id="requests" border = "1">
+            
+<!--               <tr id ="manipulate">
+              
+                <th >Request Details</td>
+                <th>Status</td>
+                <th>Request Amount</td>
+                <th>Request Date</td>
+                <th>Review Date</td>
+                <th>Reviewer</td>
+               
+              </tr>
+            -->
+ 
+
+           <!-- <tbody id="employee-requests"></tbody> -->
+
+          </table>
+<!-- </section> -->
+<footer><!-- filter radio buttons -->
+
+<table id = middle>
+	<tr>
+           <td>
+           	  <label class = "" id = "Y" > 
+              <input type="radio" checked = "checked" name = "radio" value = "Y">
+              <span class = "checkmark" ></span>Resolved Request
+              </label>
+           </td>
+           <td>
+           	  <label class = "" id = "N" > 
+              <input type="radio"  name = "radio" value = "N">
+              <span class = "checkmark" ></span>Unresolved Requests
+              </label>
+           </td>
+           <td>
+           	  <label class = "" id = "ALL" > 
+              <input type="radio"  name = "radio" value = "All">
+              <span class = "checkmark" ></span>All Requests
+              </label>
+           </td>
+    </tr>
+    </table>   
+</footer>
+<script type="text/javascript" src=../js/homepage.js></script>
+</body>
+</html>

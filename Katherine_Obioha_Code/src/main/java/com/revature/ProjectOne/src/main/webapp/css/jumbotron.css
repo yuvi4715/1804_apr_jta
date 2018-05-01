@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+/**.body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}**/
+
+html, body {
+	
+    width: 100%;
+    background-color: #e0e0e0;
+}
+
+.button {
+	background-color : #dcffd1;
+    border-style: dotted;
+    color: grey;
+    padding: 7px 66px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+#centre {
+	
+    
+    position: fixed;
+    bottom: 50%;
+    right: 45%;
+   
+}
+.navbar .transparent .navbar-inverse .navbar-inner .container {
+	/*padding-top: 80px;*/
+    /*border-width: 0px;*/
+ 
+}
+ 
