@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>ERS - Login</title>
+
+<link rel='stylesheet'
+	href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+
+<link rel="stylesheet" href="../css/style.css" media="screen"
+	type="text/css" />
+
+</head>
+
+<body>
+	<div class="login-card">
+		<h1>Expense Reimbursement System</h1>
+		<br>
+		<form method="post" action="/expense_reimbursement_service/FrontController/login">
+			<input type="text" name="username" placeholder="Username">
+			<input type="password" name="password" placeholder="Password"> 
+			<input type="submit" name="login" class="login login-submit" value="login" 
+			onclick="checkCookie()">
+			
+		</form>
+		<h6></h6>
+	</div>
+
+	<script
+		src='http://codepen.io/assets/libs/fullpage/jquery_and_jqueryui.js'></script>
+
+<script type="text/javascript">
+
+
+function setCookie(cname,cvalue) {
+    document.cookie = cname + "=" + cvalue + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = document.getElementById("username").value;
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+
+</script>
+
+</body>
+
+</html>

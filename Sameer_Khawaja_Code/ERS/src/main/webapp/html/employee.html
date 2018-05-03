@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EMPLOYEE LOGIN</title>
+</head>
+<body>
+	<h2>Welcome Employee</h2>
+	<h3 id = "loggedInAs"></h3>
+	<form method= "get" action = "servlet">
+
+		  <div class="container">
+		
+		    <label for="purpose"><b>Purpose</b></label>
+		    <input id = "purpose_input" type="text" name="purpose" required>
+		    
+		    <label for="amount"><b>Amount</b></label>
+		    <input id = "amount_input" type="text"  name="amount" required>
+		    
+		    <button type="button" id ="request_submit" onclick = "submitReimbursement()">Submit</button>
+		   
+		  </div>
+
+	</form>
+
+	<textarea id = "all_reimbursements"rows="40" cols="100">
+	Press a button to display information
+	</textarea>
+	
+	<br>
+	<label for="email"><b>Your Email</b></label>
+		    <input id = "email" type="text" name="empEmail" required>
+	<button type="button" id ="pending_req" onclick= "showPending()">Show Pending</button>
+  	<button type="button" id ="resolved_req" onclick= "showResolved()">Show Resolved</button>
+  	
+  	<br>
+  	<label for="username"><b>Your Username</b></label>
+		    <input id = "empUsername" type="text" name="empUsername" required>
+  	<button type="button" id ="show_employees" onclick= "showMyInfo()">Show My Info</button>
+  
+  
+	<div>
+		<label for="fnchange"><b>Firstname</b></label>
+	    <input id = "fn" type="text" name="f_n" required>
+	    <label for="lnchange"><b>Lastname</b></label>
+	    <input id = "ln" type="text" name="l_n" required>
+	    <label for="emchange"><b>Email</b></label>
+	    <input id = "em" type="text" name="em" required>
+	    <label for="unchange"><b>Username</b></label>
+	    <input id = "username" type="text" name="un" required>
+	    <label for="pwchange"><b>Password</b></label>
+	    <input id = "password" type="password" name="pw" required>
+	    <button type="button" id ="pw_submit" onclick = "updateUser()">Update Your Info</button>
+	</div>
+   
+
+
+
+<script type="text/javascript">
+var x = document.cookie;
+
+document.getElementById("loggedInAs").innerHTML = x.substring(9);
+console.log(x);
+console.log("hello")
+
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+
+function submitReimbursement() {
+	
+	var email = document.getElementById("email").value;
+	var purp = document.getElementById("purpose_input").value;
+	var amount = document.getElementById("amount_input").value;
+	console.log("submitting reimbursment")
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	console.log("sent the info" )
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/submit.do");
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+	  xhttp.send("employeeEmail="+email+"&purp="+purp+"&amount="+amount);
+	
+}
+
+
+function updateUser() {
+	var fn = document.getElementById("fn").value;
+	var ln = document.getElementById("ln").value;
+	var em = document.getElementById("em").value;
+	var un = document.getElementById("username").value;
+	var pw = document.getElementById("password").value;
+	
+	console.log("working on update username")
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	console.log("sent the info" )
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/updateinfo.do");
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+	  xhttp.send("firstname="+fn+"&lastname="+ln+"&email="+em+"&username="+un+"&password="+pw);
+	
+}
+
+
+
+function showMyReimbursements() {
+	
+	var email = document.getElementById("loggedInAs").innerHTML;
+	console.log("  succesfully started showReimbursements ")
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	
+	    	var test = this.responseText;
+	    	console.log(test);
+	    	document.getElementById("all_reimbursements").innerHTML = this.responseText;
+	    	console.log("sucessfully finished showReimbursements");
+	    	
+	    }
+	  };
+	  xhttp.open("POST", "/reimbursement/getAllMyReimbursements.do");
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhttp.send("email="+email);
+	
+}
+
+
+
+function showPending() {
+
+	console.log("running pending")
+	var email = document.getElementById("email").value;
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	
+	    	var test = this.responseText;
+	    	console.log(test);
+	    	document.getElementById("all_reimbursements").innerHTML = this.responseText;
+	    	console.log("sucessfully finished show pending");
+	    	
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/viewpending.do");//DOOD
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhttp.send("email="+email);
+	
+}
+
+function showResolved() {
+
+	console.log("running resolved")
+	var email = document.getElementById("email").value;
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	
+	    	var test = this.responseText;
+	    	console.log(test);
+	    	document.getElementById("all_reimbursements").innerHTML = this.responseText;
+	    	console.log("sucessfully finished show resolved");
+	    	
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/viewresolved.do");//DOOD
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhttp.send("email="+email);
+	
+}
+
+function showMyInfo() {
+
+	console.log("running showmyinfo")
+	var username = document.getElementById("empUsername").value;
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	
+	    	var test = this.responseText;
+	    	console.log(test);
+	    	document.getElementById("all_reimbursements").innerHTML = this.responseText;
+	    	console.log("sucessfully finished show myinfo");
+	    	
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/viewempinfo.do");//DOOD
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhttp.send("employeeUsername="+username);
+	
+}
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

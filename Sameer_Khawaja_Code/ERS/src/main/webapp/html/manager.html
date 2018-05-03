@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>MANAGER LOGIN</title>
+</head>
+<body>
+<h3>Welcome Manager</h3>
+<h3 id = "loggedInAs"></h3>
+
+<form method= "post" action = "/expense_reimbursement_service/FrontController/updaterequest.do">
+
+  <div class="container">
+    <label for="request"><b>Request ID</b></label>
+    <input id="requestID"  type="text" placeholder="Enter request id number" name="id_number" required>
+
+    <label for="status"><b>Status</b></label>
+    <input id = "statusID" type="text" placeholder="Type in new status" name="status"   required>
+	
+	<label for="mgrName"><b>Status</b></label>
+    <input id = "managerEmail" type="text" placeholder="Type in your email" name="status"   required>
+	
+	
+    <button type="button" id ="update_request" onclick="updateRequest()">Update Request</button>
+  </div>
+  
+  
+  <div>
+  
+  
+	<textarea id = "all_reimbursements"rows="40" cols="100">
+	Press a button to display information
+	</textarea>
+  	
+  	
+    <button type="button" id ="pending_req" onclick= "showPending()">Show Pending</button>
+  	<button type="button" id ="resolved_req" onclick= "showResolved()">Show Resolved</button>
+  	<button type="button" id ="show_employees" onclick= "showEmployees()">Show Employees</button>
+  </div>
+  
+  <div>
+  <br>
+	  <label for="employeeemail"><b>Employee Email</b></label>
+	  <input id = "employeeEmail" type="text" placeholder="Type in employee email" name="employeeemail"   required>
+	
+      <button type="button" id ="one_emp" onclick= "showOneEmployee()">Employee Requests</button>
+      <button type="button" id ="logout_button" onclick= "logout()">Logout</button>
+  </div>
+  
+
+</form>
+
+
+
+<script type="text/javascript">
+var x = document.cookie;
+
+document.getElementById("loggedInAs").innerHTML = x;
+console.log(x);
+console.log("hello")
+
+
+var requestID = document.getElementById("requestID").value;
+console.log(requestID)
+var status = document.getElementById("statusID").value;
+console.log(status)
+function updateRequest() {
+	
+	var cookie = document.cookie;
+	var manager = document.getElementById("managerEmail").innerHTML;
+	
+	var requestID = document.getElementById("requestID").value;
+	
+	var status = document.getElementById("statusID").value;
+	console.log(status)
+	console.log(requestID+ "  succesfully did function   "+ status)
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	console.log("sent the info" + manager)
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/updaterequest.do");//DOOD
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+	  xhttp.send("reqID="+requestID+"&status="+status+"&managerEmail="+manager);
+	
+}
+
+
+function showPending() {
+
+	console.log("running pending")
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	
+	    	var test = this.responseText;
+	    	console.log(test);
+	    	document.getElementById("all_reimbursements").innerHTML = this.responseText;
+	    	console.log("sucessfully finished show pending");
+	    	
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/showpending.do");//DOOD
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhttp.send();
+	
+}
+
+function showResolved() {
+
+	console.log("running resolved")
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	
+	    	var test = this.responseText;
+	    	console.log(test);
+	    	document.getElementById("all_reimbursements").innerHTML = this.responseText;
+	    	console.log("sucessfully finished show resolved");
+	    	
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/showresolved.do");//DOOD
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhttp.send();
+	
+}
+
+function showEmployees() {
+
+	console.log("running show employees")
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	
+	    	var test = this.responseText;
+	    	console.log(test);
+	    	document.getElementById("all_reimbursements").innerHTML = this.responseText;
+	    	console.log("sucessfully finished show employees");
+	    	
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/showemployees.do");//DOOD
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhttp.send();
+	
+}
+
+
+
+
+
+
+function showOneEmployee() {
+	console.log("running show one employees")
+	
+	var empEmail = document.getElementById("employeeEmail").value;
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	var test = this.responseText;
+	    	console.log(test);
+	    	document.getElementById("all_reimbursements").innerHTML = this.responseText;
+	    	console.log("sucessfully finished show one employee");
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/showoneemployee.do");//DOOD
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+	  xhttp.send("employeeEmail="+empEmail);
+	
+}
+
+
+
+function logout() {
+	var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+	
+	var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	var test = this.responseText;
+	    	console.log("sucessfully logged out");
+	    }
+	  };
+	  xhttp.open("POST", "/expense_reimbursement_service/FrontController/logout.do");//DOOD
+	xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+	  xhttp.send();
+	
+}
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
