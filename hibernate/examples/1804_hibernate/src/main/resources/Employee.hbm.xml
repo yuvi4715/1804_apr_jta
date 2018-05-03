@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.revature.model.EmployeeXML">
+		<id name="eid" type="int">
+			<column name="E_ID" not-null="true" precision="10"></column>
+			<generator class="increment"></generator>
+		</id>
+		<property name="ename" type="string">
+			<column name="E_NAME" length="40"></column>
+		</property>
+		<property name="etitle" type="string">
+			<column name="E_TITLE" length="40"></column>
+		</property>
+		<property name="createdDate" type="date">
+			<column name="CREATED_DATE" length="10"></column>
+		</property>
+		<property name="createdBy" type="string">
+			<column name="CREATED_BY" length="40"></column>
+		</property>
+	</class>
+</hibernate-mapping>
