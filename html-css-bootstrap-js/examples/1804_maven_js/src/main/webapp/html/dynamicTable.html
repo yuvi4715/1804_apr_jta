@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to Dynamic table</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- meta tags with viewport helps in viewing the app in smaller devices such as smart phones -->
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+</head>
+<body>
+
+	<div id="container" class="container">
+		<header>
+			<h3 id="header" class="page-header">Dynamic Table</h3>
+		</header>
+		<section>
+			<div>
+				<form>
+					<input type="text" placeholder="Employee Number" id="employeeid"/>
+					<input type="text" placeholder="Employee Name" id="employeename"/>
+					<input type="text" placeholder="Gender" id="gender"/>
+					<input type="email" placeholder="Employee email" id="emailid"/>
+					<button id="submitBtn" type="button"  class="btn btn-primary">Submit</button>
+					<button id="clearBtn" type="reset"  class="btn btn-success">Clear</button>
+				</form>
+			</div>
+		</section>
+		<br>
+		<section>
+			<div>
+				<table class="table table-bordered table-hover table-striped">
+					<tbody id="empTable">
+						<th>Employee Number</th>
+						<th>Employee Name</th>
+						<th>Gender</th>
+						<th>Email address</th>
+					</tbody>
+				</table>			
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript" src=../js/dynamicTable.js></script>
+</body>
+</html>

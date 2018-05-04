@@ -1,0 +1,1 @@
+Front controller is a design pattern. Along with that example, integration of servlets, ajax code is included. If you want to work on the ERS project the sample code could be useful.

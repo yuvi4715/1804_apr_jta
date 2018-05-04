@@ -1,0 +1,7 @@
+Below are the core ones (everyone MUST accomplish them)
+-account creation (admin and user role)
+--admins must approve users before they can be used
+-transactions, must support withdrawals and deposits
+-must use logging
+-everything must NOT be in the main method.
+-data must be persisted using files. (The clever among them will use serialization)
