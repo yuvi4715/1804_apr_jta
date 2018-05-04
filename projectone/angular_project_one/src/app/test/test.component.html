@@ -1,0 +1,58 @@
+
+<!-- As a link -->
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" (click)="logout(); false" href="#" >Log Out</a>
+  <div *ngIf='this._databaseService.isAdmin; else elseBlockZero'>
+	  <a class="navbar-brand" id="viewemployee" (click)="viewEmployee(); false" href="#" >View Employees</a>
+	  <a class="navbar-brand" id="register" (click)="registerNewUser(); false" href="#" >Register New Employee</a>
+  </div>
+  <ng-template #elseBlockZero>
+	  <a class="navbar-brand" id="generateReceipt" (click)="generateReceipt(); false" href="#" >Generate Receipt</a>
+  </ng-template>
+</nav>
+
+<h1 style="text-align: center;">Welcome to Ipsum Receipt Tracker!</h1>
+<div class="bar">
+<input [(ngModel)]="name" id="searchbar"type="text" #mySearchbar (keyup)="onKey($event,myCheckbox.checked,mySearchbar.value,mySearchbar)" placeholder="Enter your search terms"/>
+<a (click)="checkboxIsClicked(myCheckbox); false" href="#" ><input disabled="true" #myCheckbox type="checkbox" />Display Approved</a>
+</div>
+<br/>
+<br/>
+<div id="receiptContainer" class="align-items-center">
+	{{errorMsg}}
+	<div *ngFor="let receipt of receipts">
+		<div class="rounded" id="container">
+			<input disabled=true [checked]="receipt.reinbursementRequest.status>0" id="checkbox" type="checkbox"/>
+			<div class="right" id="amount">
+				Amount:${{receipt.reinbursementRequest.amount}}
+			</div>
+			<div id="info">
+				Status:{{receipt.reinbursementRequest.status==0?"unresolved":receipt.reinbursementRequest.status==1?"Aproved":"Denied"}}<br/>
+				ReceiptID:{{receipt.reinbursementRequest.id}}<br/>
+				Employee:{{receipt.reinbursementRequest.owner.fname}}<br/>
+				Manager:{{receipt.reinbursementRequest.handledBy!=null?receipt.reinbursementRequest.handledBy.fname:"Unhandled"}}<br/>
+			</div>
+			<div id="image">
+				<img id="receiptImage" src="{{receipt.reinbursementRequest.imageURL}}" align="middle"/>
+				<textarea name="description" form="usrform" disabled="disabled" placeholder="description">{{receipt.reinbursementRequest.description}}</textarea>
+			</div>
+			<div *ngIf='this._databaseService.isAdmin'>
+				<div *ngIf='receipt.reinbursementRequest.status==0; else elseBlock'>
+					<button (click)="onAprove(receipt.reinbursementRequest)" type="button" class="btn btn-success">Aprove</button>
+					<button (click)="onDeny(receipt.reinbursementRequest)" type="button" class="btn btn-danger right">Deny</button>
+				</div>
+				<ng-template #elseBlock>
+					<div>
+						<button (click)="onChange(receipt.reinbursementRequest)" type="button" class="btn btn-primary">Change</button>
+					</div>
+				</ng-template>
+			</div>
+		</div>
+		<br/>
+	</div>
+	<br/>
+<button (click)="onPreviousPage()" style="left:33%" type="button" class="btn btn-primary">Previous Page</button>
+<span>Page Number:{{this.page}}</span>
+<button (click)="onNextPage()" type="button" class="btn btn-primary right">Next Page</button>
+{{this.getActivatedOnly}}
+</div>

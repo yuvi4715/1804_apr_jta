@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "owner": "Maria",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/ReceiptSwiss.jpg/170px-ReceiptSwiss.jpg",
+    "handledBy": "Pedro",
+    "amount": 40,
+    "status": 1,
+    "description": "ss"
+  },
+  {
+    "id": 2,
+    "owner": "Pedro",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/ReceiptSwiss.jpg/170px-ReceiptSwiss.jpg",
+    "handledBy": "Pedro",
+    "amount": 40,
+    "status": 2,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  },
+  {
+    "id": 3,
+    "owner": "Jose",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/ReceiptSwiss.jpg/170px-ReceiptSwiss.jpg",
+    "handledBy": "Pedro",
+    "amount": 40,
+    "status": 3,
+    "description": ""
+  },
+  {
+    "id": 4,
+    "owner": "Maria",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/ReceiptSwiss.jpg/170px-ReceiptSwiss.jpg",
+    "handledBy": "Pedro",
+    "amount": 40,
+    "status": 0,
+    "description": ""
+  },
+  {
+    "id": 5,
+    "owner": "Meryjane",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/ReceiptSwiss.jpg/170px-ReceiptSwiss.jpg",
+    "handledBy": "Pedro",
+    "amount": 40,
+    "status": 0,
+    "description": ""
+  }
+]

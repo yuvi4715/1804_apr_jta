@@ -1,0 +1,68 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" (click)="logout(); false" href="#" >Log Out</a>
+  <a class="navbar-brand" id="back" (click)="back(); false" href="#" >Back</a>
+</nav>
+	<div class="container">
+			<div class="row main">
+				<div class="panel-heading">
+	            </div> 
+				<div class="main-login main-center">
+					<form class="form-horizontal" method="post" action="#">
+						
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" #email name="email" id="email"  placeholder="Enter the Email"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">First Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" #fname name="fname" id="fname"  placeholder="Enter the First name"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Last Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" #lname name="lname" id="lname"  placeholder="Enter the Last name"/>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" #password name="password" id="password"  placeholder="Enter the Password"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label><span style="font-size: 10px;"> {{status}}</span>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" #confirm name="confirm" id="confirm"  placeholder="Confirm the Password"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+							<button type="button" (click)="onSubmit(email,fname,lname,password,confirm);false"class="btn btn-primary btn-lg btn-block login-button">Register</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>

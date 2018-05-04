@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" (click)="logout(); false" href="#" >Log Out</a>
+  <a class="navbar-brand" id="back" (click)="back(); false" href="#" >Back</a>
+</nav>
+<div class="container pt-3">
+  <div class="row justify-content-sm-center">
+    <div class="col-sm-6 col-md-4">
+
+      <div class="card border-info text-center">
+        <div class="card-header">
+          Enter Amount and a photo of the receipt({{this.status}})
+        </div>
+        <div class="card-body">
+          <form class="form-createreceipt" id="usrform" enctype="multipart/form-data">
+            <input type="number" class="form-control mb-2" #Amount name="amount" placeholder="amount" required autofocus>
+            <!-- COMPONENT START -->
+			<div class="form-group">
+				<div class="input-group input-file" name="Fichier1">
+					<span class="input-group-btn">
+						<input class="btn btn-default btn-choose" name="file" type="file" (change)="handleFileInput($event.target.files)">
+					</span>
+				</div>
+			</div>
+			<textarea name="description" form="usrform" #Description placeholder="description"></textarea>
+            <button class="btn btn-lg btn-primary btn-block mb-1"  (click)="onSubmit(Amount,Description);false" type="submit">Upload</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

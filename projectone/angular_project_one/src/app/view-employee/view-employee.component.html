@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" (click)="logout(); false" href="#" >Log Out</a>
+  <a class="navbar-brand" id="register" (click)="registerNewUser(); false" href="#" >Register New Employee</a>
+  <a class="navbar-brand" id="back" (click)="back(); false" href="#" >Back</a>
+</nav>
+<div id="receiptContainer" class="align-items-center">
+	{{errorMsg}}
+	<div *ngFor="let employee of employees">
+		<span> {{employee.employee.fname}} {{employee.employee.lname}} : {{employee.employee.email}}</span>
+	</div>
+	<br/>
+<button (click)="onPreviousPage()" style="left:33%" type="button" class="btn btn-primary">Previous Page</button>
+<span>Page Number:{{this.page}}</span>
+<button (click)="onNextPage()" type="button" class="btn btn-primary right">Next Page</button>
+</div>
