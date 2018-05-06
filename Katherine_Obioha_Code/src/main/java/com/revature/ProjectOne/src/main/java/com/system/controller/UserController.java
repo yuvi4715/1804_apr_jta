@@ -57,8 +57,10 @@ public class UserController {
 						return ray;
 					}
 				}
-			else{	logger.info("user is a manager");
+			else{	
+					logger.info("user is a manager");
 					List<Request>n = UserController.getallrequest();
+					System.out.println(n.toString());
 					JSONArray ra = new JSONArray();
 					JSONObject person = new JSONObject(user);
 					ra.put(person);
@@ -125,6 +127,16 @@ public class UserController {
 		narray.put(n);
 		return narray;
 		
+	}
+	
+	public static JSONArray getallusers()
+	{
+		List<User>users = UserService.getAllUser();
+		System.out.println(users.toString());
+		JSONArray allusers = new JSONArray(users);
+		//allusers.put(users);
+		System.out.println(allusers.toString());
+		return allusers;
 	}
 	
 //	public static void main(String[]args)

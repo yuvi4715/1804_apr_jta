@@ -4,10 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.system.util.ConnectionProperties;
+import com.system.model.Request;
 import com.system.model.User;
+import com.system.service.UserService;
 
 public class UserImpl implements UserInterface {
 
@@ -139,6 +142,30 @@ public class UserImpl implements UserInterface {
 
 	public List<User> getAllUser() {
 		// TODO Auto-generated method stub
+		try(Connection conn = ConnectionProperties.getConnection())
+		{
+			PreparedStatement stmt = conn.prepareStatement("SELECT firstname, "
+								+ "lastname, username, email, password, employeeid, role FROM EMPLOYEE ");
+			ResultSet rs = stmt.executeQuery();
+			 List<User>user = new ArrayList<User>();
+			 while(rs.next()){
+					User t = new User();
+					 t.setEmail(rs.getString("email")); t.setFirstname(rs.getString("firstname")); t.setLastname(rs.getString("lastname"));
+					 t.setID(rs.getInt("employeeid")); t.setRole(rs.getString("role")); t.setUsername(rs.getString("username")); t.setPassword(rs.getString("password"));
+				
+					 user.add(t);
+				}
+				
+				return user;
+		
+		}
+		catch(SQLException e)
+		{
+			System.err.println(e.getMessage());
+			System.err.println(e.getSQLState());
+			System.err.println(e.getErrorCode());
+			e.printStackTrace();
+		}
 		return null;
 	}
 

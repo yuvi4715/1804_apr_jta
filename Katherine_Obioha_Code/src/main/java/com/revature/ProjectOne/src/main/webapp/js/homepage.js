@@ -51,6 +51,7 @@ function getrole(n)
 function loademployee(response)
 {
 	console.log("loading employee")
+	document.getElementById("centre").addEventListener("click", Createreq);
 	var result = JSON.parse(response);
 	let container = document.getElementById("requests");
 	let tableRow0 = document.createElement('tr');
@@ -100,7 +101,7 @@ function loademployee(response)
 		        requestdate.innerHTML = counter[j].requestdate;
 		        
 		        reviewdate.innerHTML =counter[j].reviewdate;
-		        if(typeof counter[j].reviewer.firstname === undefined )
+		        if(counter[j].reviewer == null )
 	        	{
 		        	reviewer.innerHTML = "Has not been reviewed";
 	        	}
@@ -129,6 +130,7 @@ function loadmanagerpage(response)
 	console.log("loading manager")
 	var result = JSON.parse(response);
 	document.getElementById('centre').innerHTML = "View All Users";
+	document.getElementById("centre").addEventListener("click", viewallusers);
 	let container = document.getElementById('requests');
 	
 	let tableRow0 = document.createElement('tr');
@@ -189,14 +191,15 @@ function loadmanagerpage(response)
 		        
 		        reviewdate.innerHTML =counter[j].reviewdate;
 		        //var reviewername = 
-		        if(typeof counter[j].reviewer.firstname === undefined)
-		        	{
+		        if(counter[j].reviewer == null )
+	        	{
 		        	reviewer.innerHTML = "Has not been reviewed";
-		        	}
-		        else
-		        {
-		        	reviewer.innerHTML = counter[j].reviewer.firstname + " "+ counter[j].reviewer.lastname;
-		        } 
+	        	}
+	        else
+	        {
+	        	reviewer.innerHTML = counter[j].reviewer.firstname + " "+ counter[j].reviewer.lastname;
+	       
+	        } 
 		        var name = counter[j].requester.firstname + " " + counter[j].requester.lastname;
 		        requester.innerHTML = name;
 		        reqid.innerHTML = counter[j].ID;
@@ -220,8 +223,97 @@ function loadmanagerpage(response)
 		}
 	
 	
+	
 	}
 
+
+
+function viewallusers()// Manager function -->
+{
+	var xrh = new XMLHttpRequest();
+	xrh.onreadystatechange = function()
+	{
+		if(xrh.readyState==4 && xrh.status ==200)
+			{
+				showallusers(xrh.responseText);
+			}
+	}
+	
+	xrh.open("GET", "/reimbursement_system/getallusers.do");
+	xrh.send();
+	
+	
+}
+
+function showallusers(usresponse)
+{
+	document.getElementById("requests").style.display = "none";
+	document.getElementById("abc1").style.display="block";
+	console.log("loading allusers")
+	var result = JSON.parse(usresponse);
+	let container = document.getElementById("users");
+	let tableRow0 = document.createElement('tr');
+    let firstname = document.createElement('th');
+    let lastname = document.createElement('td');
+    let email = document.createElement('td');
+    let username = document.createElement('td');
+   
+    while(container.rows.length > 0) {
+		  container.deleteRow(0);
+		}
+    
+    firstname.innerHTML = "Firstname";
+    lastname.innerHTML = "Lastname";
+    email.innerHTML = "Email";
+    username.innerHTML = "Username";
+   
+
+    tableRow0.appendChild(firstname);
+    tableRow0.appendChild(lastname);
+    tableRow0.appendChild(email);
+    tableRow0.appendChild(username);
+    
+
+    container.appendChild(tableRow0);
+	
+	
+	for(var i=0; i<result.length; i++)
+		{
+			 
+				let tableRow = document.createElement('tr');
+
+		        let firstname = document.createElement('th');
+		        let lastname= document.createElement('td');
+		        let email = document.createElement('td');
+		        let username = document.createElement('td');
+		 
+		        
+		        
+		        firstname.innerHTML = result[i].firstname;
+		        lastname.innerHTML = result[i].lastname;
+		        email.innerHTML = result[i].email;
+		        username.innerHTML = result[i].username;
+		        
+		      
+
+		        tableRow.appendChild(firstname);
+		        tableRow.appendChild(lastname);
+		        tableRow.appendChild(email);
+		        tableRow.appendChild(username);
+		       
+		        container.appendChild(tableRow);
+				
+		}
+	
+	
+}
+
+function closeviewallusers()
+{
+	document.getElementById("abc1").style.display = "none";
+	document.getElementById("requests").style.display = " ";
+	
+	}
 function sendreq()
 {
 	var reqdetails = document.getElementById("requestdetails").value;
@@ -274,14 +366,9 @@ function updateRequest(answer, row)
 				console.log("here");
 				let tbody = document.getElementById("requests");
 				
-				//or use :  var table = document.all.tableid;
-//				for(var i = tbody.rows.length - 1; i > 0; i--)
-//				{
-//				    tbody.deleteRow(i);
-//				    //delete added columns in manager page
-//				}
+			
 				loademployeerequests();
-				//loadmanagerpage(response);
+				
 			}
 	}
 	xhr.open("POST","/reimbursement_system/updateRequest.do");
@@ -329,7 +416,7 @@ function sort(stat)
 					{
 					loademployee(response);
 					}
-				//loadmanagerpage(response);
+		
 				
 			}
 	}
@@ -349,14 +436,11 @@ function loademployeerequests()
 				console.log("here");
 				let tbody = document.getElementById("requests");
 			
-				//or use :  var table = document.all.tableid;
+			
 				while(tbody.rows.length > 0) {
 					  tbody.deleteRow(0);
 					}
-//				var rowd = document.getElementById("manipulate");
-//				console.log(rowd[7]);
-//				rowd.deleteCell(6);
-				//rowd.deleteCell(7);
+
 				 response = xhr.responseText;
 				 if(role == 'manager')
 					{
@@ -366,7 +450,7 @@ function loademployeerequests()
 					{
 					loademployee(response);
 					}
-				//loadmanagerpage(response);
+			
 				
 			}
 	}

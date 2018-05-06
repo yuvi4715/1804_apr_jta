@@ -47,6 +47,9 @@ public class RequestHelper {
 			int t = Integer.parseInt(q);
 			int b = (Integer) session.getAttribute("userid");
 			return UserController.updateRequest(t, i, b);
+		case "/reimbursement_system/getallusers.do":
+			
+			return UserController.getallusers();
 			
 		default:
 			return null;

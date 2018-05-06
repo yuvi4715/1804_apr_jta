@@ -36,7 +36,7 @@ public class SystemServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		
+		{
 	request.setAttribute("username", request.getParameter("username"));
 	request.setAttribute("password", request.getParameter("password"));
 	request.setAttribute("role", request.getParameter("role"));
@@ -46,6 +46,11 @@ public class SystemServlet extends HttpServlet {
 	request.setAttribute("status", request.getParameter("status"));
 	System.out.println(request.getParameter("requestid"));
 	request.setAttribute("requestid", request.getParameter("requestid"));
+	
+		}
+		
+		
+		
 		//response.getWriter().append(request.getRequestURI());
 		HttpSession session = request.getSession();
 	
@@ -53,22 +58,29 @@ public class SystemServlet extends HttpServlet {
 		try{
 		
 	JSONArray res = RequestHelper.process(request);
-	 System.out.println(res);
+	// System.out.println(res);
 	// System.out.println(res.length());
 	 if(request.getRequestURI().equals( "/reimbursement_system/login.do") && res.length() > 0)
 		{
 			JSONObject t = res.getJSONObject(0);
 			logger.info("setting session");
 			session.setAttribute("username", t.get("username"));
+			session.setAttribute("password", t.get("password"));
 			session.setAttribute("role", t.get("role"));
 			session.setAttribute("userid", t.get("ID"));
 			
-			System.out.println("here");
-			//response.sendRedirect("/reimbursement_system/html/homepage.html");
+			
+			logger.info("appending login/update response");
 			response.getWriter().append(String.valueOf(res));
 			System.out.println(response.toString());
 			//doGet(request, response);
 		}
+	 if(request.getRequestURI().equals("/reimbursement_system/getallusers.do") && res.length()>0)
+	    {
+		 	response.getWriter().append(String.valueOf(res));
+			 System.out.println(res.toString());
+			 //response.getWriter().append(String.valueOf(res));
+	    }
 	}
 	catch(NullPointerException e)
 	{ 	System.out.println("not in the database");

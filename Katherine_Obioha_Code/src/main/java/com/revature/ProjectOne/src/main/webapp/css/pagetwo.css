@@ -82,6 +82,17 @@ html, body {
 	left: 44%;
 }
 
+#part2{
+	
+	width: 40%;
+	position: fixed;
+	left: 35.2%;
+	top : 30%;
+	border-color: #bd9ac2;
+	color : #484848;
+	
+}
+
 #popup{
 	left :50%;
 	padding: 7px 66px;
@@ -99,6 +110,13 @@ overflow:auto
 opacity:.95;
 display:none;
 background-color:#313131;
+overflow:auto
+}
+
+#abc1 {
+opacity:.95;
+display:none;
+/* background-color:#e0e0e0; */
 overflow:auto
 }
 
