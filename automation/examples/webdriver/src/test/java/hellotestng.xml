@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="false">
+	<test name="Test">
+		<groups>
+			<run>
+				<!-- <include name="gifted" />
+				<include name="friendsofgifted" />
+				<include name="one" /> -->
+				<!-- <exclude name="All" /> -->
+				<include name="All" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.revature.testng.HelloTestNG">
+				<!-- <methods> <include name="test3" /> </methods> -->
+			</class>
+			<class name="com.revature.testng.Mercury" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
