@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <p>Request approval page</p>
+    <table>
+    	<tr>
+    		<td><button onClick="loadAll()" value="login" class="btn btn-primary">View All</button></td>
+    		<td><button onClick="loadPending()" value="login" class="btn btn-primary">View Pending</button></td>
+    		<td><button onClick="loadApproved()" value="login" class="btn btn-primary">View Approved</button></td>
+    		<td><button onClick="loadDenied()" value="login" class="btn btn-primary">View Denied</button></td> 
+    	</tr>
+    </table>
+    <div class="table-responsive">
+    	<table class="table table-bordered table-striped">
+    		<thead>
+    			<tr>
+    				<td>Request ID</td>
+    				<td>Employee Name</td>
+    				<td>Amount</td>
+    				<td>Purpose</td>
+    				<td>Date Requested</td>
+    				<td>Status</td>
+    			</tr>
+    		</thead>
+    		<tbody id='jsTag'>
+    		</tbody>
+		</table>
+	</div>
+	<form action="/project1v2/approve.do" method="post">
+    	<div class="form-group">
+    		<input type="number" class="form-control" 
+				id="reqid" aria-describedby="emailHelp" 
+				name="reqid" placeholder="Request ID Number">
+		</div>
+		<button type="submit" value="approve" class="btn btn-primary">Approve</button>
+	</form>
+	<form action="/project1v2/deny.do" method="post">
+    	<div class="form-group">
+    		<input type="number" class="form-control" 
+				id="reqid" aria-describedby="emailHelp" 
+				name="reqid" placeholder="Request ID Number">
+		</div>
+		<button type="submit" value="approve" class="btn btn-primary">Deny</button>
+	</form>
+	
+    
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+    	function loadAll() {
+    	  var xhttp = new XMLHttpRequest();
+    	  xhttp.onreadystatechange = function() {
+    	    if (this.readyState == 4 && this.status == 200) {
+    	    	document.getElementById("jsTag").innerHTML= this.responseText;
+    	    }
+    	  };
+    	  xhttp.open("POST", "/project1v2/displayAll.do", true);
+    	  xhttp.send();
+    	}
+    </script>
+    <script>
+    	function loadPending() {
+    	  var xhttp = new XMLHttpRequest();
+    	  xhttp.onreadystatechange = function() {
+    	    if (this.readyState == 4 && this.status == 200) {
+    	    	document.getElementById("jsTag").innerHTML= this.responseText;
+    	    }
+    	  };
+    	  xhttp.open("POST", "/project1v2/displayPending.do", true);
+    	  xhttp.send();
+    	}
+    </script>
+    <script>
+    	function loadApproved() {
+    	  var xhttp = new XMLHttpRequest();
+    	  xhttp.onreadystatechange = function() {
+    	    if (this.readyState == 4 && this.status == 200) {
+    	    	document.getElementById("jsTag").innerHTML= this.responseText;
+    	    }
+    	  };
+    	  xhttp.open("POST", "/project1v2/displayApproved.do", true);
+    	  xhttp.send();
+    	}
+    </script>
+    <script>
+    	function loadDenied() {
+    	  var xhttp = new XMLHttpRequest();
+    	  xhttp.onreadystatechange = function() {
+    	    if (this.readyState == 4 && this.status == 200) {
+    	    	document.getElementById("jsTag").innerHTML= this.responseText;
+    	    }
+    	  };
+    	  xhttp.open("POST", "/project1v2/displayDenied.do", true);
+    	  xhttp.send();
+    	}
+    </script>
+    
+  </body>
+</html>

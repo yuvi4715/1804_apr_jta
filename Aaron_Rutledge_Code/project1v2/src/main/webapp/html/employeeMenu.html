@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="updateMenuAnchor"></div>
+    <button type="button" onClick="loadCurrent()"  class="btn btn-primary">Load Current User</button>
+    <div class="container">
+    	<div class="row">
+    		<div class="col">
+    			<form action="/project1v2/submit.do" method="post">
+    				<div class="form-group">
+    					<label for="reimbursementMenu">Reimbursement Request</label>
+    					<input type="text" class="form-control" 
+    						id="requestPurpose" aria-describedby="purposeHelp" 
+    						name="requestPurpose" placeholder="Describe what you need reimbursed">
+    					<input type="text" class="form-control"
+    						id="requestImage" aria-describedby="imageHelp"
+    						name="requestImage" placeholder="This is a placeholder for an image url.">
+    					<input type="number" class="form-control"
+    						id="requestAmmount" aria-describedby="ammountHelp"
+    						name="requestAmmount" placeholder="0.00" 
+    						step=".01" min="0">
+    				</div>
+    				<button type="submit" value="submitRequest" class="btn btn-primary">Submit</button>
+    			</form>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<button type="button" onClick="loadMyRequests()" class="btn btn-primary">Load Requests</button>
+    	</div>
+    	<div class="row">
+    		<div class = "col">
+    			<div class="table-responsive">
+    				<table class="table table-bordered table-striped">
+    					<thead>
+    						<tr>
+    							<td>Request ID</td>
+    							<td>Employee ID</td>
+    							<td>Amount</td>
+    							<td>Purpose</td>
+    							<td>Request Date</td>
+    							<td>Status</td>
+    							<td>Manager ID</td>
+    							<td>Review Date</td>
+    							<td>Thumbnail</td>
+    						</tr>
+    					</thead>
+    					<tbody id='jsTag'>
+    					</tbody>
+					</table>
+				</div>
+    		</div>
+    	</div>
+    	
+    </div>
+    
+    
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  	<script>
+  	function loadCurrent() {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	document.getElementById("updateMenuAnchor").innerHTML= this.responseText;
+	    
+	    }
+	  };
+	  xhttp.open("POST", "/project1v2/getMy.do", true);
+	  xhttp.send();
+	}
+	</script>
+  	<script>
+  	function loadMyRequests() {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	document.getElementById("jsTag").innerHTML= this.responseText;
+	    
+	    }
+	  };
+	  xhttp.open("POST", "/project1v2/displayMine.do", true);
+	  xhttp.send();
+	}
+	</script>
+
+  	
+  	
+  </body>
+</html>
