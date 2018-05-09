@@ -1,11 +1,17 @@
-Feature:
-		As a valid user
-		I want to login to the app
-		I should be able to login to the app with valid credentials
+Feature: 
+		As a customer with valid credentials
+		If I try to login to the application
+		I should be allowed to signin
 		
-Scenario:
-	
-
+Scenario Outline:
+		Given the url is opened in chrome 
+		When valid <username> and <password> are entered
+		Then I should see the home page
+      
+Examples:
+		 | username   | password   | 
+     |   "yuvi1"  |  "yuvi1"   | 
+     |   "test1"  |  "test1"   | 
 
 
 

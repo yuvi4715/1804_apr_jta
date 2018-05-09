@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.revature.testng.HelloTestNG">
+      <class name="com.revature.pom.Mercury_POM_TestNG">
         <methods>
-          <include name="afterMethod"/>
-          <include name="neverCreateDependencyOnOtherTests"/>
-          <include name="Friend1"/>
-          <include name="beforeMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="VerifyValidLogin"/>
+          <include name="VerifyFindingFlights"/>
         </methods>
-      </class> <!-- com.revature.testng.HelloTestNG -->
+      </class> <!-- com.revature.pom.Mercury_POM_TestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

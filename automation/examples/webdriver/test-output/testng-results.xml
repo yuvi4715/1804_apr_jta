@@ -1,55 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="11" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="86" started-at="2018-05-08T18:23:43Z" finished-at="2018-05-08T18:23:43Z">
+  <suite name="Default suite" duration-ms="11593" started-at="2018-05-09T14:40:29Z" finished-at="2018-05-09T14:40:40Z">
     <groups>
-      <group name="All">
-        <method signature="HelloTestNG.CarlLucas()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="CarlLucas" class="com.revature.testng.HelloTestNG"/>
-        <method signature="HelloTestNG.DannyRand()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="DannyRand" class="com.revature.testng.HelloTestNG"/>
-        <method signature="HelloTestNG.Friend1()[pri:1, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="Friend1" class="com.revature.testng.HelloTestNG"/>
-        <method signature="HelloTestNG.Friend2()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="Friend2" class="com.revature.testng.HelloTestNG"/>
-        <method signature="HelloTestNG.JessicaJones()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="JessicaJones" class="com.revature.testng.HelloTestNG"/>
-        <method signature="HelloTestNG.MattMurdock()[pri:1, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="MattMurdock" class="com.revature.testng.HelloTestNG"/>
-      </group> <!-- All -->
-      <group name="friendsofgifted">
-        <method signature="HelloTestNG.Friend1()[pri:1, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="Friend1" class="com.revature.testng.HelloTestNG"/>
-        <method signature="HelloTestNG.Friend2()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="Friend2" class="com.revature.testng.HelloTestNG"/>
-      </group> <!-- friendsofgifted -->
-      <group name="gifted">
-        <method signature="HelloTestNG.CarlLucas()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="CarlLucas" class="com.revature.testng.HelloTestNG"/>
-        <method signature="HelloTestNG.DannyRand()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="DannyRand" class="com.revature.testng.HelloTestNG"/>
-        <method signature="HelloTestNG.JessicaJones()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="JessicaJones" class="com.revature.testng.HelloTestNG"/>
-        <method signature="HelloTestNG.MattMurdock()[pri:1, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="MattMurdock" class="com.revature.testng.HelloTestNG"/>
-      </group> <!-- gifted -->
     </groups>
-    <test name="Test" duration-ms="86" started-at="2018-05-08T18:23:43Z" finished-at="2018-05-08T18:23:43Z">
-      <class name="com.revature.testng.HelloTestNG">
-        <test-method status="PASS" signature="CarlLucas()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="CarlLucas" duration-ms="28" started-at="2018-05-08T18:23:43Z" finished-at="2018-05-08T18:23:43Z">
+    <test name="Default test" duration-ms="11593" started-at="2018-05-09T14:40:29Z" finished-at="2018-05-09T14:40:40Z">
+      <class name="com.revature.pom.Mercury_POM_TestNG">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.revature.pom.Mercury_POM_TestNG@29774679]" name="beforeTest" is-config="true" duration-ms="16" started-at="2018-05-09T14:40:29Z" finished-at="2018-05-09T14:40:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CarlLucas -->
-        <test-method status="PASS" signature="DannyRand()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="DannyRand" duration-ms="3" started-at="2018-05-08T18:23:43Z" finished-at="2018-05-08T18:23:43Z">
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="VerifyValidLogin()[pri:0, instance:com.revature.pom.Mercury_POM_TestNG@29774679]" name="VerifyValidLogin" duration-ms="11020" started-at="2018-05-09T14:40:29Z" finished-at="2018-05-09T14:40:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DannyRand -->
-        <test-method status="PASS" signature="JessicaJones()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="JessicaJones" duration-ms="0" started-at="2018-05-08T18:23:43Z" finished-at="2018-05-08T18:23:43Z">
+        </test-method> <!-- VerifyValidLogin -->
+        <test-method status="PASS" signature="VerifyFindingFlights()[pri:1, instance:com.revature.pom.Mercury_POM_TestNG@29774679]" name="VerifyFindingFlights" duration-ms="461" started-at="2018-05-09T14:40:40Z" finished-at="2018-05-09T14:40:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- JessicaJones -->
-        <test-method status="PASS" signature="MattMurdock()[pri:1, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="MattMurdock" duration-ms="16" started-at="2018-05-08T18:23:43Z" finished-at="2018-05-08T18:23:43Z">
+        </test-method> <!-- VerifyFindingFlights -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.revature.pom.Mercury_POM_TestNG@29774679]" name="afterTest" is-config="true" duration-ms="91" started-at="2018-05-09T14:40:40Z" finished-at="2018-05-09T14:40:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MattMurdock -->
-        <test-method status="PASS" signature="Friend1()[pri:1, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="Friend1" duration-ms="0" started-at="2018-05-08T18:23:43Z" finished-at="2018-05-08T18:23:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Friend1 -->
-        <test-method status="PASS" signature="Friend2()[pri:0, instance:com.revature.testng.HelloTestNG@ae45eb6]" name="Friend2" duration-ms="0" started-at="2018-05-08T18:23:43Z" finished-at="2018-05-08T18:23:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Friend2 -->
-      </class> <!-- com.revature.testng.HelloTestNG -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.revature.pom.Mercury_POM_TestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
