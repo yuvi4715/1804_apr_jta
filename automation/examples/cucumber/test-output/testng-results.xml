@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="534" started-at="2018-05-09T16:12:43Z" finished-at="2018-05-09T16:12:43Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.cukes.TestRunner@239963d8]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="534" started-at="2018-05-09T16:12:43Z" finished-at="2018-05-09T16:12:43Z">
+      <class name="com.revature.cukes.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.revature.cukes.TestRunner@239963d8]" name="setUpClass" is-config="true" duration-ms="270" started-at="2018-05-09T12:12:43Z" finished-at="2018-05-09T12:12:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.cukes.TestRunner@239963d8]" name="feature" duration-ms="141" started-at="2018-05-09T12:12:43Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-05-09T12:12:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.cukes.TestRunner@239963d8]" name="feature" duration-ms="1" started-at="2018-05-09T12:12:43Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-05-09T12:12:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Summering]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.revature.cukes.TestRunner@239963d8]" name="tearDownClass" is-config="true" duration-ms="6" started-at="2018-05-09T12:12:43Z" finished-at="2018-05-09T12:12:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.revature.cukes.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
